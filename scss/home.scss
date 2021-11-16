@@ -1,0 +1,303 @@
+@import "_founder";
+@import "_product-card";
+// HERO
+
+.absolute-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero {
+    position: relative;
+    background: linear-gradient(349.47deg, rgba(32, 59, 131, 0.9) 31.24%, rgba(83, 152, 255, 0.9) 84.32%);
+    padding: 4.75rem 1rem 3.25rem;
+
+    &-cont {
+        text-align: center;
+        h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        h1,
+        h2 {
+            color: #fff;
+        }
+
+        h2 {
+            font-size: 1rem;
+            line-height: 18.75px;
+            font-weight: 300;
+        }
+
+        .searchbar-especialidad {
+            position: absolute;
+            display: flex;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 50%);
+            width: unquote("min(100% - 2rem, 30rem)");
+
+            .field {
+                width: 100%;
+                margin: 0;
+
+                .icon {
+                    height: 100%;
+                    width: 2em;
+                }
+            }
+
+            &-campo {
+                font-size: 0.75rem;
+                padding-block: 6px;
+                height: max-content;
+            }
+            &-button {
+                display: none;
+            }
+        }
+    }
+}
+
+.courses-top {
+    &-desktop {
+        display: none;
+    }
+
+    &-cont {
+      
+        .title {
+            font-size: 0.875rem;
+            font-weight: 400;
+            line-height: 18px;
+            text-align: center;
+            width: 44ch;
+            margin: 2.5rem auto 1.125rem;
+
+            span {
+                font-weight: 700;
+            }
+        }
+
+        &-grid {
+            display: grid;
+            grid-template-rows: repeat(3, 1fr);
+            row-gap: 0.5rem;
+        }
+
+        &-big,
+        &-small {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 1.625rem 1.375rem 2rem;
+            background-blend-mode: multiply;
+            background-position: center top !important;
+            background-size: cover !important;
+            border-radius: 4px;
+
+            &-title {
+                z-index: 2;
+                color: #fff;
+                font-size: 1.25rem;
+                line-height: 23px;
+                font-weight: 700;
+            }
+            &-bajada {
+                z-index: 2;
+                color: #fff;
+                font: 0.875rem;
+                line-height: 17px;
+            }
+        }
+    }
+}
+
+.best-seller,
+.destacados {
+    &-cont {
+        width: 100%;
+        padding: 1.5rem 0 1.25rem;
+
+        &-title {
+            flex-grow: 1;
+            font-size: 1.25rem;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .swiper {
+            &-slide {
+                display: flex;
+                align-items: center;
+                height: auto;
+                width: unquote("max(212px, 50%)");
+                padding: 1rem 0;
+            }
+            .swiper-button-prev,
+            .swiper-button-next {
+                display: none;
+            }
+        }
+    }
+}
+
+.destacados {
+    &-cont {
+        background-color: #F0F0F080;
+        &-top{
+            display: flex;
+            flex-flow: row wrap;
+        }
+        &-top-filters {
+            display: flex;
+            justify-content: center;
+            flex-grow: 1;
+            padding: 0 1rem;
+            column-gap: .5rem;
+            margin-top: .5rem;
+           
+            .btn {
+                flex-grow: 1;
+                text-align: center;
+                max-width: 130px;
+            }
+        }
+    }
+}
+
+.banner {
+    &-cont {
+        width: 100%;
+        
+        img {
+            width: 100%;
+        }
+
+        .swiper-banner{
+            position: relative;
+        }
+    }
+    
+}
+
+.reviews {
+    overflow: hidden;
+
+    &-cont {
+        padding: 2rem 0 4rem;
+        &-title {
+            width: 34ch;
+            margin: 0 auto 0.75rem;
+            font-size: 1rem;
+            line-height: 19px;
+            font-weight: 500;
+            color: #272727;
+            text-align: center;
+
+            >span {
+                margin-top: .25rem;
+                display: block;
+
+                span {display: block;}
+                
+            }
+        }
+
+        .swiper-reviews {
+            position: relative;
+
+            .swiper-slide {
+                box-sizing: border-box;
+                display: flex;
+                align-items: center;
+                height: auto;
+            }
+
+            .swiper-pagination {
+                bottom: -2rem;
+            }
+        }
+
+        .card-review {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            padding: 2rem 1rem 1rem;
+            background: #FFFFFF;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+
+            &-rating {
+                display: flex;
+                justify-content: center;
+                column-gap: .25rem;
+                margin-bottom: .75rem;
+
+                img{
+                    width: 1.25rem;
+                }
+            }
+
+            &-body {
+                margin-bottom: 2rem;
+                font-size: 0.875rem;
+                line-height: 1rem;
+                text-align: center;
+                flex-grow: 1;
+                
+            }
+
+            &-footer {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding-top: 1rem;
+                border-top: 1px solid #eeeeee80;
+
+                &-user {
+                    display: flex;
+                    align-items: center;
+                    column-gap: .5rem;
+                }
+
+                p {
+                    font-size: 0.875rem;
+                    font-weight: 700;
+                    color: $medicina-dark;
+                }
+
+                .profile-picture {
+                    width: 36px;
+                    height: 36px;
+                    background-color: $medicina;
+                    border-radius: 36px;
+                }
+                .google-market {
+                    width: 74px;
+                }
+            }
+        }
+    }
+
+  
+}
+
+@media screen and (min-width: 765px) {
+    .hero {
+        background: url(../media/b-hero.jpg);
+        height: 20rem;
+    }
+
+    .courses-top {
+        &-mobile {
+            display: none;
+        }
+        &-desktop {
+            display: block;
+        }
+    }
+}

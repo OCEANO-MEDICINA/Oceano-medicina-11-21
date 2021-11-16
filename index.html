@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.4.95/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="css/home.css">
+
+</head>
+
+<header>
+    <div class="contenedor">
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div id="navbar-overlay" class="navbar-overlay"></div>
+            <div class="navbar-brand">
+                <a id="logo" class="navbar-item logo absolute-center" href="#">
+                    <img src="media/logo-oceano-medicina.png">
+                </a>
+
+                <a id="navbar-burger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                    data-target="navbar-oceano">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+                <div id="icons" class="navbar-item icons">
+                    <input id="dgwt-wcas-search-input-1" type="search" class="dgwt-wcas-search-input invisible"
+                        placeholder="Escribí tu especialidad de interés" autocomplete="on">
+                    <button id="toggleBuscador" onclick="btnSearch()" class="icons">
+
+                        <span id="lupa" class="mdi mdi-magnify" alt=""></span>
+                        <span id="search-close" alt="" class="mdi mdi-close invisible">
+                    </button>
+                    <button id="cart" class="cart">
+                        <span src="media/icon/cart.svg" alt="" class="mdi mdi-cart-outline"></span>
+                    </button>
+                </div>
+
+
+            </div>
+
+            <div id="navbar-oceano" class="navbar-menu">
+                <div class="navbar-start">
+                    <div id="nav-medicina" class="navbar-item has-dropdown is-hoverable nav-medicina">
+                        <a class="navbar-link">
+                            Medicina
+                        </a>
+
+                        <ul class="navbar-dropdown">
+                            <div class="overlay"></div>
+                            <li><a class="navbar-item ver_todos" href="/tienda/#filter=.medicos">VER
+                                    TODOS</a></li>
+                            <li><a class="navbar-item" href="/tienda/#filter=.anestesiologia-y-dolor">Anestesiología y
+                                    dolor</a></li>
+                            <li><a class="navbar-item" href="/tienda/#filter=.bibliography">Bibliografia</a></li>
+                            <li><a class="navbar-item" href="/tienda/#filter=.cardiologia">Cardiología</a></li>
+                            <li><a class="navbar-item" href="/tienda/#filter=.cirugia">Cirugía</a></li>
+                            <li><a class="navbar-item" href="/tienda/#filter=.dermatologia">Dermatología</a></li>
+                            <li><a class="navbar-item" href="/tienda/#filter=.diabetes">Diabetes</a></li>
+                            <li><a class="navbar-item" href="/tienda/#filter=.emergentologia">Emergentología</a></li>
+                            <li><a class="navbar-item" href="/tienda/#filter=.gastroenterologia">Gastroenterología</a>
+                            </li>
+                            <li><a class="navbar-item" href="/tienda/#filter=.geriatria">Geriatría</a></li>
+                            <li><a class="navbar-item" href="/tienda/#filter=.ginecologia">Ginecología</a></li>
+                            <li><a class="navbar-item" href="/tienda/#filter=.hematologia">Hematología</a></li>
+                            <li><a class="navbar-item" href="/tienda/#filter=.infectologia">Infectología</a></li>
+                            <li><a class="navbar-item" href="/tienda/#filter=.kinesiologia">Kinesiología</a></li>
+                            <li><a class="navbar-item" href="/tienda/#filter=.medicina-estetica">Medicina estética</a>
+                            </li>
+
+                            <li><a class="navbar-item" href="/tienda/#filter=.medicina-general">Medicina general</a>
+                            </li>
+                            <li><a class="navbar-item" href="/tienda/#filter=.medicina-intensiva">Medicina intensiva</a>
+                            </li>
+                            <li><a class="navbar-item" href="/tienda/#filter=.nutricion">Nutrición</a></li>
+                            <li><a class="navbar-item" href="/tienda/#filter=.obstetricia">Obstetricia</a></li>
+                            <li><a class="navbar-item" href="/tienda/#filter=.odontologia">Odontología</a></li>
+                            <li><a class="navbar-item" href="/tienda/#filter=.oftalmologia">Oftalmología</a></li>
+                            <li><a class="navbar-item" href="/tienda/#filter=.oncologia">Oncología</a></li>
+                            <li><a class="navbar-item" href="/tienda/#filter=.pediatria">Pediatría</a></li>
+                            <li><a class="navbar-item" href="/tienda/#filter=.psicologia">Psicología</a></li>
+                            <li><a class="navbar-item" href="/tienda/#filter=.psiquiatria">Psiquiatría</a></li>
+                        </ul>
+                    </div>
+
+                    <div id="nav-enfermeria" class="navbar-item has-dropdown is-hoverable nav-enfermeria">
+                        <a class="navbar-link">
+                            Enfermería
+                        </a>
+
+                        <ul class="navbar-dropdown">
+                            <div class="overlay"></div>
+                            <li>
+                                <a class="navbar-item" href="">Item 1</a>
+                            </li>
+                            <li>
+                                <a class="navbar-item" href="">Item 2</a>
+                            </li>
+                            <li>
+                                <a class="navbar-item" href="">Item 3</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div id="nav-comunidad" class="navbar-item has-dropdown is-hoverable nav-comunidad">
+                        <a class="navbar-link">
+                            Comunidad
+                        </a>
+
+                        <div class="navbar-dropdown navbar-dropdown-comunidad">
+                            <div class="overlay"></div>
+
+                            <ul class="navbar-dropdown-comunidad-menu">
+                                <li>
+                                    <a class="navbar-item" href="">Descargables</a>
+                                </li>
+                                <li>
+                                    <a class="navbar-item" href="">Magazine</a>
+                                </li>
+                                <li>
+                                    <a class="navbar-item" href="">FAQ's</a>
+                                </li>
+                                <li>
+                                    <a class="navbar-item" href="">Contacto</a>
+                                </li>
+                            </ul>
+                            <div class="navbar-item navbar-dropdown-comunidad-news">
+                                <div class="navbar-dropdown-comunidad-news-img"></div>
+                                <div class="navbar-dropdown-comunidad-news-info">
+                                    <h3>Nuevo Ebook</h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
+                                        commodi maxime
+                                        excepturi nostrum maiores quod vel, temporibus obcaecati accusantium iure minus,
+                                        eos explicabo repellat sint, velit debitis nam omnis quia.</p>
+                                    <a href="">Leer más</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div id="search-desktop" class="navbar-item search-desktop">
+                        <input id="dgwt-wcas-search-input-1-desktop" type="search"
+                            class="dgwt-wcas-search-input invisible" placeholder="Escribí tu especialidad de interés"
+                            autocomplete="on">
+                        <button id="toggleBuscador-desktop" onclick="btnSearchDesktop()" class="icons">
+
+                            <span id="lupa-desktop" class="mdi mdi-magnify" alt=""></span>
+                            <span id="search-close-desktop" alt="" class="mdi mdi-close invisible">
+                        </button>
+                    </div>
+                    <button id="cart" class="cart-desktop">
+                        <span src="media/icon/cart.svg" alt="" class="mdi mdi-cart-outline"></span>
+                    </button>
+
+                    <a id="login-campus" class="button navbar-item login-campus"
+                        href="https://suite.oceano.com/#/public/login?not_logged=true">
+                        Acceder al campus
+                    </a>
+
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<body id="body">
+
+    <section id="hero" class="hero">
+        <article class="hero-cont contenedor mx-auto">
+            <h1 class="is-uppercase">Cursos 100% Online</h1>
+            <h2 class="is-uppercase">La herramienta de hoy para <span class="salto-de-linea">impulsar tu futuro</span>
+            </h2>
+            <div class="searchbar-especialidad">
+                <div class="field">
+                    <p class="control has-icons-left has-icons-right">
+                        <input class="input searchbar-especialidad-campo" type="search"
+                            placeholder="Escribí tu especialidad de interés">
+                        <span class="icon is-small is-left">
+                            <i class="mdi mdi-magnify"></i>
+                        </span>
+                        <span class="icon is-small is-right">
+                            <i class="mdi mdi-chevron-right"></i>
+                        </span>
+                    </p>
+                </div>
+                <input class="searchbar-especialidad-button" type="button" value="Buscar">
+            </div>
+
+        </article>
+    </section>
+
+
+    <section id="courses-top-desktop" class="courses-top courses-top-desktop">
+        <div class="solapa-sup"></div>
+        <article class="courses-top-cont contenedor mx-auto">
+            <h3 class="courses-top-cont title">
+                Tenemos más de 120 cursos avalados por prestigiosas instituciones y preparados por expertos.
+                <span class="salto-de-linea">Descubrilos de acuerdo a tu profesión.</span>
+            </h3>
+            <div class="courses-top-cont-grid">
+                <div class="courses-top-cont-big"
+                    style="background: url(media/cursos-medicina.jpg), rgba(63, 108, 187, 1);">
+                    <h4 class="courses-top-cont-big-title">Cursos para
+                        <span class="salto-de-linea">personal médico</span>
+                    </h4>
+                    <a href="" class="button btn-big has-text-white">Ingresar</a>
+                </div>
+
+                <div class="courses-top-cont-small cursos-enfermeria"
+                    style="background: url(media/cursos-enfermeria.jpg), rgba(0, 128, 102, 1);">
+                    <h4 class="courses-top-cont-small-title">Cursos para
+                        <span class="salto-de-linea">personal de</span>
+                        <span class="salto-de-linea">enfermería</span>
+                    </h4>
+                    <a href="" class="button btn-big has-text-white">Ingresar</a>
+                </div>
+                <div class="courses-top-cont-small plan-estudio"
+                    style="background: url(media/plan-estudios.jpg), rgba(0, 128, 102, 1);">
+                    <h4 class="courses-top-cont-small-title">
+                        Planes de estudio
+                        <span class="salto-de-linea">para enfermería</span>
+                    </h4>
+                    <h5 class="courses-top-cont-small-bajada mt-3">Alcanzá tus objetivos en
+                        <span class="salto-de-linea">el tiempo que vos quieras</span>
+                    </h5>
+                    <a href="" class="button btn-big has-text-white">Quiero saber más</a>
+                </div>
+            </div>
+        </article>
+    </section>
+
+
+    <section id="courses-top-mobile" class="courses-top courses-top-mobile">
+        <div class="solapa-sup"></div>
+        <article class="courses-top-cont contenedor mx-auto">
+            <h3 class="courses-top-cont title">
+                Tenemos más de 120 cursos avalados por prestigiosas instituciones y preparados por expertos.
+                <span class="salto-de-linea">Descubrilos de acuerdo a tu profesión.</span>
+            </h3>
+            <div class="courses-top-cont-grid">
+                <a href="" class="courses-top-cont-big"
+                    style="background: url(media/cursos-medicina.jpg), rgba(63, 108, 187, 1);">
+                    <h4 class="courses-top-cont-big-title">Cursos para
+                        <span class="salto-de-linea">personal médico</span>
+                    </h4>
+                </a>
+
+                <a href="" class="courses-top-cont-small cursos-enfermeria"
+                    style="background: url(media/cursos-enfermeria.jpg), rgba(0, 128, 102, 1);">
+                    <h4 class="courses-top-cont-small-title">Cursos para
+                        <span class="salto-de-linea">personal de</span>
+                        <span class="salto-de-linea">enfermería</span>
+                    </h4>
+                </a>
+                <a href="" class="courses-top-cont-small plan-estudio"
+                    style="background: url(media/plan-estudios.jpg), rgba(0, 128, 102, 1);">
+                    <h4 class="courses-top-cont-small-title">
+                        Planes de estudio
+                        <span class="salto-de-linea">para enfermería</span>
+                    </h4>
+                    <h5 class="courses-top-cont-small-bajada mt-3">Alcanzá tus objetivos en
+                        <span class="salto-de-linea">el tiempo que vos quieras</span>
+                    </h5>
+                </a>
+            </div>
+        </article>
+    </section>
+
+
+
+    <section id=" best-seller" class="best-seller">
+        <article class="best-seller-cont contenedor">
+            <h3 class="best-seller-cont-title">Cursos más vendidos</h3>
+            <div class="best-seller-cont-grid">
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <div class="card-img" style="background: url(media/curso.jpg), linear-gradient(transparent 75%, #00000035 100%);">
+                                    <a href="" class="tags tags-medicina">Medicina</a></div>
+                                <div class="card-info">
+                                    <div class="card-info-sup">
+                                        <p class="area">Cardiología</p>
+                                        <span class="horas"><i class="mdi mdi-clock-outline"></i>320 horas</span>
+                                    </div>
+                                    <div class="card-info-title">Estrés ante la hospitalización y ansiedad prequirúrgica
+                                        en pacientes adultos</div>
+                                    <div class="card-info-footer">
+                                        <div class="card-info-footer-precio">
+                                            <p class="cuotas">12 coutas de</p>
+                                            <p class="price">$1.972</p>
+                                        </div>
+                                        <a href="" class="card-info-footer-boton btn btn-mid">Descubrir</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <div class="card-img" style="background: url(media/curso.jpg), linear-gradient(transparent 75%, #00000035 100%);">
+                                    <a href="" class="tags tags-medicina">Medicina</a>
+                                    <a href="" class="tags tags-enfermeria">Enfermería</a>
+                                </div>
+                                <div class="card-info">
+                                    <div class="card-info-sup">
+                                        <p class="area">Cardiología</p>
+                                        <span class="horas"><i class="mdi mdi-clock-outline"></i>320 horas</span>
+                                    </div>
+                                    <div class="card-info-title">Programa integral en pediatría hospitalaria</div>
+                                    <div class="card-info-footer">
+                                        <div class="card-info-footer-precio">
+                                            <p class="cuotas">12 coutas de</p>
+                                            <p class="price">Sin interés</p>
+                                        </div>
+                                        <a href="" class="card-info-footer-boton btn btn-mid">Descubrir</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <div class="card-img" style="background: url(media/curso.jpg), linear-gradient(transparent 75%, #00000035 100%);">
+                                    <a href="" class="tags tags-medicina">Medicina</a></div>
+                                <div class="card-info">
+                                    <div class="card-info-sup">
+                                        <p class="area">Cardiología</p>
+                                        <span class="horas"><i class="mdi mdi-clock-outline"></i>320 horas</span>
+                                    </div>
+                                    <div class="card-info-title">Auditoría médica</div>
+                                    <div class="card-info-footer">
+                                        <div class="card-info-footer-precio">
+                                            <p class="cuotas">12 coutas de</p>
+                                            <p class="price">$1.972</p>
+                                        </div>
+                                        <a href="" class="card-info-footer-boton btn btn-mid">Descubrir</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                </div>
+            </div>
+        </article>
+    </section>
+
+
+
+    <section id="banner" class="banner">
+        <article class="banner-cont contenedor">
+            <div class="swiper-banner">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <picture>
+                        <source media="(max-width: 480px)" srcset="media/banner-enfermeria_ecommerce-480w.jpg">
+                        <source media="(max-width: 640px)" srcset="media/banner-enfermeria_ecommerce-640w.jpg">
+                        <source media="(max-width: 1920px)" srcset="media/banner-enfermeria_ecommerce-800w.jpg">
+                        <img src="media/banner-enfermeria_ecommerce-800w" alt="">
+                      </picture>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture>
+                        <source media="(max-width: 480px)" srcset="media/banner-enfermeria_ecommerce-480w.jpg">
+                        <source media="(max-width: 640px)" srcset="media/banner-enfermeria_ecommerce-640w.jpg">
+                        <source media="(max-width: 1920px)" srcset="media/banner-enfermeria_ecommerce-800w.jpg">
+                        <img src="media/banner-enfermeria_ecommerce-800w" alt="">
+                      </picture>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture>
+                        <source media="(max-width: 480px)" srcset="media/banner-enfermeria_ecommerce-480w.jpg">
+                        <source media="(max-width: 640px)" srcset="media/banner-enfermeria_ecommerce-640w.jpg">
+                        <source media="(max-width: 1920px)" srcset="media/banner-enfermeria_ecommerce-800w.jpg">
+                        <img src="media/banner-enfermeria_ecommerce-800w" alt="">
+                      </picture>
+                    </div>
+
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </article>
+    </section>
+
+
+
+    <section id="destacados" class="destacados">
+        <article class="destacados-cont contenedor">
+            <div class="destacados-cont-top">
+                <h3 class="destacados-cont-title">Cursos Destacados</h3>
+                <div class="destacados-cont-top-filters">
+                    <a href="" class="btn btn-medicina active">Medicina</a>
+                    <a href="" class="btn btn-enfermeria">Enfermería</a>
+                    <a href="" class="btn btn-bibliografias">Bibliografías</a>
+                </div>
+            </div>
+            <div class="destacados-cont-grid">
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <div class="card-img" style="background: url(media/curso.jpg), linear-gradient(transparent 75%, #00000035 100%);">
+                                    <a href="" class="tags tags-bibliografia">Bibliografía</a></div>
+                                <div class="card-info">
+                                    <div class="card-info-sup">
+                                        
+                                        <span class="horas"><i class="mdi mdi-truck-fast-outline"></i>Envios a todo el país</span>
+                                    </div>
+                                    <div class="card-info-title">Estrés ante la hospitalización y ansiedad prequirúrgica
+                                        en pacientes adultos</div>
+                                    <div class="card-info-footer">
+                                        <div class="card-info-footer-precio">
+                                            <p class="cuotas">12 coutas de</p>
+                                            <p class="price">$1.972</p>
+                                        </div>
+                                        <a href="" class="card-info-footer-boton btn btn-mid">Descubrir</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <div class="card-img" style="background: url(media/curso.jpg), linear-gradient(transparent 75%, #00000035 100%);">
+                                    <a href="" class="tags tags-medicina">Medicina</a>
+                                    <a href="" class="tags tags-enfermeria">Enfermería</a>
+                                </div>
+                                <div class="card-info">
+                                    <div class="card-info-sup">
+                                        <p class="area">Cardiología</p>
+                                        <span class="horas"><i class="mdi mdi-clock-outline"></i>320 horas</span>
+                                    </div>
+                                    <div class="card-info-title">Programa integral en pediatría hospitalaria</div>
+                                    <div class="card-info-footer">
+                                        <div class="card-info-footer-precio">
+                                            <p class="cuotas">12 coutas de</p>
+                                            <p class="price">Sin interés</p>
+                                        </div>
+                                        <a href="" class="card-info-footer-boton btn btn-mid">Descubrir</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <div class="card-img" style="background: url(media/curso.jpg), linear-gradient(transparent 75%, #00000035 100%);">
+                                    <a href="" class="tags tags-medicina">Medicina</a></div>
+                                <div class="card-info">
+                                    <div class="card-info-sup">
+                                        <p class="area">Cardiología</p>
+                                        <span class="horas"><i class="mdi mdi-clock-outline"></i>320 horas</span>
+                                    </div>
+                                    <div class="card-info-title">Auditoría médica</div>
+                                    <div class="card-info-footer">
+                                        <div class="card-info-footer-precio">
+                                            <p class="cuotas">12 coutas de</p>
+                                            <p class="price">$1.972</p>
+                                        </div>
+                                        <a href="" class="card-info-footer-boton btn btn-mid">Descubrir</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                </div>
+            </div>
+        </article>
+    </section>
+
+
+
+<section id="reviews" class="reviews">
+    <article class="reviews-cont contenedor mx-auto">
+        <h3 class="reviews-cont-title">Más de 50.000 profesionales 
+            de toda Latinoamérica realizaron 
+            nuestros cursos y compartieron 
+            su experiencia. 
+            <span>¡Unite vos también a <span> nuestra 
+                comunidad científica!</span></span>
+            </h3>
+        <div class="reviews-slider">
+            <div class="swiper-reviews">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                    <div class="card-review">
+                        <div class="card-review-rating">
+                            <img src="media/icon/icon_star.svg" alt="">
+                            <img src="media/icon/icon_star.svg" alt="">
+                            <img src="media/icon/icon_star.svg" alt="">
+                            <img src="media/icon/icon_star.svg" alt="">
+                            <img src="media/icon/icon_star.svg" alt="">
+                        </div>
+                        <div class="card-review-body">
+                            Yo hice el curso Electrocardiografia ,sinceramente estoy muy conforme , ya tramite el Certificado. Sin palabras es excelente todo el material de estudios ,y los tutores responden a la brevedad.Yo lo recomiendo.Mil Gracias a todo el equipo.
+                        </div>
+                        <div class="card-review-footer">
+                            <div class="card-review-footer-user">
+                                <div class="profile-picture">
+                                    <img src="" alt="">
+                                </div>
+                                <p class="review-username"> Nombre y apellido</p>
+                            </div>
+                            <img class="google-market" src="media/gogle_review.png" alt="">
+                        </div>
+                    </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card-review">
+                            <div class="card-review-rating">
+                                <img src="media/icon/icon_star.svg" alt="">
+                                <img src="media/icon/icon_star.svg" alt="">
+                                <img src="media/icon/icon_star.svg" alt="">
+                                <img src="media/icon/icon_star.svg" alt="">
+                                <img src="media/icon/icon_star.svg" alt="">
+                            </div>
+                            <div class="card-review-body">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed ad rerum facere minima eos quisquam culpa, beatae perferendis, aliquam labore consequatur dolor repudiandae delectus quis quos laboriosam fugiat accusantium. Dolores.
+                            </div>
+                            <div class="card-review-footer">
+                                <div class="card-review-footer-user">
+                                    <div class="profile-picture">
+                                        <img src="" alt="">
+                                    </div>
+                                    <p class="review-username"> Nombre y apellido</p>
+                                </div>
+                                <img class="google-market" src="media/gogle_review.png" alt="">
+                            </div>
+                        </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card-review">
+                                <div class="card-review-rating">
+                                    <img src="media/icon/icon_star.svg" alt="">
+                                    <img src="media/icon/icon_star.svg" alt="">
+                                    <img src="media/icon/icon_star.svg" alt="">
+                                    <img src="media/icon/icon_star.svg" alt="">
+                                    <img src="media/icon/icon_star.svg" alt="">
+                                </div>
+                                <div class="card-review-body">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam error voluptatibus officia aspernatur laborum quos deleniti! Ducimus rerum eveniet dolorum nobis modi quidem minima et. Dolores dolorem iure esse magnam!
+                                </div>
+                                <div class="card-review-footer">
+                                    <div class="card-review-footer-user">
+                                        <div class="profile-picture">
+                                            <img src="" alt="">
+                                        </div>
+                                        <p class="review-username"> Nombre y apellido</p>
+                                    </div>
+                                    <img class="google-market" src="media/gogle_review.png" alt="">
+                                </div>
+                            </div>
+                            </div>
+
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </article>
+</section>
+
+    <script src="js/navbar.js"></script>
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+            centeredSlides: false,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: "auto",
+                    centeredSlides: true,
+                    spaceBetween: 12,
+                },
+                576: {
+                    slidesPerView: 3,
+                    spaceBetween: 13,
+                },
+                992: {
+                    slidesPerView: 4,
+                    spaceBetween: 16,
+                },
+            },
+        });
+    </script>
+    <script>
+        const swiperBanner = new Swiper('.swiper-banner', {
+            // Optional parameters
+            effect: "fade",
+            loop: true,
+            slidesPerView: 1,
+            centeredSlides: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+
+        //    autoplay: {
+        //        delay: 5000,
+        //        disableOnInteraction: false,
+        //    },
+        });
+    </script>
+    <script>
+        const swiperReviews = new Swiper('.swiper-reviews', {
+            // Optional parameters
+            loop: true,
+            slidesPerView: 1,
+            spaceBetween: 13,
+            centeredSlides: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+
+        //    autoplay: {
+        //        delay: 5000,
+        //        disableOnInteraction: false,
+        //    },
+        });
+    </script>
+
+</body>
+
+</html>
