@@ -2,11 +2,8 @@
   transition: all 0.3s ease-in-out;
 }
 
-html {
-  font-family: "Roboto", sans-serif;
-}
-
 body {
+  font-family: "Roboto", sans-serif !important;
   background-color: #ffffff;
 }
 body.clip {
