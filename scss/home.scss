@@ -51,7 +51,8 @@
 
             &-campo {
                 font-size: 0.75rem;
-                padding-block: 6px;
+                padding-top: 6px;
+                padding-top: 6px;
                 height: max-content;
             }
             &-button {
@@ -67,7 +68,6 @@
     }
 
     &-cont {
-      
         .title {
             font-size: 0.875rem;
             font-weight: 400;
@@ -83,8 +83,10 @@
 
         &-grid {
             display: grid;
-            grid-template-rows: repeat(3, 1fr);
+            grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+            grid-auto-rows: 1fr;
             row-gap: 0.5rem;
+            column-gap: 1rem;
         }
 
         &-big,
@@ -147,8 +149,8 @@
 
 .destacados {
     &-cont {
-        background-color: #F0F0F080;
-        &-top{
+        background-color: #f0f0f080;
+        &-top {
             display: flex;
             flex-flow: row wrap;
         }
@@ -157,9 +159,9 @@
             justify-content: center;
             flex-grow: 1;
             padding: 0 1rem;
-            column-gap: .5rem;
-            margin-top: .5rem;
-           
+            column-gap: 0.5rem;
+            margin-top: 0.5rem;
+
             .btn {
                 flex-grow: 1;
                 text-align: center;
@@ -172,16 +174,15 @@
 .banner {
     &-cont {
         width: 100%;
-        
+
         img {
             width: 100%;
         }
 
-        .swiper-banner{
+        .swiper-banner {
             position: relative;
         }
     }
-    
 }
 
 .reviews {
@@ -198,12 +199,13 @@
             color: #272727;
             text-align: center;
 
-            >span {
-                margin-top: .25rem;
+            > span {
+                margin-top: 0.25rem;
                 display: block;
 
-                span {display: block;}
-                
+                span {
+                    display: block;
+                }
             }
         }
 
@@ -227,17 +229,17 @@
             flex-direction: column;
             height: 100%;
             padding: 2rem 1rem 1rem;
-            background: #FFFFFF;
+            background: #ffffff;
             box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
 
             &-rating {
                 display: flex;
                 justify-content: center;
-                column-gap: .25rem;
-                margin-bottom: .75rem;
+                column-gap: 0.25rem;
+                margin-bottom: 0.75rem;
 
-                img{
+                img {
                     width: 1.25rem;
                 }
             }
@@ -248,7 +250,6 @@
                 line-height: 1rem;
                 text-align: center;
                 flex-grow: 1;
-                
             }
 
             &-footer {
@@ -261,7 +262,7 @@
                 &-user {
                     display: flex;
                     align-items: center;
-                    column-gap: .5rem;
+                    column-gap: 0.5rem;
                 }
 
                 p {
@@ -282,14 +283,126 @@
             }
         }
     }
-
-  
 }
 
-@media screen and (min-width: 765px) {
+.webinars {
+    overflow: hidden;
+    padding: 1.5rem 0 3rem;
+    background: linear-gradient(95.19deg, #3767ae 0%, #203b83 99.64%);
+
+    &-cont {
+        width: 100%;
+
+        &-info {
+            margin-bottom: 2rem;
+            text-align: center;
+            color: #fff;
+
+            &-title {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 0.35rem;
+                column-gap: 0.5rem;
+                font-size: 1.25rem;
+            }
+
+            &-bajada {
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: center;
+                row-gap: 1rem;
+                margin: 0 1rem;
+                font-size: 1rem;
+                line-height: 19px;
+            }
+        }
+
+        .swiper-webinars {
+            .swiper-slide {
+                position: relative;
+                height: auto;
+                width: unquote("max(284px, 70%)");
+
+                .card-webinar {
+                    display: grid;
+                    grid-template-columns: 1fr 2fr;
+                    height: 100%;
+                    overflow: hidden;
+                    border-radius: 4px;
+                    background-color: #fff;
+                    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+
+                    &-img {
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    &-info {
+                        padding: 1.75rem 1.25rem 1.5rem 0.75rem;
+                        &-top {
+                            display: flex;
+                            align-items: center;
+                            column-gap: 0.25rem;
+                            margin-bottom: 0.25rem;
+                            font-size: 0.5rem;
+                            text-transform: uppercase;
+
+                            .fecha {
+                                max-width: 22ch;
+                                white-space: nowrap;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                            }
+                        }
+
+                        &-title {
+                            margin-bottom: 0.5rem;
+                            font-size: 0.875rem;
+                            line-height: 1rem;
+                            font-weight: 700;
+                            color: $medicina-dark;
+                        }
+
+                        .btn {
+                            width: max-content;
+                            font-size: 0.75rem;
+                            line-height: 14px;
+                            padding: 0.25rem 0.75rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 767px) {
     .hero {
         background: url(../media/b-hero.jpg);
-        height: 20rem;
+
+        .searchbar-especialidad {
+            position: relative;
+
+            &-campo {
+                font-size: 1rem;
+            }
+
+            &-button {
+                padding: 0 1rem;
+                position: absolute;
+                display: block;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: #fff;
+                font-size: 1rem;
+                line-height: 19px;
+                text-transform: uppercase;
+                color: $black-light;
+                border: none;
+            }
+        }
     }
 
     .courses-top {
@@ -300,4 +413,14 @@
             display: block;
         }
     }
+
+    .best-seller,
+    .destacados {
+        &-cont {
+            width: $width-container;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
 }

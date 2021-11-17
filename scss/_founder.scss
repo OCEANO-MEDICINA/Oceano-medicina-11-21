@@ -11,11 +11,8 @@ $width-container: unquote("min(100% - 36px, 960px)");
     transition: all 0.3s ease-in-out;
 }
 
-html {
-    font-family: $font-main;
-}
-
 body {
+    font-family: $font-main !important;
     background-color: #ffffff;
     &.clip {
         overflow: hidden;
@@ -32,7 +29,8 @@ button {
 /* contenedor marginado*/
 .contenedor {
     width: $width-container;
-    margin-inline: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 @media screen and (min-width: 1441px) {
@@ -54,8 +52,14 @@ button {
 }
 
 .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: initial;
+    width: max-content;
     background-color: $primary;
     border-radius: 4px;
+    font-weight: 700;
     color: #fff;
     text-transform: uppercase;
 
@@ -69,13 +73,19 @@ button {
         padding: 0.375rem 0.75rem;
     }
 
-    &-medicina.active{
+    &-big {
+        font-size: 0.875rem;
+        line-height: 17px;
+        padding: 0.5rem 1.5rem;
+    }
+
+    &-medicina.active {
         background-color: $medicina;
     }
-    &-enfermeria.active{
+    &-enfermeria.active {
         background-color: $enfermeria;
     }
-    &-bibliografias.active{
+    &-bibliografias.active {
         background-color: $bibliografia;
     }
 
@@ -84,7 +94,7 @@ button {
     &-bibliografias {
         font-size: 12px;
         line-height: 14px;
-        padding: 4px .5rem;
+        padding: 4px 0.5rem;
         background-color: transparent;
         border: 1px solid #acacac;
         color: #acacac;
@@ -94,7 +104,6 @@ button {
             color: #fff;
             font-weight: 700;
         }
-
     }
 }
 
@@ -313,6 +322,16 @@ header {
     }
 }
 
+@media screen and (min-width: 768px) {
+    .btn {
+        &-big {
+            font-size: 1rem;
+            line-height: 19px;
+            padding: 0.375rem 1rem;
+        }
+    }
+}
+
 @media screen and (min-width: 1024px) {
     header {
         .navbar {
@@ -393,7 +412,8 @@ header {
                 }
                 .login-campus {
                     padding: 0.25rem 0.5rem;
-                    margin-inline: 0.75rem;
+                    margin-left: 0.75rem;
+                    margin-right: 0.75rem;
                 }
 
                 #dgwt-wcas-search-input-1-desktop {
