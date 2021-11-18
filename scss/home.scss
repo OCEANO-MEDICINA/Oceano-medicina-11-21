@@ -17,7 +17,7 @@
     &-cont {
         text-align: center;
         h1 {
-            font-size: 1.5rem;
+            font-size: clamp(1.5rem, 5vw, 2.25rem);
             font-weight: 700;
         }
         h1,
@@ -26,8 +26,8 @@
         }
 
         h2 {
-            font-size: 1rem;
-            line-height: 18.75px;
+            font-size: clamp(1rem, 3vw, 1.5rem);
+            line-height: 1.1719em;
             font-weight: 300;
         }
 
@@ -69,11 +69,11 @@
 
     &-cont {
         .title {
-            font-size: 0.875rem;
+            font-size: clamp(0.875rem, 3vw, 1rem);
             font-weight: 400;
-            line-height: 18px;
+            line-height: 1.25em;
             text-align: center;
-            width: 44ch;
+            max-width: 44ch;
             margin: 2.5rem auto 1.125rem;
 
             span {
@@ -83,7 +83,7 @@
 
         &-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(212px, 1fr));
             grid-auto-rows: 1fr;
             row-gap: 0.5rem;
             column-gap: 1rem;
@@ -104,14 +104,14 @@
             &-title {
                 z-index: 2;
                 color: #fff;
-                font-size: 1.25rem;
-                line-height: 23px;
+                font-size: clamp(1.25rem, 3vw, 1.5rem);
+                line-height: 1.25em;
                 font-weight: 700;
             }
             &-bajada {
                 z-index: 2;
                 color: #fff;
-                font: 0.875rem;
+                font-size: 0.875rem;
                 line-height: 17px;
             }
         }
@@ -148,8 +148,8 @@
 }
 
 .destacados {
+    background-color: #f0f0f080;
     &-cont {
-        background-color: #f0f0f080;
         &-top {
             display: flex;
             flex-flow: row wrap;
@@ -319,6 +319,7 @@
         }
 
         .swiper-webinars {
+            position: relative;
             .swiper-slide {
                 position: relative;
                 height: auto;
@@ -374,43 +375,109 @@
                 }
             }
         }
+        .swiper-pagination {
+            bottom: -1.75rem;
+        }
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 767px) {
+    .courses-top {
+        &-cont {
+            &-grid {
+                row-gap: 1rem;
+            }
+            &-big {
+                grid-column: 1/3;
+            }
+        }
     }
 }
 
 @media screen and (min-width: 767px) {
     .hero {
         background: url(../media/b-hero.jpg);
+        padding: 5.75rem 1rem 7rem;
+
+        &-cont {
+            h2 {
+                .salto-de-linea {
+                    display: inline;
+                }
+            }
+        }
 
         .searchbar-especialidad {
             position: relative;
+            box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.6);
 
             &-campo {
+                position: relative;
                 font-size: 1rem;
+                padding-right: 6rem !important;
             }
 
             &-button {
                 padding: 0 1rem;
                 position: absolute;
-                display: block;
+                display: flex;
+                align-items: center;
+                height: 100%;
                 right: 0;
-                top: 50%;
-                transform: translateY(-50%);
-                background-color: #fff;
+                background-color: transparent;
                 font-size: 1rem;
                 line-height: 19px;
+                font-weight: 700;
                 text-transform: uppercase;
                 color: $black-light;
                 border: none;
+                cursor: pointer;
+
+                &:hover {
+                    color: $primary;
+                }
+            }
+            .icon {
+                font-size: 1.25rem;
+
+                .mdi-chevron-right {
+                    display: none;
+                }
             }
         }
     }
 
     .courses-top {
+        position: relative;
+
         &-mobile {
             display: none;
         }
         &-desktop {
             display: block;
+        }
+        &-cont {
+            position: relative;
+            z-index: 2;
+
+            &-big,
+            &-small {
+                justify-content: flex-end;
+                border-radius: 10px;
+                background-position: 70% top !important;
+            }
+            .title {
+                max-width: 78ch;
+                margin: 2rem auto 1rem;
+            }
+            .btn {
+                margin-top: 0.75rem;
+            }
+            &-small.plan-estudio {
+                .btn {
+                    padding: 0.375rem 0.5rem;
+                }
+            }
         }
     }
 
@@ -420,7 +487,92 @@
             width: $width-container;
         }
     }
+
+    .banner {
+        margin-bottom: 2rem;
+    }
+
+    .destacados {
+        &-cont {
+            &-title,
+            &-top-filters {
+                flex-grow: 0;
+                padding: 0;
+            }
+            &-top {
+                justify-content: space-between;
+
+                &-filters {
+                    margin-top: 0;
+
+                    .btn {
+                        min-width: 135px;
+                    }
+                }
+            }
+        }
+    }
+
+    .reviews {
+        &-cont {
+            display: grid;
+            grid-template-columns: 45% 55%;
+            align-items: center;
+
+            &-title {
+                text-align: left;
+                width: 26ch;
+                margin: 0;
+            }
+            .reviews-slider {
+                position: relative;
+            }
+            .swiper-reviews {
+                overflow: hidden;
+                .swiper-slide {
+                    width: 100%;
+                }
+            }
+        }
+    }
 }
 
 @media screen and (min-width: 1024px) {
+    .courses-top {
+        padding-top: 2rem;
+        margin-top: -4rem;
+        &-cont {
+            .title {
+                max-width: 78ch;
+                margin: 0rem auto 2rem;
+            }
+            &-grid {
+                grid-template-rows: 340px;
+            }
+
+            &-big {
+                grid-column: 1/3;
+            }
+            &-small {
+                h4 .salto-de-linea {
+                    display: inline;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1445px) {
+    .courses-top {
+        &-cont {
+            &-grid {
+                grid-template-columns: 2fr 1fr 1fr;
+                grid-template-rows: 340px;
+            }
+
+            &-big {
+                grid-column: 1;
+            }
+        }
+    }
 }
