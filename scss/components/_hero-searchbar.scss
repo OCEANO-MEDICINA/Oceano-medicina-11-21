@@ -1,0 +1,107 @@
+.hero {
+    position: relative;
+    background: linear-gradient(349.47deg, rgba(32, 59, 131, 0.9) 31.24%, rgba(83, 152, 255, 0.9) 84.32%);
+    padding: 4.75rem 1rem 3.25rem;
+
+    &-cont {
+        text-align: center;
+        h1 {
+            font-size: clamp(1.5rem, 5vw, 2.25rem);
+            font-weight: 700;
+        }
+        h1,
+        h2 {
+            color: #fff;
+        }
+
+        h2 {
+            font-size: clamp(1rem, 3vw, 1.5rem);
+            line-height: 1.1719em;
+            font-weight: 300;
+        }
+
+        .searchbar-especialidad {
+            position: absolute;
+            display: flex;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 50%);
+            width: unquote("min(100% - 2rem, 30rem)");
+
+            .field {
+                width: 100%;
+                margin: 0;
+
+                .icon {
+                    height: 100%;
+                    width: 2em;
+                }
+            }
+
+            &-campo {
+                font-size: 0.75rem;
+                padding-top: 6px;
+                padding-top: 6px;
+                height: max-content;
+            }
+            &-button {
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 767px) {
+    .hero {
+        background: 25% top url(../media/b-hero.jpg);
+        background-size: cover;
+        padding: 5.75rem 1rem 7rem;
+
+        &-cont {
+            h2 {
+                .salto-de-linea {
+                    display: inline;
+                }
+            }
+        }
+
+        .searchbar-especialidad {
+            position: relative;
+            box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.6);
+
+            &-campo {
+                position: relative;
+                font-size: 1rem;
+                padding-right: 6rem !important;
+            }
+
+            &-button {
+                padding: 0 1rem;
+                position: absolute;
+                display: flex;
+                align-items: center;
+                height: 100%;
+                right: 0;
+                background-color: transparent;
+                font-size: 1rem;
+                line-height: 19px;
+                font-weight: 700;
+                text-transform: uppercase;
+                color: $black-light;
+                border: none;
+                cursor: pointer;
+
+                &:hover {
+                    color: $primary;
+                }
+            }
+            .icon {
+                font-size: 1.25rem;
+
+                .mdi-chevron-right {
+                    display: none;
+                }
+            }
+        }
+    }
+}

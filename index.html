@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejemplo</title>
+
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -676,6 +677,63 @@
                     <!-- If we need pagination -->
                     <div class="swiper-pagination"></div>
                 </div>
+                <div class="swiper-webinars-desktop">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div class="card-webinar">
+                                <div class="card-webinar-img"
+                                    style="background: center/cover url(media/webinar-home.jpg);"></div>
+                                <div class="card-webinar-info">
+                                    <div class="card-webinar-info-top">
+                                        <i class="mdi mdi-clock-outline"></i>
+                                        <p class="fecha">Jueves 5 de Agosto</p>
+                                        <p class="horas">16 horas</p>
+                                    </div>
+                                    <h4 class="card-webinar-info-title">Coaching en la práctica
+                                        profesional en salud</h4>
+                                    <a href="" class="btn">Quiero anotarme</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card-webinar">
+                                <div class="card-webinar-img"
+                                    style="background: center/cover url(media/webinar-home.jpg);"></div>
+                                <div class="card-webinar-info">
+                                    <div class="card-webinar-info-top">
+                                        <i class="mdi mdi-clock-outline"></i>
+                                        <p class="fecha">Jueves 5 de Agosto</p>
+                                        <p class="horas">16 horas</p>
+                                    </div>
+                                    <h4 class="card-webinar-info-title">Coaching en la práctica
+                                        profesional en salud</h4>
+                                    <a href="" class="btn btn-mid">Quiero anotarme</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card-webinar">
+                                <div class="card-webinar-img"
+                                    style="background: center/cover url(media/webinar-home.jpg);"></div>
+                                <div class="card-webinar-info">
+                                    <div class="card-webinar-info-top">
+                                        <i class="mdi mdi-clock-outline"></i>
+                                        <p class="fecha">Miércoles 20 de Septiembre</p>
+                                        <p class="horas">16 horas</p>
+                                    </div>
+                                    <h4 class="card-webinar-info-title">Coaching en la práctica
+                                        profesional en salud</h4>
+                                    <a href="" class="btn btn-mid">Quiero anotarme</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
             </div>
         </article>
     </section>
@@ -751,7 +809,7 @@
         });
     </script>
     <script>
-        const swiperWebinars = new Swiper('.swiper-webinars', {
+        const swiperWebinarsDesktop = new Swiper('.swiper-webinars', {
             // Optional parameters
             loop: true,
             slidesPerView: "auto",
@@ -761,6 +819,55 @@
                 el: ".swiper-pagination",
                 clickable: true,
             },
+
+            breakpoints: {
+                992: {
+                    effect: "coverflow",
+                    grabCursor: true,
+                    centeredSlides: true,
+                    slidesPerView: "auto",
+                    centeredSlides: true,
+                    initialSlide: 2,
+                    coverflowEffect: {
+                        rotate: 0,
+                        stretch: 0,
+                        depth: 100,
+                        modifier: 10,
+                        initialSlide: 3,
+                        slideShadows: true
+                    },
+                },
+
+            },
+
+
+
+            //    autoplay: {
+            //        delay: 5000,
+            //        disableOnInteraction: false,
+            //    },
+        });
+    </script>
+    <script>
+        const swiperWebinars = new Swiper('.swiper-webinars-desktop', {
+            // Optional parameters
+            loop: "true",
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            centeredSlides: true,
+            initialSlide: 2,
+            coverflowEffect: {
+                rotate: 0,
+                stretch: 0,
+                depth: 25,
+                modifier: 10,
+                initialSlide: 3,
+                slideShadows: true
+            },
+
+
 
             //    autoplay: {
             //        delay: 5000,

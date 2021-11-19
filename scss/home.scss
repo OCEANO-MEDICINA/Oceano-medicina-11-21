@@ -1,65 +1,20 @@
 @import "_founder";
-@import "_product-card";
+
+@import "components/_product-card";
+
+// NAVBAR
+
+@import "components/_header-navbar";
+
 // HERO
+
+@import "components/_hero-searchbar";
 
 .absolute-center {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
-
-.hero {
-    position: relative;
-    background: linear-gradient(349.47deg, rgba(32, 59, 131, 0.9) 31.24%, rgba(83, 152, 255, 0.9) 84.32%);
-    padding: 4.75rem 1rem 3.25rem;
-
-    &-cont {
-        text-align: center;
-        h1 {
-            font-size: clamp(1.5rem, 5vw, 2.25rem);
-            font-weight: 700;
-        }
-        h1,
-        h2 {
-            color: #fff;
-        }
-
-        h2 {
-            font-size: clamp(1rem, 3vw, 1.5rem);
-            line-height: 1.1719em;
-            font-weight: 300;
-        }
-
-        .searchbar-especialidad {
-            position: absolute;
-            display: flex;
-            bottom: 0;
-            left: 50%;
-            transform: translate(-50%, 50%);
-            width: unquote("min(100% - 2rem, 30rem)");
-
-            .field {
-                width: 100%;
-                margin: 0;
-
-                .icon {
-                    height: 100%;
-                    width: 2em;
-                }
-            }
-
-            &-campo {
-                font-size: 0.75rem;
-                padding-top: 6px;
-                padding-top: 6px;
-                height: max-content;
-            }
-            &-button {
-                display: none;
-            }
-        }
-    }
 }
 
 .courses-top {
@@ -193,8 +148,8 @@
         &-title {
             width: 34ch;
             margin: 0 auto 0.75rem;
-            font-size: 1rem;
-            line-height: 19px;
+            font-size: clamp(1rem, 3vw, 1.5rem);
+            line-height: 1.15em;
             font-weight: 500;
             color: #272727;
             text-align: center;
@@ -246,8 +201,8 @@
 
             &-body {
                 margin-bottom: 2rem;
-                font-size: 0.875rem;
-                line-height: 1rem;
+                font-size: clamp(0.875rem, 2vw, 1rem);
+                line-height: 1.2em;
                 text-align: center;
                 flex-grow: 1;
             }
@@ -266,7 +221,7 @@
                 }
 
                 p {
-                    font-size: 0.875rem;
+                    font-size: clamp(0.875rem, 2vw, 1.25rem);
                     font-weight: 700;
                     color: $medicina-dark;
                 }
@@ -318,12 +273,23 @@
             }
         }
 
-        .swiper-webinars {
+        .swiper-webinars,
+        .swiper-webinars-desktop {
             position: relative;
+
             .swiper-slide {
+                visibility: hidden;
                 position: relative;
                 height: auto;
                 width: unquote("max(284px, 70%)");
+                transition: all 0ms !important;
+
+                &-active,
+                &-prev,
+                &-next {
+                    visibility: visible;
+                    transition: all 0ms !important;
+                }
 
                 .card-webinar {
                     display: grid;
@@ -395,58 +361,6 @@
 }
 
 @media screen and (min-width: 767px) {
-    .hero {
-        background: url(../media/b-hero.jpg);
-        padding: 5.75rem 1rem 7rem;
-
-        &-cont {
-            h2 {
-                .salto-de-linea {
-                    display: inline;
-                }
-            }
-        }
-
-        .searchbar-especialidad {
-            position: relative;
-            box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.6);
-
-            &-campo {
-                position: relative;
-                font-size: 1rem;
-                padding-right: 6rem !important;
-            }
-
-            &-button {
-                padding: 0 1rem;
-                position: absolute;
-                display: flex;
-                align-items: center;
-                height: 100%;
-                right: 0;
-                background-color: transparent;
-                font-size: 1rem;
-                line-height: 19px;
-                font-weight: 700;
-                text-transform: uppercase;
-                color: $black-light;
-                border: none;
-                cursor: pointer;
-
-                &:hover {
-                    color: $primary;
-                }
-            }
-            .icon {
-                font-size: 1.25rem;
-
-                .mdi-chevron-right {
-                    display: none;
-                }
-            }
-        }
-    }
-
     .courses-top {
         position: relative;
 
@@ -484,12 +398,49 @@
     .best-seller,
     .destacados {
         &-cont {
-            width: $width-container;
+            width: $width-container-solapa;
+        }
+        .swiper {
+            padding: 0 2rem;
+
+            &::before {
+                position: absolute;
+                z-index: 2;
+                content: "";
+                left: 0;
+                top: 0;
+                width: 2rem;
+                height: 100%;
+                background: linear-gradient(90deg, #fff 0 50%, transparent 100%);
+            }
+            &::after {
+                position: absolute;
+                z-index: 2;
+                content: "";
+                right: 0;
+                top: 0;
+                width: 2rem;
+                height: 100%;
+                background: linear-gradient(270deg, #fff 0 50%, transparent 100%);
+            }
         }
     }
 
     .banner {
         margin-bottom: 2rem;
+
+        &-cont {
+            width: $width-container;
+            border-radius: 10px;
+            overflow: hidden;
+
+            .swiper-banner {
+                aspect-ratio: 6/1;
+            }
+            img {
+                aspect-ratio: 6/1;
+            }
+        }
     }
 
     .destacados {
@@ -501,6 +452,7 @@
             }
             &-top {
                 justify-content: space-between;
+                padding: 0 2rem;
 
                 &-filters {
                     margin-top: 0;
@@ -508,6 +460,14 @@
                     .btn {
                         min-width: 135px;
                     }
+                }
+            }
+            .swiper {
+                &::before {
+                    background: linear-gradient(90deg, #f7f7f7 0 50%, transparent 100%);
+                }
+                &::after {
+                    background: linear-gradient(270deg, #f7f7f7 0 50%, transparent 100%);
                 }
             }
         }
@@ -523,15 +483,52 @@
                 text-align: left;
                 width: 26ch;
                 margin: 0;
+                > span {
+                    margin-top: 0.5rem;
+                }
             }
             .reviews-slider {
                 position: relative;
-            }
-            .swiper-reviews {
-                overflow: hidden;
-                .swiper-slide {
-                    width: 100%;
+                right: -1rem;
+
+                .swiper-reviews {
+                    overflow: hidden;
+
+                    .swiper-slide {
+                        width: 100% !important;
+                        height: max-content;
+                    }
                 }
+                .card-review {
+                    margin: 1rem;
+                    padding: 4rem 2rem 1rem;
+
+                    &-footer {
+                        .profile-picture {
+                            height: 52px;
+                            width: 52px;
+                        }
+                        .google-market {
+                            width: 104px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .webinars {
+        &-cont {
+            width: $width-container;
+
+            .swiper-webinars,
+            .swiper-webinars-desktop {
+                .swiper-slide {
+                    width: unquote("max(476px, 30%)");
+                }
+            }
+            .swiper-webinars {
+                display: none;
             }
         }
     }
@@ -573,6 +570,12 @@
             &-big {
                 grid-column: 1;
             }
+        }
+    }
+    .best-seller,
+    .destacados {
+        &-cont {
+            width: 1250px !important;
         }
     }
 }
