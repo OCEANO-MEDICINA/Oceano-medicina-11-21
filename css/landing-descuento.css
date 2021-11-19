@@ -278,6 +278,9 @@ header .navbar-brand img {
 }
 
 @media screen and (min-width: 767px) {
+  .form {
+    margin: 2.5rem 0 8rem;
+  }
   .form-cont {
     position: relative;
     z-index: 1;

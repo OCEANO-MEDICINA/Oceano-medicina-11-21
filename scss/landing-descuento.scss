@@ -148,6 +148,7 @@ $width-container: unquote("min(100% - 36px, 960px)");
 
 @media screen and (min-width: 767px) {
     .form {
+        margin: 2.5rem 0 8rem;
         &-cont {
             position: relative;
             z-index: 1;
