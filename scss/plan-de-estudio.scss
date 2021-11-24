@@ -1,0 +1,23 @@
+@import "_founder";
+
+// NAVBAR
+
+@import "components/_header-navbar";
+
+// HERO
+
+@import "components/_hero";
+
+// FOOTER
+
+@import "components/_footer";
+
+.hero {
+    &-cont {
+        h2 {
+            .salto-de-linea {
+                display: block;
+            }
+        }
+    }
+}

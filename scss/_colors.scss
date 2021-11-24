@@ -1,5 +1,5 @@
 $primary: #ff266e;
-$primary-dark: #ff1463;
+$primary-dark: #ec125b;
 $primary-invert: #ffffff;
 $medicina: #0055a2;
 $medicina-dark: #02204d;
@@ -20,7 +20,7 @@ $colores: (
     "medicina": $medicina,
     "enfermeria": $enfermeria,
     "bibliografia": $bibliografia,
-    "filtro-tienda": #6c6c6c,
+    "filtro-tienda": #fff,
 );
 
 @each $name, $color in $colores {
@@ -28,4 +28,8 @@ $colores: (
         background-color: $color;
         color: #fff;
     }
+}
+
+.background-filtro-tienda {
+    color: $black-light;
 }

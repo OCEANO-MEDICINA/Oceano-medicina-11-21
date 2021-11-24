@@ -24,8 +24,12 @@
 }
 
 .background-filtro-tienda {
-  background-color: #6c6c6c;
+  background-color: #fff;
   color: #fff;
+}
+
+.background-filtro-tienda {
+  color: #575757;
 }
 
 .btn {
@@ -54,7 +58,7 @@
 }
 
 .btn:hover {
-  background-color: #ff1463;
+  background-color: #ec125b;
   color: #fff;
 }
 
@@ -108,6 +112,10 @@ header .navbar-brand img {
   }
   header .navbar-brand .icons {
     display: none;
+  }
+  header .navbar .accordion-panel {
+    max-height: unset;
+    overflow: unset;
   }
 }
 

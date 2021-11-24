@@ -29,7 +29,21 @@ button {
 
 // CLASES GENERALES
 
-/* contenedor marginado*/
+// ACCORDION
+
+.accordion-trigger.active {
+    i {
+        transform: rotate(180deg);
+    }
+}
+.accordion-panel {
+    max-height: 0;
+    overflow: hidden;
+}
+.accordion-trigger.active ~ .accordion-panel {
+    display: block;
+    overflow: unset;
+}
 
 .absolute-center {
     position: absolute;
@@ -37,6 +51,8 @@ button {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+/* contenedor marginado*/
 
 .contenedor {
     width: $width-container;
@@ -49,6 +65,8 @@ button {
         width: min(1250px - 64px) !important;
     }
 }
+
+// SOLAPA SUP
 
 @media screen and (min-width: 1024px) {
     .solapa-sup {

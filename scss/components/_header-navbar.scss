@@ -401,6 +401,11 @@ header {
             &-overlay {
                 display: none;
             }
+
+            .accordion-panel {
+                max-height: unset;
+                overflow: unset;
+            }
         }
     }
 }
