@@ -40,9 +40,9 @@
 
             &-campo {
                 font-size: 0.75rem;
-                padding-top: 6px;
-                padding-top: 6px;
+                padding: 6px;
                 height: max-content;
+                min-height: 32px;
             }
             &-button {
                 display: none;

@@ -30,6 +30,14 @@ button {
 // CLASES GENERALES
 
 /* contenedor marginado*/
+
+.absolute-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .contenedor {
     width: $width-container;
     margin-left: auto;
@@ -78,10 +86,12 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-    line-height: initial;
     width: max-content;
     background-color: $primary;
     border-radius: 4px;
+    font-size: 12px;
+    line-height: 1.1em;
+    padding: 6px 0.5rem 3px;
     font-weight: 700;
     color: #fff;
     text-transform: uppercase;
@@ -128,9 +138,6 @@ button {
     &-medicina,
     &-enfermeria,
     &-bibliografias {
-        font-size: 12px;
-        line-height: 14px;
-        padding: 4px 0.5rem;
         background-color: transparent;
         border: 1px solid #acacac;
         color: #acacac;

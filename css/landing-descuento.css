@@ -1,3 +1,33 @@
+.background-primary {
+  background-color: #ff266e;
+  color: #fff;
+}
+
+.background-primary {
+  background-color: #ff266e;
+  color: #fff;
+}
+
+.background-medicina {
+  background-color: #0055a2;
+  color: #fff;
+}
+
+.background-enfermeria {
+  background-color: #008066;
+  color: #fff;
+}
+
+.background-bibliografia {
+  background-color: #f09146;
+  color: #fff;
+}
+
+.background-filtro-tienda {
+  background-color: #6c6c6c;
+  color: #fff;
+}
+
 .btn {
   display: -webkit-box;
   display: -ms-flexbox;

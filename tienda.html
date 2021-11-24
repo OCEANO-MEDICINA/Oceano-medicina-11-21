@@ -198,25 +198,31 @@
     </section>
 
     <section id="tienda" class="tienda">
-        <article class="tienda-cont">
+        <div class="solapa-sup"></div>
+        <article class="tienda-cont contenedor mx-auto">
             <div class="tienda-cont-filtros">
-                <div class="tienda_filtros">
-                    <div class="searchbar_filter">
-                        <img class="search_icon" src="/wp-content/themes/oceano/_img-newTheme/icon_search_b.png" alt="">
-                        <input class="input" id="quicksearch" type="text" placeholder="¿Qué especialidad te interesa?"
-                            value="">
-                    </div>
-                    <div class="filter-aplicados" data-filter-group="filtrosaplicados">
-                        <h6>FILTROS APLICADOS</h6>
-                        <ul id="output_filtros">
-                        </ul>
-                    </div>
 
+                <div class="searchbar-filter">
+                    <input class="input" id="quicksearch" type="text" placeholder="BUSCAR" value="">
+                </div>
+                <div class="filtros-aplicados" data-filter-group="filtrosaplicados">
+                    <h6>FILTROS APLICADOS</h6>
+                    <ul id="output-filtros" class="output-filtros">
+                        <li><a class="btn background-bibliografia">Descargables
+                                <i class="mdi mdi-close"></i></a></li>
+                        <li><a class="btn background-filtro-tienda">anestesiología
+                                y dolor <i class="mdi mdi-close"></i></a></li>
+                        <li><a class="btn background-enfermeria">Personal de
+                                enfermería
+                                y auxiliares<i class="mdi mdi-close"></i></a></li>
+                    </ul>
+                </div>
 
-                    <div class="button-group especialidad">
-                        <button class="btn dropdown-toggle btn_especialidad_dropdown" type="button"
+                <div class="tienda-cont-filtros-group">
+                    <div class="especialidad">
+                        <button class="dropdown-toggle btn-especialidad-dropdown has-dropdown" type="button"
                             id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                            ESPECIALIDAD
+                            ESPECIALIDAD <i class="mdi mdi-chevron-down"></i>
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                             <li><a class="dropdown-item filter_button" data-filter="*">Mostrar todo</a></li>
@@ -296,159 +302,257 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="filter-formacion button-group " data-filter-group="tipos">
-                        <div class="d-sm-none">
-                            <button class="sort_button accordion-button collapsed" type="button"
-                                data-bs-toggle="collapse" data-bs-target="#dropdownformacionfilter"
-                                aria-expanded="false" aria-controls="dropdownformacionfilter">
-                                TIPO DE RECURSO
-                            </button>
-                            <ul id="dropdownformacionfilter" class="accordion-collapse collapse "
-                                aria-labelledby="dropdownformacionfilter" data-bs-parent="#dropdownformacionfilter">
-                                <li>
-                                    <a class="filter_button" data-filter=".downloadable">Descargables</a>
-                                </li>
-                                <li>
-                                    <a class="filter_button" data-filter=".bibliography">Bibliografías</a>
-                                </li>
-                                <li>
-                                    <a class="filter_button" data-filter=".course">Cursos</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="d-none d-sm-block filter_mobile">
-                            <div class="filter-promos button-group " data-filter-group="tipos">
-                                <h6>TIPO DE RECURSO</h6>
-                                <ul>
+
+                    <div class="filter-profesiones" data-filter-group="profesiones">
+
+                        <h6>PROFESIONES</h6>
+                        <ul>
+                            <li>
+                                <a data-filter=".medicos">Personal médico</a>
+                            </li>
+                            <li>
+                                <a data-filter=".enfermeros-auxiliares">Personal de
+                                    enfermería
+                                    y auxiliares</a>
+                            </li>
+                            <li>
+                                <a data-filter=".otra-profesion">Otra profesión</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="filter-recurso" data-filter-group="tipos">
+
+                        <h6>TIPO DE RECURSO</h6>
+                        <ul>
+                            <li>
+                                <a data-filter=".downloadable">Descargables</a>
+                            </li>
+                            <li>
+                                <a data-filter=".bibliography">Bibliografías</a>
+                            </li>
+                            <li>
+                                <a data-filter=".course">Cursos</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="filter-duracion" data-filter-group="duracion">
+
+                        <h6>DURACIÓN</h6>
+                        <ul>
+                            <li>
+                                <a data-filter=".hasta100">Hasta 100 hs</a>
+                            </li>
+                            <li>
+                                <a data-filter=".de100">De 100 a 300 hs</a>
+                            </li>
+                            <li>
+                                <a data-filter=".mas300">Más de 300 hs</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+
+
+
+            </div>
+            <div class="tienda-cont-products">
+                <div class="tienda-cont-products-filters">
+                    <p class="filter-count">176 ITEMS DISPONIBLES</p>
+                    <div class="filtrar">
+                        <a id="btnFiltrarPor"><i class="mdi mdi-tune-variant"></i> Filtrar</a>
+                        <div class="filtrar-cont">
+
+                            <div class="especialidad">
+                                <a class="filtrar-cont-button btn-especialidad-dropdown active" type="button"
+                                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    ESPECIALIDAD <i class="mdi mdi-chevron-down"></i>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item filter_button" data-filter="*">Mostrar todo</a></li>
                                     <li>
-                                        <a class="filter_button" data-filter=".downloadable">Descargables</a>
+                                        <a class="dropdown-item filter_button"
+                                            data-filter=".traumatologia">Traumatología</a>
                                     </li>
                                     <li>
-                                        <a class="filter_button" data-filter=".bibliography">Bibliografías</a>
+                                        <a class="dropdown-item filter_button"
+                                            data-filter=".anestesiologia-y-dolor">Anestesiología
+                                            y dolor</a>
                                     </li>
                                     <li>
-                                        <a class="filter_button" data-filter=".course">Cursos</a>
+                                        <a class="dropdown-item filter_button"
+                                            data-filter=".cardiologia">Cardiología</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item filter_button" data-filter=".cirugia">Cirugía</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item filter_button"
+                                            data-filter=".dermatologia">Dermatología</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item filter_button" data-filter=".diabetes">Diabetes</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item filter_button"
+                                            data-filter=".emergentologia">Emergentología</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item filter_button"
+                                            data-filter=".gastroenterologia">Gastroenterología</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item filter_button" data-filter=".geriatria">Geriatría</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item filter_button"
+                                            data-filter=".ginecologia">Ginecología</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item filter_button"
+                                            data-filter=".infectologia">Infectología</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item filter_button"
+                                            data-filter=".kinesiologia">Kinesiología</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item filter_button" data-filter=".medicina-general">Medicina
+                                            general</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item filter_button"
+                                            data-filter=".medicina-intensiva">Medicina
+                                            intensiva</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item filter_button" data-filter=".nutricion">Nutrición</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item filter_button"
+                                            data-filter=".obstetricia">Obstetricia</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item filter_button"
+                                            data-filter=".odontologia">Odontología</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item filter_button"
+                                            data-filter=".oftalmologia">Oftalmología</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item filter_button" data-filter=".oncologia">Oncología</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item filter_button" data-filter=".psicologia">Psicología</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item filter_button"
+                                            data-filter=".psiquiatria">Psiquiatría</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item filter_button" data-filter=".pediatria">Pediatría</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item filter_button"
+                                            data-filter=".hematologia">Hematología</a>
                                     </li>
                                 </ul>
                             </div>
-                        </div>
-                    </div>
-                    <div class="filter-promos button-group " data-filter-group="profesiones">
-                        <div class="d-sm-none">
-                            <button class="sort_button accordion-button collapsed" type="button"
-                                data-bs-toggle="collapse" data-bs-target="#dropdownprofesionesnfilter"
-                                aria-expanded="false" aria-controls="dropdownprofesionesnfilter">
-                                PROFESIONES
-                            </button>
-                            <ul id="dropdownprofesionesnfilter" class="accordion-collapse collapse "
-                                aria-labelledby="dropdownprofesionesnfilter"
-                                data-bs-parent="#dropdownprofesionesnfilter">
-                                <li>
-                                    <a class="filter_button" data-filter=".medicos">Personal médico</a>
-                                </li>
-                                <li>
-                                    <a class="filter_button" data-filter=".enfermeros-auxiliares">Personal de enfermería
-                                        y
-                                        auxiliares</a>
-                                </li>
-                                <li>
-                                    <a class="filter_button" data-filter=".otra-profesion">Otra profesión</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="d-none d-sm-block">
-                            <div class="filter-promos button-group " data-filter-group="profesiones">
-                                <h6>PROFESIONES</h6>
-                                <ul>
+                            <div class="filter-recurso" data-filter-group="tipos">
+
+                                <a class="filtrar-cont-button">TIPO DE RECURSO<i class="mdi mdi-chevron-down"></i></a>
+                                <ul class="dropdown-menu">
                                     <li>
-                                        <a class="filter_button" data-filter=".medicos">Personal médico</a>
+                                        <a class="dropdown-item" data-filter=".downloadable">Descargables</a>
                                     </li>
                                     <li>
-                                        <a class="filter_button" data-filter=".enfermeros-auxiliares">Personal de
+                                        <a class="dropdown-item" data-filter=".bibliography">Bibliografías</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" data-filter=".course">Cursos</a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                            <div class="filter-profesiones" data-filter-group="profesiones">
+
+                                <a class="filtrar-cont-button">PROFESIONES<i class="mdi mdi-chevron-down"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a class="dropdown-item" data-filter=".medicos">Personal médico</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" data-filter=".enfermeros-auxiliares">Personal de
                                             enfermería
                                             y auxiliares</a>
                                     </li>
                                     <li>
-                                        <a class="filter_button" data-filter=".otra-profesion">Otra profesión</a>
+                                        <a class="dropdown-item" data-filter=".otra-profesion">Otra profesión</a>
                                     </li>
                                 </ul>
+
+                            </div>
+                            <div class="filter-duracion" data-filter-group="duracion">
+
+                                <a class="filtrar-cont-button">DURACIÓN <i class="mdi mdi-chevron-down"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a class="dropdown-item" data-filter=".hasta100">Hasta 100 hs</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" data-filter=".de100">De 100 a 300 hs</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" data-filter=".mas300">Más de 300 hs</a>
+                                    </li>
+                                </ul>
+
                             </div>
                         </div>
                     </div>
-                    <div class="filter-horas button-group " data-filter-group="duracion">
-                        <div class="d-sm-none">
-                            <button class="sort_button accordion-button collapsed" type="button"
-                                data-bs-toggle="collapse" data-bs-target="#dropdownduracionfilter" aria-expanded="false"
-                                aria-controls="dropdownduracionfilter">
-                                DURACIÓN
-                            </button>
-                            <ul id="dropdownduracionfilter" class="accordion-collapse collapse "
-                                aria-labelledby="dropdownduracionfilter" data-bs-parent="#dropdownduracionfilter">
-                                <li>
-                                    <a class="filter_button" data-filter=".hasta100">Hasta 100 hs</a>
-                                </li>
-                                <li>
-                                    <a class="filter_button" data-filter=".de100">De 100 a 300 hs</a>
-                                </li>
-                                <li>
-                                    <a class="filter_button" data-filter=".mas300">Más de 300 hs</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="d-none d-sm-block">
-                            <h6>DURACIÓN</h6>
-                            <ul>
-                                <li>
-                                    <a class="filter_button" data-filter=".hasta100">Hasta 100 hs</a>
-                                </li>
-                                <li>
-                                    <a class="filter_button" data-filter=".de100">De 100 a 300 hs</a>
-                                </li>
-                                <li>
-                                    <a class="filter_button" data-filter=".mas300">Más de 300 hs</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="tienda-cont-products">
-                <div class="tienda-cont-products-filters">
-                    <p class="applied_filter_profession"></p>
-                    <p class="filter-count">176 ITEMS DISPONIBLES</p>
-                    <div class="filtros_sorting">
-                        <p id="btnOrdenarPor">ORDENAR POR</p>
-                        <div class="filtros_sorting_cont">
-                            <a class="sort_button" type="button" id="dropdownduracion" data-bs-toggle="dropdown"
+                    <div class="sorting">
+                        <a id="btnOrdenarPor"><i class="mdi mdi-sort"></i> Ordenar</a>
+                        <div class="sorting-cont">
+                            <a class="sorting-cont-button" type="button" id="dropdownduracion" data-bs-toggle="dropdown"
                                 aria-expanded="false">
-                                DURACION
+                                DURACION <i class="mdi mdi-chevron-down"></i>
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                <li><a class="dropdown-item order_button" data-sortby="duracionAsc">Mayor a menor</a>
+                                <li><a class="dropdown-item order_button" data-sortby="duracionAsc">Mayor a menor <i
+                                            class="mdi mdi-radiobox-marked"></i></a>
                                 </li>
-                                <li><a class="dropdown-item order_button" data-sortby="duracionDes">Menor a mayor</a>
-                                </li>
-                            </ul>
-                            <a class="sort_button" type="button" id="dropdownnovedad" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                NOVEDAD
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                <li><a class="dropdown-item order_button" data-sortby="novedadAsc">Novedades Primero</a>
-                                </li>
-                                <li><a class="dropdown-item order_button" data-sortby="novedadDes">Novedades Ultimo</a>
+                                <li><a class="dropdown-item order_button" data-sortby="duracionDes">Menor a mayor <i
+                                            class="mdi mdi-radiobox-blank"></i></a>
                                 </li>
                             </ul>
-                            <a class="sort_button" type="button" id="dropdowncosto" data-bs-toggle="dropdown"
+                            <a class="sorting-cont-button" type="button" id="dropdownnovedad" data-bs-toggle="dropdown"
                                 aria-expanded="false">
-                                COSTO
+                                NOVEDAD <i class="mdi mdi-chevron-down"></i>
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                <li><a class="dropdown-item order_button" data-sortby="costoAsc">Mayor a menor</a></li>
-                                <li><a class="dropdown-item order_button" data-sortby="costoDes">Menor a mayor</a></li>
+                                <li><a class="dropdown-item order_button" data-sortby="novedadAsc">Novedades Primero <i
+                                            class="mdi mdi-radiobox-blank"></i></a>
+                                </li>
+                                <li><a class="dropdown-item order_button" data-sortby="novedadDes">Novedades Ultimo <i
+                                            class="mdi mdi-radiobox-blank"></i></a>
+                                </li>
+                            </ul>
+                            <a class="sorting-cont-button" type="button" id="dropdowncosto" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                COSTO <i class="mdi mdi-chevron-down"></i>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item order_button" data-sortby="costoAsc">Mayor a menor <i
+                                            class="mdi mdi-radiobox-blank"></i></a></li>
+                                <li><a class="dropdown-item order_button" data-sortby="costoDes">Menor a mayor <i
+                                            class="mdi mdi-radiobox-blank"></i></a></li>
                             </ul>
                         </div>
                     </div>
+
                 </div>
                 <div class="tienda-cont-products-grid">
                     <div class="card">
@@ -535,14 +639,14 @@
                         </div>
                     </div>
 
-                    <div class="big-card">
-                        <div class="banner-tienda"
-                            style="background-image: url(&quot;https://ar.oceanomedicina.com/wp-content/uploads/2021/09/Rectangle-25.png&quot;); height: 337.094px;">
-                            <h3>Planes de estudio a medida para personal de enfermería</h3>
-                            <p>Realizá hasta cinco cursos en hasta dos años de formación. Descubrí Plan Futuro y diseñá
+                    <div class="card card-big">
+                        <div class="card-big-info banner-tienda" style="background: url(media/banner-tienda.jpg);">
+                            <h3 class="card-big-info-title">Planes de estudio a medida para personal de enfermería</h3>
+                            <p class="card-big-info-bajada">Realizá hasta cinco cursos en hasta dos años de formación.
+                                Descubrí Plan Futuro y diseñá
                                 tu
                                 propio camino.</p>
-                            <a class="btn btn-big" href="/plan-de-estudio/">QUIERO SABER MÁS</a>
+                            <a class="card-info-footer-boton btn btn-mid" href="/plan-de-estudio/">QUIERO SABER MÁS</a>
                         </div>
                     </div>
 

@@ -1,3 +1,33 @@
+.background-primary {
+  background-color: #ff266e;
+  color: #fff;
+}
+
+.background-primary {
+  background-color: #ff266e;
+  color: #fff;
+}
+
+.background-medicina {
+  background-color: #0055a2;
+  color: #fff;
+}
+
+.background-enfermeria {
+  background-color: #008066;
+  color: #fff;
+}
+
+.background-bibliografia {
+  background-color: #f09146;
+  color: #fff;
+}
+
+.background-filtro-tienda {
+  background-color: #6c6c6c;
+  color: #fff;
+}
+
 * {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -18,6 +48,14 @@ button {
 }
 
 /* contenedor marginado*/
+.absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
 .contenedor {
   width: min(100% - 36px, 960px - 64px);
   margin-left: auto;
@@ -76,12 +114,14 @@ button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  line-height: initial;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   background-color: #ff266e;
   border-radius: 4px;
+  font-size: 12px;
+  line-height: 1.1em;
+  padding: 6px 0.5rem 3px;
   font-weight: 700;
   color: #fff;
   text-transform: uppercase;
@@ -129,9 +169,6 @@ button {
 }
 
 .btn-medicina, .btn-enfermeria, .btn-bibliografias {
-  font-size: 12px;
-  line-height: 14px;
-  padding: 4px 0.5rem;
   background-color: transparent;
   border: 1px solid #acacac;
   color: #acacac;
@@ -190,6 +227,36 @@ button {
     line-height: 19px;
     padding: 0.375rem 1rem;
   }
+}
+
+.background-primary {
+  background-color: #ff266e;
+  color: #fff;
+}
+
+.background-primary {
+  background-color: #ff266e;
+  color: #fff;
+}
+
+.background-medicina {
+  background-color: #0055a2;
+  color: #fff;
+}
+
+.background-enfermeria {
+  background-color: #008066;
+  color: #fff;
+}
+
+.background-bibliografia {
+  background-color: #f09146;
+  color: #fff;
+}
+
+.background-filtro-tienda {
+  background-color: #6c6c6c;
+  color: #fff;
 }
 
 .card {
@@ -816,11 +883,11 @@ header .navbar-overlay.is-active {
 
 .hero-cont .searchbar-especialidad-campo {
   font-size: 0.75rem;
-  padding-top: 6px;
-  padding-top: 6px;
+  padding: 6px;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
+  min-height: 32px;
 }
 
 .hero-cont .searchbar-especialidad-button {
@@ -875,6 +942,36 @@ header .navbar-overlay.is-active {
   .hero .searchbar-especialidad .icon .mdi-chevron-right {
     display: none;
   }
+}
+
+.background-primary {
+  background-color: #ff266e;
+  color: #fff;
+}
+
+.background-primary {
+  background-color: #ff266e;
+  color: #fff;
+}
+
+.background-medicina {
+  background-color: #0055a2;
+  color: #fff;
+}
+
+.background-enfermeria {
+  background-color: #008066;
+  color: #fff;
+}
+
+.background-bibliografia {
+  background-color: #f09146;
+  color: #fff;
+}
+
+.background-filtro-tienda {
+  background-color: #6c6c6c;
+  color: #fff;
 }
 
 .footer {
@@ -1135,14 +1232,6 @@ header .navbar-overlay.is-active {
   .footer-certificados img {
     height: 3rem;
   }
-}
-
-.absolute-center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
 }
 
 .courses-top-desktop {
