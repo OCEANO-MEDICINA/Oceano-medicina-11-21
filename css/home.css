@@ -402,12 +402,13 @@ button {
 }
 
 .card-info-footer-precio .cuotas {
-  font-size: 10px;
-  line-height: 11px;
+  font-size: 12px;
+  line-height: 14px;
   margin-bottom: 2px;
 }
 
 .card-info-footer-precio .price {
+  font-size: 18px;
   font-weight: 700;
   line-height: 1;
 }
@@ -1129,6 +1130,7 @@ header .navbar-overlay.is-active {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
+  max-width: 75%;
 }
 
 .footer-newsletter .mail-form form p .acceptance-848 {
@@ -1152,6 +1154,7 @@ header .navbar-overlay.is-active {
   border-radius: 4px 0 0 4px;
   border: none;
   outline: none;
+  width: 100%;
 }
 
 .footer-newsletter .mail-form button[type="submit"] {
@@ -1666,7 +1669,7 @@ header .navbar-overlay.is-active {
       -ms-flex-positive: 1;
           flex-grow: 1;
   margin-bottom: 0.5rem;
-  font-size: clamp(0.875rem, 2vw, 1.25rem);
+  font-size: clamp(0.875rem, 3.5vw, 1.25rem);
   line-height: 1.1em;
   font-weight: 700;
   color: #02204d;
@@ -1677,7 +1680,7 @@ header .navbar-overlay.is-active {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  font-size: clamp(0.75rem, 2vw, 1rem);
+  font-size: clamp(0.75rem, 3.5vw, 1rem);
   line-height: 1em;
   padding: 0.25rem 0.75rem;
 }

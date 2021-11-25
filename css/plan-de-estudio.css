@@ -897,6 +897,7 @@ header .navbar-overlay.is-active {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
+  max-width: 75%;
 }
 
 .footer-newsletter .mail-form form p .acceptance-848 {
@@ -920,6 +921,7 @@ header .navbar-overlay.is-active {
   border-radius: 4px 0 0 4px;
   border: none;
   outline: none;
+  width: 100%;
 }
 
 .footer-newsletter .mail-form button[type="submit"] {

@@ -193,7 +193,7 @@
                     }
                     &-info {
                         &-sup {
-                            font-size: clamp(0.5rem, 2vw, 0.625rem);
+                            font-size: clamp(0.5rem, 3vw, 0.625rem);
 
                             .area {
                                 max-width: 18ch;
@@ -201,7 +201,7 @@
                         }
                         &-title {
                             padding: 0 0.5rem 0.75rem;
-                            font-size: clamp(0.875rem, 3vw, 1rem);
+                            font-size: clamp(0.875rem, 4vw, 1rem);
                             line-height: 1.3em;
                         }
 
@@ -209,16 +209,16 @@
                             padding: 0.5rem 0.65rem;
                             &-precio {
                                 .cuotas {
-                                    font-size: clamp(0.5rem, 2vw, 0.625rem);
+                                    font-size: clamp(0.5rem, 3vw, 0.625rem);
                                     line-height: 1.2em;
                                 }
                                 .price {
-                                    font-size: clamp(0.75rem, 3vw, 1rem);
+                                    font-size: clamp(0.75rem, 4vw, 1rem);
                                     line-height: 1.2em;
                                 }
                             }
                             &-boton {
-                                font-size: clamp(0.625rem, 2vw, 0.75rem);
+                                font-size: clamp(0.625rem, 3vw, 0.75rem);
                                 line-height: 1.1em;
                                 min-height: 25px;
                             }

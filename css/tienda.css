@@ -402,12 +402,13 @@ button {
 }
 
 .card-info-footer-precio .cuotas {
-  font-size: 10px;
-  line-height: 11px;
+  font-size: 12px;
+  line-height: 14px;
   margin-bottom: 2px;
 }
 
 .card-info-footer-precio .price {
+  font-size: 18px;
   font-weight: 700;
   line-height: 1;
 }
@@ -1129,6 +1130,7 @@ header .navbar-overlay.is-active {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
+  max-width: 75%;
 }
 
 .footer-newsletter .mail-form form p .acceptance-848 {
@@ -1152,6 +1154,7 @@ header .navbar-overlay.is-active {
   border-radius: 4px 0 0 4px;
   border: none;
   outline: none;
+  width: 100%;
 }
 
 .footer-newsletter .mail-form button[type="submit"] {
@@ -1500,7 +1503,7 @@ header .navbar-overlay.is-active {
 }
 
 .tienda-cont-products-grid .card-info-sup {
-  font-size: clamp(0.5rem, 2vw, 0.625rem);
+  font-size: clamp(0.5rem, 3vw, 0.625rem);
 }
 
 .tienda-cont-products-grid .card-info-sup .area {
@@ -1509,7 +1512,7 @@ header .navbar-overlay.is-active {
 
 .tienda-cont-products-grid .card-info-title {
   padding: 0 0.5rem 0.75rem;
-  font-size: clamp(0.875rem, 3vw, 1rem);
+  font-size: clamp(0.875rem, 4vw, 1rem);
   line-height: 1.3em;
 }
 
@@ -1518,17 +1521,17 @@ header .navbar-overlay.is-active {
 }
 
 .tienda-cont-products-grid .card-info-footer-precio .cuotas {
-  font-size: clamp(0.5rem, 2vw, 0.625rem);
+  font-size: clamp(0.5rem, 3vw, 0.625rem);
   line-height: 1.2em;
 }
 
 .tienda-cont-products-grid .card-info-footer-precio .price {
-  font-size: clamp(0.75rem, 3vw, 1rem);
+  font-size: clamp(0.75rem, 4vw, 1rem);
   line-height: 1.2em;
 }
 
 .tienda-cont-products-grid .card-info-footer-boton {
-  font-size: clamp(0.625rem, 2vw, 0.75rem);
+  font-size: clamp(0.625rem, 3vw, 0.75rem);
   line-height: 1.1em;
   min-height: 25px;
 }

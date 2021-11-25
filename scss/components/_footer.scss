@@ -87,6 +87,7 @@ $width-container: unquote("min(100% - 3.25rem, 960px - 64px)");
 
                     .email-367 {
                         height: max-content;
+                        max-width: 75%;
                     }
                     .acceptance-848 {
                         margin-top: 0.75rem;
@@ -106,6 +107,7 @@ $width-container: unquote("min(100% - 3.25rem, 960px - 64px)");
                 border-radius: 4px 0 0 4px;
                 border: none;
                 outline: none;
+                width: 100%;
             }
             button[type="submit"] {
                 height: auto !important;
