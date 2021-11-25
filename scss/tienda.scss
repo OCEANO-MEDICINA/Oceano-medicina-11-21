@@ -421,3 +421,19 @@
         }
     }
 }
+
+@media screen and (min-width: 1445px) {
+    html {
+        font-size: 18px;
+    }
+    .tienda {
+        &-cont {
+            grid-template-columns: minmax(auto, 314px) auto;
+            &-products {
+                &-grid {
+                    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+                }
+            }
+        }
+    }
+}
