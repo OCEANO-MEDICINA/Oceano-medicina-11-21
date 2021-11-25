@@ -1455,26 +1455,34 @@ header .navbar-overlay.is-active {
   height: 1rem;
 }
 
-.tienda-cont-products-filters .sorting:hover .btn-filtro,
-.tienda-cont-products-filters .filtrar:hover .btn-filtro {
+.tienda-cont-products-filters .sorting:hover .btn-filtro, .tienda-cont-products-filters .sorting:focus .btn-filtro, .tienda-cont-products-filters .sorting:target .btn-filtro,
+.tienda-cont-products-filters .filtrar:hover .btn-filtro,
+.tienda-cont-products-filters .filtrar:focus .btn-filtro,
+.tienda-cont-products-filters .filtrar:target .btn-filtro {
   color: #ff266e;
 }
 
-.tienda-cont-products-filters .sorting:hover .menu-desplegable,
-.tienda-cont-products-filters .filtrar:hover .menu-desplegable {
+.tienda-cont-products-filters .sorting:hover .menu-desplegable, .tienda-cont-products-filters .sorting:focus .menu-desplegable, .tienda-cont-products-filters .sorting:target .menu-desplegable,
+.tienda-cont-products-filters .filtrar:hover .menu-desplegable,
+.tienda-cont-products-filters .filtrar:focus .menu-desplegable,
+.tienda-cont-products-filters .filtrar:target .menu-desplegable {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.tienda-cont-products-filters .sorting:hover .menu-desplegable .especialidad .accordion-trigger.active ~ .accordion-panel,
-.tienda-cont-products-filters .filtrar:hover .menu-desplegable .especialidad .accordion-trigger.active ~ .accordion-panel {
+.tienda-cont-products-filters .sorting:hover .menu-desplegable .especialidad .accordion-trigger.active ~ .accordion-panel, .tienda-cont-products-filters .sorting:focus .menu-desplegable .especialidad .accordion-trigger.active ~ .accordion-panel, .tienda-cont-products-filters .sorting:target .menu-desplegable .especialidad .accordion-trigger.active ~ .accordion-panel,
+.tienda-cont-products-filters .filtrar:hover .menu-desplegable .especialidad .accordion-trigger.active ~ .accordion-panel,
+.tienda-cont-products-filters .filtrar:focus .menu-desplegable .especialidad .accordion-trigger.active ~ .accordion-panel,
+.tienda-cont-products-filters .filtrar:target .menu-desplegable .especialidad .accordion-trigger.active ~ .accordion-panel {
   max-height: 220px !important;
   overflow-y: scroll;
 }
 
-.tienda-cont-products-filters .sorting:hover .menu-desplegable .accordion-panel,
-.tienda-cont-products-filters .filtrar:hover .menu-desplegable .accordion-panel {
+.tienda-cont-products-filters .sorting:hover .menu-desplegable .accordion-panel, .tienda-cont-products-filters .sorting:focus .menu-desplegable .accordion-panel, .tienda-cont-products-filters .sorting:target .menu-desplegable .accordion-panel,
+.tienda-cont-products-filters .filtrar:hover .menu-desplegable .accordion-panel,
+.tienda-cont-products-filters .filtrar:focus .menu-desplegable .accordion-panel,
+.tienda-cont-products-filters .filtrar:target .menu-desplegable .accordion-panel {
   overflow: hidden;
 }
 

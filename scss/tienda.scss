@@ -153,7 +153,9 @@
                         height: 1rem;
                     }
 
-                    &:hover {
+                    &:hover,
+                    &:focus,
+                    &:target {
                         .btn-filtro {
                             color: $primary;
                         }

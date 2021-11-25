@@ -316,6 +316,9 @@ header .navbar-brand img {
 }
 
 @media screen and (min-width: 767px) {
+  .hero-cont h2 {
+    max-width: 72ch;
+  }
   .form {
     margin: 2.5rem 0 8rem;
   }
