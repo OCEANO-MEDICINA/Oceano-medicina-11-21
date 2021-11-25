@@ -193,7 +193,7 @@
                     }
                     &-info {
                         &-sup {
-                            font-size: clamp(0.5rem, 3vw, 0.625rem);
+                            font-size: clamp(0.5rem, 2vw, 0.625rem);
 
                             .area {
                                 max-width: 18ch;
@@ -234,7 +234,7 @@
                             padding: 0.5rem 0.75rem;
 
                             &-title {
-                                font-size: clamp(0.875rem, 4vw, 1.25rem);
+                                font-size: clamp(0.875rem, 4.5vw, 1.25rem);
                                 font-weight: 700;
                                 line-height: 1.3em;
                                 flex-grow: unset;
@@ -243,7 +243,7 @@
                                 margin-bottom: 6px;
                             }
                             &-bajada {
-                                font-size: clamp(0.625rem, 2vw, 0.875rem);
+                                font-size: clamp(0.625rem, 3vw, 0.875rem);
                                 line-height: 1.3em;
                                 color: #fff;
                                 margin-bottom: 10px;
