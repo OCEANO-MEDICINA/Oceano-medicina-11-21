@@ -48,8 +48,12 @@ header {
             }
 
             .accordion-panel {
-                max-height: unset;
+                max-height: 0;
                 overflow: unset;
+            }
+
+            .accordion-trigger:hover ~ .accordion-panel {
+                opacity: 1;
             }
         }
     }

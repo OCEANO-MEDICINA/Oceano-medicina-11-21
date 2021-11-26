@@ -45,12 +45,16 @@
                     a {
                         display: flex;
                         column-gap: 0.5rem;
-                        border: 1px solid transparent;
+                        border: 1px solid;
 
                         &:hover {
-                            background-color: #fff;
-                            border: 1px solid $black-light;
-                            color: $black-light;
+                            background-color: inherit;
+                            color: #b5b5b5;
+                            border: 1px solid transparent;
+
+                            i {
+                                color: red;
+                            }
                         }
                     }
                 }
@@ -80,13 +84,14 @@
                         text-transform: uppercase;
                     }
                     &-cont {
+                        display: flex;
+                        flex-direction: column;
                         position: absolute;
                         z-index: 2;
                         right: 0;
                         bottom: 0;
                         overflow: hidden;
-                        display: flex;
-                        flex-direction: column;
+                        background-color: #6c6c6c;
                         font-size: 0.75rem;
                         transform: translateY(100%);
                         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
@@ -202,8 +207,8 @@
                             }
                         }
                         &-title {
-                            padding: 0 0.5rem 0.75rem;
-                            font-size: clamp(0.875rem, 4vw, 1rem);
+                            padding: 0.5rem 0.5rem 0.75rem;
+                            font-size: clamp(0.875rem, 3.75vw, 1rem);
                             line-height: 1.3em;
                         }
 
@@ -211,7 +216,7 @@
                             padding: 0.5rem 0.65rem;
                             &-precio {
                                 .cuotas {
-                                    font-size: clamp(0.5rem, 3vw, 0.625rem);
+                                    font-size: clamp(0.5rem, 2.25vw, 0.625rem);
                                     line-height: 1.2em;
                                 }
                                 .price {
@@ -220,7 +225,7 @@
                                 }
                             }
                             &-boton {
-                                font-size: clamp(0.625rem, 3vw, 0.75rem);
+                                font-size: clamp(0.625rem, 2.75vw, 0.75rem);
                                 line-height: 1.1em;
                                 min-height: 25px;
                             }
@@ -351,6 +356,7 @@
                     & > div:last-child .accordion-trigger {
                         border-bottom: none;
                     }
+
                     .accordion-panel li:last-child .dropdown-item {
                         border-bottom: none;
                     }
@@ -394,7 +400,7 @@
                                 max-width: 20ch;
                             }
                             &-title {
-                                padding: 0 1rem 0.75rem;
+                                padding: 1rem 1rem 0.75rem;
                                 line-height: 1.2em;
                             }
                             &-footer {

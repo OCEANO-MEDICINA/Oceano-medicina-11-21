@@ -36,13 +36,17 @@ button {
         transform: rotate(180deg);
     }
 }
+
 .accordion-panel {
     max-height: 0;
     overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
 .accordion-trigger.active ~ .accordion-panel {
     display: block;
     overflow: unset;
+    opacity: 1;
 }
 
 .absolute-center {
@@ -123,6 +127,12 @@ button {
         font-size: 0.75rem;
         line-height: 14px;
         padding: 0.375rem 0.75rem;
+
+        &:hover,
+        &:focus,
+        &:target {
+            box-shadow: 0px 0px 7px 1px #9893c5;
+        }
     }
 
     &-big {

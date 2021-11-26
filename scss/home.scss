@@ -74,7 +74,7 @@
 .destacados {
     &-cont {
         width: 100%;
-        padding: 1.5rem 0 1.25rem;
+        padding: 2rem 0 1.5rem;
 
         &-title {
             flex-grow: 1;
@@ -472,6 +472,7 @@
             display: grid;
             grid-template-columns: 45% 55%;
             align-items: center;
+            padding: 4rem 0 4rem;
 
             &-title {
                 text-align: left;
@@ -487,10 +488,14 @@
 
                 .swiper-reviews {
                     overflow: hidden;
+                    padding-bottom: 2rem;
 
                     .swiper-slide {
                         width: 100% !important;
                         height: max-content;
+                    }
+                    .swiper-pagination {
+                        bottom: 1rem;
                     }
                 }
                 .card-review {

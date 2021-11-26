@@ -59,11 +59,15 @@ button {
 .accordion-panel {
   max-height: 0;
   overflow: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .accordion-trigger.active ~ .accordion-panel {
   display: block;
   overflow: unset;
+  opacity: 1;
 }
 
 .absolute-center {
@@ -155,6 +159,11 @@ button {
   font-size: 0.75rem;
   line-height: 14px;
   padding: 0.375rem 0.75rem;
+}
+
+.btn-mid:hover, .btn-mid:focus, .btn-mid:target {
+  -webkit-box-shadow: 0px 0px 7px 1px #9893c5;
+          box-shadow: 0px 0px 7px 1px #9893c5;
 }
 
 .btn-big {
@@ -340,7 +349,7 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0.5rem 0.5rem 0.25rem;
+  padding: 0.5rem 0.5rem 0;
   -webkit-column-gap: 0.5rem;
           column-gap: 0.5rem;
   font-size: 0.625rem;
@@ -369,7 +378,7 @@ button {
 }
 
 .card-info-title {
-  padding: 0 1rem 1rem;
+  padding: 1rem;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -699,6 +708,7 @@ header .navbar-overlay.is-active {
         -ms-flex-pack: end;
             justify-content: flex-end;
   }
+  header .navbar .accordion-trigger.active ~ .accordion-panel,
   header .navbar-item.is-hoverable:hover .navbar-dropdown,
   header .navbar-item.is-hoverable:focus .navbar-dropdown {
     background-color: transparent;
@@ -714,6 +724,7 @@ header .navbar-overlay.is-active {
     border-radius: 8px;
     border: none;
   }
+  header .navbar .accordion-trigger.active ~ .accordion-panel-comunidad,
   header .navbar-item.is-hoverable:hover .navbar-dropdown-comunidad,
   header .navbar-item.is-hoverable:focus .navbar-dropdown-comunidad {
     gap: 0;
@@ -722,23 +733,29 @@ header .navbar-overlay.is-active {
         grid-template-columns: 1fr minmax(-webkit-max-content, 1fr);
         grid-template-columns: 1fr minmax(max-content, 1fr);
   }
+  header .navbar .accordion-trigger.active ~ .accordion-panel-comunidad::after,
   header .navbar-item.is-hoverable:hover .navbar-dropdown-comunidad::after,
   header .navbar-item.is-hoverable:focus .navbar-dropdown-comunidad::after {
     border-color: transparent transparent #3a5395;
   }
+  header .navbar .accordion-trigger.active ~ .accordion-panel-comunidad .navbar-item,
   header .navbar-item.is-hoverable:hover .navbar-dropdown-comunidad .navbar-item,
   header .navbar-item.is-hoverable:focus .navbar-dropdown-comunidad .navbar-item {
     white-space: unset;
   }
+  header .navbar .accordion-trigger.active ~ .accordion-panel-comunidad .navbar-item:hover,
   header .navbar-item.is-hoverable:hover .navbar-dropdown-comunidad .navbar-item:hover,
   header .navbar-item.is-hoverable:focus .navbar-dropdown-comunidad .navbar-item:hover {
     color: #fff;
   }
-  header .navbar-item.is-hoverable:hover .navbar-dropdown-comunidad-menu, header .navbar-item.is-hoverable:hover .navbar-dropdown-comunidad-news,
+  header .navbar .accordion-trigger.active ~ .accordion-panel-comunidad-menu, header .navbar .accordion-trigger.active ~ .accordion-panel-comunidad-news,
+  header .navbar-item.is-hoverable:hover .navbar-dropdown-comunidad-menu,
+  header .navbar-item.is-hoverable:hover .navbar-dropdown-comunidad-news,
   header .navbar-item.is-hoverable:focus .navbar-dropdown-comunidad-menu,
   header .navbar-item.is-hoverable:focus .navbar-dropdown-comunidad-news {
     padding: 1.5rem 2rem;
   }
+  header .navbar .accordion-trigger.active ~ .accordion-panel-comunidad-menu,
   header .navbar-item.is-hoverable:hover .navbar-dropdown-comunidad-menu,
   header .navbar-item.is-hoverable:focus .navbar-dropdown-comunidad-menu {
     display: -webkit-box;
@@ -752,6 +769,7 @@ header .navbar-overlay.is-active {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
+  header .navbar .accordion-trigger.active ~ .accordion-panel-comunidad-news,
   header .navbar-item.is-hoverable:hover .navbar-dropdown-comunidad-news,
   header .navbar-item.is-hoverable:focus .navbar-dropdown-comunidad-news {
     display: -ms-grid;
@@ -763,6 +781,7 @@ header .navbar-overlay.is-active {
             column-gap: 1.25rem;
     background-color: #ffffff15;
   }
+  header .navbar .accordion-trigger.active ~ .accordion-panel-comunidad-news-img,
   header .navbar-item.is-hoverable:hover .navbar-dropdown-comunidad-news-img,
   header .navbar-item.is-hoverable:focus .navbar-dropdown-comunidad-news-img {
     height: 100%;
@@ -771,6 +790,7 @@ header .navbar-overlay.is-active {
     background-color: #cccccc;
     border-radius: 8px;
   }
+  header .navbar .accordion-trigger.active ~ .accordion-panel-comunidad-news-info,
   header .navbar-item.is-hoverable:hover .navbar-dropdown-comunidad-news-info,
   header .navbar-item.is-hoverable:focus .navbar-dropdown-comunidad-news-info {
     height: 100%;
@@ -785,16 +805,20 @@ header .navbar-overlay.is-active {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
+  header .navbar .accordion-trigger.active ~ .accordion-panel-comunidad-news-info p,
   header .navbar-item.is-hoverable:hover .navbar-dropdown-comunidad-news-info p,
   header .navbar-item.is-hoverable:focus .navbar-dropdown-comunidad-news-info p {
     text-transform: none;
     width: 40ch;
   }
+  header .navbar .accordion-trigger.active ~ .accordion-panel-comunidad-news-info a,
   header .navbar-item.is-hoverable:hover .navbar-dropdown-comunidad-news-info a,
   header .navbar-item.is-hoverable:focus .navbar-dropdown-comunidad-news-info a {
     font-size: 1.25rem;
     color: #ff266e;
   }
+  header .navbar .accordion-trigger.active ~ .accordion-panel-comunidad-news-info h3,
+  header .navbar .accordion-trigger.active ~ .accordion-panel-comunidad-news-info a,
   header .navbar-item.is-hoverable:hover .navbar-dropdown-comunidad-news-info h3,
   header .navbar-item.is-hoverable:hover .navbar-dropdown-comunidad-news-info a,
   header .navbar-item.is-hoverable:focus .navbar-dropdown-comunidad-news-info h3,
@@ -802,11 +826,13 @@ header .navbar-overlay.is-active {
     text-transform: none;
     font-weight: 700;
   }
+  header .navbar .accordion-trigger.active ~ .accordion-panel-comunidad-news-info h3,
   header .navbar-item.is-hoverable:hover .navbar-dropdown-comunidad-news-info h3,
   header .navbar-item.is-hoverable:focus .navbar-dropdown-comunidad-news-info h3 {
     line-height: 1;
     font-size: 1.25rem;
   }
+  header .navbar .accordion-trigger.active ~ .accordion-panel .overlay,
   header .navbar-item.is-hoverable:hover .navbar-dropdown .overlay,
   header .navbar-item.is-hoverable:focus .navbar-dropdown .overlay {
     position: fixed;
@@ -820,11 +846,13 @@ header .navbar-overlay.is-active {
             backdrop-filter: blur(10px);
     border-radius: 8px;
   }
+  header .navbar .accordion-trigger.active ~ .accordion-panel a.navbar-item,
   header .navbar-item.is-hoverable:hover .navbar-dropdown a.navbar-item,
   header .navbar-item.is-hoverable:focus .navbar-dropdown a.navbar-item {
     font-weight: 500;
     font-size: 1rem;
   }
+  header .navbar .accordion-trigger.active ~ .accordion-panel a.navbar-item:hover,
   header .navbar-item.is-hoverable:hover .navbar-dropdown a.navbar-item:hover,
   header .navbar-item.is-hoverable:focus .navbar-dropdown a.navbar-item:hover {
     background-color: unset;
@@ -856,6 +884,7 @@ header .navbar-overlay.is-active {
     display: none;
   }
   header .navbar .accordion-panel {
+    opacity: 1;
     max-height: unset;
     overflow: unset;
   }
@@ -865,6 +894,7 @@ header .navbar-overlay.is-active {
   position: relative;
   background: linear-gradient(349.47deg, rgba(32, 59, 131, 0.9) 31.24%, rgba(83, 152, 255, 0.9) 84.32%);
   padding: 4.75rem 1rem 3.25rem;
+  min-height: 360px;
 }
 
 .hero-cont {
@@ -896,7 +926,7 @@ header .navbar-overlay.is-active {
   left: 50%;
   -webkit-transform: translate(-50%, 50%);
           transform: translate(-50%, 50%);
-  width: min(100% - 2rem, 30rem);
+  width: min(100% - 2rem, 34rem);
 }
 
 .hero-cont .searchbar-especialidad .field {
@@ -938,8 +968,9 @@ header .navbar-overlay.is-active {
   }
   .hero .searchbar-especialidad-campo {
     position: relative;
-    font-size: 1rem;
+    font-size: 1.125rem;
     padding-right: 6rem !important;
+    min-height: 46px;
   }
   .hero .searchbar-especialidad-button {
     padding: 0 1rem;
@@ -1311,13 +1342,17 @@ header .navbar-overlay.is-active {
   display: flex;
   -webkit-column-gap: 0.5rem;
           column-gap: 0.5rem;
-  border: 1px solid transparent;
+  border: 1px solid;
 }
 
 .tienda-cont-filtros .filtros-aplicados .output-filtros a:hover {
-  background-color: #fff;
-  border: 1px solid #575757;
-  color: #575757;
+  background-color: inherit;
+  color: #b5b5b5;
+  border: 1px solid transparent;
+}
+
+.tienda-cont-filtros .filtros-aplicados .output-filtros a:hover i {
+  color: red;
 }
 
 .tienda-cont-products-filters {
@@ -1350,11 +1385,6 @@ header .navbar-overlay.is-active {
 
 .tienda-cont-products-filters .sorting-cont,
 .tienda-cont-products-filters .filtrar-cont {
-  position: absolute;
-  z-index: 2;
-  right: 0;
-  bottom: 0;
-  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1362,6 +1392,12 @@ header .navbar-overlay.is-active {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  background-color: #6c6c6c;
   font-size: 0.75rem;
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
@@ -1519,8 +1555,8 @@ header .navbar-overlay.is-active {
 }
 
 .tienda-cont-products-grid .card-info-title {
-  padding: 0 0.5rem 0.75rem;
-  font-size: clamp(0.875rem, 4vw, 1rem);
+  padding: 0.5rem 0.5rem 0.75rem;
+  font-size: clamp(0.875rem, 3.75vw, 1rem);
   line-height: 1.3em;
 }
 
@@ -1529,7 +1565,7 @@ header .navbar-overlay.is-active {
 }
 
 .tienda-cont-products-grid .card-info-footer-precio .cuotas {
-  font-size: clamp(0.5rem, 3vw, 0.625rem);
+  font-size: clamp(0.5rem, 2.25vw, 0.625rem);
   line-height: 1.2em;
 }
 
@@ -1539,7 +1575,7 @@ header .navbar-overlay.is-active {
 }
 
 .tienda-cont-products-grid .card-info-footer-boton {
-  font-size: clamp(0.625rem, 3vw, 0.75rem);
+  font-size: clamp(0.625rem, 2.75vw, 0.75rem);
   line-height: 1.1em;
   min-height: 25px;
 }
@@ -1714,7 +1750,7 @@ header .navbar-overlay.is-active {
     max-width: 20ch;
   }
   .tienda-cont-products-grid .card-info-title {
-    padding: 0 1rem 0.75rem;
+    padding: 1rem 1rem 0.75rem;
     line-height: 1.2em;
   }
   .tienda-cont-products-grid .card-info-footer {

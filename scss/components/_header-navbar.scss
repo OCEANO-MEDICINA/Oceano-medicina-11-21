@@ -272,6 +272,7 @@ header {
                     justify-content: flex-end;
                 }
             }
+            .accordion-trigger.active ~ .accordion-panel,
             &-item.is-hoverable:hover .navbar-dropdown,
             &-item.is-hoverable:focus .navbar-dropdown {
                 background-color: transparent;
@@ -403,6 +404,7 @@ header {
             }
 
             .accordion-panel {
+                opacity: 1;
                 max-height: unset;
                 overflow: unset;
             }

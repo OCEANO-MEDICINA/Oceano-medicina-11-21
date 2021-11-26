@@ -114,8 +114,11 @@ header .navbar-brand img {
     display: none;
   }
   header .navbar .accordion-panel {
-    max-height: unset;
+    max-height: 0;
     overflow: unset;
+  }
+  header .navbar .accordion-trigger:hover ~ .accordion-panel {
+    opacity: 1;
   }
 }
 
@@ -123,6 +126,7 @@ header .navbar-brand img {
   position: relative;
   background: linear-gradient(349.47deg, rgba(32, 59, 131, 0.9) 31.24%, rgba(83, 152, 255, 0.9) 84.32%);
   padding: 4.75rem 1rem 3.25rem;
+  min-height: 360px;
 }
 
 .hero-cont {
