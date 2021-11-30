@@ -10,6 +10,7 @@ $bibliografia: #f09146;
 $bibliografia-invert: #ffffff;
 $black-light: #575757;
 $black: #272727;
+$ccc: #ccc;
 
 .background-primary {
     background-color: $primary;
@@ -17,10 +18,13 @@ $black: #272727;
 }
 $colores: (
     "primary": $primary,
+    "primary-dark": $primary-dark,
     "medicina": $medicina,
+    "medicina-dark": #203b83,
     "enfermeria": $enfermeria,
     "bibliografia": $bibliografia,
     "filtro-tienda": #fff,
+    "ccc": $ccc,
 );
 
 @each $name, $color in $colores {

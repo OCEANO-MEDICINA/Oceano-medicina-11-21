@@ -8,8 +8,18 @@
   color: #fff;
 }
 
+.background-primary-dark {
+  background-color: #ec125b;
+  color: #fff;
+}
+
 .background-medicina {
   background-color: #0055a2;
+  color: #fff;
+}
+
+.background-medicina-dark {
+  background-color: #203b83;
   color: #fff;
 }
 
@@ -25,6 +35,11 @@
 
 .background-filtro-tienda {
   background-color: #fff;
+  color: #fff;
+}
+
+.background-ccc {
+  background-color: #ccc;
   color: #fff;
 }
 
@@ -91,18 +106,26 @@ button {
   }
 }
 
+.solapa-sup {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  width: min(100% - 36px, 960px);
+  height: 250px;
+  left: 50%;
+  top: 0rem;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: -webkit-gradient(linear, left bottom, left top, from(#fdfdfd), to(#fdfdfd));
+  background: linear-gradient(0deg, #fdfdfd, #fdfdfd);
+  -webkit-box-shadow: 0px -6px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px -6px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
 @media screen and (min-width: 1024px) {
   .solapa-sup {
-    position: absolute;
-    z-index: 1;
-    width: min(100% - 36px, 960px);
-    height: 250px;
-    left: 50%;
-    top: 0rem;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-    background: -webkit-gradient(linear, left bottom, left top, from(#fdfdfd), to(#fdfdfd));
-    background: linear-gradient(0deg, #fdfdfd, #fdfdfd);
+    display: block;
     -webkit-box-shadow: 0px -20px 20px rgba(0, 0, 0, 0.2);
             box-shadow: 0px -20px 20px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
@@ -267,8 +290,18 @@ button {
   color: #fff;
 }
 
+.background-primary-dark {
+  background-color: #ec125b;
+  color: #fff;
+}
+
 .background-medicina {
   background-color: #0055a2;
+  color: #fff;
+}
+
+.background-medicina-dark {
+  background-color: #203b83;
   color: #fff;
 }
 
@@ -284,6 +317,11 @@ button {
 
 .background-filtro-tienda {
   background-color: #fff;
+  color: #fff;
+}
+
+.background-ccc {
+  background-color: #ccc;
   color: #fff;
 }
 
@@ -894,7 +932,6 @@ header .navbar-overlay.is-active {
   position: relative;
   background: linear-gradient(349.47deg, rgba(32, 59, 131, 0.9) 31.24%, rgba(83, 152, 255, 0.9) 84.32%);
   padding: 4.75rem 1rem 3.25rem;
-  min-height: 360px;
 }
 
 .hero-cont {
@@ -919,6 +956,7 @@ header .navbar-overlay.is-active {
 
 .hero-cont .searchbar-especialidad {
   position: absolute;
+  z-index: 3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -939,6 +977,35 @@ header .navbar-overlay.is-active {
   width: 2em;
 }
 
+.hero-cont .searchbar-especialidad .accordion-panel {
+  position: absolute;
+  z-index: -1;
+  width: 99.8%;
+  left: 0;
+  bottom: 1rem;
+  padding-top: 1.5rem;
+  border: none;
+  background-color: #fff;
+  -webkit-transform: translate(1px, 100%);
+          transform: translate(1px, 100%);
+  -webkit-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.6);
+          box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.6);
+}
+
+.hero-cont .searchbar-especialidad .accordion-panel li {
+  border-bottom: 1px solid #eeeeee;
+}
+
+.hero-cont .searchbar-especialidad .accordion-trigger.active i {
+  -webkit-transform: unset;
+          transform: unset;
+}
+
+.hero-cont .searchbar-especialidad .accordion-trigger.active ~ .accordion-panel {
+  max-height: 200px !important;
+  overflow-y: scroll;
+}
+
 .hero-cont .searchbar-especialidad-campo {
   font-size: 0.75rem;
   padding: 6px;
@@ -954,6 +1021,7 @@ header .navbar-overlay.is-active {
 
 @media screen and (min-width: 767px) {
   .hero {
+    min-height: 360px;
     background: 25% top url(../media/b-hero.jpg);
     background-size: cover;
     padding: 5.75rem 1rem 7rem;
@@ -1013,8 +1081,18 @@ header .navbar-overlay.is-active {
   color: #fff;
 }
 
+.background-primary-dark {
+  background-color: #ec125b;
+  color: #fff;
+}
+
 .background-medicina {
   background-color: #0055a2;
+  color: #fff;
+}
+
+.background-medicina-dark {
+  background-color: #203b83;
   color: #fff;
 }
 
@@ -1030,6 +1108,11 @@ header .navbar-overlay.is-active {
 
 .background-filtro-tienda {
   background-color: #fff;
+  color: #fff;
+}
+
+.background-ccc {
+  background-color: #ccc;
   color: #fff;
 }
 

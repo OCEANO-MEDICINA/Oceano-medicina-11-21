@@ -21,3 +21,382 @@
         }
     }
 }
+.solapa-sup {
+    display: block;
+    height: 4rem;
+}
+
+.plan {
+    position: relative;
+    z-index: 3;
+    margin-top: -2rem;
+
+    &-cont {
+        position: relative;
+        z-index: 2;
+        background-color: #fff;
+        border-radius: 10px;
+
+        &-header {
+            padding: 1rem 1rem 0;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+
+            &-info {
+                &-title {
+                    display: none;
+                    h3 {
+                        font-size: clamp(1.125rem, 3vw, 1.5rem);
+                        font-weight: 700;
+                    }
+                    h4 {
+                        font-size: clamp(12px, 2vw, 1rem);
+                    }
+                    &.title-1 {
+                        h4 {
+                            max-width: 24ch;
+                        }
+                    }
+
+                    &.active {
+                        display: block;
+                    }
+                }
+                &-bajada {
+                    display: none;
+                }
+            }
+
+            &-progress {
+                position: relative;
+                display: flex;
+                column-gap: 0.65rem;
+                margin-top: 4px;
+                height: max-content;
+
+                .numbers {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 18px;
+                    width: 18px;
+                    font-size: 10px;
+                    color: $black;
+                    font-weight: 700;
+                    padding: 0.5rem;
+
+                    .num {
+                        position: relative;
+                        z-index: 2;
+                    }
+                    .circle {
+                        content: "";
+                        position: absolute;
+                        z-index: 1;
+                        width: 100%;
+                        height: 100%;
+                        inset: 0;
+                        border-radius: 40px;
+                        background: #ebebeb;
+                        border: 0.75px solid #c4c4c4;
+                    }
+                    &.active {
+                        .circle {
+                            border-color: $enfermeria;
+                        }
+                    }
+                }
+                .progress {
+                    position: absolute;
+                    width: 100%;
+                    margin: 0;
+                    height: 1px;
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background-color: #c4c4c4;
+                }
+                span {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.paso {
+    &-1 {
+        .swiper-3d .swiper-slide-shadow-left {
+            background-image: none;
+        }
+        .swiper-3d .swiper-slide-shadow-right {
+            background-image: none;
+        }
+        .swiper {
+            position: relative;
+            &::before {
+                position: absolute;
+                z-index: 2;
+                content: "";
+                left: 0;
+                top: 50%;
+                width: 1rem;
+                height: 90%;
+                transform: translateY(-50%);
+                background: linear-gradient(90deg, #fff 0 0%, transparent 100%);
+            }
+            &::after {
+                position: absolute;
+                z-index: 2;
+                content: "";
+                right: 0;
+                top: 50%;
+                width: 1rem;
+                height: 90%;
+                transform: translateY(-50%);
+                background: linear-gradient(270deg, #fff 0 50%, transparent 100%);
+            }
+        }
+        .swiper-wrapper {
+            padding-top: 1.5rem;
+            padding-bottom: 2rem;
+        }
+        .swiper-slide {
+            height: auto;
+            width: unquote("max(250px, 50%)");
+
+            &-active {
+                .card-plan-header-title,
+                .card-plan-footer h4 {
+                    color: $enfermeria;
+                }
+                .card-plan-footer .btn {
+                    background-color: $enfermeria;
+                }
+            }
+        }
+        .card-plan {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            background: #ffffff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+
+            &-header {
+                padding: 1.75rem 1.25rem 1.5rem;
+                text-align: center;
+
+                &-title {
+                    font-size: clamp(1.125rem, 3vw, 1.5rem);
+                    font-weight: 700;
+                    line-height: 1.2em;
+                    color: $medicina-dark;
+                }
+                &-subtitle {
+                    font-size: clamp(12px, 2vw, 1rem);
+                }
+            }
+
+            &-list {
+                text-align: center;
+                li {
+                    padding: 0.5rem 0.5rem 0.4rem;
+                    font-size: 10px;
+                    font-weight: 500;
+                    line-height: 1;
+                    border-bottom: 1px solid #eeeeee;
+
+                    &:first-child {
+                        border-top: 1px solid #eeeeee;
+                    }
+                }
+            }
+
+            &-specs {
+                flex-grow: 1;
+                padding: 1.5rem 1.25rem 0rem;
+                &-grid {
+                    margin-bottom: 1.5rem;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 1rem;
+
+                    .specs-item {
+                        display: flex;
+                        column-gap: 0.5rem;
+                        align-items: center;
+                        justify-content: center;
+
+                        i {
+                            font-size: 1rem;
+                            color: $black-light;
+                        }
+
+                        p {
+                            font-size: 8px;
+                            line-height: 1.2;
+                            font-weight: 300;
+                            width: unquote("max(15ch,100% - 34%)");
+                        }
+                    }
+                }
+                &-info {
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 0.25rem;
+                    text-align: center;
+
+                    h5 {
+                        font-weight: 300;
+                        font-size: clamp(10px, 2vw, 14px);
+
+                        &.first-spec {
+                            font-weight: 500;
+                        }
+                    }
+                    h6 {
+                        font-size: clamp(9px, 2vw, 12px);
+                        font-weight: 500;
+                        line-height: 1.3em;
+                    }
+                }
+            }
+            &-footer {
+                padding: 0.5rem;
+                text-align: center;
+                h4 {
+                    font-size: clamp(1.75rem, 4vw, 2.25rem);
+                    font-weight: 700;
+                    color: $medicina-dark;
+
+                    .mes {
+                        font-size: 0.5em;
+                    }
+                }
+                .btn {
+                    box-sizing: border-box;
+                    width: 100%;
+                    background-color: #c4c4c4;
+                }
+            }
+        }
+    }
+
+    &-2 {
+        padding-bottom: 2rem;
+        .main-course {
+            &-card {
+                display: grid;
+                grid-template-columns: 82px 1fr;
+                background: #ffffff;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+                border-radius: 4px;
+
+                &-img {
+                    position: relative;
+                    img {
+                        width: 100%;
+                        height: unquote("min(100%, 270px)");
+                    }
+                    .avales {
+                        display: flex;
+                        flex-flow: row wrap;
+                        padding: 1rem;
+                        gap: 1rem;
+                        background-color: #f5f5f5;
+
+                        .aval {
+                            display: flex;
+                            align-items: center;
+                            width: 51px;
+                            height: 60px;
+                            background-color: #fff;
+                        }
+                    }
+                }
+                &-info {
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 0.5rem;
+                    padding: 1rem;
+
+                    .horas {
+                        display: flex;
+                        align-items: center;
+                        column-gap: 0.5rem;
+                        font-size: 10px;
+
+                        i {
+                            font-size: 14px;
+                        }
+                    }
+                    h4 {
+                        font-size: 18px;
+                        line-height: 1.2em;
+                        font-weight: 700;
+                        color: $medicina-dark;
+                    }
+                    p {
+                        font-size: 10px;
+                        line-height: 1.5em;
+                    }
+                    .mas-info {
+                        display: grid;
+                        grid-template-areas:
+                            "mas-info mas-info"
+                            "trigger select";
+                        column-gap: 0.5rem;
+
+                        .accordion-panel {
+                            grid-area: mas-info;
+                            order: 1;
+                            width: 100%;
+                        }
+
+                        .accordion-trigger {
+                            grid-area: trigger;
+                        }
+
+                        .seleccionar {
+                            grid-area: select;
+                        }
+
+                        .accordion-trigger.active ~ .accordion-panel {
+                            max-height: max-content;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.swiper-pagination-bullets {
+    display: flex;
+    justify-content: space-evenly;
+    column-gap: 0.5rem;
+
+    .swiper-pagination-bullet {
+        margin: 0 !important;
+        padding: 0.4rem 0.5rem 0.35rem;
+        width: 100%;
+        height: 100%;
+        font-size: 0.75rem;
+        line-height: 1;
+        text-align: center;
+        text-transform: uppercase;
+        background: #fff;
+        border: 1px solid #acacac;
+        border-radius: 4px;
+
+        &-active {
+            color: #fff;
+            font-weight: 700;
+            background: $enfermeria;
+            border-color: $enfermeria;
+        }
+    }
+}
