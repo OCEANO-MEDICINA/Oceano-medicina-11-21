@@ -69,6 +69,10 @@ $width-container: unquote("min(100% - 3.25rem, 960px - 64px)");
         }
     }
 
+    &-menu {
+        display: none;
+    }
+
     &-newsletter {
         color: #fff;
 
