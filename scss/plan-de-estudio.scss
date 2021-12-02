@@ -8,6 +8,10 @@
 
 @import "components/_hero";
 
+// GRILLA PASO 3
+
+@import "components/_grid-w-side";
+
 // FOOTER
 
 @import "components/_footer";
@@ -320,9 +324,10 @@ $width-container: unquote("min(100% - 36px, 960px)");
                     font-size: clamp(0.625rem, 2vw, 0.75rem);
                 }
                 h5 {
-                    font-size: clamp(16px, 3vw, 18px);
+                    font-size: clamp(1rem, 2vw, 1.125rem);
                     font-weight: 500;
                     line-height: 1.2em;
+                    color: $medicina-dark;
                 }
 
                 .btn {
@@ -718,6 +723,7 @@ $width-container: unquote("min(100% - 36px, 960px)");
         &-cont {
             &-header {
                 padding: 1.5rem 1.5rem 0;
+                margin-bottom: 2rem;
 
                 &-info {
                     &-title {
@@ -735,10 +741,10 @@ $width-container: unquote("min(100% - 36px, 960px)");
                         column-gap: 0.75rem;
 
                         p {
-                            font-size: 14px;
+                            font-size: 0.875rem;
                         }
                         a {
-                            font-size: 14px;
+                            font-size: 0.875rem;
                             font-weight: 700;
                             padding: 1px 0.75rem;
                             color: #fff;
@@ -749,15 +755,90 @@ $width-container: unquote("min(100% - 36px, 960px)");
                 }
             }
             .paso {
-                padding: 0 1.5rem;
+                padding: 0 1.5rem 100px;
 
                 &-3 {
+                    .filtros {
+                        position: sticky;
+                        top: 1.5rem;
+                        background-color: transparent;
+                        box-shadow: none;
+                        padding: 0;
+                        .cta-main-course {
+                            border-radius: 10px;
+                            background-color: #fff;
+                            filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.1));
+                            border: none;
+
+                            .btn {
+                                display: initial;
+                                margin-top: 1.875rem;
+                                font-size: 0.875rem;
+                            }
+                        }
+                        &-cont {
+                            padding: 1rem;
+                            background: rgba(240, 240, 240, 0.5);
+                            border-radius: 10px;
+
+                            .searchbar-cursos-sec {
+                                display: flex;
+                                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+                                border-radius: 4px;
+                                margin-bottom: 1.5rem;
+                            }
+
+                            &-seleccionados {
+                                width: 100%;
+
+                                span {
+                                    display: block;
+                                    font-size: 0.875rem;
+                                    padding: 0;
+                                }
+
+                                .accordion-trigger {
+                                    padding: 0;
+                                    color: #02204d;
+                                    font-size: 1rem;
+                                    font-weight: 700;
+
+                                    i {
+                                        display: none;
+                                    }
+                                }
+
+                                .accordion-panel {
+                                    padding: 0;
+                                    display: flex;
+                                    max-height: max-content;
+                                    opacity: 1;
+                                    transform: none;
+                                    background: transparent;
+                                    box-shadow: none;
+                                    position: relative;
+
+                                    a {
+                                        padding: 14px 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .searchbar-cursos-sec {
+                        flex-grow: 1;
+                    }
+                    .control-buttons {
+                        grid-column: 2/3;
+                    }
+                    .grid-w-side-cont {
+                        row-gap: 0;
+                    }
                     .grid-cursos-filters {
                         justify-content: flex-end;
+                        padding: 0 0 1rem;
                     }
-                    .filtros-cont-seleccionados {
-                        width: 12ch;
-                    }
+
                     .sorting {
                         &-cont.menu-desplegable {
                             bottom: -1.5rem;
@@ -768,6 +849,14 @@ $width-container: unquote("min(100% - 36px, 960px)");
                 &-4 {
                     .course-card-info > p {
                         display: block;
+                    }
+                }
+                .control-buttons {
+                    margin-top: 2rem;
+                    justify-content: center;
+
+                    a {
+                        max-width: 220px;
                     }
                 }
             }
@@ -853,7 +942,8 @@ $width-container: unquote("min(100% - 36px, 960px)");
 
             .paso {
                 &-1 {
-                    padding: 0;
+                    padding: 0 0 100px;
+                    margin-top: -1rem;
                     .swiper {
                         padding: 0 2rem;
                         &::before,
@@ -872,5 +962,11 @@ $width-container: unquote("min(100% - 36px, 960px)");
 
     .swiper-pagination-bullets {
         display: none;
+    }
+}
+
+@media screen and (min-width: 1445px) {
+    html {
+        font-size: 18px;
     }
 }

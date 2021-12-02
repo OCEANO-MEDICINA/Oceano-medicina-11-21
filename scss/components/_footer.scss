@@ -191,6 +191,10 @@ $width-container: unquote("min(100% - 3.25rem, 960px - 64px)");
             flex-flow: row;
         }
 
+        &-menu {
+            display: flex;
+        }
+
         &-info {
             justify-content: flex-start;
             column-gap: 0.5rem;

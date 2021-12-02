@@ -14,7 +14,7 @@
 
 @import "components/_footer";
 
-.tienda {
+.grid-w-side {
     position: relative;
     &-cont {
         position: relative;
@@ -269,8 +269,7 @@
             display: none;
         }
     }
-    .tienda {
-        margin-top: -4rem;
+    .grid-w-side {
         &-cont {
             grid-template-columns: minmax(auto, 224px) auto;
             column-gap: 24px;
@@ -285,21 +284,6 @@
                 padding: 1rem;
                 background-color: #f0f0f080;
                 border-radius: 10px;
-
-                // LINEAS SEPARADORAS
-                /*.searchbar-filter,
-                .filtros-aplicados {
-                    position: relative;
-                    &::after {
-                        content: "";
-                        position: absolute;
-                        bottom: -0.95rem;
-                        left: 0;
-                        width: 100%;
-                        height: 1px;
-                        background-color: #e4e4e4;
-                    }
-                }*/
 
                 // MOSTRAR EN DESKTOP
                 .searchbar-filter,
@@ -429,12 +413,18 @@
         }
     }
 }
+@media screen and (min-width: 1024px) {
+    .grid-w-side {
+        margin-top: -4rem;
+    }
+}
 
 @media screen and (min-width: 1445px) {
     html {
         font-size: 18px;
     }
-    .tienda {
+    .grid-w-side {
+        margin-top: -4rem;
         &-cont {
             grid-template-columns: minmax(auto, 314px) auto;
             &-products {

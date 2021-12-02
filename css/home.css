@@ -1353,6 +1353,11 @@ header .navbar-overlay.is-active {
         -ms-flex-flow: row;
             flex-flow: row;
   }
+  .footer-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
   .footer-info {
     -webkit-box-pack: start;
         -ms-flex-pack: start;

@@ -792,6 +792,59 @@ header .navbar-overlay.is-active {
   }
 }
 
+.grid-w-side {
+  position: relative;
+}
+
+.grid-w-side-cont {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  row-gap: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .grid-w-side-cont {
+    -ms-grid-columns: minmax(auto, 224px) auto;
+        grid-template-columns: minmax(auto, 224px) auto;
+    -webkit-column-gap: 24px;
+            column-gap: 24px;
+  }
+  .grid-w-side-cont-filtros {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 1.5rem;
+    position: -webkit-sticky;
+    position: sticky;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    top: 1rem;
+    padding: 1rem;
+    background-color: #f0f0f080;
+    border-radius: 10px;
+  }
+  .grid-w-side-cont-filtros-group {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 1445px) {
+  .grid-w-side-cont {
+    -ms-grid-columns: minmax(auto, 314px) auto;
+        grid-template-columns: minmax(auto, 314px) auto;
+  }
+}
+
 .background-primary {
   background-color: #ff266e;
   color: #fff;
@@ -1073,6 +1126,11 @@ header .navbar-overlay.is-active {
     -webkit-box-direction: normal;
         -ms-flex-flow: row;
             flex-flow: row;
+  }
+  .footer-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   .footer-info {
     -webkit-box-pack: start;
@@ -1476,9 +1534,10 @@ header .navbar-overlay.is-active {
 }
 
 .paso-3 .filtros .cta-main-course h5 {
-  font-size: clamp(16px, 3vw, 18px);
+  font-size: clamp(1rem, 2vw, 1.125rem);
   font-weight: 500;
   line-height: 1.2em;
+  color: #02204d;
 }
 
 .paso-3 .filtros .cta-main-course .btn {
@@ -1976,6 +2035,7 @@ header .navbar-overlay.is-active {
 @media screen and (min-width: 768px) {
   .plan-cont-header {
     padding: 1.5rem 1.5rem 0;
+    margin-bottom: 2rem;
   }
   .plan-cont-header-info-title.title-1 h4 {
     max-width: unset;
@@ -1992,10 +2052,10 @@ header .navbar-overlay.is-active {
             column-gap: 0.75rem;
   }
   .plan-cont-header-info-bajada p {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
   .plan-cont-header-info-bajada a {
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 700;
     padding: 1px 0.75rem;
     color: #fff;
@@ -2003,21 +2063,112 @@ header .navbar-overlay.is-active {
     border-radius: 4px;
   }
   .plan-cont .paso {
-    padding: 0 1.5rem;
+    padding: 0 1.5rem 100px;
+  }
+  .plan-cont .paso-3 .filtros {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 1.5rem;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    padding: 0;
+  }
+  .plan-cont .paso-3 .filtros .cta-main-course {
+    border-radius: 10px;
+    background-color: #fff;
+    -webkit-filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.1));
+            filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.1));
+    border: none;
+  }
+  .plan-cont .paso-3 .filtros .cta-main-course .btn {
+    display: initial;
+    margin-top: 1.875rem;
+    font-size: 0.875rem;
+  }
+  .plan-cont .paso-3 .filtros-cont {
+    padding: 1rem;
+    background: rgba(240, 240, 240, 0.5);
+    border-radius: 10px;
+  }
+  .plan-cont .paso-3 .filtros-cont .searchbar-cursos-sec {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+  }
+  .plan-cont .paso-3 .filtros-cont-seleccionados {
+    width: 100%;
+  }
+  .plan-cont .paso-3 .filtros-cont-seleccionados span {
+    display: block;
+    font-size: 0.875rem;
+    padding: 0;
+  }
+  .plan-cont .paso-3 .filtros-cont-seleccionados .accordion-trigger {
+    padding: 0;
+    color: #02204d;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+  .plan-cont .paso-3 .filtros-cont-seleccionados .accordion-trigger i {
+    display: none;
+  }
+  .plan-cont .paso-3 .filtros-cont-seleccionados .accordion-panel {
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-height: -webkit-max-content;
+    max-height: -moz-max-content;
+    max-height: max-content;
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+    background: transparent;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    position: relative;
+  }
+  .plan-cont .paso-3 .filtros-cont-seleccionados .accordion-panel a {
+    padding: 14px 0;
+  }
+  .plan-cont .paso-3 .searchbar-cursos-sec {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+  .plan-cont .paso-3 .control-buttons {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+  }
+  .plan-cont .paso-3 .grid-w-side-cont {
+    row-gap: 0;
   }
   .plan-cont .paso-3 .grid-cursos-filters {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
-  }
-  .plan-cont .paso-3 .filtros-cont-seleccionados {
-    width: 12ch;
+    padding: 0 0 1rem;
   }
   .plan-cont .paso-3 .sorting-cont.menu-desplegable {
     bottom: -1.5rem;
   }
   .plan-cont .paso-4 .course-card-info > p {
     display: block;
+  }
+  .plan-cont .paso .control-buttons {
+    margin-top: 2rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .plan-cont .paso .control-buttons a {
+    max-width: 220px;
   }
   .plan .course-card {
     -ms-grid-columns: 158px 1fr;
@@ -2092,7 +2243,8 @@ header .navbar-overlay.is-active {
     margin: -2px auto;
   }
   .plan-cont .paso-1 {
-    padding: 0;
+    padding: 0 0 100px;
+    margin-top: -1rem;
   }
   .plan-cont .paso-1 .swiper {
     padding: 0 2rem;
@@ -2105,6 +2257,12 @@ header .navbar-overlay.is-active {
   }
   .swiper-pagination-bullets {
     display: none;
+  }
+}
+
+@media screen and (min-width: 1445px) {
+  html {
+    font-size: 18px;
   }
 }
 /*# sourceMappingURL=plan-de-estudio.css.map */
