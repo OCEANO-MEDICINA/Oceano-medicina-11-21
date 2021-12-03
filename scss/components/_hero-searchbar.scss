@@ -82,7 +82,9 @@
         min-height: 360px;
         background: 25% top url(../media/b-hero.jpg);
         background-size: cover;
-        padding: 5.75rem 1rem 7rem;
+        padding: 0;
+        align-items: center;
+        justify-content: center;
 
         &-cont {
             h2 {

@@ -19,6 +19,8 @@
 $width-container: unquote("min(100% - 36px, 960px)");
 
 .hero {
+    background: center/cover url(../media/header-planes-mobile.jpg);
+
     &-cont {
         h2 {
             .salto-de-linea {
@@ -40,7 +42,6 @@ $width-container: unquote("min(100% - 36px, 960px)");
     &-cont {
         position: relative;
         z-index: 2;
-        background-color: #fff;
         border-radius: 10px;
 
         &-header {
@@ -84,7 +85,7 @@ $width-container: unquote("min(100% - 36px, 960px)");
                     align-items: center;
                     justify-content: center;
 
-                    font-size: clamp(10px, 2vw, 24px);
+                    font-size: clamp(0.6875rem, 2vw, 24px);
                     color: $black;
                     font-weight: 700;
                     padding: 0.05em 0.5em;
@@ -101,12 +102,13 @@ $width-container: unquote("min(100% - 36px, 960px)");
                         height: 100%;
                         inset: 0;
                         border-radius: 40px;
-                        background: #ebebeb;
-                        border: 0.75px solid #c4c4c4;
+                        background: #eeeeee;
+                        border: 1.5px solid #c4c4c4;
                     }
                     &.active {
                         .circle {
                             border-color: #00b6de;
+                            background-color: #e4faff;
                         }
                     }
                 }
@@ -315,7 +317,7 @@ $width-container: unquote("min(100% - 36px, 960px)");
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                padding: 14px;
+                padding: 1rem;
             }
             .cta-main-course {
                 flex-grow: 1;
@@ -336,15 +338,30 @@ $width-container: unquote("min(100% - 36px, 960px)");
             }
 
             .filtros-cont {
+                min-width: 33%;
                 &-seleccionados {
                     width: 10ch;
                     a {
                         display: flex;
                         align-items: center;
-                        font-size: clamp(0.625rem, 2vw, 0.75rem);
-                        font-weight: 700;
-                        line-height: 1.3em;
-                        color: $black;
+                        column-gap: 6px;
+
+                        span {
+                            font-size: clamp(0.75rem, 2vw, 1rem);
+                            font-weight: 700;
+                            line-height: 1.3em;
+                            color: $black;
+                        }
+
+                        .text {
+                            &-desktop {
+                                display: none;
+                            }
+                            &-mobile {
+                                display: block;
+                                text-transform: uppercase;
+                            }
+                        }
                     }
 
                     span {
@@ -398,15 +415,19 @@ $width-container: unquote("min(100% - 36px, 960px)");
                 align-items: center;
                 column-gap: 1rem;
                 padding: 1rem 0;
+                justify-content: space-between;
+            }
+            .searchbar-cursos-sec {
+                flex-grow: 1;
             }
             .sorting {
                 position: relative;
                 > a {
                     display: flex;
                     column-gap: 0.25rem;
-                    color: $medicina-dark;
                     font-size: clamp(0.75rem, 2vw, 1rem);
                     font-weight: 700;
+                    color: $medicina-dark;
                     text-transform: uppercase;
                 }
 
@@ -523,7 +544,7 @@ $width-container: unquote("min(100% - 36px, 960px)");
             row-gap: 1rem;
 
             h3 {
-                font-size: 18px;
+                font-size: clamp(1.125rem, 3vw, 1.5rem);
                 margin-bottom: -0.5rem;
             }
         }
@@ -577,6 +598,13 @@ $width-container: unquote("min(100% - 36px, 960px)");
                     background-color: #f5f5f5;
                     transition: all 0s !important;
 
+                    p {
+                        font-size: clamp(0.625rem, 2vw, 0.875rem);
+                        font-weight: 700;
+                        width: 100%;
+                        text-align: center;
+                    }
+
                     .aval {
                         display: flex;
                         align-items: center;
@@ -589,7 +617,6 @@ $width-container: unquote("min(100% - 36px, 960px)");
             &-info {
                 display: flex;
                 flex-direction: column;
-                row-gap: 0.5rem;
                 padding: 1rem;
 
                 .horas {
@@ -606,17 +633,20 @@ $width-container: unquote("min(100% - 36px, 960px)");
                     }
                 }
                 h4 {
-                    font-size: 18px;
+                    margin-bottom: 0.25rem;
+                    font-size: clamp(1.125rem, 3vw, 1.5rem);
                     line-height: 1.2em;
                     font-weight: 700;
                     color: $medicina-dark;
                 }
                 p {
-                    font-size: clamp(0.625rem, 2vw, 0.875rem);
-                    line-height: 1.5em;
+                    font-size: clamp(12px, 2vw, 0.875rem);
+                    line-height: 1.3em;
                 }
                 .mas-info {
+                    margin-top: 0.75rem;
                     display: grid;
+                    grid-template-columns: 50% 50%;
                     grid-template-areas:
                         "mas-info mas-info"
                         "trigger select";
@@ -633,7 +663,7 @@ $width-container: unquote("min(100% - 36px, 960px)");
                         grid-area: mas-info;
                         order: 1;
                         width: 100%;
-                        font-size: clamp(0.625rem, 2vw, 0.875rem);
+                        font-size: clamp(12px, 2vw, 0.875rem);
 
                         h6 {
                             font-weight: 700;
@@ -644,6 +674,7 @@ $width-container: unquote("min(100% - 36px, 960px)");
                         }
                     }
                     .btn-mid {
+                        width: 100%;
                         padding: 0.375rem 0.5rem;
                         font-size: clamp(0.625rem, 2vw, 0.875rem);
                     }
@@ -784,7 +815,7 @@ $width-container: unquote("min(100% - 36px, 960px)");
                         a {
                             font-size: 0.875rem;
                             font-weight: 700;
-                            padding: 1px 0.75rem;
+                            padding: 0.25rem 12px 0.1875rem;
                             color: #fff;
                             background: #54b948;
                             border-radius: 4px;
@@ -794,6 +825,13 @@ $width-container: unquote("min(100% - 36px, 960px)");
             }
             .paso {
                 padding: 0 1.5rem 100px;
+
+                .course-card-info .mas-info {
+                    margin-top: 1rem;
+                    .btn-mid {
+                        padding: 0.5rem 1rem;
+                    }
+                }
 
                 &-3 {
                     .filtros {
@@ -829,7 +867,7 @@ $width-container: unquote("min(100% - 36px, 960px)");
                             &-seleccionados {
                                 width: 100%;
 
-                                span {
+                                .trigger-bajada {
                                     display: block;
                                     font-size: 0.875rem;
                                     padding: 0;
@@ -843,6 +881,13 @@ $width-container: unquote("min(100% - 36px, 960px)");
 
                                     i {
                                         display: none;
+                                    }
+
+                                    .text-mobile {
+                                        display: none;
+                                    }
+                                    .text-desktop {
+                                        display: block;
                                     }
                                 }
 
@@ -864,7 +909,7 @@ $width-container: unquote("min(100% - 36px, 960px)");
                         }
                     }
                     .searchbar-cursos-sec {
-                        flex-grow: 1;
+                        display: none;
                     }
                     .control-buttons {
                         grid-column: 2/3;
@@ -887,6 +932,9 @@ $width-container: unquote("min(100% - 36px, 960px)");
                 &-4 {
                     .course-card-info > p {
                         display: block;
+                    }
+                    .course-card-info {
+                        padding-bottom: 3.5rem;
                     }
                 }
                 .control-buttons {
@@ -923,6 +971,10 @@ $width-container: unquote("min(100% - 36px, 960px)");
                             "boton-l boton-r";
                         justify-items: flex-end;
 
+                        .btn-mid {
+                            width: unset;
+                        }
+
                         .accordion-trigger {
                             grid-area: boton-l;
                         }
@@ -950,11 +1002,17 @@ $width-container: unquote("min(100% - 36px, 960px)");
                     width: 55px;
                 }
             }
+            a:hover {
+                box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+            }
         }
     }
 }
 
 @media screen and (min-width: 1024px) {
+    .hero {
+        background: 25% top/cover url(../media/header-planes.jpg);
+    }
     .solapa-sup {
         height: 280px;
     }
@@ -1008,6 +1066,13 @@ $width-container: unquote("min(100% - 36px, 960px)");
 
                         .swiper-slide {
                             width: unquote("max(280px, 45%)");
+                            .card-plan-footer {
+                                padding: 1rem;
+
+                                .btn {
+                                    margin-top: 1rem;
+                                }
+                            }
                         }
                     }
                 }
@@ -1023,5 +1088,8 @@ $width-container: unquote("min(100% - 36px, 960px)");
 @media screen and (min-width: 1445px) {
     html {
         font-size: 18px;
+    }
+    .hero {
+        min-height: 21vw;
     }
 }

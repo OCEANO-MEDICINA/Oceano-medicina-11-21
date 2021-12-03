@@ -355,6 +355,9 @@
 }
 
 @media screen and (min-width: 767px) {
+    .hero {
+        padding: 3rem 3rem 6rem !important;
+    }
     .courses-top {
         position: relative;
 
@@ -593,6 +596,17 @@
                     display: inline;
                 }
             }
+            &-big,
+            &-small {
+                &:hover {
+                    background-blend-mode: soft-light;
+                }
+            }
+        }
+    }
+    .reviews {
+        .swiper-reviews {
+            cursor: grab;
         }
     }
 }

@@ -92,22 +92,16 @@ button {
         box-shadow: 0px -20px 20px rgba(0, 0, 0, 0.2);
         border-radius: 20px;
     }
+    .c-hover {
+        &:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 5px 12px 1px #a8a2b9;
+        }
+    }
 }
 @media screen and (min-width: 1445px) {
     .solapa-sup {
         width: min(1250px);
-    }
-}
-
-.button {
-    background-color: $primary-dark !important;
-    border: unset;
-    text-transform: uppercase;
-
-    &:hover,
-    &:focus {
-        color: #fff !important;
-        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
     }
 }
 
@@ -134,18 +128,21 @@ button {
         font-size: 0.75rem;
         line-height: 14px;
         padding: 0.375rem 0.75rem;
-
-        &:hover,
-        &:focus,
-        &:target {
-            box-shadow: 0px 0px 7px 1px #9893c5;
-        }
     }
 
     &-big {
         font-size: 0.875rem;
         line-height: 17px;
         padding: 0.5rem 1.5rem;
+    }
+
+    &-mid,
+    &-big {
+        &:hover,
+        &:focus,
+        &:target {
+            box-shadow: 0px 0px 5px 2px #0000005d;
+        }
     }
 
     &-medicina.active {
@@ -182,6 +179,18 @@ button {
             color: #fff;
             font-weight: 700;
         }
+    }
+}
+
+.button {
+    background-color: $primary-dark !important;
+    border: unset;
+    text-transform: uppercase;
+
+    &:hover,
+    &:focus {
+        color: #fff !important;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
     }
 }
 

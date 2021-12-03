@@ -173,27 +173,53 @@
 <body>
 
     <section id="hero" class="hero">
-        <article class="hero-cont contenedor mx-auto">
-            <h1 class="is-uppercase">Cursos 100% Online</h1>
-            <h2 class="is-uppercase">La herramienta de hoy para <span class="salto-de-linea">impulsar tu futuro</span>
-            </h2>
-            <div class="searchbar-especialidad">
-                <div class="field">
-                    <p class="control has-icons-left has-icons-right">
-                        <input id="quicksearch" class="input searchbar-especialidad-campo" type="search"
-                            placeholder="Escribí tu especialidad de interés">
-                        <span class="icon is-small is-left">
-                            <i class="mdi mdi-magnify"></i>
-                        </span>
-                        <span class="icon is-small is-right">
-                            <i class="mdi mdi-chevron-right"></i>
-                        </span>
-                    </p>
+
+        <div class="swiper-hero">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="media/banner-ecommerce_mobile-320w.jpg">
+                        <source media="(max-width: 1920px)" srcset="media/banner-ecommerce-1920w.jpg">
+                        <img class="absolute-center" src="media/banner-ecommerce-1920w" alt="">
+                    </picture>
                 </div>
-                <input class="searchbar-especialidad-button" type="button" value="Buscar">
+                <div class="swiper-slide">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="media/banner-ecommerce_mobile-320w.jpg">
+                        <source media="(max-width: 1920px)" srcset="media/banner-ecommerce-1920w.jpg">
+                        <img class="absolute-center" src="media/banner-ecommerce-1920w" alt="">
+                    </picture>
+                </div>
+                <div class="swiper-slide">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="media/banner-ecommerce_mobile-320w.jpg">
+                        <source media="(max-width: 1920px)" srcset="media/banner-ecommerce-1920w.jpg">
+                        <img class="absolute-center" src="media/banner-ecommerce-1920w" alt="">
+                    </picture>
+                </div>
+
             </div>
 
-        </article>
+        </div>
+
+        <div class="searchbar-especialidad">
+            <div class="field">
+                <p class="control has-icons-left has-icons-right">
+                    <input id="quicksearch" class="input searchbar-especialidad-campo" type="search"
+                        placeholder="Escribí tu especialidad de interés">
+                    <span class="icon is-small is-left">
+                        <i class="mdi mdi-magnify"></i>
+                    </span>
+                    <span class="icon is-small is-right">
+                        <i class="mdi mdi-chevron-right"></i>
+                    </span>
+                </p>
+            </div>
+            <input class="searchbar-especialidad-button" type="button" value="Buscar">
+        </div>
+
     </section>
 
     <section id="tienda" class="tienda grid-w-side">
@@ -833,6 +859,25 @@
 
     <script src="js/navbar.js"></script>
     <script src="js/accordion.js"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script>
+        const swiperBanner = new Swiper('.swiper-hero', {
+            // Optional parameters
+            effect: "fade",
+            loop: true,
+            slidesPerView: 1,
+            centeredSlides: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+        });
+    </script>
 </body>
 
 <footer id="footer" class="footer">

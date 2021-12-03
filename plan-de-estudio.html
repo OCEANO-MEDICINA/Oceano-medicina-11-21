@@ -207,7 +207,7 @@
 
                     <div class="plan-cont-header-info-bajada">
                         <p>¿Necesitás ayuda?</p>
-                        <a href=""><i class="mdi mdi-whatsapp"></i> CONTACTANOS POR WHATSAPP</a>
+                        <a class="btn-mid" href=""><i class="mdi mdi-whatsapp"></i> CONTACTANOS POR WHATSAPP</a>
                     </div>
                 </div>
                 <div class="plan-cont-header-progress">
@@ -414,6 +414,7 @@
                                     <img class="img-curso" src="media/plan-estudio-curso-principal.jpg" alt="">
                                 </div>
                                 <div class="avales">
+                                    <p>AVALES</p>
                                     <div class="aval"><img src="media/aval-colegio-medicos.jpg" alt=""></div>
                                     <div class="aval"><img src="media/aval-aureotec.jpg" alt=""></div>
                                     <div class="aval"><img src="media/aval-esem.jpg" alt=""></div>
@@ -481,6 +482,7 @@
                                     <img class="img-curso" src="media/plan-estudio-curso-principal.jpg" alt="">
                                 </div>
                                 <div class="avales">
+                                    <p>AVALES</p>
                                     <div class="aval"><img src="media/aval-colegio-medicos.jpg" alt=""></div>
                                     <div class="aval"><img src="media/aval-aureotec.jpg" alt=""></div>
                                     <div class="aval"><img src="media/aval-esem.jpg" alt=""></div>
@@ -548,6 +550,7 @@
                                     <img class="img-curso" src="media/plan-estudio-curso-principal.jpg" alt="">
                                 </div>
                                 <div class="avales">
+                                    <p>AVALES</p>
                                     <div class="aval"><img src="media/aval-colegio-medicos.jpg" alt=""></div>
                                     <div class="aval"><img src="media/aval-aureotec.jpg" alt=""></div>
                                     <div class="aval"><img src="media/aval-esem.jpg" alt=""></div>
@@ -642,9 +645,11 @@
 
                             </div>
                             <div class="filtros-cont-seleccionados">
-                                <a class="accordion-trigger" onclick="">Cursos secundarios <i
-                                        class="mdi mdi-chevron-down"></i></a>
-                                <span>Elige 3 más</span>
+                                <a class="accordion-trigger" onclick="">
+                                    <span class="text-mobile">Tus cursos secundarios</span>
+                                    <span class="text-desktop">Cursos secundarios</span>
+                                    <i class="mdi mdi-chevron-down"></i></a>
+                                <span class="trigger-bajada">Elige 3 más</span>
                                 <ul class="accordion-panel">
                                     <li> <a>Formación integral en emergentología para enfermeros <i
                                                 class="mdi mdi-close"></i></a></li>
@@ -1143,6 +1148,7 @@
 
                 992: {
                     effect: "slide",
+                    grabCursor: false,
                     allowTouchMove: false,
                     slidesPerView: 3,
                     spaceBetween: 16,

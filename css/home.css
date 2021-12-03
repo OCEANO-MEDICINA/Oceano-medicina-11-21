@@ -130,24 +130,18 @@ button {
             box-shadow: 0px -20px 20px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
   }
+  .c-hover:hover {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+    -webkit-box-shadow: 0px 5px 12px 1px #a8a2b9;
+            box-shadow: 0px 5px 12px 1px #a8a2b9;
+  }
 }
 
 @media screen and (min-width: 1445px) {
   .solapa-sup {
     width: 1250px;
   }
-}
-
-.button {
-  background-color: #ec125b !important;
-  border: unset;
-  text-transform: uppercase;
-}
-
-.button:hover, .button:focus {
-  color: #fff !important;
-  -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
-          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 }
 
 .btn {
@@ -184,15 +178,15 @@ button {
   padding: 0.375rem 0.75rem;
 }
 
-.btn-mid:hover, .btn-mid:focus, .btn-mid:target {
-  -webkit-box-shadow: 0px 0px 7px 1px #9893c5;
-          box-shadow: 0px 0px 7px 1px #9893c5;
-}
-
 .btn-big {
   font-size: 0.875rem;
   line-height: 17px;
   padding: 0.5rem 1.5rem;
+}
+
+.btn-mid:hover, .btn-mid:focus, .btn-mid:target, .btn-big:hover, .btn-big:focus, .btn-big:target {
+  -webkit-box-shadow: 0px 0px 5px 2px #0000005d;
+          box-shadow: 0px 0px 5px 2px #0000005d;
 }
 
 .btn-medicina.active {
@@ -229,6 +223,18 @@ button {
   border: none;
   color: #fff;
   font-weight: 700;
+}
+
+.button {
+  background-color: #ec125b !important;
+  border: unset;
+  text-transform: uppercase;
+}
+
+.button:hover, .button:focus {
+  color: #fff !important;
+  -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 }
 
 .tags {
@@ -469,6 +475,10 @@ header {
   width: 100%;
 }
 
+header .contenedor {
+  width: min(100% - 36px, 960px);
+}
+
 header .navbar {
   position: relative;
   z-index: 100;
@@ -649,6 +659,9 @@ header .navbar-overlay.is-active {
 }
 
 @media screen and (min-width: 1024px) {
+  header .contenedor {
+    width: 1250px !important;
+  }
   header .navbar-brand {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -721,6 +734,8 @@ header .navbar-overlay.is-active {
   }
   header .navbar-menu .search-desktop {
     padding: 0.25rem;
+    -webkit-transition: all 0s;
+    transition: all 0s;
   }
   header .navbar-menu #lupa-desktop::before,
   header .navbar-menu .cart-desktop {
@@ -1024,7 +1039,13 @@ header .navbar-overlay.is-active {
     min-height: 360px;
     background: 25% top url(../media/b-hero.jpg);
     background-size: cover;
-    padding: 5.75rem 1rem 7rem;
+    padding: 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .hero-cont h2 .salto-de-linea {
     display: inline;
@@ -1172,7 +1193,7 @@ header .navbar-overlay.is-active {
 
 .footer-cont-third p {
   color: #fff;
-  font-size: 10px;
+  font-size: 0.625rem;
 }
 
 .footer-info, .footer-menu, .footer-redes, .footer-newsletter {
@@ -1268,7 +1289,7 @@ header .navbar-overlay.is-active {
 
 .footer-newsletter .mail-form input[type="email"] {
   padding: 0.5rem;
-  min-height: 32px;
+  min-height: 2rem;
   border-radius: 4px 0 0 4px;
   border: none;
   outline: none;
@@ -1320,7 +1341,7 @@ header .navbar-overlay.is-active {
   }
   .footer-cont {
     row-gap: 2.5rem;
-    font-size: 14px;
+    font-size: 0.875rem;
   }
   .footer-cont-first, .footer-cont-second, .footer-cont-third {
     -webkit-box-orient: horizontal;
@@ -1335,6 +1356,12 @@ header .navbar-overlay.is-active {
   }
   .footer-cont-first a:hover, .footer-cont-first a:focus, .footer-cont-first a:active, .footer-cont-second a:hover, .footer-cont-second a:focus, .footer-cont-second a:active, .footer-cont-third a:hover, .footer-cont-third a:focus, .footer-cont-third a:active {
     color: #ff266e;
+  }
+  .footer-cont input[type="email"] {
+    min-height: 2.625rem;
+  }
+  .footer-cont button[type="submit"] {
+    padding: 0 0.75rem;
   }
   .footer-cont-third {
     -webkit-box-pack: justify;
@@ -1388,6 +1415,15 @@ header .navbar-overlay.is-active {
   }
   .footer-certificados img {
     height: 3rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .footer form .wpcf7-submit {
+    cursor: pointer;
+  }
+  .footer form .wpcf7-submit:hover {
+    background-color: #ec125b;
   }
 }
 
@@ -1828,6 +1864,9 @@ header .navbar-overlay.is-active {
 }
 
 @media screen and (min-width: 767px) {
+  .hero {
+    padding: 3rem 3rem 6rem !important;
+  }
   .courses-top {
     position: relative;
   }
@@ -2050,6 +2089,13 @@ header .navbar-overlay.is-active {
   }
   .courses-top-cont-small h4 .salto-de-linea {
     display: inline;
+  }
+  .courses-top-cont-big:hover, .courses-top-cont-small:hover {
+    background-blend-mode: soft-light;
+  }
+  .reviews .swiper-reviews {
+    cursor: -webkit-grab;
+    cursor: grab;
   }
 }
 

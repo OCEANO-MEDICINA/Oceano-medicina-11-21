@@ -1,8 +1,13 @@
 // NAVBAR
+$width-container-solapa: unquote("min(100% - 36px, 960px)");
 
 header {
     position: absolute;
     width: 100%;
+
+    .contenedor {
+        width: $width-container-solapa;
+    }
 
     .navbar {
         position: relative;
@@ -181,6 +186,9 @@ header {
 
 @media screen and (min-width: 1024px) {
     header {
+        .contenedor {
+            width: 1250px !important;
+        }
         .navbar {
             &-brand {
                 align-items: center;
@@ -247,6 +255,7 @@ header {
                 }
                 .search-desktop {
                     padding: 0.25rem;
+                    transition: all 0s;
                 }
 
                 #lupa-desktop::before,
