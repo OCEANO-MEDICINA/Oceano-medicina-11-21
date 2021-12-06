@@ -189,7 +189,7 @@ button {
 
 @media screen and (min-width: 1445px) {
   .solapa-sup {
-    width: 1250px;
+    width: min(100%,1250px);
   }
 }
 

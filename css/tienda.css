@@ -140,7 +140,7 @@ button {
 
 @media screen and (min-width: 1445px) {
   .solapa-sup {
-    width: 1250px;
+    width: min(100%,1250px);
   }
 }
 
@@ -660,7 +660,7 @@ header .navbar-overlay.is-active {
 
 @media screen and (min-width: 1024px) {
   header .contenedor {
-    width: 1250px !important;
+    width: min(100% - 64px,960px);
   }
   header .navbar-brand {
     -webkit-box-align: center;
@@ -940,6 +940,12 @@ header .navbar-overlay.is-active {
     opacity: 1;
     max-height: unset;
     overflow: unset;
+  }
+}
+
+@media screen and (min-width: 1450px) {
+  header .contenedor {
+    width: 1250px !important;
   }
 }
 

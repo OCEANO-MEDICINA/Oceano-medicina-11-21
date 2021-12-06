@@ -187,7 +187,7 @@ header {
 @media screen and (min-width: 1024px) {
     header {
         .contenedor {
-            width: 1250px !important;
+            width: unquote("min(100% - 64px,960px)");
         }
         .navbar {
             &-brand {
@@ -417,6 +417,14 @@ header {
                 max-height: unset;
                 overflow: unset;
             }
+        }
+    }
+}
+
+@media screen and (min-width: 1450px) {
+    header {
+        .contenedor {
+            width: 1250px !important;
         }
     }
 }

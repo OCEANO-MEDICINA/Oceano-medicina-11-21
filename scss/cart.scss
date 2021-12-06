@@ -1,0 +1,387 @@
+@import "_founder";
+
+// NAVBAR
+
+@import "components/_header-navbar";
+
+// HERO
+
+@import "components/_hero";
+
+// FOOTER
+
+@import "components/_footer";
+
+header {
+    position: relative;
+    background-color: $black;
+    .navbar {
+        padding: 1rem 0 1rem;
+    }
+}
+
+.carrito {
+    padding: 2rem 0 4rem;
+
+    .breadcrumb {
+        margin-bottom: 0;
+        padding-bottom: 0.75rem;
+        border-bottom: 2px solid #acacacbf;
+    }
+
+    &-plan {
+        &-grid {
+            padding: 1rem 0 2rem;
+
+            &-side {
+                &-left {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 64px;
+                    height: 64px;
+                    background-color: $enfermeria;
+                    border-radius: 8px;
+                }
+            }
+
+            &-desktop {
+                .carrito-grid {
+                    padding-top: 1rem;
+                }
+
+                .accordion-trigger,
+                .accordion-panel {
+                    display: none;
+                }
+            }
+
+            &-mobile {
+                margin-top: 1rem;
+                grid-area: cursos;
+            }
+        }
+    }
+
+    &-grid {
+        padding: 1rem 0 2rem;
+    }
+
+    &-plan-grid,
+    .plan-select,
+    .discount {
+        display: grid;
+        grid-template-columns: 4rem auto;
+        grid-template-rows: 4rem auto;
+        grid-template-areas:
+            "img-plan plan"
+            "cursos cursos";
+        column-gap: 1rem;
+    }
+
+    &-footer {
+        overflow: hidden;
+        position: relative;
+        border-top: 2px solid #acacacbf;
+        background-color: #f5f5f580;
+
+        .total-price {
+            display: flex;
+            justify-content: flex-end;
+            padding: 1rem 0;
+
+            div {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                width: max-content;
+            }
+
+            h5,
+            h6 {
+                font-weight: 700;
+                color: $medicina-dark;
+            }
+
+            h5 {
+                font-size: clamp(0.75rem, 2vw, 1rem);
+            }
+            h6 {
+                font-size: clamp(1.5rem, 4vw, 2rem);
+                span {
+                    font-size: 0.5em;
+                }
+            }
+        }
+
+        &-cont > div {
+            position: relative;
+            &::after {
+                content: " ";
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                width: 120%;
+                height: 1px;
+                transform: translateX(-50%);
+                background-color: rgba(172, 172, 172, 0.25);
+            }
+        }
+
+        .plan-select,
+        .discount {
+            padding: 1rem 0;
+
+            &-img {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 2rem;
+                width: 64px;
+                height: 64px;
+                background: #ffffff;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+                border-radius: 8px;
+            }
+            &-info {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: unquote("min(100%,372px)");
+                h4 {
+                    margin-bottom: 0.25rem;
+                    font-size: clamp(0.75rem, 2vw, 0.875rem);
+                    font-weight: 700;
+                    color: #494949;
+                }
+                select,
+                input[type="text"] {
+                    padding: 0.25rem 0.5rem;
+                    font-size: clamp(0.875rem, 2vw, 1.125rem);
+                    font-weight: 700;
+                    font-family: "Roboto", sans-serif !important;
+                    background-color: #ffffff;
+                    border: 1px solid #acacac;
+                    box-sizing: border-box;
+                    border-radius: 4px;
+                    width: 100%;
+                }
+
+                &-campos {
+                    position: relative;
+                    display: flex;
+                    column-gap: 0.5rem;
+
+                    input[type="submit"] {
+                        font-size: 14px;
+                        border: none;
+                        outline: none;
+                        cursor: pointer;
+                        max-width: 110px;
+                    }
+                }
+
+                input[type="text"],
+                input[type="submit"] {
+                    text-transform: uppercase;
+                    flex-grow: 1;
+                }
+            }
+        }
+        .discount {
+            &-info {
+                i {
+                    position: absolute;
+                    top: 50%;
+                    right: 5.5rem;
+                    transform: translate(-50%, -50%);
+                }
+            }
+            &.error {
+                input[type="text"] {
+                    border: 1px solid red;
+                }
+                i {
+                    color: red;
+                }
+            }
+            &.aplicado {
+                input[type="text"] {
+                    border: 1px solid #32bea6;
+                }
+                i {
+                    color: #32bea6;
+                }
+                .discount-info {
+                    i {
+                        right: 6.25rem;
+                    }
+                }
+                input[type="submit"] {
+                    background-color: #00b6de;
+                }
+            }
+        }
+    }
+}
+
+.carrito-plan-card {
+    span,
+    a {
+        font-size: 0.875rem;
+        color: $black;
+        line-height: 1;
+    }
+    h1 {
+        margin-bottom: 3px;
+        font-size: 1.125rem;
+        font-weight: 700;
+        line-height: 1;
+        color: $medicina-dark;
+    }
+    a:hover,
+    a.active {
+        color: $primary;
+    }
+}
+
+.carrito-card {
+    display: grid;
+    grid-template-columns: 65px auto;
+    column-gap: 0.75rem;
+    padding: 1rem 0;
+    border-top: 1px solid #acacac40;
+
+    &-img {
+        position: relative;
+        border-radius: 8px;
+        overflow: hidden;
+
+        img {
+            position: absolute;
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        line-height: 1;
+        row-gap: 0.25rem;
+        span {
+            font-size: clamp(0.75rem, 2vw, 0.875rem);
+        }
+        h2 {
+            margin-bottom: 0.25rem;
+            flex-grow: 1;
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            font-weight: 700;
+            color: $medicina-dark;
+        }
+
+        h4 {
+            font-size: 0.75rem;
+            color: #acacac;
+        }
+    }
+    &-price {
+        margin-top: 0.5rem;
+        text-align: right;
+        grid-column: span 2;
+        font-size: clamp(1.125rem, 3vw, 1.75rem);
+        font-weight: 700;
+        line-height: 1;
+        color: $medicina-dark;
+        span {
+            font-size: 0.5em;
+        }
+    }
+}
+
+.carrito-grid {
+    .carrito-card {
+        padding: 1rem 0 0.75rem;
+    }
+}
+
+.accordion-trigger.active ~ .accordion-panel {
+    position: relative;
+    max-height: max-content;
+    padding-bottom: 0;
+}
+
+.control-buttons {
+    margin: 1rem 0 3rem;
+    display: flex;
+    column-gap: 0.75rem;
+    justify-content: center;
+
+    a {
+        padding: 0.5rem 1rem 0.4rem;
+        text-align: center;
+        background: #ffffff;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+        font-weight: 700;
+
+        &.prev {
+            color: $medicina-dark;
+        }
+        &.next {
+            background-color: $primary;
+            color: #fff;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .carrito {
+        padding: 2rem 0 8rem;
+
+        &-plan {
+            &-grid {
+                padding-bottom: 2rem;
+                &-desktop {
+                    .accordion-trigger {
+                        display: inline-block;
+                    }
+                }
+                &-mobile {
+                    display: none;
+                }
+            }
+        }
+        &-plan-grid,
+        .plan-select,
+        .discount {
+            grid-template-rows: unset;
+            grid-template-areas: unset;
+        }
+        &-card {
+            grid-template-columns: 64px auto minmax(180px, max-content);
+            grid-template-rows: 65px;
+
+            &-price {
+                display: flex;
+                grid-column: unset;
+                justify-content: flex-end;
+                align-items: flex-end;
+                column-gap: 0.5rem;
+                height: 100%;
+                margin: 0;
+            }
+        }
+    }
+
+    .control-buttons {
+        margin-top: 2rem;
+
+        a {
+            max-width: 220px;
+        }
+    }
+}
