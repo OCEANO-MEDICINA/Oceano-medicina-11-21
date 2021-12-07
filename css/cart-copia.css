@@ -765,68 +765,6 @@ header .navbar-overlay.is-active {
   }
 }
 
-.notification {
-  padding: 0;
-  position: absolute;
-  background: transparent;
-  width: min(100% - 32px, 646px);
-  top: 14vh;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-
-.notification.success .notification-cont {
-  border: 1px solid #32bea6;
-}
-
-.notification.error .notification-cont {
-  border: 1px solid #e04f5f;
-}
-
-.notification-cont {
-  width: 100%;
-  padding: 1rem 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  background: #ffffff;
-  -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-}
-
-.notification-cont .info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-column-gap: 1rem;
-          column-gap: 1rem;
-}
-
-.notification-cont .info i {
-  line-height: 1;
-}
-
-.notification-cont .info h5 {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #02204d;
-}
-
-.notification-cont button {
-  cursor: pointer;
-}
-
 .hero {
   position: relative;
   background: linear-gradient(349.47deg, rgba(32, 59, 131, 0.9) 31.24%, rgba(83, 152, 255, 0.9) 84.32%);
@@ -1225,46 +1163,14 @@ header .navbar {
   padding: 1rem 0 1rem;
 }
 
-.breadcrumb {
-  padding: 2rem 0 0;
+.carrito {
+  padding: 2rem 0 4rem;
+}
+
+.carrito .breadcrumb {
   margin-bottom: 0;
   padding-bottom: 0.75rem;
   border-bottom: 2px solid #acacacbf;
-}
-
-.carrito-empty-cont {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 3.5rem 0;
-}
-
-.carrito-empty-cont h1 {
-  font-size: clamp(1.5rem, 2vw, 2.25rem);
-  font-weight: 700;
-  color: #02204d;
-}
-
-.carrito-empty-cont h2 {
-  font-size: clamp(1rem, 2vw, 1.125rem);
-}
-
-.carrito-empty-cont a {
-  margin-top: 1.5rem;
-}
-
-.carrito {
-  padding: 2rem 0 4rem;
 }
 
 .carrito-plan-grid {
@@ -1700,4 +1606,4 @@ header .navbar {
     max-width: 220px;
   }
 }
-/*# sourceMappingURL=cart.css.map */
+/*# sourceMappingURL=cart-copia.css.map */
