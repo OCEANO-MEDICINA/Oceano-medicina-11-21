@@ -315,6 +315,11 @@ header {
             font-size: 0.75rem;
             color: #acacac;
         }
+        .codigo {
+            display: flex;
+            align-items: center;
+            column-gap: 1rem;
+        }
     }
     &-price {
         margin-top: 0.5rem;
