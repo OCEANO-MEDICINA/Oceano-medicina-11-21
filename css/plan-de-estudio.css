@@ -2447,6 +2447,18 @@ header .navbar-overlay.is-active {
   .plan-cont .paso-1 .swiper .swiper-slide .card-plan-footer .btn {
     margin-top: 1rem;
   }
+  .plan .paso-1 .swiper-wrapper {
+    padding-top: 2rem;
+  }
+  .plan .paso-1 .swiper-slide:hover {
+    z-index: 5;
+    -webkit-transform: translate(0px, 0px) scale(1.05);
+            transform: translate(0px, 0px) scale(1.05);
+  }
+  .plan .paso-1 .swiper-slide:hover .card-plan {
+    -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  }
   .swiper-pagination-bullets {
     display: none;
   }

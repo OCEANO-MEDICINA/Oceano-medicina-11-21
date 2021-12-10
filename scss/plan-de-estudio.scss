@@ -1078,6 +1078,20 @@ $width-container: unquote("min(100% - 36px, 960px)");
                 }
             }
         }
+        .paso {
+            &-1 {
+                .swiper-wrapper {
+                    padding-top: 2rem;
+                }
+                .swiper-slide:hover {
+                    z-index: 5;
+                    transform: translate(0px, 0px) scale(1.05);
+                    .card-plan {
+                        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+                    }
+                }
+            }
+        }
     }
 
     .swiper-pagination-bullets {
