@@ -218,6 +218,10 @@ button {
         background-color: $bibliografia;
     }
 
+    &-actualidad {
+        background-color: $actualidad;
+    }
+
     &:last-child,
     &:first-child {
         margin: 0 !important;

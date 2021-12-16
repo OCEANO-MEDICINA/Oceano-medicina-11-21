@@ -266,6 +266,10 @@ button {
   background-color: #f09146;
 }
 
+.tags-actualidad {
+  background-color: #5398ff;
+}
+
 .tags:last-child, .tags:first-child {
   margin: 0 !important;
 }
@@ -998,7 +1002,7 @@ header .navbar-overlay.is-active {
 }
 
 .footer-info img {
-  height: 58px;
+  height: 54px;
 }
 
 .footer-info-contact {

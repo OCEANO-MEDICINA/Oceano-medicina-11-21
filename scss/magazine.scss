@@ -1,0 +1,498 @@
+@import "_founder";
+
+// NAVBAR
+
+@import "components/_header-navbar";
+
+// BANNER
+
+@import "components/_banner-contenedor";
+
+// Product Cards
+
+@import "components/_product-card";
+
+// FOOTER
+
+@import "components/_footer";
+
+.navbar {
+    .navbar-brand {
+        .navbar-item {
+            p {
+                display: none;
+            }
+        }
+    }
+}
+
+.hero {
+    position: relative;
+    padding: 4.75rem 0 3.25rem;
+    background: center url(../media/magazine/header-magazine.jpg);
+
+    &-cont {
+        h1 {
+            margin-bottom: 0.5rem;
+            font-size: clamp(1.5rem, 5vw, 1.75rem);
+            line-height: 1.1em;
+            font-weight: 700;
+        }
+        h1,
+        h2 {
+            color: #fff;
+        }
+
+        h2 {
+            font-size: clamp(0.875rem, 3vw, 1.125rem);
+            line-height: 1.1719em;
+            font-weight: 300;
+        }
+    }
+}
+
+.news {
+    position: relative;
+    padding: 2rem 0;
+    overflow: hidden;
+
+    &-cont {
+        &-body {
+            padding-bottom: 2rem;
+        }
+        &-item {
+            &-small {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
+                border-top: 1px solid #c4c4c440;
+            }
+        }
+        &-side {
+            .searchbar {
+                display: flex;
+                gap: 0.5rem;
+
+                input[type="search"] {
+                    z-index: 2;
+                    padding-left: 1rem;
+                    flex-grow: 1;
+                    border: 1px solid #acacac;
+                    border-radius: 50px;
+                    background-color: #fff;
+                }
+
+                .enviar {
+                    position: relative;
+                    height: 2rem;
+                    width: 2rem;
+                    background-color: $primary;
+                    color: #fff;
+                    border-radius: 50px;
+
+                    i {
+                        font-size: 1rem;
+                        line-height: 1;
+                    }
+                }
+            }
+        }
+
+        .swiper-reviews {
+            position: relative;
+            margin: 1rem 0;
+            .swiper-slide {
+                display: flex;
+                align-items: center;
+                height: auto;
+                width: unquote("max(282px, 50%)");
+            }
+            .swiper-pagination {
+                bottom: -1.5rem;
+            }
+
+            .card-review {
+                display: flex;
+                flex-direction: column;
+                box-sizing: border-box;
+                gap: 0.5rem;
+                height: 100%;
+                width: 100%;
+                padding: 1rem 0.85rem;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+                border-radius: 10px;
+
+                &-tag {
+                    font-size: 0.75rem;
+                    font-weight: 300;
+                    letter-spacing: 0.23em;
+                }
+                a {
+                    flex-grow: 1;
+                }
+                &-title {
+                    font-size: 1.125rem;
+                    line-height: 1.2em;
+                    font-weight: 700;
+                    color: $medicina-dark;
+                }
+                &-footer {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+
+                    &-img {
+                        height: 2rem;
+                        width: 2rem;
+                    }
+                    &-info {
+                        display: flex;
+                        flex-direction: column;
+
+                        &-name {
+                            font-size: 0.75rem;
+                            font-weight: 500;
+                            color: $black;
+                        }
+                        &-job {
+                            font-size: 0.625rem;
+                            font-weight: 300;
+                            color: $black;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .card-news {
+        &-big {
+            .card-news-img {
+                height: unquote("max(200px,30vw)");
+            }
+        }
+        &-small {
+            display: flex;
+            flex-direction: column;
+            .card-news {
+                &-title {
+                    font-size: clamp(1.125rem, 3vw, 2rem);
+                }
+                &-bajada {
+                    font-size: clamp(0.75rem, 2vw, 1rem);
+                    flex-grow: 1;
+                }
+                &-img {
+                    height: unquote("max(180px,25vw)");
+                }
+            }
+        }
+        .tags {
+            font-size: clamp(0.75rem, 2vw, 0.875rem);
+            width: max-content;
+            margin-bottom: 0.75rem !important;
+        }
+        &-title {
+            font-size: clamp(1.75rem, 3vw, 2rem);
+            line-height: 1.1em;
+            font-weight: 700;
+            color: $medicina-dark;
+            margin-bottom: 0.5rem;
+        }
+        &-bajada {
+            font-size: 1rem;
+            line-height: 1.2em;
+        }
+
+        &-img {
+            margin: 1rem 0;
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            width: 100%;
+
+            a,
+            img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+            }
+            img {
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+.banner {
+    margin-bottom: 1.5rem;
+}
+
+.enfermeria {
+    background: linear-gradient(95.05deg, #0ec09c 0%, #008066 100%);
+
+    &-cont {
+        width: 100%;
+        padding: 2rem 0 1.5rem;
+
+        &-top {
+            padding: 0 1rem;
+        }
+
+        &-title {
+            color: #fff;
+        }
+
+        .swiper {
+            &-slide {
+                display: flex;
+                align-items: center;
+                height: auto;
+                width: unquote("max(212px, 50%)");
+                padding: 1rem 0;
+            }
+            .swiper-button-prev,
+            .swiper-button-next {
+                display: none;
+            }
+        }
+    }
+}
+.enfermeria,
+.actual,
+.otros {
+    padding: 2rem 0;
+    &-cont {
+        &-top {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            align-items: center;
+
+            &-button {
+                display: flex;
+                align-items: center;
+
+                .btn {
+                    font-size: 0.625rem;
+                    text-align: center;
+                    line-height: 1;
+                    height: max-content;
+                }
+            }
+        }
+
+        &-title {
+            font-size: 1.25rem;
+            line-height: 1;
+            font-weight: 300;
+            text-align: center;
+            text-transform: uppercase;
+            i {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+.actual,
+.otros {
+    &-cont {
+        &-top {
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #c4c4c480;
+        }
+
+        &-body {
+            &-grid {
+                padding: 1rem 0 2rem;
+                display: grid;
+                grid-auto-columns: 1fr;
+                gap: 1rem;
+
+                .post-item {
+                    display: grid;
+                    grid-template-columns: 7.75rem auto;
+                    gap: 1rem;
+
+                    &-img {
+                        height: 7.75rem;
+                        width: 7.75rem;
+                        border-radius: 100px;
+                        border: 1px solid #c4c4c480;
+                    }
+                    &-title {
+                        margin-top: 10px;
+                        font-size: 1.125rem;
+                        font-weight: 700;
+                        line-height: 1.2em;
+                        color: $medicina-dark;
+                    }
+                }
+            }
+        }
+    }
+    .card {
+        display: grid;
+        grid-template-columns: 130px auto;
+
+        &-img {
+            min-height: 170px;
+        }
+
+        &-info {
+            &-sup,
+            &-title {
+                padding: 0.75rem;
+                text-align: left;
+                justify-content: flex-start;
+                padding-bottom: 0;
+            }
+
+            &-footer {
+                border-top: none;
+                .cuotas {
+                    font-size: 0.625rem;
+                }
+                .price {
+                    font-size: 0.875rem;
+                }
+            }
+        }
+    }
+}
+
+.webinar {
+    padding: 1.75rem 0 1.5rem;
+    background: linear-gradient(0deg, #203b83 0%, #4173cd 100%);
+
+    &-cont {
+        &-video {
+            height: 195px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        &-info {
+            color: #fff;
+            text-align: center;
+
+            &-top {
+                padding: 1.25rem 0;
+                border-bottom: 1px solid #ffffff80;
+
+                span {
+                    font-size: 10px;
+                    letter-spacing: 0.23em;
+                    font-weight: 300;
+                    text-transform: uppercase;
+                }
+                h3 {
+                    font-size: 1.125rem;
+                    font-weight: 700;
+                }
+                .profesional {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 0.5rem;
+                    margin-top: 10px;
+
+                    i {
+                        font-size: 1.25rem;
+                        line-height: 1;
+                        color: #fff;
+                    }
+
+                    h4 {
+                        font-size: 0.875rem;
+                        font-weight: 700;
+                        line-height: 1;
+                    }
+                }
+            }
+            &-footer {
+                padding-top: 1.5rem;
+                p {
+                    font-size: 0.875rem;
+                    line-height: 1.2em;
+                }
+                .btn {
+                    margin: 1rem auto 0;
+                    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 767px) {
+    .navbar {
+        .navbar-brand {
+            .navbar-item {
+                p {
+                    display: block;
+                    border-left: 1px solid #fff;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+    .hero {
+        min-height: 360px;
+        background: 25% top url(../media/magazine/header-magazine.jpg);
+        background-size: cover;
+        padding: 0;
+        align-items: center;
+        justify-content: center;
+
+        &-cont {
+            width: 1250px !important;
+            h1 {
+                max-width: 30ch;
+            }
+            h2 {
+                max-width: 40ch;
+
+                .salto-de-linea {
+                    display: inline;
+                }
+            }
+        }
+    }
+    .news {
+        margin-top: -3rem;
+    }
+    .enfermeria {
+        &-cont {
+            width: $width-container-solapa;
+
+            &-title,
+            &-top-filters {
+                flex-grow: 0;
+                padding: 0;
+            }
+            &-top {
+                justify-content: space-between;
+                padding: 0 2rem;
+
+                &-filters {
+                    margin-top: 0;
+
+                    .btn {
+                        min-width: 135px;
+                    }
+                }
+            }
+            .swiper {
+                padding: 0 2rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1445px) {
+    .enfermeria {
+        &-cont {
+            width: 1250px !important;
+        }
+    }
+}
