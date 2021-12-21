@@ -558,6 +558,9 @@
             }
         }
     }
+    .webinar {
+        padding: 2rem 0;
+    }
 }
 
 @media screen and (min-width: 996px) {
@@ -629,6 +632,7 @@
     }
 
     .enfermeria {
+        padding: 0;
         .swiper {
             &::before {
                 position: absolute;
@@ -668,7 +672,7 @@
             grid-template-columns: 1fr 1fr;
 
             &-video {
-                height: 250px;
+                height: 290px;
             }
 
             &-info {
@@ -680,7 +684,7 @@
 
                 &-top {
                     padding: 0 0 1rem;
-                    flex-grow: 1;
+                    flex-grow: 0.5;
 
                     .profesional {
                         justify-content: flex-start;
