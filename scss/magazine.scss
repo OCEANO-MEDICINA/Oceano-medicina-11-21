@@ -34,7 +34,7 @@
     &-cont {
         h1 {
             margin-bottom: 0.5rem;
-            font-size: clamp(1.5rem, 5vw, 1.75rem);
+            font-size: clamp(1.5rem, 4vw, 2.25rem);
             line-height: 1.1em;
             font-weight: 700;
         }
@@ -44,7 +44,7 @@
         }
 
         h2 {
-            font-size: clamp(0.875rem, 3vw, 1.125rem);
+            font-size: clamp(0.875rem, 3vw, 1.25rem);
             line-height: 1.1719em;
             font-weight: 300;
         }
@@ -142,21 +142,22 @@
                     gap: 0.5rem;
 
                     &-img {
-                        height: 2rem;
-                        width: 2rem;
+                        flex-shrink: 0;
+                        height: 2.25rem;
+                        width: 2.25rem;
                     }
                     &-info {
                         display: flex;
                         flex-direction: column;
 
                         &-name {
-                            font-size: 0.75rem;
+                            font-size: 0.875rem;
                             font-weight: 500;
                             color: $black;
                         }
                         &-job {
-                            font-size: 0.625rem;
-                            font-weight: 300;
+                            font-size: 0.75rem;
+                            line-height: 1.3em;
                             color: $black;
                         }
                     }
@@ -248,12 +249,53 @@
                 display: flex;
                 align-items: center;
                 height: auto;
-                width: unquote("max(212px, 50%)");
+                width: unquote("max(13.25rem, 50%)");
                 padding: 1rem 0;
             }
             .swiper-button-prev,
             .swiper-button-next {
                 display: none;
+            }
+        }
+    }
+    .card {
+        .card-overlay,
+        .card-overlay-text {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        .card-overlay {
+            background: rgba(12, 83, 71, 0.75);
+            mix-blend-mode: normal;
+            backdrop-filter: blur(4px);
+        }
+
+        .card-overlay-text {
+            box-sizing: border-box;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            color: #fff;
+
+            &-leyenda {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                flex-grow: 1;
+            }
+
+            p {
+                font-size: 1.25rem;
+                line-height: 1.2em;
+                font-weight: 700;
+                max-width: 14.5ch;
+            }
+            span {
+                margin: 0.75rem 0 1rem;
+                font-size: 0.875rem;
+                line-height: 1.3em;
             }
         }
     }
@@ -403,7 +445,7 @@
     .otros {
         .card {
             display: grid;
-            grid-template-columns: 130px auto;
+            grid-template-columns: 8.125rem auto;
 
             &-img {
                 min-height: 170px;
@@ -456,7 +498,7 @@
                 max-width: 30ch;
             }
             h2 {
-                max-width: 40ch;
+                max-width: 41ch;
 
                 .salto-de-linea {
                     display: inline;
@@ -498,7 +540,7 @@
                 .card-news-small {
                     .card-news-img {
                         margin-top: 0;
-                        height: 92px;
+                        height: unquote("max(92px, 6vw)");
                     }
                 }
             }
@@ -535,7 +577,7 @@
     .otros {
         .cont-w-side-r {
             display: grid;
-            grid-template-columns: auto 212px;
+            grid-template-columns: auto 13.25rem;
             gap: 2rem;
         }
         &-cont {
@@ -547,6 +589,20 @@
         }
         .card {
             height: auto;
+            min-height: 330px;
+
+            &-info {
+                flex-grow: 1;
+            }
+        }
+    }
+    .actual {
+        .card {
+            &-info-footer {
+                a {
+                    margin: 0 auto;
+                }
+            }
         }
     }
     .otros {
@@ -567,7 +623,7 @@
     .hero {
         padding: 0;
         &-cont {
-            width: 1250px !important;
+            width: 960px !important;
         }
     }
 }
@@ -704,6 +760,7 @@
 }
 
 @media screen and (min-width: 1445px) {
+    .hero,
     .enfermeria {
         &-cont {
             width: 1250px !important;

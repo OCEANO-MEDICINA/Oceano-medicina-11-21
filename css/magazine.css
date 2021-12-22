@@ -33,6 +33,21 @@
   color: #fff;
 }
 
+.background-actualidad {
+  background-color: #5398ff;
+  color: #fff;
+}
+
+.background-e-health {
+  background-color: #a0cf67;
+  color: #fff;
+}
+
+.background-f-d-guardia {
+  background-color: #16c8a4;
+  color: #fff;
+}
+
 .background-filtro-tienda {
   background-color: #fff;
   color: #fff;
@@ -226,7 +241,7 @@ button {
 }
 
 .button {
-  background-color: #ec125b !important;
+  background-color: #ff266e !important;
   border: unset;
   text-transform: uppercase;
 }
@@ -833,6 +848,21 @@ header .navbar-overlay.is-active {
   color: #fff;
 }
 
+.background-actualidad {
+  background-color: #5398ff;
+  color: #fff;
+}
+
+.background-e-health {
+  background-color: #a0cf67;
+  color: #fff;
+}
+
+.background-f-d-guardia {
+  background-color: #16c8a4;
+  color: #fff;
+}
+
 .background-filtro-tienda {
   background-color: #fff;
   color: #fff;
@@ -1014,6 +1044,21 @@ header .navbar-overlay.is-active {
 
 .background-bibliografia {
   background-color: #f09146;
+  color: #fff;
+}
+
+.background-actualidad {
+  background-color: #5398ff;
+  color: #fff;
+}
+
+.background-e-health {
+  background-color: #a0cf67;
+  color: #fff;
+}
+
+.background-f-d-guardia {
+  background-color: #16c8a4;
   color: #fff;
 }
 
@@ -1329,7 +1374,7 @@ header .navbar-overlay.is-active {
 
 .hero-cont h1 {
   margin-bottom: 0.5rem;
-  font-size: clamp(1.5rem, 5vw, 1.75rem);
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
   line-height: 1.1em;
   font-weight: 700;
 }
@@ -1340,7 +1385,7 @@ header .navbar-overlay.is-active {
 }
 
 .hero-cont h2 {
-  font-size: clamp(0.875rem, 3vw, 1.125rem);
+  font-size: clamp(0.875rem, 3vw, 1.25rem);
   line-height: 1.1719em;
   font-weight: 300;
 }
@@ -1465,8 +1510,10 @@ header .navbar-overlay.is-active {
 }
 
 .news-cont .swiper-reviews .card-review-footer-img {
-  height: 2rem;
-  width: 2rem;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  height: 2.25rem;
+  width: 2.25rem;
 }
 
 .news-cont .swiper-reviews .card-review-footer-info {
@@ -1480,14 +1527,14 @@ header .navbar-overlay.is-active {
 }
 
 .news-cont .swiper-reviews .card-review-footer-info-name {
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   font-weight: 500;
   color: #272727;
 }
 
 .news-cont .swiper-reviews .card-review-footer-info-job {
-  font-size: 0.625rem;
-  font-weight: 300;
+  font-size: 0.75rem;
+  line-height: 1.3em;
   color: #272727;
 }
 
@@ -1590,13 +1637,71 @@ header .navbar-overlay.is-active {
       -ms-flex-align: center;
           align-items: center;
   height: auto;
-  width: max(212px, 50%);
+  width: max(13.25rem, 50%);
   padding: 1rem 0;
 }
 
 .enfermeria-cont .swiper .swiper-button-prev,
 .enfermeria-cont .swiper .swiper-button-next {
   display: none;
+}
+
+.enfermeria .card .card-overlay,
+.enfermeria .card .card-overlay-text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.enfermeria .card .card-overlay {
+  background: rgba(12, 83, 71, 0.75);
+  mix-blend-mode: normal;
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+}
+
+.enfermeria .card .card-overlay-text {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  color: #fff;
+}
+
+.enfermeria .card .card-overlay-text-leyenda {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.enfermeria .card .card-overlay-text p {
+  font-size: 1.25rem;
+  line-height: 1.2em;
+  font-weight: 700;
+  max-width: 14.5ch;
+}
+
+.enfermeria .card .card-overlay-text span {
+  margin: 0.75rem 0 1rem;
+  font-size: 0.875rem;
+  line-height: 1.3em;
 }
 
 .enfermeria,
@@ -1784,8 +1889,8 @@ header .navbar-overlay.is-active {
   .otros .card {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 130px auto;
-        grid-template-columns: 130px auto;
+    -ms-grid-columns: 8.125rem auto;
+        grid-template-columns: 8.125rem auto;
   }
   .actual .card-img,
   .otros .card-img {
@@ -1836,7 +1941,7 @@ header .navbar-overlay.is-active {
     max-width: 30ch;
   }
   .hero-cont h2 {
-    max-width: 40ch;
+    max-width: 41ch;
   }
   .hero-cont h2 .salto-de-linea {
     display: inline;
@@ -1880,7 +1985,7 @@ header .navbar-overlay.is-active {
   }
   .news-cont-item-small .card-news-small .card-news-img {
     margin-top: 0;
-    height: 92px;
+    height: max(92px, 6vw);
   }
   .enfermeria-cont {
     width: min(100% - 36px, 960px);
@@ -1910,8 +2015,8 @@ header .navbar-overlay.is-active {
   .otros .cont-w-side-r {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: auto 212px;
-        grid-template-columns: auto 212px;
+    -ms-grid-columns: auto 13.25rem;
+        grid-template-columns: auto 13.25rem;
     gap: 2rem;
   }
   .actual-cont-body-grid,
@@ -1921,6 +2026,16 @@ header .navbar-overlay.is-active {
   .actual .card,
   .otros .card {
     height: auto;
+    min-height: 330px;
+  }
+  .actual .card-info,
+  .otros .card-info {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+  .actual .card-info-footer a {
+    margin: 0 auto;
   }
   .otros-cont-body-grid {
     padding: 1rem 0 2rem;
@@ -1935,7 +2050,7 @@ header .navbar-overlay.is-active {
     padding: 0;
   }
   .hero-cont {
-    width: 1250px !important;
+    width: 960px !important;
   }
 }
 
@@ -2082,6 +2197,7 @@ header .navbar-overlay.is-active {
 }
 
 @media screen and (min-width: 1445px) {
+  .hero-cont,
   .enfermeria-cont {
     width: 1250px !important;
   }

@@ -33,6 +33,21 @@
   color: #fff;
 }
 
+.background-actualidad {
+  background-color: #5398ff;
+  color: #fff;
+}
+
+.background-e-health {
+  background-color: #a0cf67;
+  color: #fff;
+}
+
+.background-f-d-guardia {
+  background-color: #16c8a4;
+  color: #fff;
+}
+
 .background-filtro-tienda {
   background-color: #fff;
   color: #fff;
@@ -226,7 +241,7 @@ button {
 }
 
 .button {
-  background-color: #ec125b !important;
+  background-color: #ff266e !important;
   border: unset;
   text-transform: uppercase;
 }
@@ -322,6 +337,21 @@ button {
 
 .background-bibliografia {
   background-color: #f09146;
+  color: #fff;
+}
+
+.background-actualidad {
+  background-color: #5398ff;
+  color: #fff;
+}
+
+.background-e-health {
+  background-color: #a0cf67;
+  color: #fff;
+}
+
+.background-f-d-guardia {
+  background-color: #16c8a4;
   color: #fff;
 }
 
@@ -1134,6 +1164,21 @@ header .navbar-overlay.is-active {
 
 .background-bibliografia {
   background-color: #f09146;
+  color: #fff;
+}
+
+.background-actualidad {
+  background-color: #5398ff;
+  color: #fff;
+}
+
+.background-e-health {
+  background-color: #a0cf67;
+  color: #fff;
+}
+
+.background-f-d-guardia {
+  background-color: #16c8a4;
   color: #fff;
 }
 
