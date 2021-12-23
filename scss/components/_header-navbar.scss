@@ -225,6 +225,10 @@ header {
                 }
             }
 
+            &-item {
+                position: unset;
+            }
+
             &-link {
                 font-size: 1rem;
                 text-transform: unset;
@@ -286,18 +290,21 @@ header {
             &-item.is-hoverable:focus .navbar-dropdown {
                 background-color: transparent;
                 display: grid;
-                grid-template-columns: repeat(4, 1fr);
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
                 padding: 1.5rem 2rem;
                 gap: 0.5rem 2rem;
-                left: 50%;
-                transform: translate(-50%, 20px);
+                left: unset !important;
+                right: 0;
+                transform: translate(0%, 20px);
+                min-width: 780px !important;
                 border-radius: 8px;
                 border: none;
 
                 &-comunidad {
                     gap: 0;
                     padding: 0;
-                    grid-template-columns: 1fr minmax(max-content, 1fr);
+                    grid-template-columns: auto minmax(max-content, 1fr);
+                    min-width: unset !important;
 
                     &::after {
                         border-color: transparent transparent rgb(58, 83, 149);
@@ -390,20 +397,29 @@ header {
             &-dropdown::after {
                 position: absolute;
                 content: " ";
-                left: 50%;
                 top: -16px;
                 border: solid;
                 border-width: 0 10px 16px;
-                border-color: transparent transparent rgba(32, 59, 131, 0.75);
-                backdrop-filter: blur(10px);
-                transform: translateX(-50%);
+                border-color: transparent transparent rgba(32, 59, 131, 0.84);
+            }
+
+            .nav-medicina .navbar-dropdown::after {
+                right: 37.15rem;
+            }
+
+            .nav-enfermeria .navbar-dropdown::after {
+                right: 29rem;
+            }
+            .nav-comunidad .navbar-dropdown::after {
+                right: 20.5rem;
+                border-color: transparent transparent #4e649c !important;
             }
 
             &-dropdown::before {
                 position: absolute;
                 content: " ";
-                height: 20px;
-                top: -20px;
+                height: 28px;
+                top: -28px;
                 width: 100%;
                 background-color: transparent;
             }
@@ -416,6 +432,10 @@ header {
                 opacity: 1;
                 max-height: unset;
                 overflow: unset;
+
+                > * {
+                    z-index: 2;
+                }
             }
         }
     }

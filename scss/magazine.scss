@@ -540,7 +540,7 @@
                 .card-news-small {
                     .card-news-img {
                         margin-top: 0;
-                        height: unquote("max(92px, 6vw)");
+                        height: unquote("max(92px, 10vw)");
                     }
                 }
             }
@@ -569,6 +569,17 @@
             }
             .swiper {
                 padding: 0 2rem;
+
+                .card {
+                    &-info {
+                        &-title {
+                            text-align: left;
+                        }
+                        &-footer {
+                            border: none;
+                        }
+                    }
+                }
             }
         }
     }

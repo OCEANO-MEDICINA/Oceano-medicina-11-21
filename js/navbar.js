@@ -14,17 +14,26 @@ document.addEventListener('DOMContentLoaded', () => {
         const target = el.dataset.target;
         const $target = document.getElementById("navbar-oceano");
         const $target1 = document.getElementById("navbar-overlay");
+     
 
         // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
         el.classList.toggle('is-active');
         $target.classList.toggle('is-active');
         $target1.classList.toggle('is-active');
         
+        
       });
     });
   }
 
 });
+
+function navBar() {
+   var root = document.getElementsByTagName( 'html' )[0]; // '0' to assign the first (and only `HTML` tag)
+
+root.classList.toggle('mascarahtml') ;
+}
+
 
 function btnSearch() {
    var burger = document.getElementById("navbar-burger");
