@@ -1776,6 +1776,10 @@ header .navbar-overlay.is-active {
   border-radius: 36px;
 }
 
+.reviews-cont .card-review-footer .profile-picture img {
+  width: 100%;
+}
+
 .reviews-cont .card-review-footer .google-market {
   width: 74px;
 }
@@ -2170,6 +2174,42 @@ header .navbar-overlay.is-active {
   .reviews .swiper-reviews {
     cursor: -webkit-grab;
     cursor: grab;
+  }
+  .best-seller-cont .swiper,
+  .destacados-cont .swiper {
+    cursor: -webkit-grab;
+    cursor: grab;
+  }
+  .best-seller-cont .swiper-button-prev,
+  .destacados-cont .swiper-button-prev {
+    padding-right: 1.5rem;
+  }
+  .best-seller-cont .swiper-button-next,
+  .destacados-cont .swiper-button-next {
+    padding-left: 1.5rem;
+  }
+  .best-seller-cont .swiper-button-prev, .best-seller-cont .swiper-button-next,
+  .destacados-cont .swiper-button-prev,
+  .destacados-cont .swiper-button-next {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+  .best-seller-cont .swiper-button-prev i, .best-seller-cont .swiper-button-next i,
+  .destacados-cont .swiper-button-prev i,
+  .destacados-cont .swiper-button-next i {
+    font-size: 2rem;
+    color: #acacac;
+  }
+  .best-seller-cont .swiper-button-prev i:hover, .best-seller-cont .swiper-button-next i:hover,
+  .destacados-cont .swiper-button-prev i:hover,
+  .destacados-cont .swiper-button-next i:hover {
+    color: #02204d;
+  }
+  .best-seller-cont .swiper-button-prev::after, .best-seller-cont .swiper-button-next::after,
+  .destacados-cont .swiper-button-prev::after,
+  .destacados-cont .swiper-button-next::after {
+    display: none;
   }
 }
 

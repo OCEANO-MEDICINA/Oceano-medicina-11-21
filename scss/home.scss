@@ -228,6 +228,10 @@
                     height: 36px;
                     background-color: $medicina;
                     border-radius: 36px;
+
+                    img {
+                        width: 100%;
+                    }
                 }
                 .google-market {
                     width: 74px;
@@ -607,6 +611,40 @@
     .reviews {
         .swiper-reviews {
             cursor: grab;
+        }
+    }
+    .best-seller,
+    .destacados {
+        &-cont {
+            .swiper {
+                cursor: grab;
+
+                &-button-prev {
+                    padding-right: 1.5rem;
+                }
+
+                &-button-next {
+                    padding-left: 1.5rem;
+                }
+
+                &-button-prev,
+                &-button-next {
+                    display: flex !important;
+
+                    i {
+                        font-size: 2rem;
+                        color: #acacac;
+
+                        &:hover {
+                            color: $medicina-dark;
+                        }
+                    }
+
+                    &::after {
+                        display: none;
+                    }
+                }
+            }
         }
     }
 }
