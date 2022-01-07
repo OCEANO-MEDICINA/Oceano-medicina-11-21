@@ -139,10 +139,10 @@ body {
                     padding-right: 0.75rem;
                     border-right: 1px solid #acacac40;
                     span {
-                        font-size: clamp(0.625rem, 2vw, 0.75rem);
+                        font-size: clamp(0.75rem, 2vw, 0.75rem);
                     }
                     .precio {
-                        font-size: clamp(1.5rem, 2vw, 1.75rem);
+                        font-size: clamp(1.75rem, 2vw, 1.75rem);
                         font-weight: 700;
                         line-height: 1;
                         color: $medicina-dark;
@@ -155,7 +155,7 @@ body {
                     .unpago {
                         padding: 0.35rem;
                         width: max-content;
-                        font-size: clamp(0.625rem, 1vw, 0.75rem);
+                        font-size: clamp(0.75rem, 1vw, 0.75rem);
                         line-height: 1;
                         background-color: #f6f8fc;
                         border: 1px solid rgba(172, 172, 172, 0.25);

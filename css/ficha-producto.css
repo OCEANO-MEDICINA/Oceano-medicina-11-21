@@ -1580,11 +1580,11 @@ body {
 }
 
 .ficha-cont-header-price-info span {
-  font-size: clamp(0.625rem, 2vw, 0.75rem);
+  font-size: clamp(0.75rem, 2vw, 0.75rem);
 }
 
 .ficha-cont-header-price-info .precio {
-  font-size: clamp(1.5rem, 2vw, 1.75rem);
+  font-size: clamp(1.75rem, 2vw, 1.75rem);
   font-weight: 700;
   line-height: 1;
   color: #02204d;
@@ -1600,7 +1600,7 @@ body {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  font-size: clamp(0.625rem, 1vw, 0.75rem);
+  font-size: clamp(0.75rem, 1vw, 0.75rem);
   line-height: 1;
   background-color: #f6f8fc;
   border: 1px solid rgba(172, 172, 172, 0.25);
