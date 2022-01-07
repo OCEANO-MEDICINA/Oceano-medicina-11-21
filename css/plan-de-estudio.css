@@ -1643,10 +1643,6 @@ header .navbar-overlay.is-active {
   display: none;
 }
 
-.paso-3 .filtros .filtros-cont {
-  min-width: 33%;
-}
-
 .paso-3 .filtros .filtros-cont-seleccionados {
   width: 10ch;
 }
@@ -1916,6 +1912,10 @@ header .navbar-overlay.is-active {
 
 .paso-4 .course-card-info > p {
   display: none;
+}
+
+.paso-4 .course-card {
+  min-height: 150px;
 }
 
 .paso .grilla-cursos-planes {

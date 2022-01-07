@@ -338,7 +338,6 @@ $width-container: unquote("min(100% - 36px, 960px)");
             }
 
             .filtros-cont {
-                min-width: 33%;
                 &-seleccionados {
                     width: 10ch;
                     a {
@@ -550,6 +549,9 @@ $width-container: unquote("min(100% - 36px, 960px)");
         }
         .course-card-info > p {
             display: none;
+        }
+        .course-card {
+            min-height: 150px;
         }
     }
 
