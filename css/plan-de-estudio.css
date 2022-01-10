@@ -835,7 +835,7 @@ header .navbar-overlay.is-active {
   .hero {
     min-height: 360px;
     background: 25% top url(../media/b-hero.jpg);
-    background-size: cover;
+    background-size: cover !important;
     padding: 0;
     -webkit-box-align: center;
         -ms-flex-align: center;
