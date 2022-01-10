@@ -973,6 +973,18 @@ $width-container: unquote("min(100% - 36px, 960px)");
                             "boton-l boton-r";
                         justify-items: flex-end;
 
+                        &-modulos {
+                            ul {
+                                display: flex;
+                                flex-flow: column wrap;
+                                max-height: 320px;
+                                column-gap: 1rem;
+                            }
+                            li {
+                                max-width: 32.5%;
+                            }
+                        }
+
                         .btn-mid {
                             width: unset;
                         }

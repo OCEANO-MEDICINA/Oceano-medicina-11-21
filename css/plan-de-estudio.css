@@ -2400,6 +2400,21 @@ header .navbar-overlay.is-active {
         grid-template-areas: "mas-info mas-info" "boton-l boton-r";
     justify-items: flex-end;
   }
+  .plan .course-card-info .mas-info-modulos ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    max-height: 320px;
+    -webkit-column-gap: 1rem;
+            column-gap: 1rem;
+  }
+  .plan .course-card-info .mas-info-modulos li {
+    max-width: 32.5%;
+  }
   .plan .course-card-info .mas-info .btn-mid {
     width: unset;
   }

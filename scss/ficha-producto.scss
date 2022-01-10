@@ -725,9 +725,20 @@ body {
                 display: none;
             }
         }
+        .botones {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
         .boton {
-            font-size: 13px;
+            height: max-content;
+            font-size: 0.75rem;
             white-space: normal;
+            width: 17ch;
+
+            &#contact-me {
+                background-color: #00b6de !important;
+            }
         }
     }
 }
@@ -1022,6 +1033,23 @@ body {
         }
     }
 
+    .cta-scroll {
+        &-cont {
+            &-info {
+                &-img {
+                    display: block;
+                }
+                h5 {
+                    width: unset;
+                }
+            }
+            .boton {
+                font-size: 0.875rem;
+                width: unset;
+            }
+        }
+    }
+
     .form-asesor {
         margin: -2.5rem 0 4rem;
         &-cont {
@@ -1175,19 +1203,46 @@ body {
     }
 
     .aval {
+        margin-bottom: 0;
         &-cont {
             &-mobile {
                 display: none;
             }
             &-desktop {
                 margin-top: 2rem;
+                padding-bottom: 2rem;
                 display: grid;
                 grid-template-columns: repeat(4, 1fr);
                 gap: 1rem;
 
                 .aval-card {
+                    overflow: unset;
                     &-img {
                         height: unset;
+                        img {
+                            border-radius: 8px 8px 0 0;
+                        }
+                    }
+
+                    .info:hover {
+                        &::after {
+                            position: absolute;
+                            content: " ";
+                            top: -16px;
+                            border: solid;
+                            border-width: 0 10px 12px;
+                            border-color: transparent transparent #3f6cbb;
+                            transform: rotate(180deg);
+                        }
+                        &::before {
+                            display: block;
+                            bottom: 2rem;
+                            right: 0.75rem;
+                            width: 19ch;
+                            text-align: center;
+                            z-index: 3;
+                            transform: translateX(50%);
+                        }
                     }
                 }
             }

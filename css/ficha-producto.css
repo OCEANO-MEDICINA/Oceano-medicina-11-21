@@ -2290,9 +2290,28 @@ body {
   display: none;
 }
 
+.cta-scroll-cont .botones {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+
 .cta-scroll-cont .boton {
-  font-size: 13px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  font-size: 0.75rem;
   white-space: normal;
+  width: 17ch;
+}
+
+.cta-scroll-cont .boton#contact-me {
+  background-color: #00b6de !important;
 }
 
 .form-asesor {
@@ -2632,6 +2651,16 @@ body {
   .cta-asesor-cont-info h5 {
     width: unset;
   }
+  .cta-scroll-cont-info-img {
+    display: block;
+  }
+  .cta-scroll-cont-info h5 {
+    width: unset;
+  }
+  .cta-scroll-cont .boton {
+    font-size: 0.875rem;
+    width: unset;
+  }
   .form-asesor {
     margin: -2.5rem 0 4rem;
   }
@@ -2778,19 +2807,49 @@ body {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
   }
+  .aval {
+    margin-bottom: 0;
+  }
   .aval-cont-mobile {
     display: none;
   }
   .aval-cont-desktop {
     margin-top: 2rem;
+    padding-bottom: 2rem;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (1fr)[4];
         grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
   }
+  .aval-cont-desktop .aval-card {
+    overflow: unset;
+  }
   .aval-cont-desktop .aval-card-img {
     height: unset;
+  }
+  .aval-cont-desktop .aval-card-img img {
+    border-radius: 8px 8px 0 0;
+  }
+  .aval-cont-desktop .aval-card .info:hover::after {
+    position: absolute;
+    content: " ";
+    top: -16px;
+    border: solid;
+    border-width: 0 10px 12px;
+    border-color: transparent transparent #3f6cbb;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  .aval-cont-desktop .aval-card .info:hover::before {
+    display: block;
+    bottom: 2rem;
+    right: 0.75rem;
+    width: 19ch;
+    text-align: center;
+    z-index: 3;
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
   }
   .temario-cont-download {
     -webkit-box-pack: justify;
