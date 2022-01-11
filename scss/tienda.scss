@@ -189,7 +189,7 @@
             &-grid {
                 position: relative;
                 display: grid;
-                grid-template-columns: repeat(auto-fill, minmax(165px, 1fr));
+                grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
                 row-gap: 8px;
                 column-gap: 8px;
 
