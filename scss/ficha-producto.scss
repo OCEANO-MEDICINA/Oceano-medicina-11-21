@@ -997,6 +997,21 @@ body {
 
                 &-img {
                     display: block;
+
+                    img {
+                        position: relative;
+                        height: auto;
+                        aspect-ratio: 1/1;
+                        border-radius: 8px;
+                    }
+                    &-codigos {
+                        margin-top: 0.5rem;
+                        flex-direction: column;
+                        display: flex;
+                        font-size: 0.75rem;
+                        text-align: right;
+                        color: #878686;
+                    }
                 }
             }
             &-details {

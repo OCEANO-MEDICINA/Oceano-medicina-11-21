@@ -2643,6 +2643,25 @@ body {
   .ficha-cont-header-img {
     display: block;
   }
+  .ficha-cont-header-img img {
+    position: relative;
+    height: auto;
+    aspect-ratio: 1/1;
+    border-radius: 8px;
+  }
+  .ficha-cont-header-img-codigos {
+    margin-top: 0.5rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 0.75rem;
+    text-align: right;
+    color: #878686;
+  }
   .ficha-cont-details-top {
     margin: 2rem 0;
   }

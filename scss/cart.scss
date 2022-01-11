@@ -139,6 +139,13 @@ header {
                 font-size: clamp(1.5rem, 4vw, 2rem);
                 span {
                     font-size: 0.5em;
+
+                    &.before-discount {
+                        display: block;
+                        font-size: 1em;
+                        color: #acacac;
+                        text-decoration: line-through;
+                    }
                 }
             }
         }
@@ -216,6 +223,10 @@ header {
                     text-transform: uppercase;
                     flex-grow: 1;
                 }
+            }
+
+            .carrito-card-price {
+                text-align: left;
             }
         }
         .discount {
@@ -343,6 +354,12 @@ header {
         color: $medicina-dark;
         span {
             font-size: 0.5em;
+
+            &.before-discount {
+                font-size: 0.75em;
+                color: #acacac;
+                text-decoration: line-through;
+            }
         }
     }
 }
@@ -391,6 +408,9 @@ header {
             &-grid {
                 padding-bottom: 2rem;
                 &-desktop {
+                    .carrito-card {
+                        grid-template-columns: 65px auto;
+                    }
                     .accordion-trigger {
                         display: inline-block;
                     }
@@ -408,11 +428,17 @@ header {
             grid-template-areas: unset;
         }
         .plan-select {
+            &-info {
+                width: max-content;
+            }
             .carrito-card-price {
                 justify-content: flex-start;
 
                 span {
                     font-size: 0.6em;
+                    &.before-discount {
+                        font-size: 1em;
+                    }
                 }
             }
         }

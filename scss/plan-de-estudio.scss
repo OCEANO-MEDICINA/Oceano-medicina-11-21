@@ -835,6 +835,27 @@ $width-container: unquote("min(100% - 36px, 960px)");
                     }
                 }
 
+                &-2 {
+                    .course-card {
+                        &-info {
+                            .mas-info {
+                                &-modulos {
+                                    ul {
+                                        display: flex;
+                                        flex-flow: column wrap;
+                                        align-content: flex-start;
+                                        max-height: 430px;
+                                        column-gap: 2rem;
+                                    }
+                                    li {
+                                        max-width: 48%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
                 &-3 {
                     .filtros {
                         position: sticky;
@@ -956,7 +977,7 @@ $width-container: unquote("min(100% - 36px, 960px)");
 
                 &-img {
                     .img-course {
-                        height: unquote("min(100%, 216px)");
+                        height: unquote("min(100%, 310px)");
                     }
                     .avales {
                         width: 100%;
@@ -972,18 +993,6 @@ $width-container: unquote("min(100% - 36px, 960px)");
                             "mas-info mas-info"
                             "boton-l boton-r";
                         justify-items: flex-end;
-
-                        &-modulos {
-                            ul {
-                                display: flex;
-                                flex-flow: column wrap;
-                                max-height: 320px;
-                                column-gap: 1rem;
-                            }
-                            li {
-                                max-width: 32.5%;
-                            }
-                        }
 
                         .btn-mid {
                             width: unset;
@@ -1104,6 +1113,11 @@ $width-container: unquote("min(100% - 36px, 960px)");
                         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
                     }
                 }
+            }
+        }
+        .course-card {
+            .img-course {
+                height: unquote("min(100%, 260px)");
             }
         }
     }

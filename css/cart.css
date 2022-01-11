@@ -1427,6 +1427,13 @@ header .navbar {
   font-size: 0.5em;
 }
 
+.carrito-footer .total-price h6 span.before-discount {
+  display: block;
+  font-size: 1em;
+  color: #acacac;
+  text-decoration: line-through;
+}
+
 .carrito-footer-cont > div {
   position: relative;
 }
@@ -1544,6 +1551,12 @@ header .navbar {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+}
+
+.carrito-footer .plan-select .carrito-card-price,
+.carrito-footer .cuotas-select .carrito-card-price,
+.carrito-footer .discount .carrito-card-price {
+  text-align: left;
 }
 
 .carrito-footer .discount-info i {
@@ -1692,6 +1705,12 @@ header .navbar {
   font-size: 0.5em;
 }
 
+.carrito-card-price span.before-discount {
+  font-size: 0.75em;
+  color: #acacac;
+  text-decoration: line-through;
+}
+
 .carrito-grid .carrito-card {
   padding: 1rem 0 0.75rem;
 }
@@ -1742,6 +1761,10 @@ header .navbar {
   .carrito-plan-grid {
     padding-bottom: 2rem;
   }
+  .carrito-plan-grid-desktop .carrito-card {
+    -ms-grid-columns: 65px auto;
+        grid-template-columns: 65px auto;
+  }
   .carrito-plan-grid-desktop .accordion-trigger {
     display: inline-block;
   }
@@ -1756,6 +1779,11 @@ header .navbar {
         grid-template-rows: unset;
         grid-template-areas: unset;
   }
+  .carrito .plan-select-info {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
   .carrito .plan-select .carrito-card-price {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
@@ -1763,6 +1791,9 @@ header .navbar {
   }
   .carrito .plan-select .carrito-card-price span {
     font-size: 0.6em;
+  }
+  .carrito .plan-select .carrito-card-price span.before-discount {
+    font-size: 1em;
   }
   .carrito-card {
     -ms-grid-columns: 64px auto minmax(180px, max-content);
