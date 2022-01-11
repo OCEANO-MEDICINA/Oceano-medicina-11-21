@@ -1630,6 +1630,7 @@ header .navbar-overlay.is-active {
 }
 
 .destacados-cont-top-filters .btn {
+  font-family: "Roboto", sans-serif !important;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
