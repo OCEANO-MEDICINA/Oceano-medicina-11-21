@@ -3017,4 +3017,14 @@ body {
     width: 1250px !important;
   }
 }
+
+@media screen and (min-width: 1450px) {
+  .ficha-cont-header {
+    -ms-grid-columns: 2fr 1fr;
+        grid-template-columns: 2fr 1fr;
+  }
+  .ficha-cont-header-img img {
+    max-height: 320px;
+  }
+}
 /*# sourceMappingURL=ficha-producto.css.map */
