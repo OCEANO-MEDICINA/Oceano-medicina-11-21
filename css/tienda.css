@@ -1726,8 +1726,8 @@ header .navbar-overlay.is-active {
   position: relative;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(165px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
+  -ms-grid-columns: (minmax(165px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(165px, 1fr));
   row-gap: 8px;
   -webkit-column-gap: 8px;
           column-gap: 8px;
@@ -1968,8 +1968,8 @@ header .navbar-overlay.is-active {
         grid-template-columns: minmax(auto, 314px) auto;
   }
   .grid-w-side-cont-products-grid {
-    -ms-grid-columns: (minmax(240px, 1fr))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    -ms-grid-columns: (minmax(240px, 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   }
 }
 /*# sourceMappingURL=tienda.css.map */
