@@ -2072,16 +2072,13 @@ header .navbar-overlay.is-active {
   }
   .reviews-cont .reviews-slider .swiper-reviews {
     overflow: hidden;
-    padding-bottom: 2rem;
+    padding-block: 2rem;
   }
   .reviews-cont .reviews-slider .swiper-reviews .swiper-slide {
     width: 100% !important;
-    height: -webkit-max-content;
-    height: -moz-max-content;
-    height: max-content;
   }
   .reviews-cont .reviews-slider .swiper-reviews .swiper-pagination {
-    bottom: 1rem;
+    bottom: 0rem;
   }
   .reviews-cont .reviews-slider .card-review {
     margin: 1rem;

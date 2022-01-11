@@ -496,14 +496,13 @@
 
                 .swiper-reviews {
                     overflow: hidden;
-                    padding-bottom: 2rem;
+                    padding-block: 2rem;
 
                     .swiper-slide {
                         width: 100% !important;
-                        height: max-content;
                     }
                     .swiper-pagination {
-                        bottom: 1rem;
+                        bottom: 0rem;
                     }
                 }
                 .card-review {
