@@ -1461,4 +1461,15 @@ body {
             }
         }
     }
+    .form-asesor {
+        &-cont {
+            .formulario {
+                &-campos {
+                    > div {
+                        width: unquote("min(280px, 100%)");
+                    }
+                }
+            }
+        }
+    }
 }

@@ -3026,5 +3026,8 @@ body {
   .ficha-cont-header-img img {
     max-height: 320px;
   }
+  .form-asesor-cont .formulario-campos > div {
+    width: min(280px, 100%);
+  }
 }
 /*# sourceMappingURL=ficha-producto.css.map */
