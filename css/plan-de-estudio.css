@@ -2281,7 +2281,7 @@ header .navbar-overlay.is-active {
             column-gap: 2rem;
   }
   .plan-cont .paso-2 .course-card-info .mas-info-modulos li {
-    max-width: 48%;
+    width: clamp(32.5%, 48%, 100%);
   }
   .plan-cont .paso-3 .filtros {
     position: -webkit-sticky;

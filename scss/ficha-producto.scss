@@ -502,7 +502,6 @@ body {
             &-grid {
                 display: grid;
                 grid-template-columns: 3rem auto;
-                max-height: 489px;
             }
             .temario-tabs {
                 background-color: #eeeeee33;
@@ -522,15 +521,9 @@ body {
                             border: none;
                         }
 
-                        a {
-                            color: $black;
-                        }
                         &.is-active {
                             background-color: #00b6de;
-
-                            a {
-                                color: #fff;
-                            }
+                            color: #fff;
                         }
                         span {
                             display: none;
@@ -1065,6 +1058,7 @@ body {
                         .tab {
                             text-align: left;
                             text-transform: uppercase;
+                            cursor: pointer;
                             span {
                                 display: initial;
                             }

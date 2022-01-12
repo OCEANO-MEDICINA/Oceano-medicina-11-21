@@ -371,6 +371,17 @@
         }
         &-desktop {
             display: block;
+
+            &.internacional {
+                .courses-top-cont-grid {
+                    grid-template-columns: 1.5fr 1fr;
+                }
+                .courses-top-cont-small {
+                    h4 {
+                        max-width: 17ch;
+                    }
+                }
+            }
         }
         &-cont {
             position: relative;
@@ -583,6 +594,12 @@
     .courses-top {
         padding-top: 2rem;
         margin-top: -4rem;
+
+        &-desktop.internacional {
+            .courses-top-cont-big {
+                grid-column: unset;
+            }
+        }
         &-cont {
             .title {
                 max-width: 78ch;

@@ -848,7 +848,7 @@ $width-container: unquote("min(100% - 36px, 960px)");
                                         column-gap: 2rem;
                                     }
                                     li {
-                                        max-width: 48%;
+                                        width: clamp(32.5%, 48%, 100%);
                                     }
                                 }
                             }

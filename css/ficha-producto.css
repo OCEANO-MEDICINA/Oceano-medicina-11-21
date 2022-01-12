@@ -2009,7 +2009,6 @@ body {
   display: grid;
   -ms-grid-columns: 3rem auto;
       grid-template-columns: 3rem auto;
-  max-height: 489px;
 }
 
 .temario-cont-info .temario-tabs {
@@ -2039,15 +2038,8 @@ body {
   border: none;
 }
 
-.temario-cont-info .temario-tabs ul .tab a {
-  color: #272727;
-}
-
 .temario-cont-info .temario-tabs ul .tab.is-active {
   background-color: #00b6de;
-}
-
-.temario-cont-info .temario-tabs ul .tab.is-active a {
   color: #fff;
 }
 
@@ -2693,6 +2685,7 @@ body {
   .temario-cont-info .temario-tabs ul .tab {
     text-align: left;
     text-transform: uppercase;
+    cursor: pointer;
   }
   .temario-cont-info .temario-tabs ul .tab span {
     display: initial;

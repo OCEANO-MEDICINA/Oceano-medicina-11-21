@@ -1955,6 +1955,13 @@ header .navbar-overlay.is-active {
   .courses-top-desktop {
     display: block;
   }
+  .courses-top-desktop.internacional .courses-top-cont-grid {
+    -ms-grid-columns: 1.5fr 1fr;
+        grid-template-columns: 1.5fr 1fr;
+  }
+  .courses-top-desktop.internacional .courses-top-cont-small h4 {
+    max-width: 17ch;
+  }
   .courses-top-cont {
     position: relative;
     z-index: 2;
@@ -2149,6 +2156,9 @@ header .navbar-overlay.is-active {
   .courses-top {
     padding-top: 2rem;
     margin-top: -4rem;
+  }
+  .courses-top-desktop.internacional .courses-top-cont-big {
+    grid-column: unset;
   }
   .courses-top-cont .title {
     max-width: 78ch;
