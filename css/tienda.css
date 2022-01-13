@@ -1728,6 +1728,7 @@ header .navbar-overlay.is-active {
   display: grid;
   -ms-grid-columns: (minmax(165px, 1fr))[auto-fill];
       grid-template-columns: repeat(auto-fill, minmax(165px, 1fr));
+  grid-auto-rows: 1fr;
   row-gap: 8px;
   -webkit-column-gap: 8px;
           column-gap: 8px;
@@ -1929,7 +1930,7 @@ header .navbar-overlay.is-active {
     max-width: 20ch;
   }
   .grid-w-side-cont-products-grid .card-info-title {
-    padding: 1rem 1rem 0.75rem;
+    padding: 0.75rem 0.5rem;
     line-height: 1.2em;
   }
   .grid-w-side-cont-products-grid .card-info-footer {

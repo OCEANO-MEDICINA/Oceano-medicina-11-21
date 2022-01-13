@@ -1681,7 +1681,7 @@ body {
 }
 
 .ficha-cont-details-top {
-  margin: 0.75rem 0 2rem;
+  margin: 0.75rem 0 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1719,6 +1719,7 @@ body {
 }
 
 .ficha-cont-details-info {
+  margin-top: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1783,7 +1784,7 @@ body {
 }
 
 .ficha-cont-promo {
-  margin: 1.5rem 0;
+  margin: 1.5rem 0 0;
   background: #f6f8fc;
   border: 1px solid rgba(172, 172, 172, 0.25);
   border-radius: 4px;
@@ -1839,7 +1840,7 @@ body {
 }
 
 .aval {
-  margin: 2rem 0 0;
+  margin: 3.5rem 0 -2rem;
   overflow: hidden;
 }
 
@@ -1942,6 +1943,10 @@ body {
       -ms-flex-positive: 1;
           flex-grow: 1;
   border-top: 1px solid rgba(238, 238, 238, 0.75);
+}
+
+.r-mex {
+  margin-top: 2rem;
 }
 
 .r-mex-cont-download {
@@ -2066,7 +2071,11 @@ body {
 }
 
 .evaluacion {
-  margin: 2rem 0;
+  margin-top: 2rem;
+}
+
+.options {
+  margin-top: 2rem;
 }
 
 .options-cont {
@@ -2147,7 +2156,7 @@ body {
 }
 
 .diploma {
-  margin: 2rem 0;
+  margin-top: 2rem;
   padding: 2rem 0;
   background: linear-gradient(349.47deg, rgba(32, 59, 131, 0.9) 15.68%, rgba(65, 115, 205, 0.9) 84.32%);
   text-align: center;
@@ -2165,6 +2174,10 @@ body {
 
 .diploma-cont-modelo img {
   display: none;
+}
+
+.autor {
+  margin-top: 2rem;
 }
 
 .autor-cont {
@@ -2226,10 +2239,24 @@ body {
   line-height: 1.2em;
 }
 
-.autor-cont-grid .post-item-info a {
+.autor-cont-grid .post-item-info a,
+.autor-cont-grid .post-item-info h4,
+.autor-cont-grid .post-item-info li {
   font-size: clamp(0.625rem, 1vw, 0.75rem);
   text-transform: uppercase;
   color: #878686;
+}
+
+.autor-cont-grid .post-item-info ul {
+  padding-bottom: 0.5rem;
+}
+
+.autor-cont-grid .post-item-info ul:last-child {
+  border-bottom: 1px solid #c9c9c9;
+}
+
+.autor-cont-grid .post-item-info h4 i {
+  margin-right: 0.25rem;
 }
 
 .autor-cont-grid .post-item-title {
@@ -2369,7 +2396,7 @@ body {
 }
 
 .form-asesor {
-  margin: -3.25rem 0 2rem;
+  margin-top: -3.25rem;
 }
 
 .form-asesor-cont .formulario-check {
@@ -2569,7 +2596,7 @@ body {
 }
 
 .related {
-  margin-bottom: 5rem;
+  margin: 2rem 0 5rem;
 }
 
 .related-cont {
@@ -2663,8 +2690,8 @@ body {
   .ficha-cont-details .ficha-cont-exclusive-info {
     padding: 1.75rem 2rem;
   }
-  .aval-cont {
-    width: min(100% - 32px, 960px - 64px);
+  .ficha-cont-details .detalles {
+    border-radius: 8px;
   }
   .r-mex-cont-download,
   .temario-cont-download {
@@ -2697,7 +2724,7 @@ body {
     width: 81.5%;
   }
   .diploma {
-    margin: 4rem 0;
+    margin: 4rem 0 0;
   }
   .diploma-cont {
     display: -webkit-box;
@@ -2725,6 +2752,9 @@ body {
     width: 100%;
     margin-bottom: 0.5rem;
   }
+  .autor {
+    margin-top: 4rem;
+  }
   .autor-cont-grid {
     gap: 1.5rem;
   }
@@ -2744,12 +2774,15 @@ body {
   .cta-scroll-cont-info h5 {
     width: unset;
   }
+  .cta-scroll-cont .botones button {
+    width: 100% !important;
+  }
   .cta-scroll-cont .boton {
     font-size: 0.875rem;
     width: unset;
   }
   .form-asesor {
-    margin: -2.5rem 0 4rem;
+    margin: -2.5rem 0 0;
   }
   .form-asesor-cont .formulario-check {
     gap: 2rem;
@@ -2763,6 +2796,9 @@ body {
   }
   .form-asesor-cont .formulario-bottom {
     margin-top: 2rem;
+  }
+  .related {
+    margin-top: 4rem;
   }
   .related-cont {
     width: min(100% - 36px, 960px);
@@ -2778,8 +2814,8 @@ body {
     top: 0;
     width: 2rem;
     height: 100%;
-    background: -webkit-gradient(linear, left top, right top, color-stop(0, #fff), to(transparent));
-    background: linear-gradient(90deg, #fff 0 50%, transparent 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0, #fdfdfd), to(transparent));
+    background: linear-gradient(90deg, #fdfdfd 0 50%, transparent 100%);
   }
   .related .swiper::after {
     position: absolute;
@@ -2789,8 +2825,8 @@ body {
     top: 0;
     width: 2rem;
     height: 100%;
-    background: -webkit-gradient(linear, right top, left top, color-stop(0, #fff), to(transparent));
-    background: linear-gradient(270deg, #fff 0 50%, transparent 100%);
+    background: -webkit-gradient(linear, right top, left top, color-stop(0, #fdfdfd), to(transparent));
+    background: linear-gradient(270deg, #fdfdfd 0 50%, transparent 100%);
   }
   .related-cont-body-grid {
     padding: 1rem 0 0;
@@ -2891,6 +2927,9 @@ body {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
   }
+  .aval-cont {
+    width: min(100% - 32px, 960px - 64px);
+  }
   .aval-cont-mobile {
     display: none;
   }
@@ -2907,7 +2946,7 @@ body {
     overflow: unset;
   }
   .aval-cont-desktop .aval-card-img {
-    height: unset;
+    height: max(130px,10vw);
   }
   .aval-cont-desktop .aval-card-img img {
     border-radius: 8px 8px 0 0;
@@ -3019,8 +3058,17 @@ body {
   .ficha-cont-header-img img {
     max-height: 320px;
   }
+  .ficha-cont-details-info {
+    gap: 1.5rem;
+  }
+  .ficha-cont-exclusive {
+    margin-top: 1.5rem;
+  }
   .form-asesor-cont .formulario-campos > div {
     width: min(280px, 100%);
+  }
+  .related .swiper {
+    margin: 1rem 0 -2rem -2rem;
   }
 }
 /*# sourceMappingURL=ficha-producto.css.map */
