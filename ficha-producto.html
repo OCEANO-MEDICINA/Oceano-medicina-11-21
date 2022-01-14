@@ -524,7 +524,8 @@
                     </h6>
                 </div>
 
-                <a href="" class="btn btn-mid button boton">VER RECONOCIMIENTO</a>
+                <a class="btn btn-mid button boton js-modal-trigger" data-target="modal-reconocimiento">VER
+                    RECONOCIMIENTO</a>
             </div>
         </article>
     </section>
@@ -880,7 +881,8 @@
                 y digital, con la firma del autor del curso que certifica la aprobación.</h4>
             <div class="diploma-cont-modelo">
                 <img src="media/icon/diploma.svg" alt="">
-                <a href="" class="btn btn-mid button boton">VER MODELO DE DIPLOMA</a>
+                <a class="btn btn-mid button boton js-modal-trigger" data-target="modal-diploma">VER MODELO
+                    DE DIPLOMA</a>
             </div>
         </article>
     </section>
@@ -1182,6 +1184,66 @@
         </article>
     </section>
 
+    <div id="modal-diploma" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+
+            <section class="modal-card-body">
+                <div class="swiper-diploma" style="overflow: hidden;">
+
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div>
+                                <a target="_blank" href="media/diploma.jpg">
+                                    <img src="media/diploma.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div>
+                                <a target="_blank" href="media/diploma.jpg">
+                                    <img src="media/diploma.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div>
+                                <a target="_blank" href="media/diploma.jpg">
+                                    <img src="media/diploma.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+
+            </section>
+            <footer class="modal-card-foot">
+                <button class="ml-auto btn btn-big button">Cancel</button>
+            </footer>
+        </div>
+    </div>
+
+    <div id="modal-reconocimiento" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <section class="modal-card-body">
+                <a target="_blank" href="media/diploma.jpg">
+                    <img src="media/diploma.jpg" alt="">
+                </a>
+            </section>
+
+
+            <footer class="modal-card-foot">
+                <button class="ml-auto btn btn-big button">Cancel</button>
+            </footer>
+        </div>
+    </div>
+
+    <script src="js/modal.js"></script>
     <script src="js/tabs.js"></script>
     <script src="js/navbar.js"></script>
     <script src="js/accordion.js"></script>
@@ -1238,6 +1300,17 @@
                     slidesPerView: 5,
                     spaceBetween: 16,
                 },
+            },
+        });
+    </script>
+    <script>
+        const swiperDiploma = new Swiper('.swiper-diploma', {
+            effect: "fade",
+            slidesPerView: 1,
+            centeredSlides: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
             },
         });
     </script>

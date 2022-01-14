@@ -32,6 +32,24 @@ button {
     border: unset;
 }
 
+.ajax-loader {
+    display: block !important;
+    position: fixed !important;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background: url(../media/icon/loader.svg);
+    background-color: #23282d8f;
+    background-size: 15%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100% !important;
+    width: 100% !important;
+    margin: 0px !important;
+    border-radius: 0px !important;
+}
+
 // CLASES GENERALES
 
 // ACCORDION
@@ -107,6 +125,37 @@ button {
 @media screen and (min-width: 1445px) {
     .solapa-sup {
         width: unquote("min(100%,1250px)");
+    }
+}
+
+// MODAL
+
+.modal {
+    &-background {
+        background: rgba(32, 59, 131, 0.85);
+        backdrop-filter: blur(10px);
+    }
+    &-card {
+        width: calc(100% - 32px);
+        border-radius: 4px;
+
+        .swiper-slide {
+            width: max-content !important;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .modal {
+        &-card {
+            width: max-content;
+            max-width: 640px;
+            border-radius: 8px;
+
+            &-body {
+                padding: 2rem 2rem 1rem;
+            }
+        }
     }
 }
 
