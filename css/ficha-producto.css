@@ -2663,6 +2663,7 @@ body {
 .form-asesor-cont .formulario-bottom .verificacion p {
   font-size: 14px;
   margin-left: 0.5rem;
+  width: 100%;
 }
 
 .form-asesor-cont .formulario-bottom .verificacion a {
