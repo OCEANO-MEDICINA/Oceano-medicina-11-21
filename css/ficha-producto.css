@@ -86,7 +86,7 @@ button {
   border: unset;
 }
 
-.ajax-loader {
+.wpcf7-form.submitting .wpcf7-spinner {
   display: block !important;
   position: fixed !important;
   left: 50%;
@@ -420,6 +420,13 @@ header {
 
 header .contenedor {
   width: min(100% - 36px, 960px);
+}
+
+header .navbar-item.is-active .navbar-dropdown,
+header .navbar-item.is-hoverable:focus .navbar-dropdown,
+header .navbar-item.is-hoverable:focus-within .navbar-dropdown,
+header .navbar-item.is-hoverable:hover .navbar-dropdown {
+  display: unset !important;
 }
 
 header .navbar {
@@ -2902,6 +2909,9 @@ body {
     background: -webkit-gradient(linear, right top, left top, color-stop(0, #fdfdfd), to(transparent));
     background: linear-gradient(270deg, #fdfdfd 0 50%, transparent 100%);
   }
+  .related .swiper .card {
+    min-height: 350px;
+  }
   .related-cont-body-grid {
     padding: 1rem 0 0;
   }
@@ -2995,7 +3005,7 @@ body {
     left: unset;
   }
   .ficha-cont-details-top .details-card p {
-    width: 22ch;
+    max-width: 22ch;
   }
   .ficha-cont .related {
     padding: 0;
@@ -3096,6 +3106,9 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
   }
   .options-cont-ebooks-title, .options-cont-related-title {
     margin-bottom: 1.5rem;
@@ -3103,6 +3116,8 @@ body {
   .options-cont-ebooks-grid, .options-cont-related-grid {
     gap: 1rem;
     height: 100%;
+    -ms-grid-columns: (minmax(200px, 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   }
   .autor-cont-grid .post-item-info h5 {
     margin-bottom: 1rem;

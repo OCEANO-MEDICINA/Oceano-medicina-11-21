@@ -9,6 +9,13 @@ header {
         width: $width-container-solapa;
     }
 
+    .navbar-item.is-active .navbar-dropdown,
+    .navbar-item.is-hoverable:focus .navbar-dropdown,
+    .navbar-item.is-hoverable:focus-within .navbar-dropdown,
+    .navbar-item.is-hoverable:hover .navbar-dropdown {
+        display: unset !important;
+    }
+
     .navbar {
         position: relative;
         z-index: 100;

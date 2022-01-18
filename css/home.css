@@ -86,7 +86,7 @@ button {
   border: unset;
 }
 
-.ajax-loader {
+.wpcf7-form.submitting .wpcf7-spinner {
   display: block !important;
   position: fixed !important;
   left: 50%;
@@ -565,6 +565,13 @@ header {
 
 header .contenedor {
   width: min(100% - 36px, 960px);
+}
+
+header .navbar-item.is-active .navbar-dropdown,
+header .navbar-item.is-hoverable:focus .navbar-dropdown,
+header .navbar-item.is-hoverable:focus-within .navbar-dropdown,
+header .navbar-item.is-hoverable:hover .navbar-dropdown {
+  display: unset !important;
 }
 
 header .navbar {
@@ -1168,6 +1175,10 @@ header .navbar-overlay.is-active {
     font-size: 1.125rem;
     padding-right: 6rem !important;
     min-height: 46px;
+  }
+  .hero .searchbar-especialidad .dgwt-wcas-sf-wrapp button.dgwt-wcas-search-submit {
+    background-color: #fff;
+    color: #646464;
   }
   .hero .searchbar-especialidad-button {
     padding: 0 1rem;
