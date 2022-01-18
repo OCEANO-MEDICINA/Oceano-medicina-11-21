@@ -1,3 +1,5 @@
+@import "../_colors";
+
 // NAVBAR
 $width-container-solapa: unquote("min(100% - 36px, 960px)");
 
@@ -15,6 +17,11 @@ header {
     .navbar-item.is-hoverable:hover .navbar-dropdown {
         background-color: transparent;
         display: none;
+    }
+    .navbar-dropdown a.navbar-item:focus,
+    .navbar-dropdown a.navbar-item:hover {
+        background-color: unset;
+        color: $primary;
     }
 
     .navbar {

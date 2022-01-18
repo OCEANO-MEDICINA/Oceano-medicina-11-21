@@ -86,6 +86,10 @@ button {
   border: unset;
 }
 
+.wpcf7-spinner {
+  display: none;
+}
+
 .wpcf7-form.submitting .wpcf7-spinner {
   display: block !important;
   position: fixed !important;
@@ -359,6 +363,70 @@ button {
   }
 }
 
+.background-primary {
+  background-color: #ff266e;
+  color: #fff;
+}
+
+.background-primary {
+  background-color: #ff266e;
+  color: #fff;
+}
+
+.background-primary-dark {
+  background-color: #ec125b;
+  color: #fff;
+}
+
+.background-medicina {
+  background-color: #0055a2;
+  color: #fff;
+}
+
+.background-medicina-dark {
+  background-color: #203b83;
+  color: #fff;
+}
+
+.background-enfermeria {
+  background-color: #008066;
+  color: #fff;
+}
+
+.background-bibliografia {
+  background-color: #f09146;
+  color: #fff;
+}
+
+.background-actualidad {
+  background-color: #5398ff;
+  color: #fff;
+}
+
+.background-e-health {
+  background-color: #a0cf67;
+  color: #fff;
+}
+
+.background-f-d-guardia {
+  background-color: #16c8a4;
+  color: #fff;
+}
+
+.background-filtro-tienda {
+  background-color: #fff;
+  color: #fff;
+}
+
+.background-ccc {
+  background-color: #ccc;
+  color: #fff;
+}
+
+.background-filtro-tienda {
+  color: #575757;
+}
+
 header {
   position: absolute;
   width: 100%;
@@ -374,6 +442,12 @@ header .navbar-item.is-hoverable:focus-within .navbar-dropdown,
 header .navbar-item.is-hoverable:hover .navbar-dropdown {
   background-color: transparent;
   display: none;
+}
+
+header .navbar-dropdown a.navbar-item:focus,
+header .navbar-dropdown a.navbar-item:hover {
+  background-color: unset;
+  color: #ff266e;
 }
 
 header .navbar {
