@@ -3163,6 +3163,10 @@ body {
         -ms-flex-positive: 1;
             flex-grow: 1;
   }
+  .options-cont-ebooks-grid, .options-cont-related-grid {
+    -ms-grid-columns: (minmax(230px, 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  }
   .form-asesor-cont .formulario-campos > div {
     width: min(280px, 100%);
   }

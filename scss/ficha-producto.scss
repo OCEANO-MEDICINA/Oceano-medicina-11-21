@@ -1530,6 +1530,16 @@ body {
             }
         }
     }
+    .options {
+        &-cont {
+            &-ebooks,
+            &-related {
+                &-grid {
+                    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+                }
+            }
+        }
+    }
     .form-asesor {
         &-cont {
             .formulario {
