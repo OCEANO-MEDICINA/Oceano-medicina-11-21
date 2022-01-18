@@ -422,6 +422,14 @@ header .contenedor {
   width: min(100% - 36px, 960px);
 }
 
+header .navbar-item.is-active .navbar-dropdown,
+header .navbar-item.is-hoverable:focus .navbar-dropdown,
+header .navbar-item.is-hoverable:focus-within .navbar-dropdown,
+header .navbar-item.is-hoverable:hover .navbar-dropdown {
+  background-color: transparent;
+  display: none;
+}
+
 header .navbar {
   position: relative;
   z-index: 100;
