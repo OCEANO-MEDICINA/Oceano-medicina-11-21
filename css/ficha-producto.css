@@ -109,6 +109,14 @@ button {
   border-radius: 0px !important;
 }
 
+@media only screen and (min-width: 100px) and (max-width: 555px) {
+  .zsiq-newtheme.zsiq_size2[embedtheme],
+  .zsiq-newtheme.zsiq_size3[embedtheme],
+  body .zsiq-mobhgt[embedtheme].zsiq-newtheme {
+    height: 75% !important;
+  }
+}
+
 .accordion-trigger.active i {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
@@ -1472,8 +1480,32 @@ header .navbar-overlay.is-active {
           column-gap: 0.75rem;
 }
 
+.footer-certificados-cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
 .footer-certificados img {
   height: 2rem;
+}
+
+.footer-certificados.co .link-pago-co {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  border-left: 1px solid #c4c4c4;
+  padding-left: 0.5rem;
+}
+
+.footer-certificados.co img {
+  height: 1.5rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -1498,6 +1530,12 @@ header .navbar-overlay.is-active {
   }
   .footer-cont-first a:hover, .footer-cont-first a:focus, .footer-cont-first a:active, .footer-cont-second a:hover, .footer-cont-second a:focus, .footer-cont-second a:active, .footer-cont-third a:hover, .footer-cont-third a:focus, .footer-cont-third a:active {
     color: #ff266e;
+  }
+  .footer-cont-first {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: minmax(50%, 400px) 1fr;
+        grid-template-columns: minmax(50%, 400px) 1fr;
   }
   .footer-cont input[type="email"] {
     min-height: 2.625rem;
@@ -1526,6 +1564,10 @@ header .navbar-overlay.is-active {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    gap: 2rem;
   }
   .footer-info {
     -webkit-box-pack: start;
@@ -1552,6 +1594,11 @@ header .navbar-overlay.is-active {
   .footer-newsletter .mail-form .acceptance-848 {
     width: 100%;
   }
+  .footer-redes {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
   .footer-redes svg {
     height: 2.5rem;
   }
@@ -1566,6 +1613,17 @@ header .navbar-overlay.is-active {
   }
   .footer form .wpcf7-submit:hover {
     background-color: #ec125b;
+  }
+  .footer-certificados.co .link-pago-co {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 0.25rem;
+    border-left: 1px solid #c4c4c4;
+    padding-left: 0.5rem;
+  }
+  .footer-certificados.co img {
+    height: 2.15rem;
   }
 }
 

@@ -143,8 +143,25 @@ $width-container: unquote("min(100% - 3.25rem, 960px - 64px)");
         display: flex;
         column-gap: 0.75rem;
 
+        &-cont {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
         img {
             height: 2rem;
+        }
+        &.co {
+            .link-pago-co {
+                display: flex;
+                gap: 0.25rem;
+                border-left: 1px solid #c4c4c4;
+                padding-left: 0.5rem;
+            }
+            img {
+                height: 1.5rem;
+            }
         }
     }
 }
@@ -175,6 +192,10 @@ $width-container: unquote("min(100% - 3.25rem, 960px - 64px)");
                     }
                 }
             }
+            &-first {
+                display: grid;
+                grid-template-columns: minmax(50%, 400px) 1fr;
+            }
             input[type="email"] {
                 min-height: 2.625rem;
             }
@@ -199,6 +220,8 @@ $width-container: unquote("min(100% - 3.25rem, 960px - 64px)");
 
         &-menu {
             display: flex;
+            justify-content: flex-end;
+            gap: 2rem;
         }
 
         &-info {
@@ -228,6 +251,7 @@ $width-container: unquote("min(100% - 3.25rem, 960px - 64px)");
         }
 
         &-redes {
+            justify-content: flex-end;
             svg {
                 height: 2.5rem;
             }
@@ -249,6 +273,20 @@ $width-container: unquote("min(100% - 3.25rem, 960px - 64px)");
 
                 &:hover {
                     background-color: $primary-dark;
+                }
+            }
+        }
+
+        &-certificados {
+            &.co {
+                .link-pago-co {
+                    display: flex;
+                    gap: 0.25rem;
+                    border-left: 1px solid #c4c4c4;
+                    padding-left: 0.5rem;
+                }
+                img {
+                    height: 2.15rem;
                 }
             }
         }

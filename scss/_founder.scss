@@ -32,6 +32,8 @@ button {
     border: unset;
 }
 
+// FORM LOADER
+
 .wpcf7-spinner {
     display: none;
 }
@@ -51,6 +53,15 @@ button {
     width: 100% !important;
     margin: 0px !important;
     border-radius: 0px !important;
+}
+
+// QUICK FIX CHAT EMERGENTE
+@media only screen and (min-width: 100px) and (max-width: 555px) {
+    .zsiq-newtheme.zsiq_size2[embedtheme],
+    .zsiq-newtheme.zsiq_size3[embedtheme],
+    body .zsiq-mobhgt[embedtheme].zsiq-newtheme {
+        height: 75% !important;
+    }
 }
 
 // CLASES GENERALES
