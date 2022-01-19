@@ -1562,6 +1562,14 @@ header .navbar-overlay.is-active {
   gap: 2rem;
 }
 
+.footer-certificados-cont h6 {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
 .footer-certificados img {
   height: 2rem;
 }
@@ -1685,16 +1693,28 @@ header .navbar-overlay.is-active {
   .footer form .wpcf7-submit:hover {
     background-color: #ec125b;
   }
+  .footer-cont-third {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr auto;
+        grid-template-columns: 1fr auto;
+  }
+  .footer-certificados {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .footer-certificados-cont h6 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    text-align: right;
+  }
   .footer-certificados.co .link-pago-co {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    gap: 0.25rem;
-    border-left: 1px solid #c4c4c4;
-    padding-left: 0.5rem;
+    gap: 1rem;
+    padding-left: 1rem;
   }
   .footer-certificados.co img {
-    height: 2.15rem;
+    height: 2.5rem;
   }
 }
 
