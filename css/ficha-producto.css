@@ -2350,6 +2350,14 @@ body {
   min-height: 2rem !important;
 }
 
+#modal-temario form .intl-tel-input.allow-dropdown {
+  width: 100%;
+}
+
+#modal-temario form .intl-tel-input.allow-dropdown input[type="tel"] {
+  padding-left: 3rem;
+}
+
 #modal-temario form input[type="checkbox"] {
   width: unset;
   border: 1px solid #57575740;
@@ -2358,7 +2366,7 @@ body {
   min-height: unset !important;
 }
 
-#modal-temario form .span.wpcf7-list-item-label {
+#modal-temario form span.wpcf7-list-item-label {
   font-size: 0.75rem;
 }
 

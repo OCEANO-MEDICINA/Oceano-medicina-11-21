@@ -594,6 +594,13 @@ body {
         background-color: #fff !important;
         min-height: 2rem !important;
     }
+    .intl-tel-input.allow-dropdown {
+        width: 100%;
+
+        input[type="tel"] {
+            padding-left: 3rem;
+        }
+    }
 
     input[type="checkbox"] {
         width: unset;
@@ -602,7 +609,7 @@ body {
         background-color: #fff !important;
         min-height: unset !important;
     }
-    .span.wpcf7-list-item-label {
+    span.wpcf7-list-item-label {
         font-size: 0.75rem;
     }
 }
