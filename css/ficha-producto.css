@@ -513,20 +513,6 @@ header .contenedor {
   width: min(100% - 36px, 960px);
 }
 
-header .navbar-item.is-active .navbar-dropdown,
-header .navbar-item.is-hoverable:focus .navbar-dropdown,
-header .navbar-item.is-hoverable:focus-within .navbar-dropdown,
-header .navbar-item.is-hoverable:hover .navbar-dropdown {
-  background-color: transparent;
-  display: none;
-}
-
-header .navbar-dropdown a.navbar-item:focus,
-header .navbar-dropdown a.navbar-item:hover {
-  background-color: unset;
-  color: #ff266e;
-}
-
 header .navbar {
   position: relative;
   z-index: 100;
@@ -709,6 +695,18 @@ header .navbar-overlay.is-active {
 @media screen and (min-width: 1024px) {
   header .contenedor {
     width: min(100% - 64px,960px);
+  }
+  header .navbar-item.is-active .navbar-dropdown,
+  header .navbar-item.is-hoverable:focus .navbar-dropdown,
+  header .navbar-item.is-hoverable:focus-within .navbar-dropdown,
+  header .navbar-item.is-hoverable:hover .navbar-dropdown {
+    background-color: transparent;
+    display: none;
+  }
+  header .navbar-dropdown a.navbar-item:focus,
+  header .navbar-dropdown a.navbar-item:hover {
+    background-color: unset;
+    color: #ff266e;
   }
   header .navbar-brand {
     -webkit-box-align: center;

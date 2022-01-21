@@ -11,19 +11,6 @@ header {
         width: $width-container-solapa;
     }
 
-    .navbar-item.is-active .navbar-dropdown,
-    .navbar-item.is-hoverable:focus .navbar-dropdown,
-    .navbar-item.is-hoverable:focus-within .navbar-dropdown,
-    .navbar-item.is-hoverable:hover .navbar-dropdown {
-        background-color: transparent;
-        display: none;
-    }
-    .navbar-dropdown a.navbar-item:focus,
-    .navbar-dropdown a.navbar-item:hover {
-        background-color: unset;
-        color: $primary;
-    }
-
     .navbar {
         position: relative;
         z-index: 100;
@@ -203,6 +190,19 @@ header {
     header {
         .contenedor {
             width: unquote("min(100% - 64px,960px)");
+        }
+
+        .navbar-item.is-active .navbar-dropdown,
+        .navbar-item.is-hoverable:focus .navbar-dropdown,
+        .navbar-item.is-hoverable:focus-within .navbar-dropdown,
+        .navbar-item.is-hoverable:hover .navbar-dropdown {
+            background-color: transparent;
+            display: none;
+        }
+        .navbar-dropdown a.navbar-item:focus,
+        .navbar-dropdown a.navbar-item:hover {
+            background-color: unset;
+            color: $primary;
         }
         .navbar {
             &-brand {
