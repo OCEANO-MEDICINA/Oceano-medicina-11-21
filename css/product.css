@@ -206,12 +206,6 @@ button {
   border-radius: 4px;
 }
 
-.modal-card .swiper-slide {
-  width: -webkit-max-content !important;
-  width: -moz-max-content !important;
-  width: max-content !important;
-}
-
 @media screen and (min-width: 768px) {
   .modal-card {
     width: -webkit-max-content;
