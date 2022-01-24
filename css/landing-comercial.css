@@ -1873,6 +1873,10 @@ body {
   line-height: 1.3em;
 }
 
+.cursos-list-item-price {
+  min-width: 8ch;
+}
+
 .cursos-list-item-price::before {
   content: "$ ";
 }
@@ -2173,10 +2177,37 @@ body {
   .cursos-cont-footer {
     padding: 1.75rem 0 0.25rem;
   }
+  .cursos-cont-resumen-list-item {
+    margin-right: 2rem;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 400px max-content minmax(120px, 195px);
+        grid-template-columns: 400px -webkit-max-content minmax(120px, 195px);
+        grid-template-columns: 400px max-content minmax(120px, 195px);
+    gap: 2rem;
+  }
   .cursos-cont-resumen-total {
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    margin-right: 2rem;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 400px max-content minmax(120px, 195px);
+        grid-template-columns: 400px -webkit-max-content minmax(120px, 195px);
+        grid-template-columns: 400px max-content minmax(120px, 195px);
+    gap: 2rem;
+  }
+  .cursos-cont-resumen-total .continuar {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    width: 100%;
+  }
+  .cursos-cont-resumen-total-price-total {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
   }
   .cursos-list {
     padding-right: 2rem;
