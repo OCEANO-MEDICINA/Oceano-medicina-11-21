@@ -207,6 +207,7 @@ body {
                 line-height: 1.3em;
             }
             &-price {
+                min-width: 8ch;
                 &::before {
                     content: "$ ";
                 }
@@ -429,8 +430,27 @@ body {
                 padding: 1.75rem 0 0.25rem;
             }
             &-resumen {
+                &-list {
+                    &-item {
+                        margin-right: 2rem;
+                        display: grid;
+                        grid-template-columns: 400px max-content minmax(120px, 195px);
+                        gap: 2rem;
+                    }
+                }
                 &-total {
-                    justify-content: flex-end;
+                    margin-right: 2rem;
+                    display: grid;
+                    grid-template-columns: 400px max-content minmax(120px, 195px);
+                    gap: 2rem;
+                    .continuar {
+                        order: 2;
+                        width: 100%;
+                    }
+                    &-price-total {
+                        order: 1;
+                        grid-column: 2/3;
+                    }
                 }
             }
         }
