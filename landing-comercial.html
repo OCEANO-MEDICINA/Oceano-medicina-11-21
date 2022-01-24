@@ -237,7 +237,7 @@
                     <li class="cursos-list-item">
                         <p class="cursos-list-item-name">CURSO SUPERIOR EN MEDICINA INTERNA. MKSAP 18</p>
                         <p class="cursos-list-item-price">1234</p>
-                        <button class="cursos-list-item-select is-active btn btn-mid"><span>Seleccionar</span></button>
+                        <button class="cursos-list-item-select is-active btn btn-mid"><span>Seleccionado</span></button>
                     </li>
                     <li class="cursos-list-item">
                         <p class="cursos-list-item-name">CURSO SUPERIOR EN MEDICINA INTERNA. MKSAP 18</p>
@@ -337,14 +337,43 @@
                 </ul>
             </div>
             <div class="cursos-cont-footer">
-                <div class="cursos-resumen">
+                <div class="cursos-cont-resumen">
                     <div>
-                        <h4 class="cursos-resumen-title">CURSO SELECCIONADO</h4>
+                        <h4 class="cursos-cont-resumen-title">CURSOS SELECCIONADOS</h4>
+                        <div class="cursos-cont-resumen-list">
+                            <div class="cursos-cont-resumen-list-item">
+                                <p class="cursos-cont-resumen-list-item-name">CURSO SUPERIOR EN MEDICINA INTERNA.
+                                    MKSAP18
+                                </p>
+                                <p class="cursos-cont-resumen-list-item-price">1234</p>
+                            </div>
+                            <div class="cursos-cont-resumen-list-item">
+                                <p class="cursos-cont-resumen-list-item-name">CURSO SUPERIOR EN MEDICINA INTERNA.
+                                    MKSAP18
+                                </p>
+                                <p class="cursos-cont-resumen-list-item-price">123456</p>
+                            </div>
+                            <div class="cursos-cont-resumen-list-item">
+                                <p class="cursos-cont-resumen-list-item-name">CURSO SUPERIOR EN MEDICINA
+                                    INTERNA.MKSAP18
+                                </p>
+                                <p class="cursos-cont-resumen-list-item-price">123456</p>
+                            </div>
+
+                        </div>
                     </div>
-                    <div>
-                        <p class="cursos-resumen-item-select">CURSO SUPERIOR EN MEDICINA INTERNA.MKSAP18</p>
+
+                    <div class="cursos-cont-resumen-total">
+                        <a href="" class="btn button continuar">Continuar</a>
+                        <div class="cursos-cont-resumen-total-price-total">
+                            <p class="total">444444</p>
+                            <span class="total-bajada">TOTAL</span>
+                        </div>
+
                     </div>
                 </div>
+
+
             </div>
         </article>
     </section>
@@ -352,7 +381,7 @@
     <section id="form-asesor" class="form-asesor">
         <article class="form-asesor-cont contenedor mx-auto">
             <form action="" class="formulario">
-
+                <h4 class="formulario-title">Datos personales</h4>
                 <div class="formulario-campos">
                     <div>
                         <label for="formulario-name" class="formulario-label">Nombre</label>
@@ -400,41 +429,40 @@
                     placeholder="Observaciones"></textarea>
 
                 <div class="formulario-descuentos">
-                    <div class="formulario-descuentos">
-                        <h5>Descuento</h5>
-                        <div class="formulario-descuentos-options">
-                            <label for="0-off" class="formulario-descuentos-options-item">
-                                <input type="radio" name="descuento" id="0-off">
-                                <span>0</span>
-                            </label>
-                            <label for="10-off" class="formulario-descuentos-options-item">
-                                <input type="radio" name="descuento" id="10-off">
-                                <span>10%</span>
-                            </label>
-                            <label for="20-off" class="formulario-descuentos-options-item">
-                                <input type="radio" name="descuento" id="20-off">
-                                <span>20%</span>
-                            </label>
-                            <label for="30-off" class="formulario-descuentos-options-item">
-                                <input type="radio" name="descuento" id="30-off">
-                                <span>30%</span>
-                            </label>
-                            <label for="50-off" class="formulario-descuentos-options-item">
-                                <input type="radio" name="descuento" id="50-off">
-                                <span>50%</span>
-                            </label>
-                        </div>
 
+                    <h3 class="formulario-descuentos-title">Descuento</h3>
+                    <div class="formulario-descuentos-options">
+                        <label for="0-off" class="formulario-descuentos-options-item active">
+                            <input type="radio" name="descuento" id="0-off">
+                            <span>0</span>
+                        </label>
+                        <label for="10-off" class="formulario-descuentos-options-item">
+                            <input type="radio" name="descuento" id="10-off">
+                            <span>10%</span>
+                        </label>
+                        <label for="20-off" class="formulario-descuentos-options-item">
+                            <input type="radio" name="descuento" id="20-off">
+                            <span>20%</span>
+                        </label>
+                        <label for="30-off" class="formulario-descuentos-options-item">
+                            <input type="radio" name="descuento" id="30-off">
+                            <span>30%</span>
+                        </label>
+                        <label for="50-off" class="formulario-descuentos-options-item">
+                            <input type="radio" name="descuento" id="50-off">
+                            <span>50%</span>
+                        </label>
                     </div>
+
                 </div>
                 <div class="formulario-envio">
                     <button id="gen-lead" class="gen-lead btn btn-big button">Generar lead</button>
                     <div class="formulario-envio-link">
-                        <h5>Generar link de pago</h5>
+                        <h5 class="formulario-envio-title">Generar link de pago</h5>
                         <div class="links">
-                            <button class="btn btn-big button">Whatsapp</button>
-                            <button class="btn btn-big button">Email</button>
-                            <button class="btn btn-big button">QR</button>
+                            <button class="btn btn-big button links-item">Whatsapp</button>
+                            <button class="btn btn-big button links-item">Email</button>
+                            <button class="btn btn-big button links-item">QR</button>
                         </div>
 
                     </div>
