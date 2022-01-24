@@ -152,10 +152,6 @@ button {
     &-card {
         width: calc(100% - 32px);
         border-radius: 4px;
-
-        .swiper-slide {
-            width: max-content !important;
-        }
     }
 }
 
