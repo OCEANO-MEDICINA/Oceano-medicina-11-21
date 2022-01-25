@@ -1508,6 +1508,11 @@ header .navbar-overlay.is-active {
   height: 1.5rem;
 }
 
+.footer span.wpcf7-form-control-wrap.recaptcha {
+  -webkit-transform: scale(0.8) translateX(-12%);
+          transform: scale(0.8) translateX(-12%);
+}
+
 @media screen and (min-width: 768px) {
   .footer {
     background-color: #272727;

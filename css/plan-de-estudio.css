@@ -1345,6 +1345,11 @@ header .navbar-overlay.is-active {
   height: 1.5rem;
 }
 
+.footer span.wpcf7-form-control-wrap.recaptcha {
+  -webkit-transform: scale(0.8) translateX(-12%);
+          transform: scale(0.8) translateX(-12%);
+}
+
 @media screen and (min-width: 768px) {
   .footer {
     background-color: #272727;
@@ -1625,8 +1630,7 @@ header .navbar-overlay.is-active {
   height: 90%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  background: -webkit-gradient(linear, left top, right top, color-stop(0, #fff), to(transparent));
-  background: linear-gradient(90deg, #fff 0 0%, transparent 100%);
+  background: url(../media/plan-gradient.png);
 }
 
 .paso-1 .swiper::after {
@@ -1637,10 +1641,9 @@ header .navbar-overlay.is-active {
   top: 50%;
   width: 1rem;
   height: 90%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  background: -webkit-gradient(linear, right top, left top, color-stop(0, #fff), to(transparent));
-  background: linear-gradient(270deg, #fff 0 50%, transparent 100%);
+  -webkit-transform: translateY(-50%) rotate(180deg);
+          transform: translateY(-50%) rotate(180deg);
+  background: url(../media/plan-gradient.png);
 }
 
 .paso-1 .swiper-wrapper {
