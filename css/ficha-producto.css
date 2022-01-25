@@ -2344,25 +2344,6 @@ body {
   min-height: 2rem !important;
 }
 
-#modal-temario form .wpcf7 .wpcf7-submit {
-  position: absolute;
-  z-index: 1;
-  bottom: 1.25rem;
-  right: 50%;
-  width: min(40%, 170px) !important;
-  height: 2.25rem;
-  -webkit-transform: translateX(105%);
-          transform: translateX(105%);
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #fff;
-  background-color: #ff266e;
-}
-
-#modal-temario form .wpcf7 .wpcf7-submit:disabled {
-  background-color: #808fa6 !important;
-}
-
 #modal-temario form .intl-tel-input.allow-dropdown {
   width: 100%;
 }
@@ -2391,12 +2372,31 @@ body {
   font-size: 0.875rem;
 }
 
-#modal-temario form .modal-card-foot {
+#modal-temario .wpcf7 .wpcf7-submit {
+  position: absolute;
+  z-index: 1;
+  bottom: 1.25rem;
+  right: 50%;
+  width: min(40%, 170px) !important;
+  height: 2.25rem;
+  -webkit-transform: translateX(105%);
+          transform: translateX(105%);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #ff266e;
+}
+
+#modal-temario .wpcf7 .wpcf7-submit:disabled {
+  background-color: #808fa6 !important;
+}
+
+#modal-temario .modal-card-foot {
   padding: 0;
   height: 5rem;
 }
 
-#modal-temario form .modal-card-foot .btn.btn-big.button {
+#modal-temario .modal-card-foot .btn.btn-big.button {
   left: 50%;
   width: min(40%, 170px);
   height: 2.25rem;

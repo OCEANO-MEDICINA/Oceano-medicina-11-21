@@ -594,22 +594,7 @@ body {
         background-color: #fff !important;
         min-height: 2rem !important;
     }
-    .wpcf7 .wpcf7-submit {
-        position: absolute;
-        z-index: 1;
-        bottom: 1.25rem;
-        right: 50%;
-        width: unquote("min(40%, 170px)") !important;
-        height: 2.25rem;
-        transform: translateX(105%);
-        font-weight: 700;
-        text-transform: uppercase;
-        color: #fff;
-        background-color: $primary;
-    }
-    .wpcf7 .wpcf7-submit:disabled {
-        background-color: #808fa6 !important;
-    }
+
     .intl-tel-input.allow-dropdown {
         width: 100%;
 
@@ -634,7 +619,24 @@ body {
     span.wpcf7-list-item-label {
         font-size: 0.875rem;
     }
-
+}
+#modal-temario {
+    .wpcf7 .wpcf7-submit {
+        position: absolute;
+        z-index: 1;
+        bottom: 1.25rem;
+        right: 50%;
+        width: unquote("min(40%, 170px)") !important;
+        height: 2.25rem;
+        transform: translateX(105%);
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #fff;
+        background-color: $primary;
+    }
+    .wpcf7 .wpcf7-submit:disabled {
+        background-color: #808fa6 !important;
+    }
     .modal-card-foot {
         padding: 0;
         height: 5rem;
