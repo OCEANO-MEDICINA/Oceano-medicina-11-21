@@ -594,12 +594,31 @@ body {
         background-color: #fff !important;
         min-height: 2rem !important;
     }
+    .wpcf7 .wpcf7-submit {
+        position: absolute;
+        z-index: 1;
+        bottom: 1.25rem;
+        right: 50%;
+        width: unquote("min(40%, 170px)") !important;
+        height: 2.25rem;
+        transform: translateX(105%);
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #fff;
+        background-color: $primary;
+    }
+    .wpcf7 .wpcf7-submit:disabled {
+        background-color: #808fa6 !important;
+    }
     .intl-tel-input.allow-dropdown {
         width: 100%;
 
         input[type="tel"] {
             padding-left: 3rem;
         }
+    }
+    div[data-id="Opcion_LicSalud"] {
+        width: 100%;
     }
 
     input[type="checkbox"] {
@@ -609,8 +628,28 @@ body {
         background-color: #fff !important;
         min-height: unset !important;
     }
+    .wpcf7-list-item {
+        margin: 0px;
+    }
     span.wpcf7-list-item-label {
-        font-size: 0.75rem;
+        font-size: 0.875rem;
+    }
+
+    .modal-card-foot {
+        padding: 0;
+        height: 5rem;
+
+        .btn.btn-big.button {
+            left: 50%;
+            width: unquote("min(40%, 170px)");
+            height: 2.25rem;
+            transform: translateX(-105%);
+            background: transparent !important;
+            border: 1px solid #808fa6;
+            color: #808fa6;
+            bottom: 1.25rem;
+            position: absolute;
+        }
     }
 }
 
