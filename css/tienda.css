@@ -1987,7 +1987,7 @@ header .navbar-overlay.is-active {
 }
 
 .grid-w-side-cont-products-grid .card-info-footer-precio .price {
-  font-size: clamp(0.75rem, 4vw, 1rem);
+  font-size: clamp(0.75rem, 3.5vw, 1rem);
   line-height: 1.2em;
 }
 

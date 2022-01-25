@@ -1630,7 +1630,7 @@ header .navbar-overlay.is-active {
   height: 90%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  background: url(../media/plan-gradient.png);
+  background: url(https://ar.oceanomedicina.com/wp-content/themes/oceano2/assets/media/plan-gradient.png);
 }
 
 .paso-1 .swiper::after {
@@ -1643,7 +1643,7 @@ header .navbar-overlay.is-active {
   height: 90%;
   -webkit-transform: translateY(-50%) rotate(180deg);
           transform: translateY(-50%) rotate(180deg);
-  background: url(../media/plan-gradient.png);
+  background: url(https://ar.oceanomedicina.com/wp-content/themes/oceano2/assets/media/plan-gradient.png);
 }
 
 .paso-1 .swiper-wrapper {
