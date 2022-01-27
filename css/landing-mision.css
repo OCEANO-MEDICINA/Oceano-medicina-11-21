@@ -1659,8 +1659,8 @@ header .navbar-overlay.is-active {
     content: "";
     left: 0;
     top: 50%;
-    width: 2rem;
-    height: 90%;
+    width: 2.25rem;
+    height: 1000%;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
     background: -webkit-gradient(linear, left top, right top, color-stop(0, #fff), to(transparent));
@@ -1672,8 +1672,8 @@ header .navbar-overlay.is-active {
     content: "";
     right: 0;
     top: 50%;
-    width: 2rem;
-    height: 90%;
+    width: 2.25rem;
+    height: 100%;
     -webkit-transform: translateY(-50%) rotate(180deg);
             transform: translateY(-50%) rotate(180deg);
     background: -webkit-gradient(linear, left top, right top, color-stop(0, #fff), to(transparent));
@@ -1715,6 +1715,9 @@ header .navbar-overlay.is-active {
   .aval-cont-mobile .aval-card-img img {
     border-radius: 8px 8px 0 0;
   }
+  .aval-cont-mobile .aval-card .aval-card-img:hover .info::before {
+    display: none;
+  }
   .aval-cont-mobile .aval-card .info:hover::after {
     position: absolute;
     content: " ";
@@ -1726,7 +1729,7 @@ header .navbar-overlay.is-active {
             transform: rotate(180deg);
   }
   .aval-cont-mobile .aval-card .info:hover::before {
-    display: block;
+    display: block !important;
     bottom: 2rem;
     right: 0.75rem;
     width: 19ch;
