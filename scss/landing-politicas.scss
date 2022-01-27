@@ -1,0 +1,80 @@
+@import "_founder";
+
+// NAVBAR
+
+@import "components/_header-navbar";
+
+// HERO
+
+@import "components/_hero";
+
+// FOOTER
+
+@import "components/_footer";
+
+.hero {
+    position: relative;
+    padding: 5.75rem 1rem 3.25rem;
+    background: none;
+
+    &-cont {
+        z-index: 2;
+    }
+
+    picture {
+        position: absolute;
+        z-index: 1;
+        inset: 0;
+
+        img {
+            object-fit: cover;
+            object-position: center;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.contenedor {
+    width: unquote("min(100% - 64px, 960px - 64px)");
+}
+.solapa-sup {
+    display: block;
+    margin-top: -1rem;
+}
+.politicas {
+    position: relative;
+    margin-bottom: 3rem;
+
+    &-cont {
+        position: relative;
+        z-index: 2;
+
+        p {
+            font-size: 0.875rem;
+            &.block {
+                margin-bottom: 0.5rem;
+            }
+        }
+    }
+}
+@media screen and (min-width: 768px) {
+    .hero {
+        min-height: 290px;
+    }
+    .solapa-sup {
+        margin-top: -2rem;
+    }
+    .politicas {
+        margin-bottom: 6rem;
+
+        &-cont {
+            p {
+                font-size: 1rem;
+                &.block {
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+    }
+}
