@@ -1736,4 +1736,10 @@ header .navbar-overlay.is-active {
             transform: translateX(50%);
   }
 }
+
+@media screen and (min-width: 1920px) {
+  .aval-cont {
+    width: 1250px !important;
+  }
+}
 /*# sourceMappingURL=landing-mision.css.map */
