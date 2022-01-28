@@ -12,6 +12,14 @@
 
 @import "components/_footer";
 
+// DETAIL CARDS
+
+@import "components/_detail-cards";
+
+// FORMULARIO
+
+@import "components/_formulario-3";
+
 .hero {
     position: relative;
     padding: 5.75rem 1rem 3.25rem;
@@ -42,7 +50,7 @@
     display: block;
     margin-top: -1rem;
 }
-.mision {
+.instituciones {
     position: relative;
     margin-bottom: 1rem;
 
@@ -167,6 +175,26 @@
         }
     }
 }
+.formulario-3 {
+    margin: 1.75rem 0 4rem;
+
+    &-title {
+        font-size: clamp(1.375rem, 3vw, 1.875rem);
+        font-weight: 700;
+        color: $medicina-dark;
+        line-height: 1.2em;
+    }
+    .formulario {
+        &-check {
+            label {
+                font-size: clamp(0.75rem, 2vw, 1.125rem);
+            }
+        }
+        &-campos {
+            padding-top: 0.75rem;
+        }
+    }
+}
 
 @media screen and (min-width: 768px) {
     .hero {
@@ -176,7 +204,31 @@
     .solapa-sup {
         margin-top: -2rem;
     }
-    .mision {
+    .details-card {
+        h3 {
+            font-size: clamp(0.625rem, 1vw, 0.75rem);
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        h4 {
+            font-size: clamp(0.875rem, 1vw, 1.125rem);
+        }
+        h3,
+        h4 {
+            color: $black;
+        }
+        &:hover {
+            box-shadow: 0px 4px 8px #5b2f9f1a;
+            transform: translateY(-4px);
+
+            p,
+            h3,
+            h4 {
+                color: #000;
+            }
+        }
+    }
+    .instituciones {
         margin-bottom: 2.5rem;
 
         &-cont {
@@ -190,123 +242,18 @@
             }
         }
     }
+    .formulario-3 {
+        margin: 2rem 0 8rem;
+        .formulario {
+            &-check {
+                margin: 4rem 0 2rem;
 
-    .aval {
-        margin-bottom: 5rem;
-        &-cont {
-            width: $width-container-solapa;
-
-            &-title {
-                padding: 0 2rem;
-            }
-
-            &-mobile {
-                margin-top: 1rem;
-                padding: 0 0 2rem;
-
-                .swiper-avales {
-                    margin-top: 0;
-                    padding: 1rem 2rem;
-                    position: relative;
-                    overflow: hidden;
-                    &::before {
-                        position: absolute;
-                        z-index: 2;
-                        content: "";
-                        left: 0;
-                        top: 50%;
-                        width: 2.25rem;
-                        height: 1000%;
-                        transform: translateY(-50%);
-                        background: linear-gradient(90deg, #fff 0 50%, transparent 100%);
-                    }
-                    &::after {
-                        position: absolute;
-                        z-index: 2;
-                        content: "";
-                        right: 0;
-                        top: 50%;
-                        width: 2.25rem;
-                        height: 100%;
-                        transform: translateY(-50%) rotate(180deg);
-                        background: linear-gradient(90deg, #fff 0 50%, transparent 100%);
-                    }
-
-                    cursor: grab;
-
-                    .swiper-button-prev {
-                        padding-right: 1.5rem;
-                        left: 0.75rem;
-                    }
-
-                    .swiper-button-next {
-                        padding-left: 1.5rem;
-                        right: 0.75rem;
-                    }
-
-                    .swiper-button-prev,
-                    .swiper-button-next {
-                        display: flex !important;
-
-                        i {
-                            font-size: 2rem;
-                            color: #acacac;
-
-                            &:hover {
-                                color: $medicina-dark;
-                            }
-                        }
-
-                        &::after {
-                            display: none;
-                        }
-                    }
-                }
-
-                .aval-card {
-                    overflow: unset;
-                    &-img {
-                        height: unquote("max(130px,10vw)");
-                        img {
-                            border-radius: 8px 8px 0 0;
-                        }
-                    }
-                    .aval-card-img:hover {
-                        .info::before {
-                            display: none;
-                        }
-                    }
-
-                    .info:hover {
-                        &::after {
-                            position: absolute;
-                            content: " ";
-                            top: -16px;
-                            border: solid;
-                            border-width: 0 10px 12px;
-                            border-color: transparent transparent #3f6cbb;
-                            transform: rotate(180deg);
-                        }
-                        &::before {
-                            display: block !important;
-                            bottom: 2rem;
-                            right: 0.75rem;
-                            width: 19ch;
-                            text-align: center;
-                            z-index: 3;
-                            transform: translateX(50%);
-                        }
+                .checks {
+                    > div {
+                        gap: 0.5rem !important;
                     }
                 }
             }
-        }
-    }
-}
-
-@media screen and (min-width: 1920px) {
-    .aval {
-        &-cont {
-            width: 1250px !important;
         }
     }
 }
