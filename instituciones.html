@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Magazine | Categorías</title>
+    <title>Oceano | Instituciones</title>
 
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
@@ -13,9 +13,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.4.95/css/materialdesignicons.min.css">
-    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/instituciones.css">
 
 </head>
+
+
 <header>
     <div class="contenedor">
         <nav class="navbar" role="navigation" aria-label="main navigation">
@@ -202,53 +204,180 @@
 <body>
 
     <section id="hero" class="hero">
+        <picture>
+            <source media="(max-width: 480px)" srcset="media/background-institucionales-m.jpg">
+            <source media="(max-width: 768px)" srcset="media/background-institucionales.jpg">
+            <source media="(max-width: 1920px)" srcset="media/background-institucionales.jpg">
+            <img src="media/background-institucionales.jpg" alt="">
+        </picture>
         <article class="hero-cont contenedor mx-auto">
-            <h1>Información, datos y testimonios de
-                calidad formativa para tu crecimiento</h1>
-            <h2>Da tu primer paso hacia nuevos conocimientos.
-                <span class="salto-de-linea">Cursos 100% online para profesionales de la salud.</span>
-            </h2>
+            <h1>INSTITUCIONES</h1>
         </article>
     </section>
 
-    <section id="product" class="product">
+    <section id="instituciones" class="instituciones">
         <div class="solapa-sup"></div>
-        <article class="product-cont contenedor mx-auto cont-w-side-r">
-            <div class="product-cont-header">
+        <article class="instituciones-cont contenedor mx-auto">
 
+            <h2 class="block">
+                <span>Queremos que muchos más profesionales </span>
+                <span> accedan a nuestras formaciones</span>
 
-                <div class="product-cont-header-info">
-                    <div class="product-cont-header-info-cont">
-                        <div class="product-cont-header-tags">
-                            <a href="" class="btn tags background-actualidad">ACTUALIDAD</a>
-                            <a href="" class="btn tags background-e-health">E-HEALTH</a>
+            </h2>
+            <p class="block">
+                Es por eso que a través del <b>“Programa de Difusión Científica”</b> generamos acuerdos con
+                instituciones
+                que
+                promuevan la actualización digital de sus miembros o colegiados. Si perteneces a alguna de ellas y
+                desean
+                ser parte de nuestro programa de beneficios, nos comunicaremos para compartirte todos los detalles.
+
+            </p>
+
+        </article>
+    </section>
+
+    <section id="details" class="details contenedor mx-auto">
+        <article class="details-cont">
+            <div class="details-card">
+                <img src="../media/icon/detail-cards/instituciones-1.svg" alt="">
+                <p>Plan de afinidad y becas especiales</p>
+            </div>
+            <div class="details-card">
+                <img src="../media/icon/detail-cards/instituciones-2.svg" alt="">
+                <p> <span>Campus customizado para el</span>
+                    <span> ingreso de miembros activos</span></p>
+            </div>
+            <div class="details-card">
+                <img src="../media/icon/detail-cards/instituciones-3.svg" alt="">
+                <p>
+                    <span>Envíos de actualización de todo el</span>
+                    <span> material disponible a miembros activos</span> </p>
+            </div>
+            <div class="details-card">
+                <img src="../media/icon/detail-cards/instituciones-4.svg" alt="">
+                <p>Acceso a actualización científica de vanguardia de modo constante, desde cualquier lugar y cualquier
+                    dispositivo</p>
+            </div>
+        </article>
+    </section>
+
+    <section id="formulario-3" class="formulario-3 formulario">
+        <article class="formulario-3-cont contenedor mx-auto">
+            <form action="" class="formulario">
+
+                <h3 class="formulario-3-title">Envíanos tu consulta</h3>
+
+                <div class="formulario-campos">
+                    <div>
+                        <label for="formulario-name" class="formulario-label">Nombre</label>
+                        <input type="text" name="formulario-name" id="formulario-name" placeholder="Ingresar nombre">
+                    </div>
+
+                    <div>
+                        <label for="formulario-apellido" class="formulario-label">Apellido</label>
+                        <input type="text" name="formulario-apellido" id="formulario-apellido"
+                            placeholder="Ingresar apellido">
+                    </div>
+
+                    <div>
+                        <label for="formulario-email" class="formulario-label">E-mail</label>
+                        <input type="email" name="formulario-email" id="formulario-email" placeholder="Ingresar E-mail">
+                    </div>
+
+                    <div class="campo-doble">
+                        <div style="min-width: 110px;">
+                            <label for="formulario-cod-pais" class="formulario-label">Código país</label>
+                            <select id="formulario-cod-pais" class="form-control" name="">
+                                <option>AR +54</option>
+                            </select>
                         </div>
-                        <h3 class="product-cont-header-info-title">Curso superior en medicina interna. MKSAP 18</h3>
-                        <h4 class="product-cont-header-info-bajada">Los efectos cardiovasculares de la obesidad en
-                            las personas
-                            sin hipertensión,
-                            dislipidemia y diabetes son complejos y diferirían entre los hombres y las mujeres, de
-                            acuerdo con un nuevo estudio.</h4>
+                        <div style="flex-grow: 1;">
+                            <label for="formulario-telefono" class="formulario-label">Teléfono</label>
+                            <input type="number" name="" id="formulario-telefono" placeholder="Ingresar número">
+                        </div>
                     </div>
-                    <div class="product-cont-header-info-img">
-                        <picture>
-                            <source media="(max-width: 480px)" srcset="media/magazine/product-cont-headeregoria.jpg">
-                            <source media="(max-width: 640px)" srcset="media/magazine/product-cont-headeregoria.jpg">
-                            <source media="(max-width: 1920px)" srcset="media/magazine/product-cont-headeregoria.jpg">
-                            <img src="media/magazine/product-cont-headeregoria.jpg" alt="">
-                        </picture>
+                    <div>
+                        <label for="formulario-institucion" class="formulario-label">Institución</label>
+                        <input type="text" name="formulario-institucion" id="formulario-institucion"
+                            placeholder="Ingresar institución">
                     </div>
+
+                    <div>
+                        <label for="formulario-apellido" class="formulario-label">Apellido</label>
+                        <input type="text" name="formulario-apellido" id="formulario-apellido"
+                            placeholder="Ingresar apellido">
+                    </div>
+
+                    <div>
+                        <label for="formulario-profesion" class="formulario-label">País</label>
+                        <select id="formulario-profesion" class="form-control" name="">
+                            <option>Seleccionar país</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="formulario-apellido" class="formulario-label">Apellido</label>
+                        <input type="text" name="formulario-apellido" id="formulario-apellido"
+                            placeholder="Ingresar apellido">
+                    </div>
+
                 </div>
 
-            </div>
+                <textarea id="formulario-textarea" class="form-control" name="" rows="6"
+                    placeholder="Mensaje"></textarea>
 
+                <div class="formulario-bottom">
+                    <div class="recaptcha"></div>
+                    <div class="verificacion">
+                        <input type="checkbox" name="" id="">
+                        <p> Acepto las <a href=""> condiciones de privacidad</a></p>
+                        <input type="submit" value="Enviar" class="btn btn-mid button boton">
 
+                    </div>
+                </div>
+            </form>
         </article>
     </section>
 
-    <script src="js/navbar.js"></script>
+
+
     <script src="js/accordion.js"></script>
+    <script src="js/navbar.js"></script>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+    <script>
+        const swiperReviews = new Swiper('.swiper-avales', {
+            effect: 'slide',
+            direction: 'horizontal',
+            loop: true,
+            centeredSlides: false,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+
+            breakpoints: {
+                0: {
+                    slidesPerView: "auto",
+                    centeredSlides: true,
+                    spaceBetween: 12,
+                },
+                576: {
+                    slidesPerView: 3,
+                    spaceBetween: 13,
+                },
+                992: {
+                    slidesPerView: 4,
+                    spaceBetween: 16,
+                },
+                1500: {
+                    slidesPerView: 5,
+                    spaceBetween: 16,
+                },
+            },
+        });
+    </script>
 
 </body>
 
