@@ -6,15 +6,7 @@
 
 // NAVBAR
 
-@import "components/_header-navbar";
-
-// CONTENEDOR CON SIDE - RIGHT
-
-@import "components/_contenedor-side-r";
-
-// Product Cards
-
-@import "components/_product-card";
+@import "components/_header";
 
 // FOOTER
 
@@ -25,14 +17,8 @@ body {
     color: $black;
 }
 
-.navbar {
-    .navbar-brand {
-        .navbar-item {
-            p {
-                display: none;
-            }
-        }
-    }
+header .navbar-brand .logo img {
+    height: 63px;
 }
 
 .sombra {

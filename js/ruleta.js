@@ -1,17 +1,17 @@
 var data = [
   //{ id: '', color: '#3f297e', text: 'ALL IN', ikon: 'invert_colors' },
-  { id: '', type: 'allin', color: '#3f297e', text: 'ALL IN', ikon: 'grade' },
-  { id: '', type: 'quiz', color: '#1d61ac', text: '25' },
-  { id: '', type: 'quiz', color: '#169ed8', text: '50' },
-  { id: '', type: 'quiz', color: '#209b6c', text: '100' },
-  { id: '', color: '#60b236', text: '200', ikon: 'stars' },
-  { id: '', color: '#efe61f', text: '300' },
-  { id: '', color: '#f7a416', text: '500' },
-  { id: '', type: 'time', color: '#e6471d', text: '+15', ikon: 'timer' },
-  { id: '', type: 'question', color: '#dc0936', text: '#@!?' },
-  { id: '', color: '#e5177b', text: 'BONUS!' },
-  { id: '', color: '#be107f', text: '+100' },
-  { id: '', type: 'replay', color: '#881f7e', text: 'PLAY AGAIN', ikon: 'replay' }
+  { id: '', type: 'beca50', color: '#be0f34', text: 'BECA 50% <br> EN MKSAP', ikon: 'stars'},
+  { id: '', type: 'quiz', color: '#06BF8C', text: '10% <span>OFF*</span>' },
+  { id: '', type: 'ebook', color: '#1d61ac', text: 'Ebook <br>de regalo', ikon: 'redeem'},
+  { id: '', type: 'book', color: '#169ed8', text: 'Bibliografía', ikon: 'book' },
+  { id: '', type: 'quiz', color: '#06BF8C', text: '10% <span>OFF*</span>' },
+  { id: '', type: 'quiz', color: '#209b6c', text: '20% <span>OFF*</span>' },
+  { id: '', type: 'quiz', color: '#157359', text: '30% <span>OFF*</span>' },
+  { id: '', type: 'ebook', color: '#1d61ac', text: 'Ebook <br>de regalo', ikon: 'redeem'},
+  { id: '', type: 'quiz', color: '#06BF8C', text: '10% <span>OFF*</span>' },
+  { id: '', type: 'replay', color: '#881f7e', text: 'TIRO GRATIS', ikon: 'replay' },
+  { id: '', type: 'ebook', color: '#1d61ac', text: 'Ebook <br>de regalo', ikon: 'redeem'},
+
 ];
 
 var RouletteWheel = function(el, items){
@@ -58,9 +58,9 @@ RouletteWheel.prototype.spin = function(_index){
   .velocity({
     rotateZ: a +'deg'
   },{
-    //easing: [20, 7],
+    easing: [20, 7],
     //easing: [200, 20],
-    easing: 'easeOutQuint',
+    //easing: 'easeOutQuint',
     duration: 3000,
     begin: $.proxy(_onAnimationBegin,this),
     complete: $.proxy(_onAnimationComplete,this)
@@ -127,7 +127,7 @@ RouletteWheel.prototype.render = function(){
   }
   
   $spinner.css({
-    fontSize: parseInt(R*0.06)+'px'
+    fontSize: parseInt(R*0.055)+'px'
   })
   
   //this.renderMarker();
