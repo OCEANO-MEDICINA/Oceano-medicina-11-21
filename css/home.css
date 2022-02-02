@@ -74,7 +74,7 @@
 
 body {
   font-family: "Roboto", sans-serif !important;
-  background-color: #ffffff;
+  background-color: #fdfdfd;
 }
 
 body.clip {
@@ -174,6 +174,16 @@ button {
   border-radius: 10px;
 }
 
+.solapa-sup::after {
+  content: "";
+  position: absolute;
+  bottom: -1rem;
+  left: 0;
+  width: 100%;
+  height: 2rem;
+  background-color: #fdfdfd;
+}
+
 @media screen and (min-width: 1024px) {
   .solapa-sup {
     display: block;
@@ -204,12 +214,6 @@ button {
 .modal-card {
   width: calc(100% - 32px);
   border-radius: 4px;
-}
-
-.modal-card .swiper-slide {
-  width: -webkit-max-content !important;
-  width: -moz-max-content !important;
-  width: max-content !important;
 }
 
 @media screen and (min-width: 768px) {
@@ -1267,6 +1271,15 @@ header .navbar-overlay.is-active {
   width: 2em;
 }
 
+.hero-cont .searchbar-especialidad .dgwt-wcas-search-wrapp .dgwt-wcas-sf-wrapp input[type="search"].dgwt-wcas-search-input {
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hero-cont .searchbar-especialidad .dgwt-wcas-close:not(.dgwt-wcas-inner-preloader) {
+  right: 0px !important;
+}
+
 .hero-cont .searchbar-especialidad .accordion-panel {
   position: absolute;
   z-index: -1;
@@ -1339,6 +1352,9 @@ header .navbar-overlay.is-active {
   .hero .searchbar-especialidad .dgwt-wcas-sf-wrapp button.dgwt-wcas-search-submit {
     background-color: #fff;
     color: #646464;
+  }
+  .hero .searchbar-especialidad .dgwt-wcas-close:not(.dgwt-wcas-inner-preloader) {
+    right: 79px !important;
   }
   .hero .searchbar-especialidad-button {
     padding: 0 1rem;
@@ -1658,6 +1674,11 @@ header .navbar-overlay.is-active {
 
 .footer-certificados.co img {
   height: 1.5rem;
+}
+
+.footer span.wpcf7-form-control-wrap.recaptcha {
+  -webkit-transform: scale(0.8) translateX(-12%);
+          transform: scale(0.8) translateX(-12%);
 }
 
 @media screen and (min-width: 768px) {

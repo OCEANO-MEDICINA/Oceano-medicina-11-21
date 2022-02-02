@@ -74,7 +74,7 @@
 
 body {
   font-family: "Roboto", sans-serif !important;
-  background-color: #ffffff;
+  background-color: #fdfdfd;
 }
 
 body.clip {
@@ -174,6 +174,16 @@ button {
   border-radius: 10px;
 }
 
+.solapa-sup::after {
+  content: "";
+  position: absolute;
+  bottom: -1rem;
+  left: 0;
+  width: 100%;
+  height: 2rem;
+  background-color: #fdfdfd;
+}
+
 @media screen and (min-width: 1024px) {
   .solapa-sup {
     display: block;
@@ -204,12 +214,6 @@ button {
 .modal-card {
   width: calc(100% - 32px);
   border-radius: 4px;
-}
-
-.modal-card .swiper-slide {
-  width: -webkit-max-content !important;
-  width: -moz-max-content !important;
-  width: max-content !important;
 }
 
 @media screen and (min-width: 768px) {
@@ -1470,6 +1474,11 @@ header .navbar-overlay.is-active {
 
 .footer-certificados.co img {
   height: 1.5rem;
+}
+
+.footer span.wpcf7-form-control-wrap.recaptcha {
+  -webkit-transform: scale(0.8) translateX(-12%);
+          transform: scale(0.8) translateX(-12%);
 }
 
 @media screen and (min-width: 768px) {

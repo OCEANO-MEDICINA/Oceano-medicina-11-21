@@ -1,18 +1,39 @@
 @import url("https://fonts.googleapis.com/css?family=Material+Icons|Work+Sans:400,700,900");
 body {
   overflow: hidden;
+  font-family: "Roboto", sans-serif !important;
+}
+
+.invisible {
+  display: none !important;
+}
+
+.boton {
+  font-family: "Roboto", sans-serif !important;
+  font-size: clamp(0.75rem, 2vw, 1rem);
+  cursor: pointer;
+}
+
+.boton.error {
+  background-color: red !important;
+  border-color: red !important;
+}
+
+.boton.success {
+  background-color: #008066 !important;
+  border-color: #008066 !important;
 }
 
 .roulette {
   font-family: "Work Sans", sans-serif;
   display: block;
   position: absolute;
-  width: 400px;
-  height: 400px;
+  width: 360px;
+  height: 360px;
   top: 50%;
   left: 50%;
-  margin-top: -200px;
-  margin-left: -200px;
+  margin-top: -180px;
+  margin-left: -180px;
 }
 
 .roulette .shadow {
@@ -42,10 +63,10 @@ body {
   position: absolute;
   width: 0;
   height: 0;
-  top: -200px;
-  left: 200px;
-  -webkit-transform-origin: 0% 400px;
-          transform-origin: 0% 400px;
+  top: -180px;
+  left: 180px;
+  -webkit-transform-origin: 0% 360px;
+          transform-origin: 0% 360px;
   border: 0 solid transparent;
 }
 
@@ -84,10 +105,10 @@ body {
   position: absolute;
   width: 0;
   height: 0;
-  top: -200px;
-  left: 200px;
-  -webkit-transform-origin: 0% 400px;
-          transform-origin: 0% 400px;
+  top: -180px;
+  left: 180px;
+  -webkit-transform-origin: 0% 360px;
+          transform-origin: 0% 360px;
   border: 0 solid transparent;
 }
 
@@ -118,15 +139,15 @@ body {
 }
 
 .roulette .button {
-  width: 10em;
-  height: 10em;
+  width: 6.5em;
+  height: 6.5em;
   line-height: 10em;
   top: 50%;
   left: 50%;
-  margin-left: -5em;
-  margin-top: -5em;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   font-weight: 800;
-  z-index: 998;
+  z-index: 2;
   position: absolute;
   background: #fff;
   border: none;
@@ -140,27 +161,25 @@ body {
           user-select: none;
   -webkit-box-shadow: 0 0.4em 0 rgba(0, 0, 0, 0.25);
           box-shadow: 0 0.4em 0 rgba(0, 0, 0, 0.25);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   text-align: center;
-  -webkit-transition: -webkit-transform 0.15s;
-  transition: -webkit-transform 0.15s;
-  transition: transform 0.15s;
-  transition: transform 0.15s, -webkit-transform 0.15s;
-  -webkit-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-          transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 .roulette .button:hover {
   color: inherit;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .roulette .button span {
-  font-size: 1.6em;
+  font-size: 1.5em;
   letter-spacing: -0.05em;
 }
 
 .roulette.busy .button {
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
+  -webkit-transform: translate(-50%, -50%) scale(0.9);
+          transform: translate(-50%, -50%) scale(0.9);
   -webkit-box-shadow: 0 0.15em 0 rgba(0, 0, 0, 0.25);
           box-shadow: 0 0.15em 0 rgba(0, 0, 0, 0.25);
   color: #999;
@@ -169,7 +188,12 @@ body {
 
 /* CUSTOM LABELS */
 .roulette .spinner .item[data-type="quiz"] .label {
-  font-size: 1.5em;
+  font-size: 1.15em;
+  line-height: 1;
+}
+
+.roulette .spinner .item[data-type="quiz"] .label span > span {
+  font-size: 0.75em;
 }
 
 .roulette .spinner .item[data-type="question"] .label {
@@ -191,5 +215,411 @@ body {
 
 .roulette .spinner .item[data-type="time"] .label i {
   font-size: 1.5em;
+}
+
+.modal {
+  z-index: 10;
+}
+
+.modal-background {
+  background: #042799e1;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+}
+
+.modal.ingreso .modal-card {
+  min-height: unset;
+}
+
+.modal.ingreso .modal-card-body {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.modal.ingreso .modal-card-body form {
+  margin-bottom: 2.25rem;
+}
+
+.modal-card {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 430px;
+  padding: 2.75rem 0 2.375rem;
+  max-height: unset;
+  width: min(100% - 64px, 445px);
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+.modal-card-body {
+  max-height: 310px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 2.25rem;
+  text-align: center;
+}
+
+.modal-card-body-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.25em;
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
+  font-weight: 700;
+  color: #575757;
+}
+
+.modal-card-body-title img {
+  width: clamp(1.5rem, 2vw, 2rem);
+}
+
+.modal-card-body p {
+  font-size: clamp(0.75rem, 2vw, 0.875rem);
+  color: #979797;
+}
+
+.modal-card-body .win {
+  min-height: 170px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1.5fr;
+      grid-template-columns: 1fr 1.5fr;
+}
+
+.modal-card-body .win-img {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #3f6cbb;
+}
+
+.modal-card-body .win-img h3 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.2;
+  font-weight: 700;
+  color: #fff;
+}
+
+.modal-card-body .win-img h3 span {
+  display: block;
+  font-size: clamp(0.625rem, 1.25vw, 0.875rem);
+}
+
+.modal-card-body .win-img::after {
+  position: absolute;
+  content: " ";
+  left: -5px;
+  top: 0;
+  width: 10px;
+  height: 100%;
+  background: top url(../media/icon/coupon-side.svg);
+}
+
+.modal-card-body .win-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1.75rem 0.75rem;
+  text-align: left;
+  background-color: #f6f8fc;
+  border: 1px solid #f2f2f7;
+  border-radius: 0 4px 4px 0;
+}
+
+.modal-card-body .win-info p {
+  color: #575757;
+}
+
+.modal-card-body .win-info-title {
+  margin-bottom: 0.25rem;
+  font-size: clamp(1.125rem, 2vw, 1.25rem);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.modal-card-body .lose-info p {
+  font-size: 0.875rem;
+  color: #575757;
+}
+
+.modal-card-body .lose-info p span {
+  display: block;
+}
+
+.modal-card-body .lose ~ form {
+  margin-top: 68px;
+}
+
+.modal-card-body form {
+  width: 100%;
+  margin: 1rem 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.modal-card-body input {
+  width: 100%;
+  padding: 0.25rem 0.75rem;
+  min-height: 2rem;
+  background: #f6f8fc;
+  border: 1px solid #f2f2f7;
+  border-radius: 4px;
+}
+
+.modal-card-body input:focus {
+  outline: none;
+}
+
+.modal-card-body input::-webkit-input-placeholder {
+  color: #979797;
+}
+
+.modal-card-body input:-ms-input-placeholder {
+  color: #979797;
+}
+
+.modal-card-body input::-ms-input-placeholder {
+  color: #979797;
+}
+
+.modal-card-body input::placeholder {
+  color: #979797;
+}
+
+.modal-card-body input.btn {
+  background-color: #ff266e;
+  border: 1px solid #ff266e;
+  font-weight: 700;
+  color: #fff;
+  outline: none;
+}
+
+.modal-card-body input.error {
+  border: 1px solid red !important;
+}
+
+.modal-resultado input.finalizar {
+  font-weight: 700;
+  background-color: #00b6de;
+  border: 1px solid #00b6de;
+}
+
+.modal-form .modal-card {
+  width: min(100% - 64px, 1020px);
+}
+
+.modal-form .modal-card-body {
+  max-height: unset;
+}
+
+.modal-form .modal-card-body form .boton {
+  max-width: 330px;
+}
+
+.modal .formulario {
+  margin: 0;
+}
+
+.modal .formulario-campos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  gap: 0.75rem;
+}
+
+.modal .formulario-campos > div {
+  width: min(225px, 100%);
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.modal .formulario-campos label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #575757;
+  text-align: left;
+}
+
+.modal .formulario-campos .intl-tel-input {
+  width: 100%;
+}
+
+.modal .formulario-campos input,
+.modal .formulario-campos select {
+  font-size: 0.875rem;
+  padding: 0.25rem 0.5rem;
+  width: 100%;
+  border: 1px solid #57575740;
+  border-radius: 4px;
+  background-color: #fff !important;
+  min-height: 2rem !important;
+}
+
+.modal .formulario-campos input::-webkit-input-placeholder,
+.modal .formulario-campos select::-webkit-input-placeholder {
+  color: #979797;
+}
+
+.modal .formulario-campos input:-ms-input-placeholder,
+.modal .formulario-campos select:-ms-input-placeholder {
+  color: #979797;
+}
+
+.modal .formulario-campos input::-ms-input-placeholder,
+.modal .formulario-campos select::-ms-input-placeholder {
+  color: #979797;
+}
+
+.modal .formulario-campos input::placeholder,
+.modal .formulario-campos select::placeholder {
+  color: #979797;
+}
+
+.modal .formulario-campos .campo-doble {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.75rem;
+}
+
+.modal .formulario textarea {
+  margin: 1rem 0;
+  padding: 0.25rem 0.5rem;
+  width: 100%;
+  border: 1px solid #57575740;
+  border-radius: 4px;
+}
+
+.modal .formulario textarea::-webkit-input-placeholder {
+  color: #979797;
+}
+
+.modal .formulario textarea:-ms-input-placeholder {
+  color: #979797;
+}
+
+.modal .formulario textarea::-ms-input-placeholder {
+  color: #979797;
+}
+
+.modal .formulario textarea::placeholder {
+  color: #979797;
+}
+
+@media screen and (min-width: 768px) {
+  .boton {
+    margin-top: 1rem;
+    height: 2.5rem;
+  }
+  .modal {
+    z-index: 10;
+  }
+  .modal-background {
+    background: #042799e1;
+    -webkit-backdrop-filter: blur(2px);
+            backdrop-filter: blur(2px);
+  }
+  .modal-card {
+    width: min(100% - 64px, 445px);
+  }
+  .modal-card-body {
+    padding: 3.625rem 4rem 4rem;
+    border-radius: 25px;
+  }
+  .modal-card-body form {
+    margin: 1.75rem 0 2.625rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .modal-card-body .logo {
+    width: 5.375rem;
+  }
+  .modal-card-body .win-info {
+    padding: 1.25rem 1rem;
+  }
+  .modal-form .formulario-campos {
+    gap: 1.75rem 1.5rem;
+  }
+  .modal-form .formulario textarea {
+    margin: 1.75rem 0 0.5rem;
+  }
+  .roulette {
+    width: 700px;
+    height: 700px;
+    margin-top: -350px;
+    margin-left: -350px;
+  }
+  .roulette .markers .marker {
+    top: -350px;
+    left: 350px;
+    -webkit-transform-origin: 0% 700px;
+            transform-origin: 0% 700px;
+  }
+  .roulette .spinner .item {
+    top: -350px;
+    left: 350px;
+    -webkit-transform-origin: 0% 700px;
+            transform-origin: 0% 700px;
+  }
+  .roulette .button {
+    width: 10em;
+    height: 10em;
+  }
+  .roulette .button span {
+    font-size: 2em;
+  }
 }
 /*# sourceMappingURL=ruleta.css.map */

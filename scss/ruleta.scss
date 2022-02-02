@@ -2,22 +2,41 @@
 
 body {
     overflow: hidden;
+    font-family: "Roboto", sans-serif !important;
+}
+.invisible {
+    display: none !important;
 }
 
 $spin-duration: 2.5s;
 $spin-easing: cubic-bezier(0, 0.4, 0.4, 1.025);
 
-$size: 400px;
+$size: 360px;
+$size-d: 700px;
 $button-size: 12em;
 
 $D: $size;
 $R: $size * 0.5;
+$D-d: $size-d;
+$R-d: $size-d * 0.5;
 
+.boton {
+    font-family: "Roboto", sans-serif !important;
+    font-size: clamp(0.75rem, 2vw, 1rem);
+    cursor: pointer;
+
+    &.error {
+        background-color: red !important;
+        border-color: red !important;
+    }
+    &.success {
+        background-color: #008066 !important;
+        border-color: #008066 !important;
+    }
+}
 .roulette {
     font-family: "Work Sans", sans-serif;
-
     display: block;
-
     position: absolute;
     width: $size;
     height: $size;
@@ -118,15 +137,14 @@ $R: $size * 0.5;
     }
 
     .button {
-        width: 10em;
-        height: 10em;
+        width: 6.5em;
+        height: 6.5em;
         line-height: 10em;
         top: 50%;
         left: 50%;
-        margin-left: -5em;
-        margin-top: -5em;
+        transform: translate(-50%, -50%);
         font-weight: 800;
-        z-index: 998;
+        z-index: 2;
         position: absolute;
         background: #fff;
         border: none;
@@ -136,22 +154,22 @@ $R: $size * 0.5;
         cursor: pointer;
         user-select: none;
         box-shadow: 0 0.4em 0 rgba(0, 0, 0, 0.25);
+        transition: all 0.3s ease-in-out;
         text-align: center;
-        transition: transform 0.15s;
-        transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
     }
 
     .button:hover {
         color: inherit;
+        transition: all 0.3s ease-in-out;
     }
 
     .button span {
-        font-size: 1.6em;
+        font-size: 1.5em;
         letter-spacing: -0.05em;
     }
 
     &.busy .button {
-        transform: scale(0.9);
+        transform: translate(-50%, -50%) scale(0.9);
         box-shadow: 0 0.15em 0 rgba(0, 0, 0, 0.25);
         color: #999;
         cursor: default;
@@ -162,7 +180,11 @@ $R: $size * 0.5;
 .roulette {
     .spinner {
         .item[data-type="quiz"] .label {
-            font-size: 1.5em;
+            font-size: 1.15em;
+            line-height: 1;
+            span > span {
+                font-size: 0.75em;
+            }
         }
 
         .item[data-type="question"] .label {
@@ -186,6 +208,318 @@ $R: $size * 0.5;
         .item[data-type="time"] .label {
             i {
                 font-size: 1.5em;
+            }
+        }
+    }
+}
+
+.modal {
+    z-index: 10;
+    &-background {
+        background: #042799e1;
+        backdrop-filter: blur(2px);
+    }
+    &.ingreso {
+        .modal-card {
+            min-height: unset;
+            &-body {
+                justify-content: center;
+
+                form {
+                    margin-bottom: 2.25rem;
+                }
+            }
+        }
+    }
+    &-card {
+        justify-content: center;
+        min-height: 430px;
+        padding: 2.75rem 0 2.375rem;
+        max-height: unset;
+        width: unquote("min(100% - 64px, 445px)");
+        background-color: #fff;
+        border-radius: 20px;
+
+        &-body {
+            max-height: 310px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2.25rem;
+
+            text-align: center;
+
+            &-title {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 0.25em;
+                font-size: clamp(1.25rem, 3vw, 1.5rem);
+                font-weight: 700;
+                color: #575757;
+
+                img {
+                    width: clamp(1.5rem, 2vw, 2rem);
+                }
+            }
+            p {
+                font-size: clamp(0.75rem, 2vw, 0.875rem);
+                color: #979797;
+            }
+
+            .win {
+                min-height: 170px;
+                display: grid;
+                grid-template-columns: 1fr 1.5fr;
+
+                &-img {
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #3f6cbb;
+                    h3 {
+                        font-size: clamp(2rem, 4vw, 3rem);
+                        line-height: 1.2;
+                        font-weight: 700;
+                        color: #fff;
+                        span {
+                            display: block;
+                            font-size: clamp(0.625rem, 1.25vw, 0.875rem);
+                        }
+                    }
+                    &::after {
+                        position: absolute;
+                        content: " ";
+                        left: -5px;
+                        top: 0;
+                        width: 10px;
+                        height: 100%;
+                        background: top url(../media/icon/coupon-side.svg);
+                    }
+                }
+
+                &-info {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 1.75rem 0.75rem;
+                    text-align: left;
+                    background-color: #f6f8fc;
+                    border: 1px solid #f2f2f7;
+                    border-radius: 0 4px 4px 0;
+                    p {
+                        color: #575757;
+                    }
+                    &-title {
+                        margin-bottom: 0.25rem;
+                        font-size: clamp(1.125rem, 2vw, 1.25rem);
+                        font-weight: 700;
+                        line-height: 1.2;
+                    }
+                }
+            }
+            .lose {
+                &-info {
+                    p {
+                        font-size: 0.875rem;
+                        color: #575757;
+                        span {
+                            display: block;
+                        }
+                    }
+                }
+                & ~ form {
+                    margin-top: 68px;
+                }
+            }
+
+            form {
+                width: 100%;
+                margin: 1rem 0 0;
+                display: flex;
+                flex-direction: column;
+            }
+
+            input {
+                width: 100%;
+                padding: 0.25rem 0.75rem;
+                min-height: 2rem;
+                background: #f6f8fc;
+                border: 1px solid #f2f2f7;
+                border-radius: 4px;
+
+                &:focus {
+                    outline: none;
+                }
+
+                &::placeholder {
+                    color: #979797;
+                }
+
+                &.btn {
+                    background-color: #ff266e;
+                    border: 1px solid #ff266e;
+                    font-weight: 700;
+                    color: #fff;
+                    outline: none;
+                }
+                &.error {
+                    border: 1px solid red !important;
+                }
+            }
+        }
+    }
+
+    &-resultado {
+        input.finalizar {
+            font-weight: 700;
+            background-color: #00b6de;
+            border: 1px solid #00b6de;
+        }
+    }
+    &-form {
+        .modal-card {
+            width: unquote("min(100% - 64px, 1020px)");
+
+            &-body {
+                max-height: unset;
+
+                form {
+                    .boton {
+                        max-width: 330px;
+                    }
+                }
+            }
+        }
+    }
+    .formulario {
+        margin: 0;
+        &-campos {
+            display: flex;
+            flex-flow: row wrap;
+            gap: 0.75rem;
+
+            > div {
+                width: unquote("min(225px, 100%)");
+                flex-grow: 1;
+            }
+            label {
+                display: block;
+                font-size: 0.875rem;
+                font-weight: 700;
+                color: #575757;
+                text-align: left;
+            }
+            .intl-tel-input {
+                width: 100%;
+            }
+            input,
+            select {
+                font-size: 0.875rem;
+                padding: 0.25rem 0.5rem;
+                width: 100%;
+                border: 1px solid #57575740;
+                border-radius: 4px;
+                background-color: #fff !important;
+                min-height: 2rem !important;
+                &::placeholder {
+                    color: #979797;
+                }
+            }
+            .campo-doble {
+                display: flex;
+                gap: 0.75rem;
+            }
+        }
+        textarea {
+            margin: 1rem 0;
+            padding: 0.25rem 0.5rem;
+            width: min(100%);
+            border: 1px solid #57575740;
+            border-radius: 4px;
+            &::placeholder {
+                color: #979797;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .boton {
+        margin-top: 1rem;
+        height: 2.5rem;
+    }
+    .modal {
+        z-index: 10;
+        &-background {
+            background: #042799e1;
+            backdrop-filter: blur(2px);
+        }
+        &-card {
+            width: unquote("min(100% - 64px, 445px)");
+
+            &-body {
+                padding: 3.625rem 4rem 4rem;
+                border-radius: 25px;
+
+                form {
+                    margin: 1.75rem 0 2.625rem;
+                    display: flex;
+                    flex-direction: column;
+                }
+                .logo {
+                    width: 5.375rem;
+                }
+                .win {
+                    &-info {
+                        padding: 1.25rem 1rem;
+                    }
+                }
+            }
+        }
+
+        &-form {
+            .formulario {
+                &-campos {
+                    gap: 1.75rem 1.5rem;
+                }
+                textarea {
+                    margin: 1.75rem 0 0.5rem;
+                }
+            }
+        }
+    }
+    .roulette {
+        width: $size-d;
+        height: $size-d;
+
+        margin-top: -1 * $size-d * 0.5;
+        margin-left: -1 * $size-d * 0.5;
+
+        .markers {
+            .marker {
+                top: -1 * $R-d;
+                left: $R-d;
+                transform-origin: 0% $D-d;
+            }
+        }
+        .spinner {
+            .item {
+                top: -1 * $R-d;
+                left: $R-d;
+                transform-origin: 0% $D-d;
+            }
+        }
+        .button {
+            width: 10em;
+            height: 10em;
+
+            & span {
+                font-size: 2em;
             }
         }
     }

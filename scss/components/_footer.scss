@@ -172,6 +172,9 @@ $width-container: unquote("min(100% - 3.25rem, 960px - 64px)");
             }
         }
     }
+    span.wpcf7-form-control-wrap.recaptcha {
+        transform: scale(0.8) translateX(-12%);
+    }
 }
 
 @media screen and (min-width: 768px) {
