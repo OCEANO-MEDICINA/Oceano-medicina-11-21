@@ -1389,10 +1389,6 @@ header .navbar-overlay.is-active {
           column-gap: 0.5rem;
 }
 
-.footer-menu {
-  display: none;
-}
-
 .footer-newsletter {
   color: #fff;
 }
