@@ -24,6 +24,9 @@ body {
     background-color: #fdfdfd;
     color: $black;
 }
+.fixed-position {
+    bottom: 8rem;
+}
 
 .navbar {
     .navbar-brand {
@@ -1074,6 +1077,13 @@ body {
 @media screen and (min-width: 767px) {
     .boton {
         max-width: 233px;
+    }
+    .fixed-position {
+        bottom: 7rem;
+
+        &-chat {
+            bottom: 6.75rem;
+        }
     }
     .hero {
         background: center url(../media/header-ficha.jpg);
