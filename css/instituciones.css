@@ -1490,6 +1490,11 @@ header .navbar-overlay.is-active {
   }
 }
 
+.formulario-3 {
+  position: relative;
+  z-index: 1;
+}
+
 .formulario-3-cont .formulario-check {
   padding: 1.5rem;
   display: -webkit-box;
