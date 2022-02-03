@@ -1461,19 +1461,17 @@ header .navbar-brand .logo img {
     margin-right: 2rem;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 400px max-content minmax(120px, 195px);
-        grid-template-columns: 400px -webkit-max-content minmax(120px, 195px);
-        grid-template-columns: 400px max-content minmax(120px, 195px);
-    gap: 2rem;
+    -ms-grid-columns: 380px 80px minmax(120px, 195px);
+        grid-template-columns: 380px 80px minmax(120px, 195px);
+    gap: 1rem;
   }
   .cursos-cont-resumen-total {
     margin-right: 2rem;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 400px max-content minmax(120px, 195px);
-        grid-template-columns: 400px -webkit-max-content minmax(120px, 195px);
-        grid-template-columns: 400px max-content minmax(120px, 195px);
-    gap: 2rem;
+    -ms-grid-columns: 380px 80px minmax(120px, 195px);
+        grid-template-columns: 380px 80px minmax(120px, 195px);
+    gap: 1rem;
   }
   .cursos-cont-resumen-total .continuar {
     -webkit-box-ordinal-group: 3;
@@ -1496,9 +1494,8 @@ header .navbar-brand .logo img {
     padding: 0.5rem 0;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 400px max-content minmax(120px, 195px);
-        grid-template-columns: 400px -webkit-max-content minmax(120px, 195px);
-        grid-template-columns: 400px max-content minmax(120px, 195px);
+    -ms-grid-columns: 380px 100px minmax(120px, 195px);
+        grid-template-columns: 380px 100px minmax(120px, 195px);
     gap: 2rem;
   }
   .cursos-list-item-name {

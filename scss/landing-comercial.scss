@@ -420,15 +420,15 @@ header .navbar-brand .logo img {
                     &-item {
                         margin-right: 2rem;
                         display: grid;
-                        grid-template-columns: 400px max-content minmax(120px, 195px);
-                        gap: 2rem;
+                        grid-template-columns: 380px 80px minmax(120px, 195px);
+                        gap: 1rem;
                     }
                 }
                 &-total {
                     margin-right: 2rem;
                     display: grid;
-                    grid-template-columns: 400px max-content minmax(120px, 195px);
-                    gap: 2rem;
+                    grid-template-columns: 380px 80px minmax(120px, 195px);
+                    gap: 1rem;
                     .continuar {
                         order: 2;
                         width: 100%;
@@ -445,7 +445,7 @@ header .navbar-brand .logo img {
             &-item {
                 padding: 0.5rem 0;
                 display: grid;
-                grid-template-columns: 400px max-content minmax(120px, 195px);
+                grid-template-columns: 380px 100px minmax(120px, 195px);
                 gap: 2rem;
                 &-name {
                     width: unset;

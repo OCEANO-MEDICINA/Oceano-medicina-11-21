@@ -1637,6 +1637,7 @@ header .navbar-overlay.is-active {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   background: url(https://ar.oceanomedicina.com/wp-content/themes/oceano2/assets/media/plan-gradient.png);
+
 }
 
 .paso-1 .swiper::after {
@@ -1650,6 +1651,7 @@ header .navbar-overlay.is-active {
   -webkit-transform: translateY(-50%) rotate(180deg);
           transform: translateY(-50%) rotate(180deg);
   background: url(https://ar.oceanomedicina.com/wp-content/themes/oceano2/assets/media/plan-gradient.png);
+
 }
 
 .paso-1 .swiper-wrapper {
@@ -2276,7 +2278,8 @@ header .navbar-overlay.is-active {
   display: grid;
   -ms-grid-columns: 50% 50%;
       grid-template-columns: 50% 50%;
-      grid-template-areas: "mas-info mas-info" "trigger select";
+      grid-template-areas: "mas-info mas-info"
+ "trigger select";
   -webkit-column-gap: 0.5rem;
           column-gap: 0.5rem;
 }
@@ -2639,7 +2642,8 @@ header .navbar-overlay.is-active {
   .plan .course-card-info .mas-info {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-        grid-template-areas: "mas-info mas-info" "boton-l boton-r";
+        grid-template-areas: "mas-info mas-info"
+ "boton-l boton-r";
     justify-items: flex-end;
   }
   .plan .course-card-info .mas-info .btn-mid {
