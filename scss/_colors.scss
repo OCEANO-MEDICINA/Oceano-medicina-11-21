@@ -40,6 +40,10 @@ $colores: (
     .background-#{$name} {
         background-color: $color;
         color: #fff;
+
+        &:hover {
+            background: rgba($color, 0.75);
+        }
     }
 }
 

@@ -14,7 +14,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.4.95/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="css/magazine-categorias.css">
-
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $("#datepicker").datepicker();
+        });
+    </script>
 </head>
 <header>
     <div class="contenedor">
@@ -217,6 +225,23 @@
             <div class="categorias-cont-header">
                 <h3 class="categorias-cont-header-title">Actualidad</h3>
                 <div class="categorias-cont-header-filters">
+
+                    <div class="date" onclick="">
+                        <a id="btnOrdenarPor" class="btn-filtro"><i class="mdi mdi-calendar"></i> Fecha</a>
+                        <div class="date-cont menu-desplegable">
+                            <div id="datepicker"></div>
+                            <div class="date-cont-select">
+                                <label for="from">Buscar desde</label>
+                                <label for="to">Hasta</label>
+
+                                <input type="text" id="from" name="from">
+                                <input type="text" id="to" name="to">
+                            </div>
+
+
+                        </div>
+                    </div>
+
                     <div class="filtrar" ontouchstart="">
                         <a id="btnFiltrarPor" class="btn-filtro"><i class="mdi mdi-tune-variant"></i> Filtrar</a>
                         <div class="filtrar-cont menu-desplegable">
@@ -257,25 +282,6 @@
 
                         </div>
                     </div>
-                    <div class="sorting" onclick="">
-                        <a id="btnOrdenarPor" class="btn-filtro"><i class="mdi mdi-sort"></i> Ordenar</a>
-                        <div class="sorting-cont menu-desplegable">
-
-                            <a class="sorting-cont-button accordion-trigger" type="button" id="dropdownnovedad"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                FECHA DE PUBLICACIÓN <i class="mdi mdi-chevron-down"></i>
-                            </a>
-                            <ul class="accordion-panel" aria-labelledby="dropdownMenuButton1">
-                                <li><a class="dropdown-item order_button" data-sortby="novedadAsc">MÁS NUEVOS <i
-                                            class="mdi mdi-radiobox-marked"></i></a>
-                                </li>
-                                <li><a class="dropdown-item order_button" data-sortby="novedadDes">MÁS ANTIGUOS <i
-                                            class="mdi mdi-radiobox-blank"></i></a>
-                                </li>
-                            </ul>
-
-                        </div>
-                    </div>
 
                 </div>
 
@@ -290,12 +296,26 @@
                     </div>
                     <div class="card-cat-info">
                         <div class="card-cat-info-cont">
-                            <h4 class="card-cat-info-title">Resultados contradictorios respecto a la obesidad
-                                “metabólicamente saludable”</h4>
-                            <h5 class="card-cat-info-bajada">Los efectos cardiovasculares de la obesidad en las personas
+                            <a href="" class="card-cat-info-title">Resultados contradictorios respecto a la obesidad
+                                “metabólicamente saludable”</a>
+                            <h5 class="card-cat-info-bajada">Los efectos cardiovasculares de la
+                                obesidad en las
+                                personas
                                 sin hipertensión,
                                 dislipidemia y diabetes son complejos y diferirían entre los hombres y las mujeres, de
                                 acuerdo con un nuevo estudio.</h5>
+                            <div class="card-cat-info-footer">
+                                <div class="autor">
+                                    <div class="autor-img"
+                                        style="background: center/cover url(media/magazine/review-profile.jpg);">
+                                    </div>
+                                    <div class="autor-info">
+                                        <h5 class="autor-info-name">María Constanza Celano</h5>
+                                        <h6 class="autor-info-date is-uppercase">1 de Septiembre de 2022</h6>
+                                    </div>
+                                </div>
+                                <a href="" class="btn btn-big button">LEER</a>
+                            </div>
                         </div>
                         <div class="card-cat-info-img">
                             <picture>
@@ -316,12 +336,26 @@
                     </div>
                     <div class="card-cat-info">
                         <div class="card-cat-info-cont">
-                            <h4 class="card-cat-info-title">Resultados contradictorios respecto a la obesidad
-                                “metabólicamente saludable”</h4>
-                            <h5 class="card-cat-info-bajada">Los efectos cardiovasculares de la obesidad en las personas
+                            <a href="" class="card-cat-info-title">Resultados contradictorios respecto a la obesidad
+                                “metabólicamente saludable”</a>
+                            <h5 class="card-cat-info-bajada">Los efectos cardiovasculares de la
+                                obesidad en las
+                                personas
                                 sin hipertensión,
                                 dislipidemia y diabetes son complejos y diferirían entre los hombres y las mujeres, de
                                 acuerdo con un nuevo estudio.</h5>
+                            <div class="card-cat-info-footer">
+                                <div class="autor">
+                                    <div class="autor-img"
+                                        style="background: center/cover url(media/magazine/review-profile.jpg);">
+                                    </div>
+                                    <div class="autor-info">
+                                        <h5 class="autor-info-name">María Constanza Celano</h5>
+                                        <h6 class="autor-info-date is-uppercase">1 de Septiembre de 2022</h6>
+                                    </div>
+                                </div>
+                                <a href="" class="btn btn-big button">LEER</a>
+                            </div>
                         </div>
                         <div class="card-cat-info-img">
                             <picture>
@@ -342,12 +376,26 @@
                     </div>
                     <div class="card-cat-info">
                         <div class="card-cat-info-cont">
-                            <h4 class="card-cat-info-title">Resultados contradictorios respecto a la obesidad
-                                “metabólicamente saludable”</h4>
-                            <h5 class="card-cat-info-bajada">Los efectos cardiovasculares de la obesidad en las personas
+                            <a href="" class="card-cat-info-title">Resultados contradictorios respecto a la obesidad
+                                “metabólicamente saludable”</a>
+                            <h5 class="card-cat-info-bajada">Los efectos cardiovasculares de la
+                                obesidad en las
+                                personas
                                 sin hipertensión,
                                 dislipidemia y diabetes son complejos y diferirían entre los hombres y las mujeres, de
                                 acuerdo con un nuevo estudio.</h5>
+                            <div class="card-cat-info-footer">
+                                <div class="autor">
+                                    <div class="autor-img"
+                                        style="background: center/cover url(media/magazine/review-profile.jpg);">
+                                    </div>
+                                    <div class="autor-info">
+                                        <h5 class="autor-info-name">María Constanza Celano</h5>
+                                        <h6 class="autor-info-date is-uppercase">1 de Septiembre de 2022</h6>
+                                    </div>
+                                </div>
+                                <a href="" class="btn btn-big button">LEER</a>
+                            </div>
                         </div>
                         <div class="card-cat-info-img">
                             <picture>
@@ -368,12 +416,26 @@
                     </div>
                     <div class="card-cat-info">
                         <div class="card-cat-info-cont">
-                            <h4 class="card-cat-info-title">Resultados contradictorios respecto a la obesidad
-                                “metabólicamente saludable”</h4>
-                            <h5 class="card-cat-info-bajada">Los efectos cardiovasculares de la obesidad en las personas
+                            <a href="" class="card-cat-info-title">Resultados contradictorios respecto a la obesidad
+                                “metabólicamente saludable”</a>
+                            <h5 class="card-cat-info-bajada">Los efectos cardiovasculares de la
+                                obesidad en las
+                                personas
                                 sin hipertensión,
                                 dislipidemia y diabetes son complejos y diferirían entre los hombres y las mujeres, de
                                 acuerdo con un nuevo estudio.</h5>
+                            <div class="card-cat-info-footer">
+                                <div class="autor">
+                                    <div class="autor-img"
+                                        style="background: center/cover url(media/magazine/review-profile.jpg);">
+                                    </div>
+                                    <div class="autor-info">
+                                        <h5 class="autor-info-name">María Constanza Celano</h5>
+                                        <h6 class="autor-info-date is-uppercase">1 de Septiembre de 2022</h6>
+                                    </div>
+                                </div>
+                                <a href="" class="btn btn-big button">LEER</a>
+                            </div>
                         </div>
                         <div class="card-cat-info-img">
                             <picture>
@@ -394,12 +456,26 @@
                     </div>
                     <div class="card-cat-info">
                         <div class="card-cat-info-cont">
-                            <h4 class="card-cat-info-title">Resultados contradictorios respecto a la obesidad
-                                “metabólicamente saludable”</h4>
-                            <h5 class="card-cat-info-bajada">Los efectos cardiovasculares de la obesidad en las personas
+                            <a href="" class="card-cat-info-title">Resultados contradictorios respecto a la obesidad
+                                “metabólicamente saludable”</a>
+                            <h5 class="card-cat-info-bajada">Los efectos cardiovasculares de la
+                                obesidad en las
+                                personas
                                 sin hipertensión,
                                 dislipidemia y diabetes son complejos y diferirían entre los hombres y las mujeres, de
                                 acuerdo con un nuevo estudio.</h5>
+                            <div class="card-cat-info-footer">
+                                <div class="autor">
+                                    <div class="autor-img"
+                                        style="background: center/cover url(media/magazine/review-profile.jpg);">
+                                    </div>
+                                    <div class="autor-info">
+                                        <h5 class="autor-info-name">María Constanza Celano</h5>
+                                        <h6 class="autor-info-date is-uppercase">1 de Septiembre de 2022</h6>
+                                    </div>
+                                </div>
+                                <a href="" class="btn btn-big button">LEER</a>
+                            </div>
                         </div>
                         <div class="card-cat-info-img">
                             <picture>
@@ -420,12 +496,26 @@
                     </div>
                     <div class="card-cat-info">
                         <div class="card-cat-info-cont">
-                            <h4 class="card-cat-info-title">Resultados contradictorios respecto a la obesidad
-                                “metabólicamente saludable”</h4>
-                            <h5 class="card-cat-info-bajada">Los efectos cardiovasculares de la obesidad en las personas
+                            <a href="" class="card-cat-info-title">Resultados contradictorios respecto a la obesidad
+                                “metabólicamente saludable”</a>
+                            <h5 class="card-cat-info-bajada">Los efectos cardiovasculares de la
+                                obesidad en las
+                                personas
                                 sin hipertensión,
                                 dislipidemia y diabetes son complejos y diferirían entre los hombres y las mujeres, de
                                 acuerdo con un nuevo estudio.</h5>
+                            <div class="card-cat-info-footer">
+                                <div class="autor">
+                                    <div class="autor-img"
+                                        style="background: center/cover url(media/magazine/review-profile.jpg);">
+                                    </div>
+                                    <div class="autor-info">
+                                        <h5 class="autor-info-name">María Constanza Celano</h5>
+                                        <h6 class="autor-info-date is-uppercase">1 de Septiembre de 2022</h6>
+                                    </div>
+                                </div>
+                                <a href="" class="btn btn-big button">LEER</a>
+                            </div>
                         </div>
                         <div class="card-cat-info-img">
                             <picture>
@@ -450,7 +540,7 @@
                 </div>
                 <div class="mas-leidas">
                     <div class="mas-leidas-cont">
-
+                        <h3 class="mas-leidas-title">LAS MÁS LEÍDAS</h3>
                         <div class="card-leida">
                             <span class="card-leida-tag">ACTUALIDAD</span>
                             <a href="#">
@@ -459,6 +549,7 @@
                         </div>
 
                         <div class="card-leida">
+
                             <span class="card-leida-tag">ACTUALIDAD</span>
                             <a href="#">
                                 <h4 class="card-leida-title">La salud como un proceso de coconstrucción con el
