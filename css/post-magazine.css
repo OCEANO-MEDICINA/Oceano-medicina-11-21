@@ -1776,6 +1776,19 @@ header .navbar-overlay.is-active {
   display: none;
 }
 
+@media print {
+  header,
+  footer,
+  .hero,
+  .recomended,
+  .post-cont-side,
+  .share,
+  .related,
+  .coments {
+    display: none !important;
+  }
+}
+
 .hero {
   position: relative;
   padding: 4.75rem 0 3.25rem;
@@ -2159,7 +2172,12 @@ header .navbar-overlay.is-active {
   grid-area: body;
 }
 
-.post-cont-body > p {
+.post-cont-body > p,
+.post-cont-body h3,
+.post-cont-body h4,
+.post-cont-body h5,
+.post-cont-body ul,
+.post-cont-body figure {
   margin-top: 1.25rem;
 }
 
@@ -2167,7 +2185,48 @@ header .navbar-overlay.is-active {
   margin-top: 1.75rem;
 }
 
+.post-cont-body ul {
+  list-style: disc;
+  list-style-position: inside;
+}
+
+.post-cont-body h3,
+.post-cont-body h4,
+.post-cont-body h5 {
+  font-weight: 700;
+}
+
+.post-cont-body h3 {
+  font-size: 1.325em;
+}
+
+.post-cont-body h4 {
+  font-size: 1.25rem;
+}
+
+.post-cont-body h5 {
+  font-size: 1.125rem;
+}
+
+.post-cont-body figure {
+  width: 100%;
+}
+
+.post-cont-body figure img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.post-cont-body figure figcaption {
+  font-style: italic;
+  font-weight: 500;
+}
+
 .post-cont .recomended {
+  position: relative;
+  z-index: 1;
   padding: 2rem 0 0.75rem;
   grid-area: recomended;
   text-align: center;

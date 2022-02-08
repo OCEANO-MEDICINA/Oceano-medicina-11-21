@@ -245,17 +245,16 @@
                     background-color: #fff;
                 }
 
-                .enviar {
+                .promagnifier {
                     position: relative;
                     height: 2rem;
                     width: 2rem;
                     background-color: $primary;
                     color: #fff;
-                    border-radius: 50px;
+                    border-radius: 50%;
 
-                    i {
-                        font-size: 1rem;
-                        line-height: 1;
+                    svg {
+                        fill: #fff;
                     }
                 }
             }
@@ -419,6 +418,7 @@
                                 flex-shrink: 0;
                                 height: 2.625rem;
                                 width: 2.625rem;
+                                border-radius: 50%;
                             }
                             &-info {
                                 display: flex;
@@ -471,18 +471,24 @@
             margin: 1rem 0 2rem;
             display: flex;
             justify-content: center;
+            gap: 0.5rem;
+            font-weight: 700;
+            color: $black;
 
             a {
                 height: unset;
-                padding: 0.75rem 1.25rem;
+                padding: 0.25rem 0.5rem;
                 font-size: clamp(1rem, 2vw, 1.25rem);
                 font-weight: 700;
                 line-height: 1;
                 text-align: center;
-                color: $medicina-dark;
-                background: #ffffff;
-                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+                color: $black;
                 border-radius: 4px;
+
+                .active {
+                    background-color: $actualidad;
+                    color: #fff;
+                }
             }
         }
     }
@@ -565,10 +571,19 @@
 
             &-body {
                 .card-cat {
+                    display: flex;
+                    flex-direction: column;
                     padding: 2rem 0;
                     &-info {
+                        flex-grow: 1;
                         grid-template-columns: unquote("max(370px, 57%)") auto;
                         gap: 1.75rem;
+
+                        &-cont {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                        }
 
                         &-title {
                             font-size: 1.375rem;
@@ -586,9 +601,6 @@
             margin: 1.5rem 0 4rem;
 
             a {
-                padding: 0.75rem 2rem;
-                color: #fff;
-                background: $primary;
                 border-radius: 8px;
             }
         }
@@ -691,6 +703,8 @@
 
                             .btn {
                                 width: 100%;
+                                padding: 0.5rem 1rem;
+                                height: unset;
                             }
                         }
                     }

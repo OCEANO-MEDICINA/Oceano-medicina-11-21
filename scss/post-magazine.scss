@@ -26,6 +26,19 @@
     }
 }
 
+@media print {
+    header,
+    footer,
+    .hero,
+    .recomended,
+    .post-cont-side,
+    .share,
+    .related,
+    .coments {
+        display: none !important;
+    }
+}
+
 .hero {
     position: relative;
     padding: 4.75rem 0 3.25rem;
@@ -347,17 +360,59 @@
         &-body {
             grid-area: body;
 
-            > p {
+            > p,
+            h3,
+            h4,
+            h5,
+            ul,
+            figure {
                 margin-top: 1.25rem;
             }
             > p:first-child {
                 margin-top: 1.75rem;
             }
+
+            ul {
+                list-style: disc;
+                list-style-position: inside;
+            }
+
+            h3,
+            h4,
+            h5 {
+                font-weight: 700;
+            }
+            h3 {
+                font-size: 1.325em;
+            }
+            h4 {
+                font-size: 1.25rem;
+            }
+            h5 {
+                font-size: 1.125rem;
+            }
+
+            figure {
+                width: 100%;
+
+                img {
+                    object-fit: cover;
+                    width: 100%;
+                    border-radius: 8px;
+                }
+                figcaption {
+                    font-style: italic;
+                    font-weight: 500;
+                }
+            }
         }
         .recomended {
+            position: relative;
+            z-index: 1;
             padding: 2rem 0 0.75rem;
             grid-area: recomended;
             text-align: center;
+
             h5 {
                 font-size: 0.75rem;
                 font-weight: 300;

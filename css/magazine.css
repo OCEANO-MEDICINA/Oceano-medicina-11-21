@@ -2068,21 +2068,20 @@ header .navbar-overlay.is-active {
   display: none;
 }
 
-.enfermeria .card .card-overlay,
-.enfermeria .card .card-overlay-text {
+.enfermeria .card-overlay, .enfermeria .card-overlay-text {
   position: absolute;
   width: 100%;
   height: 100%;
 }
 
-.enfermeria .card .card-overlay {
+.enfermeria .card-overlay {
   background: rgba(12, 83, 71, 0.75);
   mix-blend-mode: normal;
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
 }
 
-.enfermeria .card .card-overlay-text {
+.enfermeria .card-overlay-text {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 1rem;
@@ -2094,10 +2093,16 @@ header .navbar-overlay.is-active {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   color: #fff;
 }
 
-.enfermeria .card .card-overlay-text-leyenda {
+.enfermeria .card-overlay-text-leyenda {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2113,14 +2118,15 @@ header .navbar-overlay.is-active {
           flex-grow: 1;
 }
 
-.enfermeria .card .card-overlay-text p {
+.enfermeria .card-overlay-text p {
+  margin: 0 auto;
   font-size: 1.25rem;
   line-height: 1.2em;
   font-weight: 700;
   max-width: 14.5ch;
 }
 
-.enfermeria .card .card-overlay-text span {
+.enfermeria .card-overlay-text span {
   margin: 0.75rem 0 1rem;
   font-size: 0.875rem;
   line-height: 1.3em;
