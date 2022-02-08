@@ -1778,7 +1778,7 @@ header .navbar-overlay.is-active {
 
 .hero {
   position: relative;
-  padding: 4.75rem 0 3.25rem;
+  padding: 5.75rem 0 2.25rem;
   background: center url(../media/magazine/header-magazine.jpg);
 }
 
@@ -2054,6 +2054,26 @@ header .navbar-overlay.is-active {
   gap: 0.5rem;
 }
 
+.categorias-cont-side .searchbar .probox {
+  gap: 0.5rem;
+  height: -webkit-min-content !important;
+  height: -moz-min-content !important;
+  height: min-content !important;
+}
+
+.categorias-cont-side .searchbar .probox .proinput {
+  min-height: 2rem !important;
+}
+
+.categorias-cont-side .searchbar .probox .proloading {
+  position: absolute;
+  z-index: 2;
+  right: 2.25rem !important;
+  top: 50% !important;
+  -webkit-transform: translateY(-50%) !important;
+          transform: translateY(-50%) !important;
+}
+
 .categorias-cont-side .searchbar input[type="search"] {
   z-index: 2;
   padding-left: 1rem;
@@ -2067,15 +2087,14 @@ header .navbar-overlay.is-active {
 
 .categorias-cont-side .searchbar .promagnifier {
   position: relative;
-  height: 2rem;
-  width: 2rem;
-  background-color: #ff266e;
-  color: #fff;
-  border-radius: 50%;
+  height: 2rem !important;
+  width: 2rem !important;
+  background-color: #ff266e !important;
+  border-radius: 50% !important;
 }
 
 .categorias-cont-side .searchbar .promagnifier svg {
-  fill: #fff;
+  fill: #fff !important;
 }
 
 .categorias-cont-side .mas-leidas {
@@ -2382,10 +2401,20 @@ header .navbar-overlay.is-active {
   text-align: center;
   color: #272727;
   border-radius: 4px;
+  border: 1px solid transparent;
+}
+
+.categorias-cont .control-buttons a:hover {
+  border: 1px solid #272727;
+}
+
+.categorias-cont .control-buttons a:focus {
+  background-color: #43c8e6;
+  color: #fff;
 }
 
 .categorias-cont .control-buttons a .active {
-  background-color: #5398ff;
+  background-color: #00b6de;
   color: #fff;
 }
 
@@ -2467,6 +2496,7 @@ header .navbar-overlay.is-active {
         -ms-flex-direction: column;
             flex-direction: column;
     padding: 2rem 0;
+    min-height: 350px;
   }
   .categorias-cont-body .card-cat-info {
     -webkit-box-flex: 1;
