@@ -43,7 +43,7 @@ header {
 
         &-link {
             font-size: 1.5rem;
-            font-weight: 700;
+            font-weight: 500;
             text-transform: uppercase;
             border-bottom: 1px solid #ffffff25;
 
@@ -431,7 +431,16 @@ header {
             }
 
             .nav-contenidos .navbar-dropdown::after {
-                right: 24rem;
+                right: 48%;
+                transform: translateX(50%);
+            }
+            .nav-contenidos ~ .accordion-panel,
+            .nav-contenidos.is-hoverable:hover .navbar-dropdown,
+            .nav-contenidos.is-hoverable:focus .navbar-dropdown {
+                right: 19.85rem;
+                display: flex;
+                flex-direction: column;
+                min-width: 165px !important;
             }
 
             &-dropdown::before {

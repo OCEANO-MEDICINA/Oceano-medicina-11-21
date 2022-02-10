@@ -580,7 +580,7 @@ header .navbar-item.button, header .navbar-link.button {
 
 header .navbar-link {
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 500;
   text-transform: uppercase;
   border-bottom: 1px solid #ffffff25;
 }
@@ -1021,7 +1021,22 @@ header .navbar-overlay.is-active {
     border-color: transparent transparent #4e649c !important;
   }
   header .navbar .nav-contenidos .navbar-dropdown::after {
-    right: 24rem;
+    right: 48%;
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
+  }
+  header .navbar .nav-contenidos ~ .accordion-panel,
+  header .navbar .nav-contenidos.is-hoverable:hover .navbar-dropdown,
+  header .navbar .nav-contenidos.is-hoverable:focus .navbar-dropdown {
+    right: 19.85rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    min-width: 165px !important;
   }
   header .navbar-dropdown::before {
     position: absolute;
@@ -1787,8 +1802,34 @@ header .navbar-overlay.is-active {
   }
 }
 
-.navbar .navbar-brand .navbar-item p {
-  display: none;
+.navbar .navbar-brand .navbar-item.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.navbar .navbar-brand .navbar-item.logo p {
+  position: relative;
+  padding-left: 0.5rem;
+  display: block;
+  font-weight: 500;
+}
+
+.navbar .navbar-brand .navbar-item.logo p::before {
+  content: " ";
+  position: absolute;
+  width: 1px;
+  top: 45%;
+  left: 0;
+  background-color: #fff;
+  height: 120%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.navbar .navbar-brand .navbar-item.logo:hover {
+  color: #fff;
 }
 
 .hero {
@@ -2358,11 +2399,6 @@ header .navbar-overlay.is-active {
 }
 
 @media screen and (min-width: 767px) {
-  .navbar .navbar-brand .navbar-item p {
-    display: block;
-    border-left: 1px solid #fff;
-    font-weight: 700;
-  }
   .hero {
     min-height: 360px;
     background: 25% top url(../media/magazine/header-magazine.jpg);
@@ -2498,6 +2534,18 @@ header .navbar-overlay.is-active {
 }
 
 @media screen and (min-width: 1024px) {
+  .navbar .navbar-brand .navbar-item.logo p::before {
+    height: 155%;
+  }
+  .navbar .navbar-link {
+    padding: 0.5rem 0.5rem;
+  }
+  .navbar .navbar-link:not(.is-arrowless) {
+    padding-right: 2rem;
+  }
+  .navbar .navbar-link:not(.is-arrowless)::after {
+    right: 0.75rem !important;
+  }
   .news {
     overflow: unset;
     margin-top: -3rem;

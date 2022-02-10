@@ -18,9 +18,28 @@
 
 .navbar {
     .navbar-brand {
-        .navbar-item {
+        .navbar-item.logo {
+            display: flex;
+            gap: 0.5rem;
             p {
-                display: none;
+                position: relative;
+                padding-left: 0.5rem;
+                display: block;
+                font-weight: 500;
+
+                &::before {
+                    content: " ";
+                    position: absolute;
+                    width: 1px;
+                    top: 45%;
+                    left: 0;
+                    background-color: #fff;
+                    height: 120%;
+                    transform: translateY(-50%);
+                }
+            }
+            &:hover {
+                color: #fff;
             }
         }
     }
@@ -494,6 +513,7 @@
                 display: flex;
                 gap: 0.5rem;
                 justify-content: center;
+                flex-flow: row wrap;
             }
 
             .btn {
@@ -613,17 +633,6 @@
 }
 
 @media screen and (min-width: 767px) {
-    .navbar {
-        .navbar-brand {
-            .navbar-item {
-                p {
-                    display: block;
-                    border-left: 1px solid #fff;
-                    font-weight: 700;
-                }
-            }
-        }
-    }
     .hero {
         min-height: 360px;
         background: 25% top url(../media/magazine/header-magazine.jpg);
@@ -713,6 +722,27 @@
 }
 
 @media screen and (min-width: 1024px) {
+    .navbar {
+        .navbar-brand {
+            .navbar-item.logo {
+                p {
+                    &::before {
+                        height: 155%;
+                    }
+                }
+            }
+        }
+        .navbar-link {
+            padding: 0.5rem 0.5rem;
+            &:not(.is-arrowless) {
+                padding-right: 2rem;
+
+                &::after {
+                    right: 0.75rem !important;
+                }
+            }
+        }
+    }
     .post {
         overflow: unset;
         margin-top: -3rem;
