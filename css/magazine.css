@@ -1980,6 +1980,7 @@ header .navbar-overlay.is-active {
       flex-shrink: 0;
   height: 2.25rem;
   width: 2.25rem;
+  border-radius: 50%;
 }
 
 .news-cont .swiper-reviews .card-review-footer-info {
@@ -2116,6 +2117,12 @@ header .navbar-overlay.is-active {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  padding-inline: 1rem;
+}
+
+.enfermeria .card-info-title {
+  padding-top: 0.5rem;
+  text-align: left;
 }
 
 .enfermeria .card-overlay, .enfermeria .card-overlay-text {

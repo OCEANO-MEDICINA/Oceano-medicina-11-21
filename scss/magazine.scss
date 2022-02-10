@@ -164,6 +164,7 @@
                         flex-shrink: 0;
                         height: 2.25rem;
                         width: 2.25rem;
+                        border-radius: 50%;
                     }
                     &-info {
                         display: flex;
@@ -281,6 +282,11 @@
         &-info {
             &-sup {
                 justify-content: flex-start;
+                padding-inline: 1rem;
+            }
+            &-title {
+                padding-top: 0.5rem;
+                text-align: left;
             }
         }
         &-overlay,
