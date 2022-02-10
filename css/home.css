@@ -1263,6 +1263,9 @@ header .navbar-overlay.is-active {
     right: 20.5rem;
     border-color: transparent transparent #4e649c !important;
   }
+  header .navbar .nav-contenidos .navbar-dropdown::after {
+    right: 24rem;
+  }
   header .navbar-dropdown::before {
     position: absolute;
     content: " ";

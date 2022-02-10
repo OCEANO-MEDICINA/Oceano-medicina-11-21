@@ -430,6 +430,10 @@ header {
                 border-color: transparent transparent #4e649c !important;
             }
 
+            .nav-contenidos .navbar-dropdown::after {
+                right: 24rem;
+            }
+
             &-dropdown::before {
                 position: absolute;
                 content: " ";

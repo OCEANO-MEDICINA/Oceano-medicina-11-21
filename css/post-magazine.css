@@ -1020,6 +1020,9 @@ header .navbar-overlay.is-active {
     right: 20.5rem;
     border-color: transparent transparent #4e649c !important;
   }
+  header .navbar .nav-contenidos .navbar-dropdown::after {
+    right: 24rem;
+  }
   header .navbar-dropdown::before {
     position: absolute;
     content: " ";
@@ -1940,8 +1943,25 @@ header .navbar-overlay.is-active {
      object-fit: cover;
 }
 
+.post-cont-header .post-meta {
+  margin-top: 0.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.75rem;
+}
+
+.post-cont-header .post-meta-date {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #878686;
+}
+
 .post-cont-header .post-meta .meta-item {
-  margin-top: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2023,6 +2043,13 @@ header .navbar-overlay.is-active {
   display: none;
   position: relative;
   margin: 1rem 0;
+}
+
+.post-cont-side .mas-leidas-title {
+  padding: 1rem 0.85rem 0;
+  font-size: 1.125rem;
+  font-weight: 300;
+  color: #272727;
 }
 
 .post-cont-side .mas-leidas .card-leida {

@@ -185,8 +185,17 @@
                 }
             }
             .post-meta {
+                margin-top: 0.75rem;
+                display: flex;
+                flex-direction: column;
+                gap: 0.75rem;
+
+                &-date {
+                    font-size: 0.75rem;
+                    text-transform: uppercase;
+                    color: #878686;
+                }
                 .meta-item {
-                    margin-top: 1rem;
                     display: flex;
                     align-items: center;
                     gap: 0.5rem;
@@ -249,6 +258,13 @@
                 display: none;
                 position: relative;
                 margin: 1rem 0;
+
+                &-title {
+                    padding: 1rem 0.85rem 0;
+                    font-size: 1.125rem;
+                    font-weight: 300;
+                    color: $black;
+                }
 
                 .card-leida {
                     display: flex;

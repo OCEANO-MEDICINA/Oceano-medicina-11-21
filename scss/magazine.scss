@@ -259,6 +259,11 @@
         }
     }
     .card {
+        &-info {
+            &-sup {
+                justify-content: flex-start;
+            }
+        }
         &-overlay,
         &-overlay-text {
             position: absolute;
