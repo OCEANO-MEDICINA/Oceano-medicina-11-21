@@ -1,8 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Material+Icons|Work+Sans:400,700,900");
 
 body {
+    position: fixed;
     overflow: hidden;
     font-family: "Roboto", sans-serif !important;
+    background-color: #4173cd;
+    width: 100%;
+    height: 100%;
 }
 .invisible {
     display: none !important;
@@ -49,6 +53,8 @@ $R-d: $size-d * 0.5;
     margin-left: -1 * $size * 0.5;
 
     .shadow {
+        border: $size * 0.02 solid #fff;
+
         display: block;
         position: absolute;
         top: 0;
@@ -85,7 +91,7 @@ $R-d: $size-d * 0.5;
             position: absolute;
             border-left-color: #fff;
             top: 50%;
-            left: -1px;
+            left: $size * 0.02;
             margin-top: -1em;
             filter: drop-shadow(0 0.25em 0 rgba(0, 0, 0, 0.25));
         }
@@ -229,6 +235,9 @@ $R-d: $size-d * 0.5;
                 justify-content: center;
 
                 form {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
                     margin-bottom: 2.25rem;
                 }
             }
@@ -236,22 +245,19 @@ $R-d: $size-d * 0.5;
     }
     &-card {
         justify-content: center;
-        min-height: 430px;
-        padding: 2.75rem 0 2.375rem;
+        min-height: 370px;
         max-height: unset;
         width: unquote("min(100% - 64px, 445px)");
         background-color: #fff;
         border-radius: 20px;
 
         &-body {
-            max-height: 310px;
             height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
-            padding: 0 2.25rem;
-
+            padding: 2.75rem 2.25rem 2.375rem;
             text-align: center;
 
             &-title {
@@ -259,12 +265,16 @@ $R-d: $size-d * 0.5;
                 justify-content: center;
                 align-items: center;
                 gap: 0.25em;
-                font-size: clamp(1.25rem, 3vw, 1.5rem);
+                font-size: clamp(1.25rem, 3vw, 2.25rem);
                 font-weight: 700;
                 color: #575757;
 
                 img {
                     width: clamp(1.5rem, 2vw, 2rem);
+                }
+
+                &.title-ingreso {
+                    font-size: clamp(1.25rem, 3vw, 1.5rem);
                 }
             }
             p {
@@ -461,6 +471,11 @@ $R-d: $size-d * 0.5;
             background: #042799e1;
             backdrop-filter: blur(2px);
         }
+        &.ingreso {
+            form {
+                margin: 1.75rem 0 2.625rem;
+            }
+        }
         &-card {
             width: unquote("min(100% - 64px, 445px)");
 
@@ -469,9 +484,11 @@ $R-d: $size-d * 0.5;
                 border-radius: 25px;
 
                 form {
-                    margin: 1.75rem 0 2.625rem;
                     display: flex;
                     flex-direction: column;
+                    input {
+                        margin: 0;
+                    }
                 }
                 .logo {
                     width: 5.375rem;
@@ -502,11 +519,18 @@ $R-d: $size-d * 0.5;
         margin-top: -1 * $size-d * 0.5;
         margin-left: -1 * $size-d * 0.5;
 
+        .shadow {
+            border: $size * 0.04 solid #fff;
+        }
+
         .markers {
             .marker {
                 top: -1 * $R-d;
                 left: $R-d;
                 transform-origin: 0% $D-d;
+            }
+            .triangle {
+                left: $size * 0.04;
             }
         }
         .spinner {
@@ -537,6 +561,7 @@ $R-d: $size-d * 0.5;
             background: #042799e1;
             backdrop-filter: blur(2px);
         }
+
         &-card {
             width: unquote("min(100% - 64px, 445px)");
 
@@ -545,7 +570,6 @@ $R-d: $size-d * 0.5;
                 border-radius: 25px;
 
                 form {
-                    margin: 1.75rem 0 2.625rem;
                     display: flex;
                     flex-direction: column;
                 }
