@@ -382,16 +382,15 @@ button {
 }
 
 .tags {
-  padding: 0.25rem 0.5rem;
+  padding: 0.125rem 0.5rem;
   font-size: 0.625rem;
   font-weight: 700;
   text-transform: uppercase;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
-  line-height: 1;
   color: #fff;
-  border-radius: 2px;
+  border-radius: 3px;
 }
 
 .tags:hover {

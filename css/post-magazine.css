@@ -382,16 +382,15 @@ button {
 }
 
 .tags {
-  padding: 0.25rem 0.5rem;
+  padding: 0.125rem 0.5rem;
   font-size: 0.625rem;
   font-weight: 700;
   text-transform: uppercase;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
-  line-height: 1;
   color: #fff;
-  border-radius: 2px;
+  border-radius: 3px;
 }
 
 .tags:hover {
@@ -1011,14 +1010,14 @@ header .navbar-overlay.is-active {
     border-color: transparent transparent rgba(32, 59, 131, 0.84);
   }
   header .navbar .nav-medicina .navbar-dropdown::after {
-    right: 37.15rem;
+    right: 34.5rem;
   }
   header .navbar .nav-enfermeria .navbar-dropdown::after {
-    right: 29rem;
+    right: 27.5rem;
   }
   header .navbar .nav-comunidad .navbar-dropdown::after {
-    right: 20.5rem;
-    border-color: transparent transparent #4e649c !important;
+    right: 20rem;
+    border-color: transparent transparent #3c5596 !important;
   }
   header .navbar .nav-contenidos .navbar-dropdown::after {
     right: 48%;
@@ -2055,6 +2054,26 @@ header .navbar-overlay.is-active {
   gap: 0.5rem;
 }
 
+.post-cont-side .searchbar .probox {
+  gap: 0.5rem;
+  height: -webkit-min-content !important;
+  height: -moz-min-content !important;
+  height: min-content !important;
+}
+
+.post-cont-side .searchbar .probox .proinput {
+  min-height: 2rem !important;
+}
+
+.post-cont-side .searchbar .probox .proloading {
+  position: absolute;
+  z-index: 2;
+  right: 2.75rem !important;
+  top: 50% !important;
+  -webkit-transform: translateY(-50%) !important;
+          transform: translateY(-50%) !important;
+}
+
 .post-cont-side .searchbar input[type="search"] {
   z-index: 2;
   padding-left: 1rem;
@@ -2066,18 +2085,16 @@ header .navbar-overlay.is-active {
   background-color: #fff;
 }
 
-.post-cont-side .searchbar .enviar {
+.post-cont-side .searchbar .promagnifier {
   position: relative;
-  height: 2rem;
-  width: 2rem;
-  background-color: #ff266e;
-  color: #fff;
-  border-radius: 50px;
+  height: 2rem !important;
+  width: 2rem !important;
+  background-color: #ff266e !important;
+  border-radius: 50% !important;
 }
 
-.post-cont-side .searchbar .enviar i {
-  font-size: 1rem;
-  line-height: 1;
+.post-cont-side .searchbar .promagnifier svg {
+  fill: #fff !important;
 }
 
 .post-cont-side .mas-leidas {
@@ -2245,6 +2262,7 @@ header .navbar-overlay.is-active {
 .post-cont-body h4,
 .post-cont-body h5,
 .post-cont-body ul,
+.post-cont-body ol,
 .post-cont-body figure {
   margin-top: 1.25rem;
 }
@@ -2258,33 +2276,32 @@ header .navbar-overlay.is-active {
   list-style-position: inside;
 }
 
+.post-cont-body ol {
+  list-style-position: inside;
+}
+
+.post-cont-body h2,
 .post-cont-body h3,
 .post-cont-body h4,
-.post-cont-body h5 {
+.post-cont-body h5,
+.post-cont-body h6 {
   font-weight: 700;
 }
 
+.post-cont-body h2 {
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+}
+
 .post-cont-body h3 {
-  font-size: 1.325em;
+  font-size: clamp(1.125rem, 2vw, 1.375rem);
 }
 
 .post-cont-body h4 {
-  font-size: 1.25rem;
+  font-size: clamp(1rem, 2vw, 1.25rem);
 }
 
 .post-cont-body h5 {
-  font-size: 1.125rem;
-}
-
-.post-cont-body figure {
-  width: 100%;
-}
-
-.post-cont-body figure img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
-  border-radius: 8px;
+  font-size: clamp(0.875rem, 2vw, 1.125rem);
 }
 
 .post-cont-body figure figcaption {
@@ -2427,7 +2444,14 @@ header .navbar-overlay.is-active {
 
 .card-img {
   min-height: 170px;
-  padding: 0;
+  padding: 0.5rem;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.card-img .tags {
+  font-size: 0.625rem;
 }
 
 .card-info-sup, .card-info-title {
@@ -2530,6 +2554,18 @@ header .navbar-overlay.is-active {
   -ms-grid-row: 7;
   -ms-grid-column: 1;
   grid-area: coments;
+}
+
+.coments .comments-area {
+  margin: 0;
+}
+
+.coments .comments-area .wpd-form-head {
+  margin-top: unset;
+}
+
+.coments .comments-area #wpdcom {
+  max-width: unset;
 }
 
 @media screen and (min-width: 767px) {
@@ -2729,6 +2765,41 @@ header .navbar-overlay.is-active {
     float: right;
     max-width: 346px;
     margin: 1.25rem 0 0 2rem;
+  }
+  .post-cont .recomended h4,
+  .post-cont .recomended h5 {
+    margin: 0;
+  }
+  .post-cont .recomended.apaisado {
+    margin: 1.25rem 0 0;
+    float: unset;
+    max-width: 100%;
+  }
+  .post-cont .recomended.apaisado .recomended-cont {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 0.75rem;
+  }
+  .post-cont .recomended.apaisado .recomended-cont .card {
+    -ms-grid-columns: 112px auto;
+        grid-template-columns: 112px auto;
+  }
+  .post-cont .recomended.apaisado .recomended-cont .card-img {
+    padding: 0.5rem;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .post-cont .recomended.apaisado .recomended-cont .card-img .tags {
+    font-size: 0.625rem;
+  }
+  .post-cont .recomended.apaisado .recomended-cont .card-info-title {
+    font-size: 0.875rem;
+  }
+  .post-cont .recomended.apaisado .recomended-cont .card-info-footer-precio .price {
+    font-size: 0.875rem;
   }
   .post-cont .recomended-cont {
     padding: 1rem 0;

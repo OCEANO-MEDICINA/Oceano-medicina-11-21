@@ -382,16 +382,15 @@ button {
 }
 
 .tags {
-  padding: 0.25rem 0.5rem;
+  padding: 0.125rem 0.5rem;
   font-size: 0.625rem;
   font-weight: 700;
   text-transform: uppercase;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
-  line-height: 1;
   color: #fff;
-  border-radius: 2px;
+  border-radius: 3px;
 }
 
 .tags:hover {
@@ -1011,14 +1010,14 @@ header .navbar-overlay.is-active {
     border-color: transparent transparent rgba(32, 59, 131, 0.84);
   }
   header .navbar .nav-medicina .navbar-dropdown::after {
-    right: 37.15rem;
+    right: 34.5rem;
   }
   header .navbar .nav-enfermeria .navbar-dropdown::after {
-    right: 29rem;
+    right: 27.5rem;
   }
   header .navbar .nav-comunidad .navbar-dropdown::after {
-    right: 20.5rem;
-    border-color: transparent transparent #4e649c !important;
+    right: 20rem;
+    border-color: transparent transparent #3c5596 !important;
   }
   header .navbar .nav-contenidos .navbar-dropdown::after {
     right: 48%;
@@ -2126,7 +2125,7 @@ header .navbar-overlay.is-active {
 .categorias-cont-side .searchbar .probox .proloading {
   position: absolute;
   z-index: 2;
-  right: 2.25rem !important;
+  right: 2.75rem !important;
   top: 50% !important;
   -webkit-transform: translateY(-50%) !important;
           transform: translateY(-50%) !important;

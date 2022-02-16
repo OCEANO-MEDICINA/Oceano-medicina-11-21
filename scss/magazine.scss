@@ -89,8 +89,24 @@
         }
         &-side {
             .searchbar {
-                display: flex;
+                display: none;
                 gap: 0.5rem;
+
+                .probox {
+                    gap: 0.5rem;
+                    height: min-content !important;
+
+                    .proinput {
+                        min-height: 2rem !important;
+                    }
+                    .proloading {
+                        position: absolute;
+                        z-index: 2;
+                        right: 2.75rem !important;
+                        top: 50% !important;
+                        transform: translateY(-50%) !important;
+                    }
+                }
 
                 input[type="search"] {
                     z-index: 2;
@@ -101,17 +117,15 @@
                     background-color: #fff;
                 }
 
-                .enviar {
+                .promagnifier {
                     position: relative;
-                    height: 2rem;
-                    width: 2rem;
-                    background-color: $primary;
-                    color: #fff;
-                    border-radius: 50px;
+                    height: 2rem !important;
+                    width: 2rem !important;
+                    background-color: $primary !important;
+                    border-radius: 50% !important;
 
-                    i {
-                        font-size: 1rem;
-                        line-height: 1;
+                    svg {
+                        fill: #fff !important;
                     }
                 }
             }
@@ -289,8 +303,22 @@
                 text-align: left;
             }
         }
+        &:hover,
+        &:target {
+            .card-overlay,
+            .card-overlay-text {
+                transition: all 0.3s ease-in-out;
+                opacity: 1;
+            }
+            .card-overlay-text {
+                transition-delay: 0.1s;
+            }
+        }
+
         &-overlay,
         &-overlay-text {
+            transition: all 0.3s ease-in-out;
+            opacity: 0;
             position: absolute;
             width: 100%;
             height: 100%;
@@ -299,6 +327,7 @@
             background: rgba(12, 83, 71, 0.75);
             mix-blend-mode: normal;
             backdrop-filter: blur(4px);
+            box-shadow: inset 0 0 5px 3px #00000015;
 
             &-text {
                 box-sizing: border-box;
@@ -307,10 +336,14 @@
                 flex-direction: column;
                 text-align: center;
                 align-items: center;
-                justify-content: center;
+                justify-content: flex-end;
                 color: #fff;
 
                 &-leyenda {
+                    position: absolute;
+                    padding: 1rem;
+                    top: 50%;
+                    transform: translateY(-50%);
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
@@ -328,6 +361,21 @@
                     margin: 0.75rem 0 1rem;
                     font-size: 0.875rem;
                     line-height: 1.3em;
+                }
+            }
+        }
+        &.exclusive {
+            .card-img {
+                justify-content: flex-start;
+                align-items: flex-start;
+                padding: 0.75rem;
+
+                .tags {
+                    padding: 0.125rem 0.25rem;
+                    display: flex;
+                    gap: 2px;
+                    align-items: center;
+                    line-height: 1.5;
                 }
             }
         }
@@ -382,7 +430,7 @@
                 padding: 1rem 0 2rem;
                 display: grid;
                 grid-template-columns: 1fr;
-                gap: 1rem;
+                gap: 2rem;
 
                 .post-item {
                     display: grid;
@@ -401,6 +449,11 @@
                         font-weight: 700;
                         line-height: 1.2em;
                         color: $medicina-dark;
+                    }
+                    &:hover {
+                        .post-item-title {
+                            color: $primary;
+                        }
                     }
                 }
             }
@@ -467,6 +520,10 @@
                 .btn {
                     margin: 1rem auto 0;
                     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+
+                    &:hover {
+                        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.75);
+                    }
                 }
             }
         }
@@ -504,6 +561,9 @@
                 }
             }
         }
+    }
+    .banner {
+        margin-bottom: 2rem;
     }
 }
 

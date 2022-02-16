@@ -895,6 +895,11 @@ body {
         }
     }
 }
+.cta-asesor {
+    &.ebook {
+        padding: 2rem 0;
+    }
+}
 
 .cta-scroll {
     position: fixed;
@@ -1275,6 +1280,11 @@ body {
             form {
                 width: unset;
             }
+        }
+    }
+    .cta-asesor {
+        &.ebook {
+            padding: 2.5rem 0;
         }
     }
 
