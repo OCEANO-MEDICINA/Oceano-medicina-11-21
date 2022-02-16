@@ -3358,6 +3358,11 @@ body {
   .cta-asesor.ebook {
     padding: 2.5rem 0;
   }
+  .cta-asesor.ebook .cta-asesor-cont {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
   .cta-scroll-cont-info-img {
     display: block;
   }

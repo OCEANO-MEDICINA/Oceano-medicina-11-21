@@ -1285,6 +1285,10 @@ body {
     .cta-asesor {
         &.ebook {
             padding: 2.5rem 0;
+
+            .cta-asesor-cont {
+                justify-content: center;
+            }
         }
     }
 
