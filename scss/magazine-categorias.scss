@@ -566,6 +566,14 @@
 
 .daterangepicker {
     right: 1rem !important;
+
+    .drp-buttons {
+        .btn {
+            display: unset;
+            color: $medicina-dark;
+            background-color: transparent;
+        }
+    }
 }
 
 @media screen and (min-width: 767px) {
@@ -676,6 +684,10 @@
 }
 
 @media screen and (min-width: 1024px) {
+    .daterangepicker {
+        right: unset !important;
+    }
+
     .navbar {
         .navbar-brand {
             .navbar-item.logo {

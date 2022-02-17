@@ -25,7 +25,7 @@ body {
     color: $black;
 }
 .fixed-position {
-    bottom: 8rem;
+    bottom: 8rem !important;
 }
 
 .navbar {
@@ -1084,7 +1084,7 @@ body {
         max-width: 233px;
     }
     .fixed-position {
-        bottom: 7rem;
+        bottom: 7rem !important;
 
         &-chat {
             bottom: 6.75rem;

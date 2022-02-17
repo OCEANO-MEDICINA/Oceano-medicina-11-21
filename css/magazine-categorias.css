@@ -1010,13 +1010,13 @@ header .navbar-overlay.is-active {
     border-color: transparent transparent rgba(32, 59, 131, 0.84);
   }
   header .navbar .nav-medicina .navbar-dropdown::after {
-    right: 34.5rem;
+    right: 37rem;
   }
   header .navbar .nav-enfermeria .navbar-dropdown::after {
-    right: 27.5rem;
+    right: 29rem;
   }
   header .navbar .nav-comunidad .navbar-dropdown::after {
-    right: 20rem;
+    right: 20.5rem;
     border-color: transparent transparent #3c5596 !important;
   }
   header .navbar .nav-contenidos .navbar-dropdown::after {
@@ -2508,6 +2508,12 @@ header .navbar-overlay.is-active {
   right: 1rem !important;
 }
 
+.daterangepicker .drp-buttons .btn {
+  display: unset;
+  color: #02204d;
+  background-color: transparent;
+}
+
 @media screen and (min-width: 767px) {
   .hero {
     min-height: 360px;
@@ -2622,6 +2628,9 @@ header .navbar-overlay.is-active {
 }
 
 @media screen and (min-width: 1024px) {
+  .daterangepicker {
+    right: unset !important;
+  }
   .navbar .navbar-brand .navbar-item.logo p::before {
     height: 155%;
   }

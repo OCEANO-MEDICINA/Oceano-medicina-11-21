@@ -1253,13 +1253,13 @@ header .navbar-overlay.is-active {
     border-color: transparent transparent rgba(32, 59, 131, 0.84);
   }
   header .navbar .nav-medicina .navbar-dropdown::after {
-    right: 34.5rem;
+    right: 37rem;
   }
   header .navbar .nav-enfermeria .navbar-dropdown::after {
-    right: 27.5rem;
+    right: 29rem;
   }
   header .navbar .nav-comunidad .navbar-dropdown::after {
-    right: 20rem;
+    right: 20.5rem;
     border-color: transparent transparent #3c5596 !important;
   }
   header .navbar .nav-contenidos .navbar-dropdown::after {

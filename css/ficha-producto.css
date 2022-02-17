@@ -1064,13 +1064,13 @@ header .navbar-overlay.is-active {
     border-color: transparent transparent rgba(32, 59, 131, 0.84);
   }
   header .navbar .nav-medicina .navbar-dropdown::after {
-    right: 34.5rem;
+    right: 37rem;
   }
   header .navbar .nav-enfermeria .navbar-dropdown::after {
-    right: 27.5rem;
+    right: 29rem;
   }
   header .navbar .nav-comunidad .navbar-dropdown::after {
-    right: 20rem;
+    right: 20.5rem;
     border-color: transparent transparent #3c5596 !important;
   }
   header .navbar .nav-contenidos .navbar-dropdown::after {
@@ -1849,7 +1849,7 @@ body {
 }
 
 .fixed-position {
-  bottom: 8rem;
+  bottom: 8rem !important;
 }
 
 .navbar .navbar-brand .navbar-item p {
@@ -3195,7 +3195,7 @@ body {
     max-width: 233px;
   }
   .fixed-position {
-    bottom: 7rem;
+    bottom: 7rem !important;
   }
   .fixed-position-chat {
     bottom: 6.75rem;
