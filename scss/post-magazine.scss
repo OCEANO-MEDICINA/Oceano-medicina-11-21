@@ -312,8 +312,9 @@
 
                     &-tag {
                         font-size: 0.75rem;
-                        font-weight: 300;
-                        letter-spacing: 0.23em;
+                        font-weight: 400;
+                        letter-spacing: 0.1em;
+                        color: #878686;
                     }
                     a {
                         flex-grow: 1;
@@ -412,6 +413,7 @@
             grid-area: body;
 
             > p,
+            h2,
             h3,
             h4,
             h5,
@@ -464,6 +466,7 @@
             }
 
             figure {
+                max-width: 100%;
                 figcaption {
                     font-style: italic;
                     font-weight: 500;
@@ -495,17 +498,18 @@
             z-index: 1;
             padding: 2rem 0 0.75rem;
             grid-area: recomended;
-            text-align: center;
 
             h5 {
                 font-size: 0.75rem;
                 font-weight: 300;
                 letter-spacing: 0.23em;
                 color: $medicina-dark;
+                text-align: center;
             }
             h4 {
                 font-size: clamp(1.375rem, 1vw, 1.5rem);
                 font-weight: 700;
+                text-align: center;
             }
 
             &-cont {

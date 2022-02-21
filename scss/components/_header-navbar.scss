@@ -230,7 +230,9 @@ header {
 
             &-item.has-dropdown:hover .navbar-link,
             &-item.has-dropdown:focus .navbar-link,
-            &-item.has-dropdown:focus-within .navbar-link {
+            &-item.has-dropdown:focus-within .navbar-link,
+            &-link:focus,
+            &-link:hover {
                 background-color: $primary;
 
                 color: #fff;

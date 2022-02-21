@@ -260,13 +260,130 @@ button {
   border-radius: 4px;
 }
 
+.modal-card-head {
+  padding: 1.125rem;
+  gap: 0.5rem;
+}
+
+.modal-card-head svg {
+  height: clamp(0.875rem, 2vw, 1.125rem);
+}
+
+.modal-card-head .delete {
+  display: none;
+}
+
+.modal-card-title {
+  font-size: clamp(18px, 2.5vw, 1.5rem);
+  font-weight: 700;
+  color: #272727;
+}
+
+.modal-card-foot {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+}
+
+.modal-card-foot .casillaverificacion-label {
+  font-size: clamp(0.75rem, 2vw, 0.875rem);
+}
+
+.modal-card-foot .button {
+  margin-top: 0.25rem;
+  width: 100%;
+  max-width: 244px;
+}
+
+.modal .formulario-campos {
+  padding-bottom: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  gap: 0.75rem;
+}
+
+.modal .formulario-campos > div {
+  width: min(225px, 100%);
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.modal .formulario-campos label {
+  display: block;
+  font-size: clamp(0.875rem, 2vw, 1.125rem);
+  color: #272727;
+}
+
+.modal .formulario-campos input,
+.modal .formulario-campos select {
+  font-size: 0.875rem;
+  padding: 0.25rem 0.5rem;
+  width: 100%;
+  border: 1px solid #57575740;
+  border-radius: 4px;
+  background-color: #fff !important;
+  min-height: 2rem !important;
+}
+
+.modal .formulario-campos input::-webkit-input-placeholder,
+.modal .formulario-campos select::-webkit-input-placeholder {
+  color: #979797;
+}
+
+.modal .formulario-campos input:-ms-input-placeholder,
+.modal .formulario-campos select:-ms-input-placeholder {
+  color: #979797;
+}
+
+.modal .formulario-campos input::-ms-input-placeholder,
+.modal .formulario-campos select::-ms-input-placeholder {
+  color: #979797;
+}
+
+.modal .formulario-campos input::placeholder,
+.modal .formulario-campos select::placeholder {
+  color: #979797;
+}
+
+.modal .formulario-campos .campo-doble {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.75rem;
+}
+
+.modal .formulario-name-cont, .modal .formulario-email-cont {
+  width: 100% !important;
+}
+
 @media screen and (min-width: 768px) {
   .modal-card {
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
+    width: 100%;
     max-width: 640px;
     border-radius: 8px;
+  }
+  .modal-card-head {
+    padding: 1.5rem 2rem;
+  }
+  .modal-card-head .delete {
+    display: initial;
   }
   .modal-card-body {
     padding: 2rem 2rem 1rem;
@@ -806,7 +923,7 @@ header .navbar-brand img {
   width: 100%;
 }
 
-.footer-newsletter .mail-form button[type="submit"] {
+.footer-newsletter .mail-form .js-modal-trigger {
   height: auto !important;
   background-color: #ff266e;
   border-radius: 0 4px 4px 0;
@@ -913,7 +1030,7 @@ header .navbar-brand img {
   .footer-cont input[type="email"] {
     min-height: 2.625rem;
   }
-  .footer-cont button[type="submit"] {
+  .footer-cont .js-modal-trigger {
     padding: 0 0.75rem;
   }
   .footer-cont-third {

@@ -109,7 +109,7 @@ $width-container: unquote("min(100% - 3.25rem, 960px - 64px)");
                 outline: none;
                 width: 100%;
             }
-            button[type="submit"] {
+            .js-modal-trigger {
                 height: auto !important;
                 background-color: $primary;
                 border-radius: 0 4px 4px 0;
@@ -206,7 +206,7 @@ $width-container: unquote("min(100% - 3.25rem, 960px - 64px)");
             input[type="email"] {
                 min-height: 2.625rem;
             }
-            button[type="submit"] {
+            .js-modal-trigger {
                 padding: 0 0.75rem;
             }
             &-third {

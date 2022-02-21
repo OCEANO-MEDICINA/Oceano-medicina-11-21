@@ -599,6 +599,65 @@
         </article>
     </section>
 
+    <div id="modal-newsletter" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <svg width="28" height="20" viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M25.6735 0.68042H2.33195C1.04745 0.68042 0 1.72787 0 3.01789V17.0372C0 18.3217 1.04745 19.3691 2.33195 19.3691H25.668C26.9525 19.3691 28 18.3217 28 17.0372V3.01789C28.0055 1.72787 26.958 0.68042 25.6735 0.68042ZM25.0451 2.24057L13.9972 11.5629L2.96042 2.24057H25.0451ZM1.55464 16.8497V3.08955L9.75782 10.0137L1.55464 16.8497ZM2.83363 17.809L10.9651 11.0336L13.4956 13.1726C13.6389 13.2939 13.8208 13.3546 13.9972 13.3546C14.1736 13.3546 14.3556 13.2939 14.4989 13.1726L17.0348 11.0336L25.1774 17.809H2.83363ZM26.4509 16.8442L18.2422 10.0137L26.4509 3.08404V16.8442Z"
+                        fill="black" />
+                </svg>
+                <p class="modal-card-title"> Suscribite a nuestro newsletter</p>
+                <button class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body formulario">
+
+                <div class="formulario-campos">
+                    <div class="formulario-email-cont">
+                        <label for="formulario-email" class="formulario-label">E-mail</label>
+                        <input type="email" name="formulario-email" id="formulario-email" placeholder="Ingresar E-mail">
+                    </div>
+                    <div class="formulario-name-cont">
+                        <label for="formulario-name" class="formulario-label">Nombre</label>
+                        <input type="text" name="formulario-name" id="formulario-name" placeholder="Ingresar nombre">
+                    </div>
+                    <div>
+                        <label for="formulario-profesion" class="formulario-label">Profesión</label>
+                        <select id="formulario-profesion" class="form-control" name="">
+                            <option>Seleccionar profesión</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="formulario-especialidad" class="formulario-label">Especialidad</label>
+                        <select id="formulario-especialidad" class="form-control" name="">
+                            <option>Seleccionar especialidad</option>
+                        </select>
+                    </div>
+                </div>
+
+
+            </section>
+            <footer class="modal-card-foot">
+                <div class="recaptcha"></div>
+                <div>
+                    <label class="casillaverificacion-label">
+                        <input type="checkbox" name="acceptance-848" value="1" aria-invalid="false"
+                            class="casillaverificacion">
+                        <span class="wpcf7-list-item-label">Acepto las
+                            <a href="https://oceanomedicina.com/politicadeprivacidad/" target="_blank">Políticas de
+                                Privacidad</a>
+                        </span>
+                    </label>
+                    <button class="btn btn-big button">suscribirme</button>
+                </div>
+
+            </footer>
+        </div>
+    </div>
+
+
+    <script src="js/modal.js"></script>
     <script src="js/navbar.js"></script>
     <script src="js/accordion.js"></script>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
@@ -752,30 +811,16 @@
                                             placeholder="Ingresá tu dirección de email">
                                     </span>
                                     <br>
-                                    <button type="submit" class="wpcf7-form-control has-spinner wpcf7-submit casas"
-                                        disabled="">
+                                    <button class="js-modal-trigger">
                                         <i class="mdi mdi-chevron-right"></i>
                                     </button>
 
-                                    <span class="wpcf7-spinner"></span>
-                                    <span class="wpcf7-form-control-wrap acceptance-848">
-                                        <span class="wpcf7-form-control wpcf7-acceptance">
-                                            <span class="wpcf7-list-item">
-                                                <label>
-                                                    <input type="checkbox" name="acceptance-848" value="1"
-                                                        aria-invalid="false" class="casillaverificacion">
-                                                    <span class="wpcf7-list-item-label">Acepto las
-                                                        <a href="https://oceanomedicina.com/politicadeprivacidad/"
-                                                            target="_blank">Políticas de
-                                                            Privacidad</a>
-                                                    </span>
-                                                </label>
-                                            </span>
-                                        </span>
-                                    </span>
                                 </p>
                                 <div class="wpcf7-response-output" aria-hidden="true"></div>
                             </form>
+                            <button class="btn btn-mid js-modal-trigger has-text-white"
+                                data-target="modal-newsletter">Prueba modal</button>
+
                         </div>
                     </div>
                     <br>
