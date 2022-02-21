@@ -386,6 +386,10 @@ button {
         background-color: $actualidad;
     }
 
+    &-f-d-guardia {
+        background-color: $fuera-de-guardia;
+    }
+
     &:last-child,
     &:first-child {
         margin: 0 !important;

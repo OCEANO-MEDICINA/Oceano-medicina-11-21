@@ -530,6 +530,10 @@ button {
   background-color: #5398ff;
 }
 
+.tags-f-d-guardia {
+  background-color: #16c8a4;
+}
+
 .tags:last-child, .tags:first-child {
   margin: 0 !important;
 }
