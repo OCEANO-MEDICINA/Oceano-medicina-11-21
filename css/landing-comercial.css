@@ -956,6 +956,7 @@ header .navbar-brand img {
   border-radius: 0 4px 4px 0;
   font-size: 1.25rem;
   color: #fff;
+  cursor: pointer;
   outline: none;
   border: none;
 }
