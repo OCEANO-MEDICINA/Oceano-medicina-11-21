@@ -55,6 +55,23 @@ button {
     border-radius: 0px !important;
 }
 
+// FORM ALERTS
+
+.wpcf7 form .wpcf7-response-output {
+    margin: 0 !important;
+    padding: 1.25rem 2.5rem 1.25rem 1.5rem !important;
+    position: fixed !important;
+    z-index: 10;
+    width: unquote("min(100% - 32px, 646px)");
+    top: 14vh;
+    left: 50%;
+    transform: translateX(-50%);
+    transform: translate(-50%, -120%) !important;
+    background: #ffffff;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+}
+
 // QUICK FIX CHAT EMERGENTE
 @media only screen and (min-width: 100px) and (max-width: 555px) {
     .zsiq-newtheme.zsiq_size2[embedtheme],

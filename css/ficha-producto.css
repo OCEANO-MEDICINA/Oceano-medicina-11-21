@@ -153,6 +153,24 @@ button {
   border-radius: 0px !important;
 }
 
+.wpcf7 form .wpcf7-response-output {
+  margin: 0 !important;
+  padding: 1.25rem 2.5rem 1.25rem 1.5rem !important;
+  position: fixed !important;
+  z-index: 10;
+  width: min(100% - 32px, 646px);
+  top: 14vh;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transform: translate(-50%, -120%) !important;
+          transform: translate(-50%, -120%) !important;
+  background: #ffffff;
+  -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+}
+
 @media only screen and (min-width: 100px) and (max-width: 555px) {
   .zsiq-newtheme.zsiq_size2[embedtheme],
   .zsiq-newtheme.zsiq_size3[embedtheme],
@@ -1831,6 +1849,28 @@ header .navbar-overlay.is-active {
 .footer span.wpcf7-form-control-wrap.recaptcha {
   -webkit-transform: scale(0.8) translateX(-12%);
           transform: scale(0.8) translateX(-12%);
+}
+
+#modal-newsletter .modal-card,
+#modal-temario .modal-card {
+  overflow: visible !important;
+}
+
+#modal-newsletter .wpcf7 form .wpcf7-response-output,
+#modal-temario .wpcf7 form .wpcf7-response-output {
+  margin: 0 !important;
+  padding: 1.25rem 2.5rem 1.25rem 1.5rem !important;
+  position: absolute !important;
+  z-index: 10;
+  width: 100%;
+  left: 50%;
+  top: 0;
+  -webkit-transform: translate(-50%, -120%) !important;
+          transform: translate(-50%, -120%) !important;
+  background: #ffffff;
+  -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
 }
 
 @media screen and (min-width: 768px) {
