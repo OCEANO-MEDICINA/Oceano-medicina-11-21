@@ -153,7 +153,7 @@ button {
   border-radius: 0px !important;
 }
 
-.wpcf7 form.sent .wpcf7-response-output {
+.wpcf7 form .wpcf7-response-output {
   display: none;
 }
 
