@@ -153,7 +153,12 @@ button {
   border-radius: 0px !important;
 }
 
-.wpcf7 form .wpcf7-response-output {
+.wpcf7 form.sent .wpcf7-response-output {
+  display: none;
+}
+
+.wpcf7 form.sent .wpcf7-response-output {
+  display: block;
   margin: 0 !important;
   padding: 1.25rem 2.5rem 1.25rem 1.5rem !important;
   position: fixed !important;
@@ -1596,8 +1601,9 @@ header .navbar-overlay.is-active {
   overflow: visible !important;
 }
 
-#modal-newsletter .wpcf7 form .wpcf7-response-output,
-#modal-temario .wpcf7 form .wpcf7-response-output {
+#modal-newsletter .wpcf7 form.sent .wpcf7-response-output,
+#modal-temario .wpcf7 form.sent .wpcf7-response-output {
+  display: block;
   margin: 0 !important;
   padding: 1.25rem 2.5rem 1.25rem 1.5rem !important;
   position: absolute !important;

@@ -178,7 +178,8 @@ $width-container: unquote("min(100% - 3.25rem, 960px - 64px)");
     .modal-card {
         overflow: visible !important;
     }
-    .wpcf7 form .wpcf7-response-output {
+    .wpcf7 form.sent .wpcf7-response-output {
+        display: block;
         margin: 0 !important;
         padding: 1.25rem 2.5rem 1.25rem 1.5rem !important;
         position: absolute !important;
