@@ -194,6 +194,26 @@ $width-container: unquote("min(100% - 3.25rem, 960px - 64px)");
         border-radius: 6px;
     }
 }
+#modal-newsletter {
+    .modal-card {
+        &-foot {
+            gap: 1rem;
+
+            &:last-child div {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+
+                .wpcf7-list-item {
+                    margin: 0;
+                }
+                input.button {
+                    margin: 0 !important;
+                }
+            }
+        }
+    }
+}
 
 @media screen and (min-width: 768px) {
     .footer {
