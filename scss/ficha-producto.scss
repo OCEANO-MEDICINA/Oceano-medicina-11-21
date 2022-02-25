@@ -383,7 +383,8 @@ body {
                     display: flex;
                     align-items: center;
                     height: auto;
-                    width: unquote("max(208px, 25vw)");
+                    max-width: unquote("min(16rem, 100%)");
+                    width: 100%;
                 }
             }
             .aval-card-img:hover {
@@ -410,8 +411,9 @@ body {
         border-radius: 8px;
 
         &-img {
+            width: 100%;
+            aspect-ratio: 1/1;
             position: relative;
-            height: unquote("max(130px,15vw)");
 
             .imagen-aval {
                 width: 100%;
@@ -433,7 +435,8 @@ body {
                     padding: 0.5rem 0.75rem;
                     border-radius: 4px;
                     position: absolute;
-                    width: 16ch;
+                    width: max-content;
+                    max-width: 30ch;
                     font-size: 14px;
                     content: "Aval solo disponible en Argentina";
                     background-color: #3f6cbb;
@@ -648,24 +651,13 @@ body {
         cursor: not-allowed;
         box-shadow: none;
     }
-    .modal-card-foot {
-        padding: 0;
-        height: 5rem;
+    .modal-card-body {
+        padding-top: 0;
 
-        .btn.btn-big.button {
-            left: 50%;
-            width: unquote("min(40%, 170px)");
-            height: 2.25rem;
-            transform: translateX(-105%);
-            background: transparent !important;
-            border: 1px solid #808fa6;
-            color: #808fa6;
-            bottom: 1.25rem;
-            position: absolute;
-
-            &:hover {
-                color: #808fa6 !important;
-            }
+        .verificacion.checks {
+            background: #ffffff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
         }
     }
 }
@@ -953,6 +945,9 @@ body {
                 border-radius: 8px;
                 box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
 
+                &:hover {
+                    transform: scale(1.02);
+                }
                 p {
                     font-size: 1.125rem;
                     font-weight: 500;
@@ -963,14 +958,22 @@ body {
                     align-items: center;
                     justify-content: center;
                     gap: 1rem;
+                    & > div {
+                        display: flex;
+                        align-items: center;
+                        gap: 6px;
+                    }
 
                     input {
                         margin: 0px;
+                        width: 18px;
+                        height: 18px;
                     }
 
                     label {
                         font-size: clamp(0.875rem, 2vw, 1.125rem);
                         color: #494949;
+                        cursor: pointer;
                     }
                 }
             }
@@ -1009,6 +1012,9 @@ body {
                 .campo-doble {
                     display: flex;
                     gap: 0.75rem;
+                }
+                .verificación {
+                    width: 100%;
                 }
             }
             textarea {
@@ -1077,6 +1083,9 @@ body {
             }
         }
     }
+}
+.c-hover:hover {
+    box-shadow: 0px 11px 20px 1px #d2cedb;
 }
 
 @media screen and (min-width: 767px) {
@@ -1250,6 +1259,18 @@ body {
                     display: block;
                     width: 100%;
                     margin-bottom: 0.5rem;
+                }
+            }
+        }
+    }
+    .options {
+        &-cont {
+            &-ebooks,
+            &-related {
+                &-grid {
+                    .card-img {
+                        min-height: 150px;
+                    }
                 }
             }
         }
@@ -1489,7 +1510,6 @@ body {
                 .aval-card {
                     overflow: unset;
                     &-img {
-                        height: unquote("max(130px,10vw)");
                         img {
                             border-radius: 8px 8px 0 0;
                         }
@@ -1509,7 +1529,6 @@ body {
                             display: block;
                             bottom: 2rem;
                             right: 0.75rem;
-                            width: 19ch;
                             text-align: center;
                             z-index: 3;
                             transform: translateX(50%);

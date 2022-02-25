@@ -603,12 +603,13 @@
         <div class="modal-background"></div>
         <div class="modal-card">
             <header class="modal-card-head">
-                <svg width="28" height="20" viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M25.6735 0.68042H2.33195C1.04745 0.68042 0 1.72787 0 3.01789V17.0372C0 18.3217 1.04745 19.3691 2.33195 19.3691H25.668C26.9525 19.3691 28 18.3217 28 17.0372V3.01789C28.0055 1.72787 26.958 0.68042 25.6735 0.68042ZM25.0451 2.24057L13.9972 11.5629L2.96042 2.24057H25.0451ZM1.55464 16.8497V3.08955L9.75782 10.0137L1.55464 16.8497ZM2.83363 17.809L10.9651 11.0336L13.4956 13.1726C13.6389 13.2939 13.8208 13.3546 13.9972 13.3546C14.1736 13.3546 14.3556 13.2939 14.4989 13.1726L17.0348 11.0336L25.1774 17.809H2.83363ZM26.4509 16.8442L18.2422 10.0137L26.4509 3.08404V16.8442Z"
-                        fill="black" />
-                </svg>
-                <p class="modal-card-title"> Suscribite a nuestro newsletter</p>
+                <div class="modal-card-head-info">
+                    <h3 class="modal-card-title"> Suscribite a <span class="salto-de-linea">nuestro newsletter</span>
+                    </h3>
+                    <p class="modal-card-subtitle"> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+                </div>
                 <button class="delete" aria-label="close"></button>
             </header>
             <section class="modal-card-body formulario">
@@ -622,6 +623,11 @@
                         <label for="formulario-name" class="formulario-label">Nombre</label>
                         <input type="text" name="formulario-name" id="formulario-name" placeholder="Ingresar nombre">
                     </div>
+                    <div class="formulario-name-cont">
+                        <label for="formulario-last-name" class="formulario-label">Apellido</label>
+                        <input type="text" name="formulario-last-name" id="formulario-last-name"
+                            placeholder="Ingresar apellido">
+                    </div>
                     <div>
                         <label for="formulario-profesion" class="formulario-label">Profesión</label>
                         <select id="formulario-profesion" class="form-control" name="">
@@ -634,25 +640,23 @@
                             <option>Seleccionar especialidad</option>
                         </select>
                     </div>
-                </div>
+                    <div class="verificacion">
+                        <div class="recaptcha"></div>
 
-
-            </section>
-            <footer class="modal-card-foot">
-                <div class="recaptcha"></div>
-                <div>
-                    <label class="casillaverificacion-label">
-                        <input type="checkbox" name="acceptance-848" value="1" aria-invalid="false"
-                            class="casillaverificacion">
-                        <span class="wpcf7-list-item-label">Acepto las
-                            <a href="https://oceanomedicina.com/politicadeprivacidad/" target="_blank">Políticas de
-                                Privacidad</a>
-                        </span>
-                    </label>
+                        <label class="casillaverificacion-label">
+                            <input type="checkbox" name="acceptance-848" value="1" aria-invalid="false"
+                                class="casillaverificacion">
+                            <span class="wpcf7-list-item-label">Acepto las
+                                <a href="https://oceanomedicina.com/politicadeprivacidad/" target="_blank">Políticas de
+                                    Privacidad</a>
+                            </span>
+                        </label>
+                    </div>
                     <button class="btn btn-big button">suscribirme</button>
                 </div>
 
-            </footer>
+            </section>
+
         </div>
     </div>
 

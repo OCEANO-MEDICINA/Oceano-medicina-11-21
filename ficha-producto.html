@@ -542,7 +542,8 @@
                     <span class="salto-de-linea"> Para recibir la certificación, el curso debe completarse al
                         100%.</span>
                 </h6>
-                <a href="" class="btn btn-mid button boton">Descargar temario</a>
+                <button class="btn btn-mid button boton js-modal-trigger" data-target="modal-temario">Descargar
+                    temario</button>
             </div>
             <div class="temario-cont-info sombra">
                 <article class="temario-cont-info-grid">
@@ -1184,6 +1185,134 @@
         </article>
     </section>
 
+    <div id="modal-temario" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <div class="modal-card-head-info">
+                    <h3 class="modal-card-title"> Descargar temario </h3>
+
+                </div>
+                <button class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body formulario">
+
+                <div class="formulario-campos">
+                    <div class="verificacion checks">
+                        <label class="casillaverificacion-label">
+                            <input type="radio" name="opcion-descarga" id="" class="casillaverificacion">
+                            Recibirlo en mi e-mail
+                        </label>
+                        <label class="casillaverificacion-label">
+                            <input type="radio" name="opcion-descarga" id="" class="casillaverificacion">
+                            Descargar ahora
+                        </label>
+                    </div>
+                    <div class="formulario-email-cont">
+                        <label for="formulario-email" class="formulario-label">E-mail</label>
+                        <input type="email" name="formulario-email" id="formulario-email" placeholder="Ingresar E-mail">
+                    </div>
+                    <div class="formulario-name-cont">
+                        <label for="formulario-name" class="formulario-label">Nombre</label>
+                        <input type="text" name="formulario-name" id="formulario-name" placeholder="Ingresar nombre">
+                    </div>
+                    <div class="formulario-name-cont">
+                        <label for="formulario-last-name" class="formulario-label">Apellido</label>
+                        <input type="text" name="formulario-last-name" id="formulario-last-name"
+                            placeholder="Ingresar apellido">
+                    </div>
+                    <div>
+                        <label for="formulario-profesion" class="formulario-label">Profesión</label>
+                        <select id="formulario-profesion" class="form-control" name="">
+                            <option>Seleccionar profesión</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="formulario-especialidad" class="formulario-label">Especialidad</label>
+                        <select id="formulario-especialidad" class="form-control" name="">
+                            <option>Seleccionar especialidad</option>
+                        </select>
+                    </div>
+                    <div class="verificacion">
+                        <div class="recaptcha"></div>
+
+                        <label class="casillaverificacion-label">
+                            <input type="checkbox" name="acceptance-848" value="1" aria-invalid="false"
+                                class="casillaverificacion">
+                            <span class="wpcf7-list-item-label">Acepto las
+                                <a href="https://oceanomedicina.com/politicadeprivacidad/" target="_blank">Políticas de
+                                    Privacidad</a>
+                            </span>
+                        </label>
+                    </div>
+                    <button class="btn btn-big button">suscribirme</button>
+                </div>
+
+            </section>
+
+        </div>
+    </div>
+
+    <div id="modal-newsletter" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <div class="modal-card-head-info">
+                    <h3 class="modal-card-title"> Suscribite a <span class="salto-de-linea">nuestro newsletter</span>
+                    </h3>
+                    <p class="modal-card-subtitle"> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+                </div>
+                <button class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body formulario">
+
+                <div class="formulario-campos">
+                    <div class="formulario-email-cont">
+                        <label for="formulario-email" class="formulario-label">E-mail</label>
+                        <input type="email" name="formulario-email" id="formulario-email" placeholder="Ingresar E-mail">
+                    </div>
+                    <div class="formulario-name-cont">
+                        <label for="formulario-name" class="formulario-label">Nombre</label>
+                        <input type="text" name="formulario-name" id="formulario-name" placeholder="Ingresar nombre">
+                    </div>
+                    <div class="formulario-name-cont">
+                        <label for="formulario-last-name" class="formulario-label">Apellido</label>
+                        <input type="text" name="formulario-last-name" id="formulario-last-name"
+                            placeholder="Ingresar apellido">
+                    </div>
+                    <div>
+                        <label for="formulario-profesion" class="formulario-label">Profesión</label>
+                        <select id="formulario-profesion" class="form-control" name="">
+                            <option>Seleccionar profesión</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="formulario-especialidad" class="formulario-label">Especialidad</label>
+                        <select id="formulario-especialidad" class="form-control" name="">
+                            <option>Seleccionar especialidad</option>
+                        </select>
+                    </div>
+                    <div class="verificacion">
+                        <div class="recaptcha"></div>
+
+                        <label class="casillaverificacion-label">
+                            <input type="checkbox" name="acceptance-848" value="1" aria-invalid="false"
+                                class="casillaverificacion">
+                            <span class="wpcf7-list-item-label">Acepto las
+                                <a href="https://oceanomedicina.com/politicadeprivacidad/" target="_blank">Políticas de
+                                    Privacidad</a>
+                            </span>
+                        </label>
+                    </div>
+                    <button class="btn btn-big button">suscribirme</button>
+                </div>
+
+            </section>
+
+        </div>
+    </div>
     <div id="modal-diploma" class="modal">
         <div class="modal-background"></div>
         <div class="modal-card">
@@ -1383,7 +1512,8 @@
                                             placeholder="Ingresá tu dirección de email">
                                     </span>
                                     <br>
-                                    <button type="submit" class="wpcf7-form-control has-spinner wpcf7-submit casas"
+                                    <button type="submit"
+                                        class="js-modal-trigger wpcf7-form-control has-spinner wpcf7-submit casas"
                                         disabled="">
                                         <i class="mdi mdi-chevron-right"></i>
                                     </button>
@@ -1407,6 +1537,9 @@
                                 </p>
                                 <div class="wpcf7-response-output" aria-hidden="true"></div>
                             </form>
+                            <button class="btn btn-mid js-modal-trigger has-text-white"
+                                data-target="modal-newsletter">Prueba modal</button>
+
                         </div>
                     </div>
                     <br>

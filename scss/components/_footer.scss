@@ -195,11 +195,26 @@ $width-container: unquote("min(100% - 3.25rem, 960px - 64px)");
     }
 }
 #modal-newsletter {
-    .modal-card {
-        &-foot {
-            gap: 1rem;
+    .formulario {
+        &-campos {
+            border-top: 1px solid #57575740;
+            padding-top: 10px;
+        }
+        &-email {
+            &-cont {
+                width: 100% !important;
+            }
+        }
+    }
 
-            &:last-child div {
+    .modal-card {
+        &-head {
+            padding-bottom: 0.75rem;
+        }
+        &-body {
+            padding-top: 0;
+
+            .verficacion {
                 display: flex;
                 flex-direction: column;
                 gap: 0.5rem;
@@ -309,6 +324,37 @@ $width-container: unquote("min(100% - 3.25rem, 960px - 64px)");
         &-certificados {
             img {
                 height: 3rem;
+            }
+        }
+    }
+    #modal-newsletter {
+        .formulario {
+            &-campos {
+                border-top: 1px solid #57575740;
+                padding-top: 10px;
+            }
+            &-email {
+                &-cont {
+                    width: 100% !important;
+                }
+            }
+        }
+
+        .modal-card {
+            &-head {
+                padding-bottom: 0.75rem;
+            }
+            &-body {
+                padding-top: 0;
+
+                .formulario {
+                    &-campos {
+                        gap: 1.5rem;
+                        .button {
+                            max-width: 204px;
+                        }
+                    }
+                }
             }
         }
     }
