@@ -395,6 +395,7 @@ button {
   opacity: 1;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  z-index: 100;
 }
 
 .modal.is-active .modal-card {

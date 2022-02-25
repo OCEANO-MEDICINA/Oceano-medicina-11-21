@@ -184,6 +184,7 @@ button {
         top: 0;
         opacity: 1;
         transition: 0.5s;
+        z-index: 100;
 
         .modal-card {
             opacity: 1;
