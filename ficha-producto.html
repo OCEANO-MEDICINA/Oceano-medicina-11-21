@@ -1185,83 +1185,20 @@
         </article>
     </section>
 
-    <div id="modal-temario" class="modal">
-        <div class="modal-background"></div>
-        <div class="modal-card">
-            <header class="modal-card-head">
-                <div class="modal-card-head-info">
-                    <h3 class="modal-card-title"> Descargar temario </h3>
-
-                </div>
-                <button class="delete" aria-label="close"></button>
-            </header>
-            <section class="modal-card-body formulario">
-
-                <div class="formulario-campos">
-                    <div class="verificacion checks">
-                        <label class="casillaverificacion-label">
-                            <input type="radio" name="opcion-descarga" id="" class="casillaverificacion">
-                            Recibirlo en mi e-mail
-                        </label>
-                        <label class="casillaverificacion-label">
-                            <input type="radio" name="opcion-descarga" id="" class="casillaverificacion">
-                            Descargar ahora
-                        </label>
-                    </div>
-                    <div class="formulario-email-cont">
-                        <label for="formulario-email" class="formulario-label">E-mail</label>
-                        <input type="email" name="formulario-email" id="formulario-email" placeholder="Ingresar E-mail">
-                    </div>
-                    <div class="formulario-name-cont">
-                        <label for="formulario-name" class="formulario-label">Nombre</label>
-                        <input type="text" name="formulario-name" id="formulario-name" placeholder="Ingresar nombre">
-                    </div>
-                    <div class="formulario-name-cont">
-                        <label for="formulario-last-name" class="formulario-label">Apellido</label>
-                        <input type="text" name="formulario-last-name" id="formulario-last-name"
-                            placeholder="Ingresar apellido">
-                    </div>
-                    <div>
-                        <label for="formulario-profesion" class="formulario-label">Profesión</label>
-                        <select id="formulario-profesion" class="form-control" name="">
-                            <option>Seleccionar profesión</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="formulario-especialidad" class="formulario-label">Especialidad</label>
-                        <select id="formulario-especialidad" class="form-control" name="">
-                            <option>Seleccionar especialidad</option>
-                        </select>
-                    </div>
-                    <div class="verificacion">
-                        <div class="recaptcha"></div>
-
-                        <label class="casillaverificacion-label">
-                            <input type="checkbox" name="acceptance-848" value="1" aria-invalid="false"
-                                class="casillaverificacion">
-                            <span class="wpcf7-list-item-label">Acepto las
-                                <a href="https://oceanomedicina.com/politicadeprivacidad/" target="_blank">Políticas de
-                                    Privacidad</a>
-                            </span>
-                        </label>
-                    </div>
-                    <button class="btn btn-big button">suscribirme</button>
-                </div>
-
-            </section>
-
-        </div>
-    </div>
+    <!--
+        MODAL NEWSLETTER
+    -->
 
     <div id="modal-newsletter" class="modal">
         <div class="modal-background"></div>
         <div class="modal-card">
             <header class="modal-card-head">
                 <div class="modal-card-head-info">
-                    <h3 class="modal-card-title"> Suscribite a <span class="salto-de-linea">nuestro newsletter</span>
+                    <h3 class="modal-card-title"> Suscribite / Suscríbete a <span class="salto-de-linea">nuestro
+                            newsletter</span>
                     </h3>
-                    <p class="modal-card-subtitle"> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    <p class="modal-card-subtitle"> Compartinos / Compártenos tus datos para que te enviemos contenidos
+                        orientados a tu profesión y tus áreas de interés.
                     </p>
                 </div>
                 <button class="delete" aria-label="close"></button>
@@ -1306,13 +1243,41 @@
                             </span>
                         </label>
                     </div>
-                    <button class="btn btn-big button">suscribirme</button>
+                    <button class="btn btn-big button wpcf7-submit" disabled>suscribirme</button>
                 </div>
 
             </section>
 
         </div>
     </div>
+
+
+    <!--
+        MODAL SUCCESS NEWSLETTER
+    -->
+    <div id="modal-success" class="modal modal-success success-subnewsletter">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <div class="modal-card-body">
+                <img src="media/icon/success.svg" alt="">
+                <div class="info">
+                    <p class="info-title">Suscripción exitosa</p>
+                    <p class="info-msj">
+                        ¡Muchas gracias por suscribirte
+                        <br>
+                        a nuestro newsletter!</p>
+                </div>
+                <button class="btn btn-big button">Finalizar</button>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!--
+        MODAL DIPLOMA
+    -->
+
     <div id="modal-diploma" class="modal">
         <div class="modal-background"></div>
         <div class="modal-card">
@@ -1356,6 +1321,133 @@
         </div>
     </div>
 
+
+    <!--
+        MODAL TEMARIO
+    -->
+
+    <div id="modal-temario" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <div class="modal-card-head-info">
+                    <h3 class="modal-card-title"> Descargar temario </h3>
+
+                </div>
+                <button class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body formulario">
+
+                <div class="formulario-campos">
+                    <div class="verificacion checks">
+                        <label class="casillaverificacion-label">
+                            <input type="radio" name="opcion-descarga" id="" class="casillaverificacion">
+                            Recibirlo en mi e-mail
+                        </label>
+                        <label class="casillaverificacion-label">
+                            <input type="radio" name="opcion-descarga" id="" class="casillaverificacion">
+                            Descargar ahora
+                        </label>
+                    </div>
+                    <div class="formulario-name-cont">
+                        <label for="formulario-name" class="formulario-label">Nombre</label>
+                        <input type="text" name="formulario-name" id="formulario-name" placeholder="Ingresar nombre">
+                    </div>
+                    <div class="formulario-name-cont">
+                        <label for="formulario-last-name" class="formulario-label">Apellido</label>
+                        <input type="text" name="formulario-last-name" id="formulario-last-name"
+                            placeholder="Ingresar apellido">
+                    </div>
+                    <div class="formulario-name-cont">
+                        <label for="formulariox-tel" class="formulario-label">Teléfono</label>
+                        <input type="text" name="formulario-tel" id="formulario-tel" placeholder="Ingresar apellido">
+                    </div>
+                    <div class="formulario-email-cont">
+                        <label for="formulario-email" class="formulario-label">E-mail</label>
+                        <input type="email" name="formulario-email" id="formulario-email" placeholder="Ingresar E-mail">
+                    </div>
+                    <div>
+                        <label for="formulario-profesion" class="formulario-label">Profesión</label>
+                        <select id="formulario-profesion" class="form-control" name="">
+                            <option>Seleccionar profesión</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="formulario-especialidad" class="formulario-label">Especialidad</label>
+                        <select id="formulario-especialidad" class="form-control" name="">
+                            <option>Seleccionar especialidad</option>
+                        </select>
+                    </div>
+                    <div class="verificacion">
+                        <div class="recaptcha"></div>
+
+                        <label class="casillaverificacion-label">
+                            <input type="checkbox" name="acceptance-848" value="1" aria-invalid="false"
+                                class="casillaverificacion">
+                            <span class="wpcf7-list-item-label">Acepto las
+                                <a href="https://oceanomedicina.com/politicadeprivacidad/" target="_blank">Políticas
+                                    de
+                                    Privacidad</a>
+                            </span>
+                        </label>
+                    </div>
+                    <button class="btn btn-big button wpcf7-submit" disabled>suscribirme</button>
+                </div>
+
+            </section>
+
+        </div>
+    </div>
+
+
+    <!--
+        MODAL SUCCESS TEMARIO EMAIL
+    -->
+    <div id="modal-success" class="modal modal-success success-temario-email is-active">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <div class="modal-card-body">
+                <img src="media/icon/success.svg" alt="">
+                <div class="info">
+                    <p class="info-title">Temario enviado</p>
+                    <p class="info-msj">Recibirás el temario vía e-mail. <br>
+                        Revisá / Revisa tu bandeja de entrada, <br>
+                        spam o no deseados</p>
+                </div>
+                <button class="btn btn-big button">Finalizar</button>
+                <button class="modal-close is-large" aria-label="close"></button>
+            </div>
+
+        </div>
+    </div>
+
+    <!--
+        MODAL SUCCESS TEMARIO DESCARGA
+    -->
+
+    <div id="modal-success" class="modal modal-success success-temario-descarga">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <div class="modal-card-body">
+                <img src="media/icon/success.svg" alt="">
+                <div class="info">
+                    <p class="info-title">Descargando</p>
+                    <p class="info-msj">El temario esta siendo descargado</p>
+                </div>
+                <button class="btn btn-big button">Finalizar</button>
+
+            </div>
+        </div>
+    </div>
+
+    <!--
+        MODAL SUCCESS TEMARIO DESCARGA
+    -->
+
+    <!--
+        MODAL RECONOCIMIENTO
+    -->
+
     <div id="modal-reconocimiento" class="modal">
         <div class="modal-background"></div>
         <div class="modal-card">
@@ -1371,6 +1463,23 @@
             </footer>
         </div>
     </div>
+
+    <div id="modal-addcart-success" class="modal modal-success">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <div class="modal-card-body">
+                <img src="media/icon/cart-check.svg" alt="" style="width: 48px;">
+                <div class="info">
+                    <p class="info-title">
+                    </p>
+                    <p class="info-msj">Producto agregado <br> exitosamente al carrito</p>
+                </div>
+                <button class="btn btn-big button">Ir al carrito</button>
+
+            </div>
+        </div>
+    </div>
+
 
     <script src="js/modal.js"></script>
     <script src="js/tabs.js"></script>

@@ -316,7 +316,7 @@ button {
   opacity: 0;
   width: calc(100% - 76px);
   max-height: unset;
-  border-radius: 4px;
+  border-radius: 0.5rem;
   background-color: #fdfdfd;
   -webkit-box-shadow: 0 0 20px 10px #00000020;
           box-shadow: 0 0 20px 10px #00000020;
@@ -481,6 +481,7 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  line-height: 1.2;
   gap: 0.5rem;
   font-size: clamp(0.75rem, 2vw, 0.875rem);
 }
@@ -488,6 +489,65 @@ button {
 .modal .formulario .button {
   margin: 0.25rem auto 0;
   width: 100%;
+}
+
+.modal .formulario .wpcf7-not-valid-tip {
+  font-size: 0.8em;
+  margin-top: 4px;
+}
+
+.modal .formulario .wpcf7-submit:disabled {
+  background-color: #808fa6 !important;
+  cursor: not-allowed;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#modal-newsletter .modal-card,
+#modal-temario .modal-card {
+  overflow: visible !important;
+}
+
+#modal-newsletter .wpcf7 form.sent .wpcf7-response-output,
+#modal-temario .wpcf7 form.sent .wpcf7-response-output {
+  display: none !important;
+}
+
+#modal-success .modal-card {
+  max-width: 19.5rem;
+}
+
+#modal-success .modal-card-body {
+  padding: 3.25rem 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.5rem;
+}
+
+#modal-success .modal-card-body .info {
+  text-align: center;
+}
+
+#modal-success .modal-card-body .info-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #494949;
+}
+
+#modal-success .modal-card-body .info-msj {
+  font-size: 14px;
+  color: #979797;
 }
 
 @media screen and (min-width: 768px) {
@@ -2029,29 +2089,6 @@ header .navbar-overlay.is-active {
 .footer span.wpcf7-form-control-wrap.recaptcha {
   -webkit-transform: scale(0.8) translateX(-12%);
           transform: scale(0.8) translateX(-12%);
-}
-
-#modal-newsletter .modal-card,
-#modal-temario .modal-card {
-  overflow: visible !important;
-}
-
-#modal-newsletter .wpcf7 form.sent .wpcf7-response-output,
-#modal-temario .wpcf7 form.sent .wpcf7-response-output {
-  display: block;
-  margin: 0 !important;
-  padding: 1.25rem 2.5rem 1.25rem 1.5rem !important;
-  position: absolute !important;
-  z-index: 10;
-  width: 100%;
-  left: 50%;
-  top: 0;
-  -webkit-transform: translate(-50%, -120%) !important;
-          transform: translate(-50%, -120%) !important;
-  background: #ffffff;
-  -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-  border-radius: 6px;
 }
 
 #modal-newsletter .formulario-campos {
