@@ -591,35 +591,6 @@ body {
         justify-content: center;
     }
 
-    input,
-    select {
-        font-size: 0.875rem;
-        padding: 0.25rem 0.5rem;
-        width: 100%;
-        border: 1px solid #57575740;
-        border-radius: 4px;
-        background-color: #fff !important;
-        min-height: 2rem !important;
-    }
-
-    .intl-tel-input.allow-dropdown {
-        width: 100%;
-
-        input[type="tel"] {
-            padding-left: 3rem;
-        }
-    }
-    div[data-id="Opcion_LicSalud"] {
-        width: 100%;
-    }
-
-    input[type="checkbox"] {
-        width: unset;
-        border: 1px solid #57575740;
-        border-radius: 4px;
-        background-color: #fff !important;
-        min-height: unset !important;
-    }
     .wpcf7-list-item {
         margin: 0px;
     }

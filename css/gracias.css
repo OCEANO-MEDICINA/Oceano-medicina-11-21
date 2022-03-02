@@ -550,6 +550,22 @@ button {
   color: #979797;
 }
 
+.modal .formulario-campos .intl-tel-input.allow-dropdown {
+  width: 100%;
+}
+
+.modal .formulario-campos .intl-tel-input.allow-dropdown input[type="tel"] {
+  padding-left: 3rem;
+}
+
+.modal .formulario-campos input[type="checkbox"] {
+  width: unset;
+  border: 1px solid #57575740;
+  border-radius: 4px;
+  background-color: #fff !important;
+  min-height: unset !important;
+}
+
 .modal .formulario-campos .campo-doble {
   display: -webkit-box;
   display: -ms-flexbox;

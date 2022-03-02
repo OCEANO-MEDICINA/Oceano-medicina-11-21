@@ -294,6 +294,22 @@ button {
                     color: #979797;
                 }
             }
+
+            .intl-tel-input.allow-dropdown {
+                width: 100%;
+
+                input[type="tel"] {
+                    padding-left: 3rem;
+                }
+            }
+
+            input[type="checkbox"] {
+                width: unset;
+                border: 1px solid #57575740;
+                border-radius: 4px;
+                background-color: #fff !important;
+                min-height: unset !important;
+            }
             .campo-doble {
                 display: flex;
                 gap: 0.75rem;
