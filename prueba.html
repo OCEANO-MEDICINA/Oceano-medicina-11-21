@@ -1,0 +1,1508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.4.95/css/materialdesignicons.min.css">
+
+    <link rel="stylesheet" href="css/home.css">
+
+</head>
+
+<header>
+    <div class="contenedor">
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div id="navbar-overlay" class="navbar-overlay"></div>
+            <div class="navbar-brand">
+                <a id="logo" class="navbar-item logo absolute-center" href="#">
+                    <img src="media/logo-oceano-medicina.png">
+                </a>
+
+                <a id="navbar-burger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                    data-target="navbar-oceano" onclick="navBar()">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+                <div id="icons" class="navbar-item icons">
+                    <input id="dgwt-wcas-search-input-1" type="search" class="dgwt-wcas-search-input invisible"
+                        placeholder="Escribí tu especialidad de interés" autocomplete="on">
+                    <button id="toggleBuscador" onclick="btnSearch()" class="icons">
+
+                        <span id="lupa" class="mdi mdi-magnify" alt=""></span>
+                        <span id="search-close" alt="" class="mdi mdi-close invisible">
+                    </button>
+                    <button id="user" class="user">
+                        <span src="media/icon/cart.svg" alt="" class="mdi mdi-account-circle-outline js-modal-trigger"
+                            data-target="modal-logreg"></span>
+                    </button>
+                    <button id="cart" class="cart">
+                        <span src="media/icon/cart.svg" alt="" class="mdi mdi-cart-outline"></span>
+                    </button>
+                </div>
+
+
+            </div>
+
+            <div id="navbar-oceano" class="navbar-menu">
+                <div class="navbar-start">
+                    <div id="nav-medicina" class="navbar-item has-dropdown is-hoverable nav-medicina">
+                        <a class="navbar-link accordion-trigger">
+                            Medicina
+                        </a>
+
+                        <ul class="navbar-dropdown accordion-panel">
+                            <div class="overlay"></div>
+                            <li><a class="navbar-item ver_todos" href="/tienda/#filter=.medicos">VER
+                                    TODOS</a></li>
+                            <li><a class="navbar-item" href="/tienda/#filter=.anestesiologia-y-dolor">Anestesiología y
+                                    dolor</a></li>
+                            <li><a class="navbar-item" href="/tienda/#filter=.bibliography">Bibliografia</a></li>
+                            <li><a class="navbar-item" href="/tienda/#filter=.cardiologia">Cardiología</a></li>
+                            <li><a class="navbar-item" href="/tienda/#filter=.cirugia">Cirugía</a></li>
+                            <li><a class="navbar-item" href="/tienda/#filter=.dermatologia">Dermatología</a></li>
+                            <li><a class="navbar-item" href="/tienda/#filter=.diabetes">Diabetes</a></li>
+                            <li><a class="navbar-item" href="/tienda/#filter=.emergentologia">Emergentología</a></li>
+                            <li><a class="navbar-item" href="/tienda/#filter=.gastroenterologia">Gastroenterología</a>
+                            </li>
+                            <li><a class="navbar-item" href="/tienda/#filter=.geriatria">Geriatría</a></li>
+                            <li><a class="navbar-item" href="/tienda/#filter=.ginecologia">Ginecología</a></li>
+                            <li><a class="navbar-item" href="/tienda/#filter=.hematologia">Hematología</a></li>
+                            <li><a class="navbar-item" href="/tienda/#filter=.infectologia">Infectología</a></li>
+                            <li><a class="navbar-item" href="/tienda/#filter=.kinesiologia">Kinesiología</a></li>
+                            <li><a class="navbar-item" href="/tienda/#filter=.medicina-estetica">Medicina estética</a>
+                            </li>
+
+                            <li><a class="navbar-item" href="/tienda/#filter=.medicina-general">Medicina general</a>
+                            </li>
+                            <li><a class="navbar-item" href="/tienda/#filter=.medicina-intensiva">Medicina intensiva</a>
+                            </li>
+                            <li><a class="navbar-item" href="/tienda/#filter=.nutricion">Nutrición</a></li>
+                            <li><a class="navbar-item" href="/tienda/#filter=.obstetricia">Obstetricia</a></li>
+                            <li><a class="navbar-item" href="/tienda/#filter=.odontologia">Odontología</a></li>
+                            <li><a class="navbar-item" href="/tienda/#filter=.oftalmologia">Oftalmología</a></li>
+                            <li><a class="navbar-item" href="/tienda/#filter=.oncologia">Oncología</a></li>
+                            <li><a class="navbar-item" href="/tienda/#filter=.pediatria">Pediatría</a></li>
+                            <li><a class="navbar-item" href="/tienda/#filter=.psicologia">Psicología</a></li>
+                            <li><a class="navbar-item" href="/tienda/#filter=.psiquiatria">Psiquiatría</a></li>
+                        </ul>
+                    </div>
+
+                    <div id="nav-enfermeria" class="navbar-item has-dropdown is-hoverable nav-enfermeria">
+                        <a class="navbar-link accordion-trigger">
+                            Enfermería
+                        </a>
+
+                        <ul class="navbar-dropdown accordion-panel">
+                            <div class="overlay"></div>
+                            <li>
+                                <a class="navbar-item" href="">Item 1</a>
+                            </li>
+                            <li>
+                                <a class="navbar-item" href="">Item 2</a>
+                            </li>
+                            <li>
+                                <a class="navbar-item" href="">Item 3</a>
+                            </li>
+                            <li>
+                                <a class="navbar-item" href="">Item 1</a>
+                            </li>
+                            <li>
+                                <a class="navbar-item" href="">Item 2</a>
+                            </li>
+                            <li>
+                                <a class="navbar-item" href="">Item 3</a>
+                            </li>
+                            <li>
+                                <a class="navbar-item" href="">Item 1</a>
+                            </li>
+                            <li>
+                                <a class="navbar-item" href="">Item 2</a>
+                            </li>
+                            <li>
+                                <a class="navbar-item" href="">Item 3</a>
+                            </li>
+                            <li>
+                                <a class="navbar-item" href="">Item 1</a>
+                            </li>
+                            <li>
+                                <a class="navbar-item" href="">Item 2</a>
+                            </li>
+                            <li>
+                                <a class="navbar-item" href="">Item 3</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div id="nav-comunidad" class="navbar-item has-dropdown is-hoverable nav-comunidad">
+                        <a class="navbar-link accordion-trigger">
+                            Comunidad
+                        </a>
+
+                        <div class="navbar-dropdown navbar-dropdown-comunidad accordion-panel">
+                            <div class="overlay"></div>
+
+                            <ul class="navbar-dropdown-comunidad-menu">
+                                <li>
+                                    <a class="navbar-item" href="">Descargables</a>
+                                </li>
+                                <li>
+                                    <a class="navbar-item" href="">Magazine</a>
+                                </li>
+                                <li>
+                                    <a class="navbar-item" href="">FAQ's</a>
+                                </li>
+                                <li>
+                                    <a class="navbar-item" href="">Contacto</a>
+                                </li>
+                            </ul>
+                            <div class="navbar-item navbar-dropdown-comunidad-news">
+                                <div class="navbar-dropdown-comunidad-news-img"></div>
+                                <div class="navbar-dropdown-comunidad-news-info">
+                                    <h3>Nuevo Ebook</h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
+                                        commodi maxime
+                                        excepturi nostrum maiores quod vel, temporibus obcaecati accusantium iure minus,
+                                        eos explicabo repellat sint, velit debitis nam omnis quia.</p>
+                                    <a href="">Leer más</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div id="search-desktop" class="navbar-item search-desktop">
+                        <input id="dgwt-wcas-search-input-1-desktop" type="search"
+                            class="dgwt-wcas-search-input invisible" placeholder="Escribí tu especialidad de interés"
+                            autocomplete="on">
+                        <button id="toggleBuscador-desktop" onclick="btnSearchDesktop()" class="icons">
+
+                            <span id="lupa-desktop" class="mdi mdi-magnify" alt=""></span>
+                            <span id="search-close-desktop" alt="" class="mdi mdi-close invisible">
+                        </button>
+                    </div>
+                    <button id="cart" class="cart-desktop">
+                        <span src="media/icon/cart.svg" alt="" class="mdi mdi-cart-outline"></span>
+                    </button>
+
+                    <a id="login-campus" class="button navbar-item login-campus js-modal-trigger"
+                        data-target="modal-logreg">
+                        MI CUENTA
+                    </a>
+
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<body id="body">
+
+    <!----1.HERO.C/Searchbar---->
+
+    <section id="hero" class="hero">
+        <article class="hero-cont contenedor mx-auto">
+            <h1 class="is-uppercase">Cursos 100% Online</h1>
+            <h2 class="is-uppercase">La herramienta de hoy para <span class="salto-de-linea">impulsar tu futuro</span>
+            </h2>
+            <div class="searchbar-especialidad">
+                <div class="field">
+                    <p class="control has-icons-left has-icons-right accordion-trigger">
+                        <input id="hero-searchbar" class="input searchbar-especialidad-campo accordion-trigger"
+                            type="search" placeholder="Escribí tu especialidad de interés">
+                        <span class="icon is-small is-left">
+                            <i class="mdi mdi-magnify"></i>
+                        </span>
+                        <span class="icon is-small is-right">
+                            <i class="mdi mdi-chevron-right"></i>
+                        </span>
+
+                    </p>
+                    <div id="hero-searchbar-overlay" class="overlay-exit"></div>
+                    <ul id="hero-searchbar-results" class="accordion-panel">
+                        <li><a href="" class="navbar-item">item-x</a></li>
+                        <li><a href="" class="navbar-item">item-x</a></li>
+                        <li><a href="" class="navbar-item">item-x</a></li>
+                        <li><a href="" class="navbar-item">item-x</a></li>
+                        <li><a href="" class="navbar-item">item-x</a></li>
+                        <li><a href="" class="navbar-item">item-x</a></li>
+                        <li><a href="" class="navbar-item">item-x</a></li>
+                        <li><a href="" class="navbar-item">item-x</a></li>
+                        <li><a href="" class="navbar-item">item-x</a></li>
+                        <li><a href="" class="navbar-item">item-x</a></li>
+                    </ul>
+
+                </div>
+                <input class="searchbar-especialidad-button" type="button" value="Buscar">
+            </div>
+
+        </article>
+    </section>
+
+    <!----1.END-HERO.C/Searchbar---->
+    <!----X.---->
+    <!----X.---->
+    <!----2.COURSES-TOP---->
+
+    <section id="courses-top-desktop-internacional" class="courses-top courses-top-desktop internacional mt-2">
+        <article class="courses-top-cont contenedor mx-auto">
+            <h3 class="courses-top-cont title">
+                Tenemos más de 120 cursos avalados por prestigiosas instituciones y preparados por expertos.
+                <span class="salto-de-linea">Descubrilos de acuerdo a tu profesión.</span>
+            </h3>
+            <div class="courses-top-cont-grid">
+                <div class="courses-top-cont-big c-hover"
+                    style="background: url(media/cursos-medicina.jpg), rgba(63, 108, 187, 1);">
+                    <h4 class="courses-top-cont-big-title">Cursos para
+                        <span class="salto-de-linea">personal médico</span>
+                    </h4>
+                    <a href="" class="btn btn-big has-text-white">Ingresar</a>
+                </div>
+
+                <div class="courses-top-cont-small c-hover cursos-enfermeria"
+                    style="background: url(media/cursos-enfermeria.jpg), rgba(0, 128, 102, 1);">
+                    <h4 class="courses-top-cont-small-title">Cursos para
+                        <span class="salto-de-linea">personal de</span>
+                        <span class="salto-de-linea">enfermería</span>
+                    </h4>
+                    <a href="" class="btn btn-big has-text-white">Ingresar</a>
+                </div>
+
+            </div>
+        </article>
+    </section>
+
+    <section id="courses-top-mobile" class="courses-top courses-top-mobile">
+        <div class="solapa-sup"></div>
+        <article class="courses-top-cont contenedor mx-auto">
+            <h3 class="courses-top-cont title">
+                Tenemos más de 120 cursos avalados por prestigiosas instituciones y preparados por expertos.
+                <span class="salto-de-linea">Descubrilos de acuerdo a tu profesión.</span>
+            </h3>
+            <div class="courses-top-cont-grid">
+                <a href="" class="courses-top-cont-big" style="background: url(media/coruses-top-1.jpg);">
+                    <h4 class="courses-top-cont-big-title">Cursos para
+                        <span class="salto-de-linea">personal médico</span>
+                    </h4>
+                </a>
+
+                <a href="" class="courses-top-cont-small cursos-enfermeria"
+                    style="background: url(media/courses-top-2.jpg);">
+                    <h4 class="courses-top-cont-small-title">Cursos para
+                        <span class="salto-de-linea">personal de</span>
+                        <span class="salto-de-linea">enfermería</span>
+                    </h4>
+                </a>
+                <a href="" class="courses-top-cont-small plan-estudio"
+                    style="background: url(media/courses-top-3.jpg);">
+                    <h4 class="courses-top-cont-small-title">
+                        Planes de estudio
+                        <span class="salto-de-linea">para enfermería</span>
+                    </h4>
+                    <h5 class="courses-top-cont-small-bajada mt-3">Alcanzá tus objetivos en
+                        <span class="salto-de-linea">el tiempo que vos quieras</span>
+                    </h5>
+                </a>
+            </div>
+        </article>
+    </section>
+
+    <!----2.END-COURSES-TOP---->
+    <!----X.---->
+    <!----X.---->
+    <!----3.BEST-SELLERS---->
+
+    <section id=" best-seller" class="best-seller">
+        <article class="best-seller-cont contenedor">
+            <h3 class="best-seller-cont-title">Cursos más vendidos</h3>
+            <div class="best-seller-cont-grid">
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div class="card c-hover">
+                                <div class="card-img"
+                                    style="background: url(media/curso.jpg), linear-gradient(transparent 75%, #00000035 100%);">
+                                    <a href="" class="tags tags-medicina">Medicina</a></div>
+                                <div class="card-info">
+                                    <div class="card-info-sup">
+                                        <p class="area">ANESTESIOLOGÍA Y DOLOR</p>
+                                        <span class="horas"><i class="mdi mdi-clock-outline"></i>320 horas</span>
+                                    </div>
+                                    <div class="card-info-title">Estrés ante la hospitalización y ansiedad prequirúrgica
+                                        en pacientes adultos</div>
+                                    <div class="card-info-footer">
+                                        <div class="card-info-footer-precio">
+                                            <p class="cuotas">12 coutas de</p>
+                                            <p class="price">$1.972</p>
+                                        </div>
+                                        <a href="" class="card-info-footer-boton btn btn-mid">Descubrir</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="card c-hover">
+                                <div class="card-img"
+                                    style="background: url(media/curso.jpg), linear-gradient(transparent 75%, #00000035 100%);">
+                                    <a href="" class="tags tags-medicina">Medicina</a>
+                                    <a href="" class="tags tags-enfermeria">Enfermería</a>
+                                </div>
+                                <div class="card-info">
+                                    <div class="card-info-sup">
+                                        <p class="area">Cardiología</p>
+                                        <span class="horas"><i class="mdi mdi-clock-outline"></i>320 horas</span>
+                                    </div>
+                                    <div class="card-info-title">Programa integral en pediatría hospitalaria</div>
+                                    <div class="card-info-footer">
+                                        <div class="card-info-footer-precio">
+                                            <p class="cuotas">12 coutas de</p>
+                                            <p class="price">Sin interés</p>
+                                        </div>
+                                        <a href="" class="card-info-footer-boton btn btn-mid">Descubrir</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="card c-hover">
+                                <div class="card-img"
+                                    style="background: url(media/curso.jpg), linear-gradient(transparent 75%, #00000035 100%);">
+                                    <a href="" class="tags tags-medicina">Medicina</a></div>
+                                <div class="card-info">
+                                    <div class="card-info-sup">
+                                        <p class="area">Cardiología</p>
+                                        <span class="horas"><i class="mdi mdi-clock-outline"></i>320 horas</span>
+                                    </div>
+                                    <div class="card-info-title">Auditoría médica</div>
+                                    <div class="card-info-footer">
+                                        <div class="card-info-footer-precio">
+                                            <p class="cuotas">12 coutas de</p>
+                                            <p class="price">$1.972</p>
+                                        </div>
+                                        <a href="" class="card-info-footer-boton btn btn-mid">Descubrir</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"><i class="mdi mdi-chevron-left"></i></div>
+                    <div class="swiper-button-next"><i class="mdi mdi-chevron-right"></i></div>
+
+
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <!----3-END.BEST-SELLERS---->
+    <!----X.---->
+    <!----X.---->
+    <!----4.BANNER---->
+
+    <section id="banner" class="banner">
+        <article class="banner-cont contenedor">
+            <div class="swiper-banner">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <picture>
+                            <source media="(max-width: 480px)" srcset="media/home-banner-enfermeria_ecommerce-480w.jpg">
+                            <source media="(max-width: 640px)" srcset="media/home-banner-enfermeria_ecommerce-640w.jpg">
+                            <source media="(max-width: 1920px)"
+                                srcset="media/home-banner-enfermeria_ecommerce-800w.jpg">
+                            <img src="media/banner-enfermeria_ecommerce-800w" alt="">
+                        </picture>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture>
+                            <source media="(max-width: 480px)" srcset="media/home-banner-enfermeria_ecommerce-480w.jpg">
+                            <source media="(max-width: 640px)" srcset="media/home-banner-enfermeria_ecommerce-640w.jpg">
+                            <source media="(max-width: 1920px)"
+                                srcset="media/home-banner-enfermeria_ecommerce-800w.jpg">
+                            <img src="media/banner-enfermeria_ecommerce-800w" alt="">
+                        </picture>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture>
+                            <source media="(max-width: 480px)" srcset="media/home-banner-enfermeria_ecommerce-480w.jpg">
+                            <source media="(max-width: 640px)" srcset="media/home-banner-enfermeria_ecommerce-640w.jpg">
+                            <source media="(max-width: 1920px)"
+                                srcset="media/home-banner-enfermeria_ecommerce-800w.jpg">
+                            <img src="media/banner-enfermeria_ecommerce-800w" alt="">
+                        </picture>
+                    </div>
+
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </article>
+    </section>
+
+    <!----4.END-BANNER---->
+    <!----X.---->
+    <!----X.---->
+    <!----5.DESTACADOS---->
+
+    <section id="destacados" class="destacados">
+        <article class="destacados-cont contenedor">
+            <div class="destacados-cont-top">
+                <h3 class="destacados-cont-title">Cursos Destacados</h3>
+                <div class="destacados-cont-top-filters">
+                    <a href="" class="btn btn-medicina active">Medicina</a>
+                    <a href="" class="btn btn-enfermeria">Enfermería</a>
+                    <a href="" class="btn btn-bibliografias">Bibliografías</a>
+                </div>
+            </div>
+            <div class="destacados-cont-grid">
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div class="card c-hover">
+                                <div class="card-img"
+                                    style="background: url(media/curso.jpg), linear-gradient(transparent 75%, #00000035 100%);">
+                                    <a href="" class="tags tags-bibliografia">Bibliografía</a></div>
+                                <div class="card-info">
+                                    <div class="card-info-sup">
+
+                                        <span class="horas"><i class="mdi mdi-truck-fast-outline"></i>Envios a todo el
+                                            país</span>
+                                    </div>
+                                    <div class="card-info-title">Estrés ante la hospitalización y ansiedad prequirúrgica
+                                        en pacientes adultos</div>
+                                    <div class="card-info-footer">
+                                        <div class="card-info-footer-precio">
+                                            <p class="cuotas">12 coutas de</p>
+                                            <p class="price">$1.972</p>
+                                        </div>
+                                        <a href="" class="card-info-footer-boton btn btn-mid">Descubrir</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="card c-hover">
+                                <div class="card-img"
+                                    style="background: url(media/curso.jpg), linear-gradient(transparent 75%, #00000035 100%);">
+                                    <a href="" class="tags tags-medicina">Medicina</a>
+                                    <a href="" class="tags tags-enfermeria">Enfermería</a>
+                                </div>
+                                <div class="card-info">
+                                    <div class="card-info-sup">
+                                        <p class="area">Cardiología</p>
+                                        <span class="horas"><i class="mdi mdi-clock-outline"></i>320 horas</span>
+                                    </div>
+                                    <div class="card-info-title">Programa integral en pediatría hospitalaria</div>
+                                    <div class="card-info-footer">
+                                        <div class="card-info-footer-precio">
+                                            <p class="cuotas">12 coutas de</p>
+                                            <p class="price">Sin interés</p>
+                                        </div>
+                                        <a href="" class="card-info-footer-boton btn btn-mid">Descubrir</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="card c-hover">
+                                <div class="card-img"
+                                    style="background: url(media/curso.jpg), linear-gradient(transparent 75%, #00000035 100%);">
+                                    <a href="" class="tags tags-medicina">Medicina</a></div>
+                                <div class="card-info">
+                                    <div class="card-info-sup">
+                                        <p class="area">Cardiología</p>
+                                        <span class="horas"><i class="mdi mdi-clock-outline"></i>320 horas</span>
+                                    </div>
+                                    <div class="card-info-title">Auditoría médica</div>
+                                    <div class="card-info-footer">
+                                        <div class="card-info-footer-precio">
+                                            <p class="cuotas">12 coutas de</p>
+                                            <p class="price">$1.972</p>
+                                        </div>
+                                        <a href="" class="card-info-footer-boton btn btn-mid">Descubrir</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"><i class="mdi mdi-chevron-left"></i></div>
+                    <div class="swiper-button-next"><i class="mdi mdi-chevron-right"></i></div>
+
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <!----5.END-DESTACADOS---->
+    <!----X.---->
+    <!----X.---->
+    <!----6.REVIEWS---->
+
+    <section id="reviews" class="reviews">
+        <article class="reviews-cont contenedor mx-auto">
+            <h3 class="reviews-cont-title">Más de 50.000 profesionales
+                de toda Latinoamérica realizaron
+                nuestros cursos y compartieron
+                su experiencia.
+                <span>¡Unite vos también a <span> nuestra
+                        comunidad científica!</span></span>
+            </h3>
+            <div class="reviews-slider">
+                <div class="swiper-reviews">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div class="card-review">
+                                <div class="card-review-rating">
+                                    <img src="media/icon/icon_star.svg" alt="">
+                                    <img src="media/icon/icon_star.svg" alt="">
+                                    <img src="media/icon/icon_star.svg" alt="">
+                                    <img src="media/icon/icon_star.svg" alt="">
+                                    <img src="media/icon/icon_star.svg" alt="">
+                                </div>
+                                <div class="card-review-body">
+                                    Yo hice el curso Electrocardiografia ,sinceramente estoy muy conforme , ya tramite
+                                    el Certificado. Sin palabras es excelente todo el material de estudios ,y los
+                                    tutores responden a la brevedad.Yo lo recomiendo.Mil Gracias a todo el equipo.
+                                </div>
+                                <div class="card-review-footer">
+                                    <div class="card-review-footer-user">
+                                        <div class="profile-picture">
+                                            <img src="" alt="">
+                                        </div>
+                                        <p class="review-username"> Nombre y apellido</p>
+                                    </div>
+                                    <img class="google-market" src="media/gogle_review.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card-review">
+                                <div class="card-review-rating">
+                                    <img src="media/icon/icon_star.svg" alt="">
+                                    <img src="media/icon/icon_star.svg" alt="">
+                                    <img src="media/icon/icon_star.svg" alt="">
+                                    <img src="media/icon/icon_star.svg" alt="">
+                                    <img src="media/icon/icon_star.svg" alt="">
+                                </div>
+                                <div class="card-review-body">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed ad rerum facere minima
+                                    eos quisquam culpa, beatae perferendis, aliquam labore consequatur dolor repudiandae
+                                    delectus quis quos laboriosam fugiat accusantium. Dolores.
+                                </div>
+                                <div class="card-review-footer">
+                                    <div class="card-review-footer-user">
+                                        <div class="profile-picture">
+                                            <img src="" alt="">
+                                        </div>
+                                        <p class="review-username"> Nombre y apellido</p>
+                                    </div>
+                                    <img class="google-market" src="media/gogle_review.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card-review">
+                                <div class="card-review-rating">
+                                    <img src="media/icon/icon_star.svg" alt="">
+                                    <img src="media/icon/icon_star.svg" alt="">
+                                    <img src="media/icon/icon_star.svg" alt="">
+                                    <img src="media/icon/icon_star.svg" alt="">
+                                    <img src="media/icon/icon_star.svg" alt="">
+                                </div>
+                                <div class="card-review-body">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam error voluptatibus
+                                    officia aspernatur laborum quos deleniti! Ducimus rerum eveniet dolorum nobis modi
+                                    quidem minima et. Dolores dolorem iure esse magnam!
+                                </div>
+                                <div class="card-review-footer">
+                                    <div class="card-review-footer-user">
+                                        <div class="profile-picture">
+                                            <img src="" alt="">
+                                        </div>
+                                        <p class="review-username"> Nombre y apellido</p>
+                                    </div>
+                                    <img class="google-market" src="media/gogle_review.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <!----5.END-REVIEWS---->
+    <!----X.---->
+    <!----X.---->
+    <!----7.WEBINARS---->
+
+    <section id="webinars" class="webinars">
+        <article class="webinars-cont contenedor mx-auto">
+            <div class="webinars-cont-info">
+                <div class="webinars-cont-info-title">
+                    <i class="mdi mdi-laptop"></i>
+                    <h3 class="is-uppercase">Webinars</h3>
+                </div>
+                <div class="webinars-cont-info-bajada">
+                    <h5>Participá en vivo de las charlas gratuitas con profesionales del ámbito de la medicina y la
+                        ciencia. También disfrutá las ediciones pasadas
+                        en nuestro canal de YouTube.</h5>
+                    <a class="button btn btn-big" href="">Ver todos</a>
+                </div>
+            </div>
+            <div class="webinars-cont-slider">
+                <div class="swiper-webinars">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div class="card-webinar">
+                                <div class="card-webinar-img"
+                                    style="background: center/cover url(media/webinar-home.jpg);"></div>
+                                <div class="card-webinar-info">
+                                    <div class="card-webinar-info-top">
+                                        <i class="mdi mdi-clock-outline"></i>
+                                        <p class="fecha">Jueves 5 de Agosto</p>
+                                        <p class="horas">16 horas</p>
+                                    </div>
+                                    <h4 class="card-webinar-info-title">Coaching en la práctica
+                                        profesional en salud</h4>
+                                    <a href="" class="btn">Quiero anotarme</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card-webinar">
+                                <div class="card-webinar-img"
+                                    style="background: center/cover url(media/webinar-home.jpg);"></div>
+                                <div class="card-webinar-info">
+                                    <div class="card-webinar-info-top">
+                                        <i class="mdi mdi-clock-outline"></i>
+                                        <p class="fecha">Jueves 5 de Agosto</p>
+                                        <p class="horas">16 horas</p>
+                                    </div>
+                                    <h4 class="card-webinar-info-title">Desafíos de la enfermería en el siglo XXI - Lic.
+                                        Viviana Alcaraz y Dr. Sergio Butman</h4>
+                                    <a href="" class="btn btn-mid">Quiero anotarme</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card-webinar">
+                                <div class="card-webinar-img"
+                                    style="background: center/cover url(media/webinar-home.jpg);"></div>
+                                <div class="card-webinar-info">
+                                    <div class="card-webinar-info-top">
+                                        <i class="mdi mdi-clock-outline"></i>
+                                        <p class="fecha">Miércoles 20 de Septiembre</p>
+                                        <p class="horas">16 horas</p>
+                                    </div>
+                                    <h4 class="card-webinar-info-title">Coaching en la práctica
+                                        profesional en salud</h4>
+                                    <a href="" class="btn btn-mid">Quiero anotarme</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="swiper-webinars-desktop">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div class="card-webinar">
+                                <div class="card-webinar-img"
+                                    style="background: center/cover url(media/webinar-home.jpg);"></div>
+                                <div class="card-webinar-info">
+                                    <div class="card-webinar-info-top">
+                                        <i class="mdi mdi-clock-outline"></i>
+                                        <p class="fecha">Jueves 5 de Agosto</p>
+                                        <p class="horas">16 horas</p>
+                                    </div>
+                                    <h4 class="card-webinar-info-title">Coaching en la práctica
+                                        profesional en salud</h4>
+                                    <a href="" class="btn">Quiero anotarme</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card-webinar">
+                                <div class="card-webinar-img"
+                                    style="background: center/cover url(media/webinar-home.jpg);"></div>
+                                <div class="card-webinar-info">
+                                    <div class="card-webinar-info-top">
+                                        <i class="mdi mdi-clock-outline"></i>
+                                        <p class="fecha">Jueves 5 de Agosto</p>
+                                        <p class="horas">16 horas</p>
+                                    </div>
+                                    <h4 class="card-webinar-info-title">Desafíos de la enfermería en el siglo XXI - Lic.
+                                        Viviana Alcaraz y Dr. Sergio Butman</h4>
+                                    <a href="" class="btn btn-mid">Quiero anotarme</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card-webinar">
+                                <div class="card-webinar-img"
+                                    style="background: center/cover url(media/webinar-home.jpg);"></div>
+                                <div class="card-webinar-info">
+                                    <div class="card-webinar-info-top">
+                                        <i class="mdi mdi-clock-outline"></i>
+                                        <p class="fecha">Miércoles 20 de Septiembre</p>
+                                        <p class="horas">16 horas</p>
+                                    </div>
+                                    <h4 class="card-webinar-info-title">Coaching en la práctica
+                                        profesional en salud</h4>
+                                    <a href="" class="btn btn-mid">Quiero anotarme</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <!--
+        MODAL TEMARIO
+    -->
+
+    <div id="modal-logreg" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <button class="delete is-right" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body ">
+                <div class="info info-log">
+                    <h3 class="info-title"> Te damos la <br> bienvenida </h3>
+                    <h4 class="info-msj"> Accede a tu cuenta para ver tu actividad
+                        y <br> descubrir oportunidades de aprendizaje </h4>
+                </div>
+
+                <!--
+                TEXTOS REGISTRARME
+
+                <div class="info info-reg">
+                    <h3 class="info-title"> ¡Prepárate! </h3>
+                    <h4 class="info-msj">Estás a pocos pasos de sumarte a una <br> comunidad científica en crecimiento
+                    </h4>
+                </div>
+
+                -->
+
+                <!--
+                TEXTOS PASS RESET
+
+                <div class="info info-pass-reset">
+                    <h3 class="info-title"> Te damos la <br> bienvenida </h3>
+                    <h4 class="info-msj"> Accede a tu cuenta para ver tu actividad
+                        y <br> descubrir oportunidades de aprendizaje </h4>
+                </div>
+                
+                -->
+
+                <div class="logreg-cont formulario">
+                    <nav class="logreg-tabs">
+                        <ul>
+                            <li class="tab is-active" onclick="openTabUser(event,'log-tab')"><a>INICIAR SESIÓN</a></li>
+                            <li class="tab" onclick="openTabUser(event,'reg-tab')"><a>REGISTRARME</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <form id="log-tab" class="content-tab formulario-campos" style="display: flex;">
+                        <div class="field">
+                            <p class="control has-icons-left has-icons-right">
+                                <input id="formulario-log-email" class="input" type="email" name="formulario-log-email"
+                                    placeholder="Ingresar e-mail">
+                                <span class="icon is-small is-left">
+                                    <i class="mdi mdi-email-outline"></i>
+                                </span>
+                            </p>
+                        </div>
+                        <div class="field">
+                            <p class="control has-icons-left">
+                                <input id="formulario-log-pass" class="input" type="password" name="formulario-log-pass"
+                                    placeholder="Ingresar contraseña">
+                                <span class="icon is-small is-left">
+                                    <i class="mdi mdi-form-textbox-password"></i>
+                                </span>
+                            </p>
+                        </div>
+
+                        <a id="forgot-pass" class="tab forgot-pass" onclick="openTabUser(event,'forgot-pass-tab')">¿Haz
+                            olvidado
+                            tu contraseña?</a>
+
+                        <button class="btn btn-big button">ENTRAR</button>
+                    </form>
+                    <form id="reg-tab" class="content-tab formulario-campos" style="display: none;">
+                        <div class="field">
+                            <p class="control has-icons-left has-icons-right">
+                                <input id="formulario-log-email" class="input" type="email" name="formulario-log-email"
+                                    placeholder="Ingresar e-mail">
+                                <span class="icon is-small is-left">
+                                    <i class="mdi mdi-account-tie"></i>
+                                </span>
+                            </p>
+                        </div>
+                        <div class="field">
+                            <p class="control has-icons-left has-icons-right">
+                                <input id="formulario-log-email" class="input" type="email" name="formulario-log-email"
+                                    placeholder="Ingresar e-mail">
+                                <span class="icon is-small is-left">
+                                    <i class="mdi mdi-email-outline"></i>
+                                </span>
+                            </p>
+                        </div>
+                        <div class="field">
+                            <p class="control has-icons-left">
+                                <input id="formulario-log-pass" class="input" type="password" name="formulario-log-pass"
+                                    placeholder="Ingresar contraseña">
+                                <span class="icon is-small is-left">
+                                    <i class="mdi mdi-form-textbox-password"></i>
+                                </span>
+                            </p>
+                        </div>
+                        <div class="field">
+                            <p class="control has-icons-left">
+                                <input id="formulario-log-pass-confirm" class="input" type="password"
+                                    name="formulario-log-pass-confirm" placeholder="Confirmar contraseña">
+                                <span class="icon is-small is-left">
+                                    <i class="mdi mdi-form-textbox-lock"></i>
+                                </span>
+                            </p>
+                        </div>
+
+                        <div class="field campo-doble">
+                            <div class="">
+                                <span class="wpcf7-form-control-wrap Profesion">
+                                    <select name="Profesion"
+                                        class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required form-control"
+                                        id="formulario-profesion" aria-required="true" aria-invalid="false">
+                                        <option value=""> <i class="mdi mdi-medical-bag"></i>Profesión</option>
+                                        <option value="Médico">Médico</option>
+                                        <option value="Lic. de la Salud">Lic. de la Salud</option>
+                                        <option value="Técnico Universitario">Técnico Universitario</option>
+                                        <option value="Enfermeros / Auxiliares">Enfermeros / Auxiliares</option>
+                                        <option value="Residentes / Estudiantes">Residentes / Estudiantes</option>
+                                        <option value="Fuerza Pública">Fuerza Pública</option>
+                                        <option value="Otra Profesión">Otra Profesión</option>
+                                    </select>
+                                </span>
+                            </div>
+                            <div class="">
+                                <span class="wpcf7-form-control-wrap Especialidad"><select name="Especialidad"
+                                        class="wpcf7-form-control wpcf7-select form-control"
+                                        id="formulario-especialidad" aria-invalid="false">
+                                        <option value=""><i class="mdi mdi-medical-bag"></i>Especialidad</option>
+                                        <option value="Anestesiología">Anestesiología</option>
+                                        <option value="Diagnóstico por Imágenes">Diagnóstico por Imágenes</option>
+                                        <option value="Cardiología">Cardiología</option>
+                                        <option value="Cirugía">Cirugía</option>
+                                        <option value="Cuidados críticos e intensivos">Cuidados críticos e
+                                            intensivos
+                                        </option>
+                                        <option value="Dermatología">Dermatología</option>
+                                        <option value="Emergentología">Emergentología</option>
+                                        <option value="Endocrinología">Endocrinología</option>
+                                        <option value="Gastroenterología">Gastroenterología</option>
+                                        <option value="Generalista - Clínica - Medicina interna">Generalista -
+                                            Clínica -
+                                            Medicina interna</option>
+                                        <option value="Geriatría y Gerontología">Geriatría y Gerontología</option>
+                                        <option value="Ginecología">Ginecología</option>
+                                        <option value="Hematología">Hematología</option>
+                                        <option value="Infectología">Infectología</option>
+                                        <option value="Internación domiciliaria y cuidados paliativos">Internación
+                                            domiciliaria y cuidados paliativos</option>
+                                        <option value="Nefrología">Nefrología</option>
+                                        <option value="Neonatología">Neonatología</option>
+                                        <option value="Neurología">Neurología</option>
+                                        <option value="Nutrición y alimentación">Nutrición y alimentación</option>
+                                        <option value="Obstetricia">Obstetricia</option>
+                                        <option value="Obstetricia y Ginecología">Obstetricia y Ginecología</option>
+                                        <option value="Odontología">Odontología</option>
+                                        <option value="Oftalmología">Oftalmología</option>
+                                        <option value="Oncología">Oncología</option>
+                                        <option value="Ortopedia y Traumatología">Ortopedia y Traumatología</option>
+                                        <option value="Otorrinolaringología">Otorrinolaringología</option>
+                                        <option value="Pediatría">Pediatría</option>
+                                        <option value="Psiquiatría">Psiquiatría</option>
+                                        <option value="Radiología">Radiología</option>
+                                        <option value="Otra Especialidad">Otra Especialidad</option>
+                                    </select></span>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-big button">REGISTRARME</button>
+                    </form>
+                    <form id="forgot-pass-tab" class="content-tab formulario-campos" style="display: none;">
+                        <div class="field">
+                            <p class="control has-icons-left">
+                                <input id="formulario-log-pass" class="input" type="password" name="formulario-log-pass"
+                                    placeholder="Ingresar código de verificación">
+                                <span class="icon is-small is-left">
+                                    <i class="mdi mdi-shield-lock-outline"></i>
+                                </span>
+                            </p>
+                        </div>
+                        <div class="field">
+                            <p class="control has-icons-left">
+                                <input id="formulario-log-pass" class="input" type="password" name="formulario-log-pass"
+                                    placeholder="Ingresar nueva contraseña">
+                                <span class="icon is-small is-left">
+                                    <i class="mdi mdi-form-textbox-password"></i>
+                                </span>
+                            </p>
+                        </div>
+                        <div class="field">
+                            <p class="control has-icons-left">
+                                <input id="formulario-log-pass-confirm" class="input" type="password"
+                                    name="formulario-log-pass-confirm" placeholder="Confirmar nueva contraseña">
+                                <span class="icon is-small is-left">
+                                    <i class="mdi mdi-form-textbox-lock"></i>
+                                </span>
+                            </p>
+                        </div>
+
+
+
+                        <button class="btn btn-big button">CAMBIAR CONTRASEÑA</button>
+                    </form>
+                </div>
+
+            </section>
+
+        </div>
+    </div>
+
+    <!--
+        MODAL NEWSLETTER
+    -->
+
+    <div id="modal-newsletter" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <div class="modal-card-head-info">
+                    <h3 class="modal-card-title"> Suscribite / Suscríbete a <span class="salto-de-linea">nuestro
+                            newsletter</span>
+                    </h3>
+                    <p class="modal-card-subtitle"> Compartinos / Compártenos tus datos para que te enviemos contenidos
+                        orientados a tu profesión y tus áreas de interés.
+                    </p>
+                </div>
+                <button class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body formulario">
+
+                <div class="formulario-campos">
+                    <div class="formulario-email-cont">
+                        <label for="formulario-email" class="formulario-label">E-mail</label>
+                        <input type="email" name="formulario-email" id="formulario-email" placeholder="Ingresar E-mail">
+                    </div>
+                    <div class="formulario-name-cont">
+                        <label for="formulario-name" class="formulario-label">Nombre</label>
+                        <input type="text" name="formulario-name" id="formulario-name" placeholder="Ingresar nombre">
+                    </div>
+                    <div class="formulario-name-cont">
+                        <label for="formulario-last-name" class="formulario-label">Apellido</label>
+                        <input type="text" name="formulario-last-name" id="formulario-last-name"
+                            placeholder="Ingresar apellido">
+                    </div>
+                    <div>
+                        <label for="formulario-profesion" class="formulario-label">Profesión</label>
+                        <select id="formulario-profesion" class="form-control" name="">
+                            <option>Seleccionar profesión</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="formulario-especialidad" class="formulario-label">Especialidad</label>
+                        <select id="formulario-especialidad" class="form-control" name="">
+                            <option>Seleccionar especialidad</option>
+                        </select>
+                    </div>
+                    <div class="verificacion">
+                        <div class="recaptcha"></div>
+
+                        <label class="casillaverificacion-label">
+                            <input type="checkbox" name="acceptance-848" value="1" aria-invalid="false"
+                                class="casillaverificacion">
+                            <span class="wpcf7-list-item-label">Acepto las
+                                <a href="https://oceanomedicina.com/politicadeprivacidad/" target="_blank">Políticas de
+                                    Privacidad</a>
+                            </span>
+                        </label>
+                    </div>
+                    <button class="btn btn-big button wpcf7-submit" disabled>suscribirme</button>
+                </div>
+
+            </section>
+
+        </div>
+    </div>
+
+
+    <!--
+        MODAL SUCCESS NEWSLETTER
+    -->
+    <div id="modal-success" class="modal modal-success success-subnewsletter">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <div class="modal-card-body">
+                <img src="media/icon/success.svg" alt="">
+                <div class="info">
+                    <p class="info-title">Suscripción exitosa</p>
+                    <p class="info-msj">
+                        ¡Muchas gracias por suscribirte
+                        <br>
+                        a nuestro newsletter!</p>
+                </div>
+                <button class="btn btn-big button">Finalizar</button>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="js/modal.js"></script>
+    <script src="js/tabs.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/accordion.js"></script>
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+            centeredSlides: false,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: "auto",
+                    centeredSlides: true,
+                    spaceBetween: 12,
+                },
+                576: {
+                    slidesPerView: 3,
+                    spaceBetween: 13,
+                },
+                992: {
+                    slidesPerView: 4,
+                    spaceBetween: 16,
+                },
+                1500: {
+                    slidesPerView: 5,
+                    spaceBetween: 16,
+                },
+            },
+        });
+    </script>
+    <script>
+        const swiperBanner = new Swiper('.swiper-banner', {
+            // Optional parameters
+            effect: "fade",
+            loop: true,
+            slidesPerView: 1,
+            centeredSlides: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+        });
+    </script>
+    <script>
+        const swiperReviews = new Swiper('.swiper-reviews', {
+            // Optional parameters
+            loop: true,
+            slidesPerView: 1,
+            spaceBetween: 13,
+            centeredSlides: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+        });
+    </script>
+    <script>
+        const swiperWebinarsDesktop = new Swiper('.swiper-webinars', {
+            // Optional parameters
+            loop: true,
+            slidesPerView: "auto",
+            spaceBetween: 13,
+            centeredSlides: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+
+            breakpoints: {
+                992: {
+                    effect: "coverflow",
+                    grabCursor: true,
+                    centeredSlides: true,
+                    slidesPerView: "auto",
+                    centeredSlides: true,
+                    initialSlide: 2,
+                    coverflowEffect: {
+                        rotate: 0,
+                        stretch: 0,
+                        depth: 100,
+                        modifier: 10,
+                        initialSlide: 3,
+                        slideShadows: true
+                    },
+                },
+
+            },
+
+
+
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+        });
+    </script>
+    <script>
+        const swiperWebinars = new Swiper('.swiper-webinars-desktop', {
+            // Optional parameters
+
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            centeredSlides: true,
+            initialSlide: 1,
+            coverflowEffect: {
+                rotate: 0,
+                stretch: 0,
+                depth: 50,
+                modifier: 14.25,
+                initialSlide: 3,
+                slideShadows: true
+            },
+
+            breakpoints: {
+                768: {
+                    coverflowEffect: {
+                        rotate: 0,
+                        stretch: 0,
+                        depth: 50,
+                        modifier: 14.25,
+                        initialSlide: 3,
+                        slideShadows: true
+                    },
+
+                },
+                1445: {
+                    coverflowEffect: {
+
+                        depth: 17,
+
+                    },
+
+                },
+
+
+            },
+        });
+    </script>
+
+</body>
+
+<footer id="footer" class="footer">
+    <article class="footer-cont contenedor mx-auto">
+        <div class="footer-cont-first">
+            <div class="footer-info">
+                <img src="media/logo-footer.png" alt="" class="footer-info-logo">
+                <address class="footer-info-contact">
+                    <a href=""><i class="mdi mdi-phone"></i>0810-220-6232 / (011) 5263-7133</a>
+                    <a href=""><i class="mdi mdi-email-outline"></i>oceanomedicina@oceano.com
+                    </a>
+                    <a href=""><i class="mdi mdi-map-marker"></i>Carlos Pellegrini 855 Piso 12º
+                    </a>
+                </address>
+            </div>
+            <div class="footer-menu">
+                <ul>
+                    <li><a href="">Nuestra misión</a></li>
+                    <li><a href="">Programa de instituciones</a></li>
+                    <li><a href="">Programa referidos</a></li>
+                    <li><a href="">Preguntas frecuentes</a></li>
+                </ul>
+                <ul>
+                    <li><a href="">Politícas de privacidad</a></li>
+                    <li><a href="">Condiciones de uso</a></li>
+                    <li><a href="">Políticas de cookies</a></li>
+                    <li><a href="">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-cont-second">
+            <div class="footer-newsletter">
+                <h5>SUSCRÍBITE A NUESTRO NEWSLETTER</h5>
+                <p>Información, novedades y ofertas, directamente en tu mail.</p>
+
+                <div class="mail-form">
+                    <div class="mail_input_container">
+                        <div role="form" class="wpcf7" id="wpcf7-f4958-o1" lang="es-AR" dir="ltr">
+                            <div class="screen-reader-response">
+                                <p role="status" aria-live="polite" aria-atomic="true"></p>
+                                <ul></ul>
+                            </div>
+                            <form action="/#wpcf7-f4958-o1" method="ficha" class="wpcf7-form init"
+                                novalidate="novalidate" data-status="init" siq_id="autopick_7225">
+                                <div style="display: none;">
+                                    <input type="hidden" name="_wpcf7" value="4958">
+                                    <input type="hidden" name="_wpcf7_version" value="5.5.1">
+                                    <input type="hidden" name="_wpcf7_locale" value="es_AR">
+                                    <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f4958-o1">
+                                    <input type="hidden" name="_wpcf7_container_ficha" value="0">
+                                    <input type="hidden" name="_wpcf7_fichaed_data_hash" value="">
+                                    <input type="hidden" name="_wpcf7cf_hidden_group_fields" value="[]">
+                                    <input type="hidden" name="_wpcf7cf_hidden_groups" value="[]">
+                                    <input type="hidden" name="_wpcf7cf_visible_groups" value="[]">
+                                    <input type="hidden" name="_wpcf7cf_repeaters" value="[]">
+                                    <input type="hidden" name="_wpcf7cf_steps" value="{}">
+                                    <input type="hidden" name="_wpcf7cf_options"
+                                        value="{&quot;form_id&quot;:4958,&quot;conditions&quot;:[],&quot;settings&quot;:{&quot;animation&quot;:&quot;yes&quot;,&quot;animation_intime&quot;:200,&quot;animation_outtime&quot;:200,&quot;conditions_ui&quot;:&quot;normal&quot;,&quot;notice_dismissed&quot;:false,&quot;notice_dismissed_update-cf7-5.4.1&quot;:true}}">
+                                </div>
+                                <p>
+                                    <span class="wpcf7-form-control-wrap email-367">
+                                        <input type="email" name="email-367" value="" size="40"
+                                            class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email newsletter form-control"
+                                            aria-required="true" aria-invalid="false"
+                                            placeholder="Ingresá tu dirección de email">
+                                    </span>
+                                    <br>
+                                    <button type="submit"
+                                        class="js-modal-trigger wpcf7-form-control has-spinner wpcf7-submit casas"
+                                        disabled="">
+                                        <i class="mdi mdi-chevron-right"></i>
+                                    </button>
+
+                                    <span class="wpcf7-spinner"></span>
+                                    <span class="wpcf7-form-control-wrap acceptance-848">
+                                        <span class="wpcf7-form-control wpcf7-acceptance">
+                                            <span class="wpcf7-list-item">
+                                                <label>
+                                                    <input type="checkbox" name="acceptance-848" value="1"
+                                                        aria-invalid="false" class="casillaverificacion">
+                                                    <span class="wpcf7-list-item-label">Acepto las
+                                                        <a href="https://oceanomedicina.com/politicadeprivacidad/"
+                                                            target="_blank">Políticas de
+                                                            Privacidad</a>
+                                                    </span>
+                                                </label>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </p>
+                                <div class="wpcf7-response-output" aria-hidden="true"></div>
+                            </form>
+                            <button class="btn btn-mid js-modal-trigger has-text-white"
+                                data-target="modal-newsletter">Prueba modal</button>
+
+                        </div>
+                    </div>
+                    <br>
+
+                </div>
+
+            </div>
+            <div class="footer-redes">
+                <a href="" class="footer-redes-lik">
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <!-- Generator: Adobe Illustrator 25.4.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 37 37"
+                        style="enable-background:new 0 0 37 37;" xml:space="preserve">
+                        <style type="text/css">
+                            .st0 {
+                                fill: #FFFFFF;
+                            }
+                        </style>
+                        <path class="st0"
+                            d="M37,18.5C37,8.3,28.7,0,18.5,0C8.3,0,0,8.3,0,18.5C0,28.7,8.3,37,18.5,37c0.1,0,0.2,0,0.3,0V22.6h-4V18h4v-3.4
+	c0-4,2.4-6.1,5.9-6.1c1.7,0,3.1,0.1,3.6,0.2v4.1h-2.4c-1.9,0-2.3,0.9-2.3,2.2V18h4.6l-0.6,4.6h-4v13.7C31.3,34.1,37,26.9,37,18.5z" />
+                    </svg>
+                </a>
+                <a href="" class="footer-redes-lik">
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <!-- Generator: Adobe Illustrator 25.4.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 37 37"
+                        style="enable-background:new 0 0 37 37;" xml:space="preserve">
+                        <style type="text/css">
+                            .st0 {
+                                fill: #FFFFFF;
+                            }
+                        </style>
+                        <path class="st0"
+                            d="M18.5,0C8.3,0,0,8.3,0,18.5S8.3,37,18.5,37S37,28.7,37,18.5S28.7,0,18.5,0z M26.9,14.4c0,0.2,0,0.4,0,0.5
+	c0,5.6-4.3,12.1-12.1,12.1c-2.4,0-4.6-0.7-6.5-1.9c0.3,0,0.7,0.1,1,0.1c2,0,3.8-0.7,5.3-1.8c-1.9,0-3.4-1.3-4-2.9
+	c0.3,0,0.5,0.1,0.8,0.1c0.4,0,0.8-0.1,1.1-0.1c-1.9-0.4-3.4-2.1-3.4-4.2c0,0,0,0,0-0.1c0.6,0.3,1.2,0.5,1.9,0.5
+	c-1.1-0.8-1.9-2.1-1.9-3.5c0-0.8,0.2-1.5,0.6-2.1c2.1,2.6,5.2,4.3,8.8,4.4c-0.1-0.3-0.1-0.6-0.1-1c0-2.3,1.9-4.2,4.2-4.2
+	c1.2,0,2.3,0.5,3.1,1.3c1-0.2,1.9-0.5,2.7-1c-0.3,1-1,1.8-1.9,2.3c0.9-0.1,1.7-0.3,2.4-0.7C28.5,13.1,27.8,13.8,26.9,14.4z" />
+                    </svg>
+
+                </a>
+                <a href="" class="footer-redes-lik">
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <!-- Generator: Adobe Illustrator 25.4.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 37 37"
+                        style="enable-background:new 0 0 37 37;" xml:space="preserve">
+                        <style type="text/css">
+                            .st0 {
+                                fill: #FFFFFF;
+                            }
+                        </style>
+                        <g>
+                            <path class="st0" d="M16.2,21.7l6-3.4l-6-3.4V21.7z" />
+                            <path class="st0" d="M18.5,0C8.3,0,0.1,8.2,0.1,18.3s8.2,18.3,18.4,18.3c10.2,0,18.4-8.2,18.4-18.3S28.7,0,18.5,0z M30,18.3
+		c0,0,0,3.7-0.5,5.5c-0.3,1-1,1.8-2,2c-1.8,0.5-9,0.5-9,0.5s-7.2,0-9-0.5c-1-0.3-1.8-1-2-2C7,22,7,18.3,7,18.3s0-3.7,0.5-5.5
+		c0.3-1,1.1-1.8,2-2c1.8-0.5,9-0.5,9-0.5s7.2,0,9,0.5c1,0.3,1.8,1,2,2C30,14.6,30,18.3,30,18.3z" />
+                        </g>
+                    </svg>
+                </a>
+                <a href="" class="footer-redes-lik">
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <!-- Generator: Adobe Illustrator 25.4.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 37 37"
+                        style="enable-background:new 0 0 37 37;" xml:space="preserve">
+                        <style type="text/css">
+                            .st0 {
+                                fill: #FFFFFF;
+                            }
+                        </style>
+                        <g>
+                            <path class="st0"
+                                d="M22,18.3c0,1.9-1.6,3.5-3.5,3.5S15,20.2,15,18.3c0-1.9,1.6-3.5,3.5-3.5S22,16.4,22,18.3z" />
+                            <path class="st0" d="M26.8,12.1c-0.2-0.5-0.4-0.9-0.8-1.2c-0.3-0.3-0.8-0.6-1.2-0.8c-0.4-0.1-0.9-0.3-2-0.4
+		c-1.1-0.1-1.4-0.1-4.3-0.1c-2.8,0-3.2,0-4.3,0.1c-1,0-1.6,0.2-2,0.4c-0.5,0.2-0.9,0.4-1.2,0.8c-0.4,0.3-0.6,0.8-0.8,1.2
+		c-0.1,0.4-0.3,0.9-0.4,2c-0.1,1.1-0.1,1.4-0.1,4.2c0,2.8,0,3.1,0.1,4.2c0,1,0.2,1.6,0.4,2c0.2,0.5,0.4,0.9,0.8,1.2
+		c0.3,0.3,0.8,0.6,1.2,0.8c0.4,0.1,0.9,0.3,2,0.4c1.1,0.1,1.4,0.1,4.3,0.1c2.8,0,3.2,0,4.3-0.1c1,0,1.6-0.2,2-0.4
+		c0.9-0.4,1.7-1.1,2-2c0.1-0.4,0.3-0.9,0.4-2c0.1-1.1,0.1-1.4,0.1-4.2c0-2.8,0-3.1-0.1-4.2C27.1,13,26.9,12.5,26.8,12.1z M18.5,23.7
+		c-3,0-5.4-2.4-5.4-5.4c0-3,2.4-5.4,5.4-5.4c3,0,5.4,2.4,5.4,5.4C23.9,21.3,21.5,23.7,18.5,23.7z M24.2,13.9c-0.7,0-1.3-0.6-1.3-1.3
+		c0-0.7,0.6-1.3,1.3-1.3c0.7,0,1.3,0.6,1.3,1.3C25.4,13.4,24.9,13.9,24.2,13.9z" />
+                            <path class="st0" d="M18.5,0C8.3,0,0.1,8.2,0.1,18.3s8.2,18.3,18.4,18.3c10.2,0,18.4-8.2,18.4-18.3S28.7,0,18.5,0z M29,22.6
+		c-0.1,1.1-0.2,1.9-0.5,2.6c-0.5,1.4-1.7,2.5-3.1,3.1c-0.7,0.3-1.4,0.4-2.6,0.5c-1.1,0.1-1.5,0.1-4.4,0.1c-2.9,0-3.2,0-4.4-0.1
+		c-1.1-0.1-1.9-0.2-2.6-0.5c-0.7-0.3-1.3-0.7-1.9-1.2c-0.5-0.5-1-1.2-1.2-1.9c-0.3-0.7-0.4-1.4-0.5-2.5c-0.1-1.1-0.1-1.5-0.1-4.3
+		S8,15.1,8,14c0.1-1.1,0.2-1.9,0.5-2.6c0.3-0.7,0.7-1.3,1.2-1.9c0.5-0.5,1.2-0.9,1.9-1.2c0.7-0.3,1.4-0.4,2.6-0.5
+		c1.1-0.1,1.5-0.1,4.4-0.1c2.9,0,3.2,0,4.4,0.1c1.1,0.1,1.9,0.2,2.6,0.5c0.7,0.3,1.3,0.7,1.9,1.2c0.5,0.5,1,1.2,1.2,1.9
+		c0.3,0.7,0.4,1.4,0.5,2.6c0.1,1.1,0.1,1.5,0.1,4.3S29.1,21.5,29,22.6z" />
+                        </g>
+                    </svg>
+                </a>
+                <a href="" class="footer-redes-lik">
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <!-- Generator: Adobe Illustrator 25.4.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 37 37"
+                        style="enable-background:new 0 0 37 37;" xml:space="preserve">
+                        <style type="text/css">
+                            .st0 {
+                                fill: #FFFFFF;
+                            }
+                        </style>
+                        <path class="st0" d="M18.5,0C8.3,0,0,8.3,0,18.5S8.3,37,18.5,37S37,28.7,37,18.5S28.7,0,18.5,0z M13.1,28H8.6V14.4h4.5V28z
+	 M10.9,12.6L10.9,12.6c-1.5,0-2.5-1-2.5-2.3c0-1.3,1-2.3,2.5-2.3c1.5,0,2.5,1,2.5,2.3C13.4,11.5,12.4,12.6,10.9,12.6z M29.4,28h-4.5
+	v-7.3c0-1.8-0.7-3.1-2.3-3.1c-1.2,0-2,0.8-2.3,1.6c-0.1,0.3-0.1,0.7-0.1,1.1V28h-4.5c0,0,0.1-12.3,0-13.6h4.5v1.9
+	c0.6-0.9,1.7-2.2,4.1-2.2c3,0,5.2,1.9,5.2,6.1V28z" />
+                    </svg>
+                </a>
+                <a href="" class="footer-redes-lik">
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <!-- Generator: Adobe Illustrator 25.4.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 37 37"
+                        style="enable-background:new 0 0 37 37;" xml:space="preserve">
+                        <style type="text/css">
+                            .st0 {
+                                fill: #FFFFFF;
+                            }
+                        </style>
+                        <g>
+                            <path class="st0" d="M18.6,0C8.4,0,0.2,8.2,0.2,18.3s8.2,18.3,18.4,18.3c10.2,0,18.4-8.2,18.4-18.3S28.8,0,18.6,0z M19,28.9
+		C19,28.9,19,28.9,19,28.9L19,28.9c-1.8,0-3.7-0.5-5.3-1.3l-5.8,1.5l1.6-5.7c-1-1.7-1.5-3.5-1.5-5.5C8,12,12.9,7,19,7
+		c2.9,0,5.7,1.1,7.8,3.2c2.1,2.1,3.2,4.8,3.2,7.7C30,24,25,28.9,19,28.9z" />
+                            <path class="st0" d="M19,8.9c-5.1,0-9.2,4.1-9.2,9.1c0,1.7,0.5,3.4,1.4,4.8l0.2,0.3l-0.9,3.4l3.5-0.9l0.3,0.2
+		c1.4,0.8,3,1.3,4.7,1.3h0c5.1,0,9.2-4.1,9.2-9.1c0-2.4-1-4.7-2.7-6.4C23.7,9.8,21.4,8.9,19,8.9z M24.4,21.9
+		c-0.2,0.6-1.3,1.2-1.9,1.3c-0.5,0.1-1.1,0.1-1.7-0.1c-0.4-0.1-0.9-0.3-1.6-0.6c-2.8-1.2-4.6-3.9-4.7-4.1s-1.1-1.5-1.1-2.8
+		c0-1.3,0.7-2,1-2.3c0.3-0.3,0.6-0.3,0.7-0.3s0.4,0,0.5,0c0.2,0,0.4-0.1,0.6,0.5c0.2,0.5,0.8,1.9,0.8,2c0.1,0.1,0.1,0.3,0,0.5
+		c-0.1,0.2-0.4,0.6-0.7,0.9c-0.1,0.2-0.3,0.3-0.1,0.6c0.2,0.3,0.7,1.2,1.5,1.9c1.1,0.9,1.9,1.2,2.2,1.4c0.3,0.1,0.4,0.1,0.6-0.1
+		c0.2-0.2,0.7-0.8,0.9-1.1c0.2-0.3,0.4-0.2,0.6-0.1c0.3,0.1,1.6,0.8,1.9,0.9c0.3,0.1,0.5,0.2,0.5,0.3C24.6,20.7,24.6,21.3,24.4,21.9
+		z" />
+                        </g>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="footer-cont-third">
+            <p>© 2021 • Editorial Océano S.L • Todos los derechos reservados.</p>
+            <div class="footer-certificados">
+                <img src="media/img_sitio-seguro.png" alt="">
+                <img src="media/img_sello-cace.png" alt="">
+                <img src="media/img_iso-bg.png" alt="">
+                <a href="">
+                    <img src="media/img_data-fiscal.jpg" alt="">
+                </a>
+            </div>
+        </div>
+    </article>
+</footer>
+
+
+</html>
