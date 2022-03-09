@@ -483,12 +483,12 @@ body .zsiq-mobhgt[embedtheme].zsiq-newtheme {
   max-width: 40rem;
 }
 #modal-logreg .modal-card-head {
-  padding: 1rem;
+  padding: 1rem 1rem 0;
   justify-content: flex-end;
-  background-color: #fff;
+  background-color: transparent;
 }
 #modal-logreg .modal-card-body {
-  padding: 0.75rem 2.375rem;
+  padding: 0.75rem 2.375rem 2rem;
   min-height: 28.75rem;
   display: flex;
   flex-direction: column;
@@ -561,7 +561,7 @@ body .zsiq-mobhgt[embedtheme].zsiq-newtheme {
   text-align: right;
 }
 #modal-logreg .modal-card .formulario .logreg-tabs {
-  margin: 0.7rem 0;
+  margin: 0 0 0.7rem;
 }
 #modal-logreg .modal-card .formulario .logreg-tabs ul {
   display: grid;
@@ -592,7 +592,183 @@ body .zsiq-mobhgt[embedtheme].zsiq-newtheme {
 #modal-logreg .modal-card .formulario .logreg-tabs ul li.is-active::after {
   background-color: #00b6de;
 }
+#modal-logreg .modal-card .logreg-cont-redes {
+  padding-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+}
+#modal-logreg .modal-card .logreg-cont-redes p {
+  font-size: 0.75rem;
+  color: #a4a4a4;
+  line-height: 1.1;
+  text-align: center;
+}
+#modal-logreg .modal-card .logreg-cont-redes .iconos {
+  display: flex;
+  gap: 0.5rem;
+}
 
+#modal-logreg .modal-card {
+  width: calc(100% - 32px);
+  max-width: 40rem;
+}
+#modal-logreg .modal-card-head {
+  padding: 1rem 1rem 0;
+  justify-content: flex-end;
+  background-color: transparent;
+}
+#modal-logreg .modal-card-head .delete {
+  z-index: 10;
+}
+#modal-logreg .modal-card-body {
+  padding: 0.75rem 2.375rem 2rem;
+  min-height: 28.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+#modal-logreg .modal-card-body > div {
+  width: 100%;
+}
+#modal-logreg .modal-card-body .info {
+  text-align: center;
+}
+#modal-logreg .modal-card-body .info-title {
+  font-size: 1.75rem;
+  line-height: 1.1;
+  font-weight: 500;
+  color: #02204d;
+}
+#modal-logreg .modal-card-body .info-msj {
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
+  color: #979797;
+}
+#modal-logreg .modal-card .formulario-campos {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+#modal-logreg .modal-card .formulario-campos > div {
+  width: 100%;
+  flex-grow: 1;
+}
+#modal-logreg .modal-card .formulario-campos input,
+#modal-logreg .modal-card .formulario-campos select {
+  font-size: 0.875rem;
+  width: 100%;
+  border: 1px solid #f2f2f7;
+  border-radius: 4px;
+  background-color: #f6f8fc !important;
+  min-height: 2rem !important;
+}
+#modal-logreg .modal-card .formulario-campos input::-moz-placeholder, #modal-logreg .modal-card .formulario-campos select::-moz-placeholder {
+  color: #979797;
+}
+#modal-logreg .modal-card .formulario-campos input:-ms-input-placeholder, #modal-logreg .modal-card .formulario-campos select:-ms-input-placeholder {
+  color: #979797;
+}
+#modal-logreg .modal-card .formulario-campos input::placeholder,
+#modal-logreg .modal-card .formulario-campos select::placeholder {
+  color: #979797;
+}
+#modal-logreg .modal-card .formulario-campos select option[value=""] {
+  color: #979797;
+}
+#modal-logreg .modal-card .formulario-campos .campo-doble {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+#modal-logreg .modal-card .formulario-campos .icon {
+  color: #979797;
+}
+#modal-logreg .modal-card .formulario-campos .field {
+  margin: 0;
+}
+#modal-logreg .modal-card .formulario-campos .forgot-pass {
+  font-size: 0.625rem;
+  color: #ff266e;
+  line-height: 1;
+  text-align: right;
+}
+#modal-logreg .modal-card .formulario .logreg-tabs {
+  margin: 0 0 0.7rem;
+}
+#modal-logreg .modal-card .formulario .logreg-tabs ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+#modal-logreg .modal-card .formulario .logreg-tabs ul li {
+  padding: 0.25rem;
+  position: relative;
+  text-align: center;
+  font-size: 0.625rem;
+}
+#modal-logreg .modal-card .formulario .logreg-tabs ul li a {
+  color: #a4a4a4;
+}
+#modal-logreg .modal-card .formulario .logreg-tabs ul li::after {
+  position: absolute;
+  content: " ";
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #f2f2f7;
+}
+#modal-logreg .modal-card .formulario .logreg-tabs ul li.is-active a {
+  color: #00b6de;
+}
+#modal-logreg .modal-card .formulario .logreg-tabs ul li.is-active::after {
+  background-color: #00b6de;
+}
+#modal-logreg .modal-card .logreg-cont-redes {
+  padding-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+}
+#modal-logreg .modal-card .logreg-cont-redes p {
+  font-size: 0.75rem;
+  color: #a4a4a4;
+  line-height: 1.1;
+  text-align: center;
+}
+#modal-logreg .modal-card .logreg-cont-redes .iconos {
+  display: flex;
+  gap: 0.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  #modal-logreg .modal-card-head {
+    background-color: transparent;
+  }
+  #modal-logreg .modal-card-body {
+    max-width: 340px;
+  }
+  #modal-logreg .modal-card-body .btn.button {
+    max-width: unset;
+  }
+  #modal-logreg .modal-card-img {
+    position: absolute;
+    width: 300px;
+    height: 100%;
+    right: 0;
+    top: 0;
+  }
+  #modal-logreg .modal-card-img img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
 .btn {
   display: flex;
   align-items: center;
