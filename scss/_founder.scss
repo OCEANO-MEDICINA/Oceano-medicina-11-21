@@ -294,6 +294,9 @@ button {
                     color: #979797;
                 }
             }
+            input.btn.button {
+                background-color: $primary !important;
+            }
 
             .intl-tel-input.allow-dropdown {
                 width: 100%;
