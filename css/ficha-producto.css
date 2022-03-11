@@ -479,141 +479,61 @@ body .zsiq-mobhgt[embedtheme].zsiq-newtheme {
     gap: 1.5rem;
   }
 }
-#modal-logreg .modal-card {
-  width: calc(100% - 32px);
-  max-width: 40rem;
+.notification {
+  padding: 0;
+  position: fixed;
+  z-index: 101;
+  background: transparent;
+  width: min(100% - 32px, 646px);
+  top: 14vh;
+  left: 50%;
+  transform: translateX(-50%);
 }
-#modal-logreg .modal-card-head {
-  padding: 1rem 1rem 0;
-  justify-content: flex-end;
-  background-color: transparent;
+.notification.success .notification-cont {
+  border: 1px solid #32bea6;
 }
-#modal-logreg .modal-card-body {
-  padding: 0.75rem 2.375rem 2rem;
-  min-height: 28.75rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 1rem;
+.notification.error .notification-cont {
+  border: 1px solid #e04f5f;
 }
-#modal-logreg .modal-card-body > div {
+.notification-cont {
   width: 100%;
+  padding: 1rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
 }
-#modal-logreg .modal-card-body .info {
-  text-align: center;
+.notification-cont .info {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
 }
-#modal-logreg .modal-card-body .info-title {
-  font-size: 1.75rem;
-  line-height: 1.1;
-  font-weight: 500;
+.notification-cont .info i {
+  line-height: 1;
+}
+.notification-cont .info h5 {
+  font-size: 1.25rem;
+  font-weight: 700;
   color: #02204d;
 }
-#modal-logreg .modal-card-body .info-msj {
-  margin-top: 0.25rem;
-  font-size: 0.75rem;
-  color: #979797;
-}
-#modal-logreg .modal-card .formulario-campos {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-#modal-logreg .modal-card .formulario-campos > div {
-  width: 100%;
-  flex-grow: 1;
-}
-#modal-logreg .modal-card .formulario-campos input,
-#modal-logreg .modal-card .formulario-campos select {
-  font-size: 0.875rem;
-  width: 100%;
-  border: 1px solid #f2f2f7;
-  border-radius: 4px;
-  background-color: #f6f8fc !important;
-  min-height: 2rem !important;
-}
-#modal-logreg .modal-card .formulario-campos input::-moz-placeholder, #modal-logreg .modal-card .formulario-campos select::-moz-placeholder {
-  color: #979797;
-}
-#modal-logreg .modal-card .formulario-campos input:-ms-input-placeholder, #modal-logreg .modal-card .formulario-campos select:-ms-input-placeholder {
-  color: #979797;
-}
-#modal-logreg .modal-card .formulario-campos input::placeholder,
-#modal-logreg .modal-card .formulario-campos select::placeholder {
-  color: #979797;
-}
-#modal-logreg .modal-card .formulario-campos select option[value=""] {
-  color: #979797;
-}
-#modal-logreg .modal-card .formulario-campos .campo-doble {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-#modal-logreg .modal-card .formulario-campos .icon {
-  color: #979797;
-}
-#modal-logreg .modal-card .formulario-campos .field {
-  margin: 0;
-}
-#modal-logreg .modal-card .formulario-campos .forgot-pass {
-  font-size: 0.625rem;
-  color: #ff266e;
-  line-height: 1;
-  text-align: right;
-}
-#modal-logreg .modal-card .formulario .logreg-tabs {
-  margin: 0 0 0.7rem;
-}
-#modal-logreg .modal-card .formulario .logreg-tabs ul {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-}
-#modal-logreg .modal-card .formulario .logreg-tabs ul li {
-  padding: 0.25rem;
-  position: relative;
-  text-align: center;
-  font-size: 0.625rem;
-}
-#modal-logreg .modal-card .formulario .logreg-tabs ul li a {
-  color: #a4a4a4;
-}
-#modal-logreg .modal-card .formulario .logreg-tabs ul li::after {
-  position: absolute;
-  content: " ";
-  bottom: 0;
-  left: 0;
-  height: 2px;
-  width: 100%;
-  background-color: #f2f2f7;
-}
-#modal-logreg .modal-card .formulario .logreg-tabs ul li.is-active a {
-  color: #00b6de;
-}
-#modal-logreg .modal-card .formulario .logreg-tabs ul li.is-active::after {
-  background-color: #00b6de;
-}
-#modal-logreg .modal-card .logreg-cont-redes {
-  padding-top: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.75rem;
-}
-#modal-logreg .modal-card .logreg-cont-redes p {
-  font-size: 0.75rem;
-  color: #a4a4a4;
-  line-height: 1.1;
-  text-align: center;
-}
-#modal-logreg .modal-card .logreg-cont-redes .iconos {
-  display: flex;
-  gap: 0.5rem;
+.notification-cont button {
+  cursor: pointer;
 }
 
-#modal-logreg .modal-card {
+#modal-logreg {
+  top: 0;
+}
+#modal-logreg .modal-cont {
   width: calc(100% - 32px);
   max-width: 40rem;
+}
+#modal-logreg .modal-card {
+  width: 100%;
+  margin: 0;
+  max-width: unset;
 }
 #modal-logreg .modal-card-head {
   padding: 1rem 1rem 0;
@@ -649,6 +569,12 @@ body .zsiq-mobhgt[embedtheme].zsiq-newtheme {
   font-size: 0.75rem;
   color: #979797;
 }
+#modal-logreg .modal-card-body .btn.button {
+  height: 2rem;
+}
+#modal-logreg .modal-card-img {
+  display: none;
+}
 #modal-logreg .modal-card .formulario-campos {
   display: flex;
   flex-direction: column;
@@ -689,6 +615,9 @@ body .zsiq-mobhgt[embedtheme].zsiq-newtheme {
 }
 #modal-logreg .modal-card .formulario-campos .field {
   margin: 0;
+}
+#modal-logreg .modal-card .formulario-campos .field:focus-within .icon {
+  color: #000;
 }
 #modal-logreg .modal-card .formulario-campos .forgot-pass {
   font-size: 0.625rem;
@@ -745,8 +674,65 @@ body .zsiq-mobhgt[embedtheme].zsiq-newtheme {
   display: flex;
   gap: 0.5rem;
 }
+#modal-logreg .notification {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  position: relative;
+  opacity: 0;
+  width: 100%;
+  top: unset;
+  left: unset;
+  transform: none;
+}
+#modal-logreg .notification .info-text h5 {
+  line-height: 1;
+}
+#modal-logreg .notification.news-login .info-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+#modal-logreg .notification.news-login .info-text-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+#modal-logreg .notification.news-login .info-text .button {
+  font-size: 0.75rem;
+  line-height: 1.5;
+  height: unset;
+  padding: 0.25rem 1rem;
+}
+#modal-logreg .notification.news-login .info h5 {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-weight: 500;
+  line-height: 1;
+}
+#modal-logreg .notification.news-login .info h6 {
+  font-size: clamp(0.75rem, 2vw, 0.875rem);
+  line-height: 1.1;
+}
+#modal-logreg .notification.news-login .info i {
+  color: #02204d;
+}
+#modal-logreg .notification:not(:last-child) {
+  margin-bottom: 1rem;
+}
+#modal-logreg .notification:last-child {
+  margin-top: 1rem;
+}
+#modal-logreg .notification-cont button {
+  width: 1rem;
+  padding: 0;
+}
+#modal-logreg.is-active .notification {
+  opacity: 1;
+  transition-delay: 0.5s;
+}
 
 @media screen and (min-width: 768px) {
+  #modal-logreg .modal-card {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  }
   #modal-logreg .modal-card-head {
     background-color: transparent;
   }
@@ -757,6 +743,7 @@ body .zsiq-mobhgt[embedtheme].zsiq-newtheme {
     max-width: unset;
   }
   #modal-logreg .modal-card-img {
+    display: block;
     position: absolute;
     width: 300px;
     height: 100%;
@@ -768,6 +755,24 @@ body .zsiq-mobhgt[embedtheme].zsiq-newtheme {
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
+  }
+  #modal-logreg .notification {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  }
+  #modal-logreg .notification.news-login .info {
+    width: 100%;
+  }
+  #modal-logreg .notification.news-login .info-text {
+    flex-grow: 1;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #modal-logreg .notification.news-login .info-text .button {
+    height: 2rem;
+    font-size: 1rem;
+    max-width: 204px;
+    width: 100%;
   }
 }
 .btn {

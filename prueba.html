@@ -798,229 +798,262 @@
     </section>
 
     <!--
-        MODAL TEMARIO
+        MODAL LOGIN REGISTER
     -->
 
     <div id="modal-logreg" class="modal">
         <div class="modal-background"></div>
-        <div class="modal-card">
-            <header class="modal-card-head">
-                <button class="delete is-right" aria-label="close"></button>
-            </header>
-            <section class="modal-card-body">
-                <div class="info info-log">
-                    <h3 class="info-title"> Te damos la <br> bienvenida </h3>
-                    <h4 class="info-msj"> Accede a tu cuenta para ver tu actividad
-                        y <br> descubrir oportunidades de aprendizaje </h4>
-                </div>
-
-                <!--
-                TEXTOS REGISTRARME
-
-                <div class="info info-reg">
-                    <h3 class="info-title"> ¡Prepárate! </h3>
-                    <h4 class="info-msj">Estás a pocos pasos de sumarte a una <br> comunidad científica en crecimiento
-                    </h4>
-                </div>
-
-                -->
-
-                <!--
-                TEXTOS PASS RESET
-
-                <div class="info info-pass-reset">
-                    <h3 class="info-title"> Te damos la <br> bienvenida </h3>
-                    <h4 class="info-msj"> Accede a tu cuenta para ver tu actividad
-                        y <br> descubrir oportunidades de aprendizaje </h4>
-                </div>
-                
-                -->
-
-                <div class="logreg-cont formulario">
-                    <nav class="logreg-tabs">
-                        <ul>
-                            <li class="tab is-active" onclick="openTabUser(event,'log-tab')"><a>INICIAR SESIÓN</a></li>
-                            <li class="tab" onclick="openTabUser(event,'reg-tab')"><a>REGISTRARME</a>
-                            </li>
-                        </ul>
-                    </nav>
-
-                    <form id="log-tab" class="content-tab formulario-campos" style="display: flex;">
-                        <div class="field">
-                            <p class="control has-icons-left has-icons-right">
-                                <input id="formulario-log-email" class="input" type="email" name="formulario-log-email"
-                                    placeholder="Ingresar e-mail">
-                                <span class="icon is-small is-left">
-                                    <i class="mdi mdi-email-outline"></i>
-                                </span>
-                            </p>
+        <div class="modal-cont">
+            <section id="notification-login" class="notification error">
+                <article class="notification-cont">
+                    <div class="info">
+                        <i class="mdi mdi-close-circle is-size-2 has-text-danger"></i>
+                        <div class="info-text">
+                            <h5>Tipo de error</h5>
+                            <h6>Descripción del problema</h6>
                         </div>
-                        <div class="field">
-                            <p class="control has-icons-left">
-                                <input id="formulario-log-pass" class="input" type="password" name="formulario-log-pass"
-                                    placeholder="Ingresar contraseña">
-                                <span class="icon is-small is-left">
-                                    <i class="mdi mdi-form-textbox-password"></i>
-                                </span>
-                            </p>
-                        </div>
-
-                        <a id="forgot-pass" class="tab forgot-pass" onclick="openTabUser(event,'forgot-pass-tab')">¿Haz
-                            olvidado
-                            tu contraseña?</a>
-
-                        <button class="btn btn-big button">ENTRAR</button>
-                    </form>
-                    <form id="reg-tab" class="content-tab formulario-campos" style="display: none;">
-                        <div class="field">
-                            <p class="control has-icons-left has-icons-right">
-                                <input id="formulario-log-name" class="input" type="text" name="formulario-log-name"
-                                    placeholder="Ingresar nombre y apellido">
-                                <span class="icon is-small is-left">
-                                    <i class="mdi mdi-account-tie"></i>
-                                </span>
-                            </p>
-                        </div>
-                        <div class="field">
-                            <p class="control has-icons-left has-icons-right">
-                                <input id="formulario-log-email" class="input" type="email" name="formulario-log-email"
-                                    placeholder="Ingresar e-mail">
-                                <span class="icon is-small is-left">
-                                    <i class="mdi mdi-email-outline"></i>
-                                </span>
-                            </p>
-                        </div>
-                        <div class="field">
-                            <p class="control has-icons-left">
-                                <input id="formulario-log-pass" class="input" type="password" name="formulario-log-pass"
-                                    placeholder="Ingresar contraseña">
-                                <span class="icon is-small is-left">
-                                    <i class="mdi mdi-form-textbox-password"></i>
-                                </span>
-                            </p>
-                        </div>
-                        <div class="field">
-                            <p class="control has-icons-left">
-                                <input id="formulario-log-pass-confirm" class="input" type="password"
-                                    name="formulario-log-pass-confirm" placeholder="Confirmar contraseña">
-                                <span class="icon is-small is-left">
-                                    <i class="mdi mdi-form-textbox-lock"></i>
-                                </span>
-                            </p>
-                        </div>
-
-                        <div class="field campo-doble">
-                            <div class="">
-                                <span class="wpcf7-form-control-wrap Profesion">
-                                    <select name="Profesion"
-                                        class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required form-control"
-                                        id="formulario-profesion" aria-required="true" aria-invalid="false">
-                                        <option value=""> <i class="mdi mdi-medical-bag"></i>Profesión</option>
-                                        <option value="Médico">Médico</option>
-                                        <option value="Lic. de la Salud">Lic. de la Salud</option>
-                                        <option value="Técnico Universitario">Técnico Universitario</option>
-                                        <option value="Enfermeros / Auxiliares">Enfermeros / Auxiliares</option>
-                                        <option value="Residentes / Estudiantes">Residentes / Estudiantes</option>
-                                        <option value="Fuerza Pública">Fuerza Pública</option>
-                                        <option value="Otra Profesión">Otra Profesión</option>
-                                    </select>
-                                </span>
+        
+                    </div>
+                    <button><i class="mdi mdi-close is-size-5"></i></button>
+                </article>
+            </section>
+            <div class="modal-card">
+                <header class="modal-card-head">
+                    <button class="delete is-right" aria-label="close"></button>
+                </header>
+                <section class="modal-card-body">
+                    <div class="info info-log">
+                        <h3 class="info-title"> Te damos la <br> bienvenida </h3>
+                        <h4 class="info-msj"> Accede a tu cuenta para ver tu actividad
+                            y <br> descubrir oportunidades de aprendizaje </h4>
+                    </div>
+    
+                    <!--
+                    TEXTOS REGISTRARME
+    
+                    <div class="info info-reg">
+                        <h3 class="info-title"> ¡Prepárate! </h3>
+                        <h4 class="info-msj">Estás a pocos pasos de sumarte a una <br> comunidad científica en crecimiento
+                        </h4>
+                    </div>
+    
+                    -->
+    
+                    <!--
+                    TEXTOS PASS RESET
+    
+                    <div class="info info-pass-reset">
+                        <h3 class="info-title"> Te damos la <br> bienvenida </h3>
+                        <h4 class="info-msj"> Accede a tu cuenta para ver tu actividad
+                            y <br> descubrir oportunidades de aprendizaje </h4>
+                    </div>
+                    
+                    -->
+    
+                    <div class="logreg-cont formulario">
+                        <nav class="logreg-tabs">
+                            <ul>
+                                <li class="tab is-active" onclick="openTabUser(event,'log-tab')"><a>INICIAR SESIÓN</a></li>
+                                <li class="tab" onclick="openTabUser(event,'reg-tab')"><a>REGISTRARME</a>
+                                </li>
+                            </ul>
+                        </nav>
+    
+                        <form id="log-tab" class="content-tab formulario-campos" style="display: flex;">
+                            <div class="field">
+                                <p class="control has-icons-left has-icons-right">
+                                    <input id="formulario-log-email" class="input" type="email" name="formulario-log-email"
+                                        placeholder="Ingresar e-mail">
+                                    <span class="icon is-small is-left">
+                                        <i class="mdi mdi-email-outline"></i>
+                                    </span>
+                                </p>
                             </div>
-                            <div class="">
-                                <span class="wpcf7-form-control-wrap Especialidad"><select name="Especialidad"
-                                        class="wpcf7-form-control wpcf7-select form-control"
-                                        id="formulario-especialidad" aria-invalid="false">
-                                        <option value=""><i class="mdi mdi-medical-bag"></i>Especialidad</option>
-                                        <option value="Anestesiología">Anestesiología</option>
-                                        <option value="Diagnóstico por Imágenes">Diagnóstico por Imágenes</option>
-                                        <option value="Cardiología">Cardiología</option>
-                                        <option value="Cirugía">Cirugía</option>
-                                        <option value="Cuidados críticos e intensivos">Cuidados críticos e
-                                            intensivos
-                                        </option>
-                                        <option value="Dermatología">Dermatología</option>
-                                        <option value="Emergentología">Emergentología</option>
-                                        <option value="Endocrinología">Endocrinología</option>
-                                        <option value="Gastroenterología">Gastroenterología</option>
-                                        <option value="Generalista - Clínica - Medicina interna">Generalista -
-                                            Clínica -
-                                            Medicina interna</option>
-                                        <option value="Geriatría y Gerontología">Geriatría y Gerontología</option>
-                                        <option value="Ginecología">Ginecología</option>
-                                        <option value="Hematología">Hematología</option>
-                                        <option value="Infectología">Infectología</option>
-                                        <option value="Internación domiciliaria y cuidados paliativos">Internación
-                                            domiciliaria y cuidados paliativos</option>
-                                        <option value="Nefrología">Nefrología</option>
-                                        <option value="Neonatología">Neonatología</option>
-                                        <option value="Neurología">Neurología</option>
-                                        <option value="Nutrición y alimentación">Nutrición y alimentación</option>
-                                        <option value="Obstetricia">Obstetricia</option>
-                                        <option value="Obstetricia y Ginecología">Obstetricia y Ginecología</option>
-                                        <option value="Odontología">Odontología</option>
-                                        <option value="Oftalmología">Oftalmología</option>
-                                        <option value="Oncología">Oncología</option>
-                                        <option value="Ortopedia y Traumatología">Ortopedia y Traumatología</option>
-                                        <option value="Otorrinolaringología">Otorrinolaringología</option>
-                                        <option value="Pediatría">Pediatría</option>
-                                        <option value="Psiquiatría">Psiquiatría</option>
-                                        <option value="Radiología">Radiología</option>
-                                        <option value="Otra Especialidad">Otra Especialidad</option>
-                                    </select></span>
+                            <div class="field">
+                                <p class="control has-icons-left">
+                                    <input id="formulario-log-pass" class="input" type="password" name="formulario-log-pass"
+                                        placeholder="Ingresar contraseña">
+                                    <span class="icon is-small is-left">
+                                        <i class="mdi mdi-form-textbox-password"></i>
+                                    </span>
+                                </p>
                             </div>
-                        </div>
-
-                        <button class="btn btn-big button">REGISTRARME</button>
-                    </form>
-                    <form id="forgot-pass-tab" class="content-tab formulario-campos" style="display: none;">
-                        <div class="field">
-                            <p class="control has-icons-left">
-                                <input id="formulario-log-pass" class="input" type="password" name="formulario-log-pass"
-                                    placeholder="Ingresar código de verificación">
-                                <span class="icon is-small is-left">
-                                    <i class="mdi mdi-shield-lock-outline"></i>
-                                </span>
-                            </p>
-                        </div>
-                        <div class="field">
-                            <p class="control has-icons-left">
-                                <input id="formulario-log-pass" class="input" type="password" name="formulario-log-pass"
-                                    placeholder="Ingresar nueva contraseña">
-                                <span class="icon is-small is-left">
-                                    <i class="mdi mdi-form-textbox-password"></i>
-                                </span>
-                            </p>
-                        </div>
-                        <div class="field">
-                            <p class="control has-icons-left">
-                                <input id="formulario-log-pass-confirm" class="input" type="password"
-                                    name="formulario-log-pass-confirm" placeholder="Confirmar nueva contraseña">
-                                <span class="icon is-small is-left">
-                                    <i class="mdi mdi-form-textbox-lock"></i>
-                                </span>
-                            </p>
-                        </div>
-
-
-
-                        <button class="btn btn-big button">CAMBIAR CONTRASEÑA</button>
-                    </form>
-                    <div class="logreg-cont-redes">
-                        <p>Iniciar sesión con <br>
-                            tus redes sociales</p>
-                        <div class="iconos">
-                            <a href=""><img src="media/icon/login-facbook.svg" alt=""></a>
-                            <a href=""><img src="media/icon/login-google.svg" alt=""></a>
+    
+                            <a id="forgot-pass" class="tab forgot-pass" onclick="openTabUser(event,'forgot-pass-tab')">¿Haz
+                                olvidado
+                                tu contraseña?</a>
+    
+                            <button class="btn btn-big button">ENTRAR</button>
+                        </form>
+                        <form id="reg-tab" class="content-tab formulario-campos" style="display: none;">
+                            <div class="field">
+                                <p class="control has-icons-left has-icons-right">
+                                    <input id="formulario-log-name" class="input" type="text" name="formulario-log-name"
+                                        placeholder="Ingresar nombre y apellido">
+                                    <span class="icon is-small is-left">
+                                        <i class="mdi mdi-account-tie"></i>
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="field">
+                                <p class="control has-icons-left has-icons-right">
+                                    <input id="formulario-log-email" class="input" type="email" name="formulario-log-email"
+                                        placeholder="Ingresar e-mail">
+                                    <span class="icon is-small is-left">
+                                        <i class="mdi mdi-email-outline"></i>
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="field">
+                                <p class="control has-icons-left">
+                                    <input id="formulario-log-pass" class="input" type="password" name="formulario-log-pass"
+                                        placeholder="Ingresar contraseña">
+                                    <span class="icon is-small is-left">
+                                        <i class="mdi mdi-form-textbox-password"></i>
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="field">
+                                <p class="control has-icons-left">
+                                    <input id="formulario-log-pass-confirm" class="input" type="password"
+                                        name="formulario-log-pass-confirm" placeholder="Confirmar contraseña">
+                                    <span class="icon is-small is-left">
+                                        <i class="mdi mdi-form-textbox-lock"></i>
+                                    </span>
+                                </p>
+                            </div>
+    
+                            <div class="field campo-doble">
+                                <div class="">
+                                    <span class="wpcf7-form-control-wrap Profesion">
+                                        <select name="Profesion"
+                                            class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required form-control"
+                                            id="formulario-profesion" aria-required="true" aria-invalid="false">
+                                            <option value=""> <i class="mdi mdi-medical-bag"></i>Profesión</option>
+                                            <option value="Médico">Médico</option>
+                                            <option value="Lic. de la Salud">Lic. de la Salud</option>
+                                            <option value="Técnico Universitario">Técnico Universitario</option>
+                                            <option value="Enfermeros / Auxiliares">Enfermeros / Auxiliares</option>
+                                            <option value="Residentes / Estudiantes">Residentes / Estudiantes</option>
+                                            <option value="Fuerza Pública">Fuerza Pública</option>
+                                            <option value="Otra Profesión">Otra Profesión</option>
+                                        </select>
+                                    </span>
+                                </div>
+                                <div class="">
+                                    <span class="wpcf7-form-control-wrap Especialidad"><select name="Especialidad"
+                                            class="wpcf7-form-control wpcf7-select form-control"
+                                            id="formulario-especialidad" aria-invalid="false">
+                                            <option value=""><i class="mdi mdi-medical-bag"></i>Especialidad</option>
+                                            <option value="Anestesiología">Anestesiología</option>
+                                            <option value="Diagnóstico por Imágenes">Diagnóstico por Imágenes</option>
+                                            <option value="Cardiología">Cardiología</option>
+                                            <option value="Cirugía">Cirugía</option>
+                                            <option value="Cuidados críticos e intensivos">Cuidados críticos e
+                                                intensivos
+                                            </option>
+                                            <option value="Dermatología">Dermatología</option>
+                                            <option value="Emergentología">Emergentología</option>
+                                            <option value="Endocrinología">Endocrinología</option>
+                                            <option value="Gastroenterología">Gastroenterología</option>
+                                            <option value="Generalista - Clínica - Medicina interna">Generalista -
+                                                Clínica -
+                                                Medicina interna</option>
+                                            <option value="Geriatría y Gerontología">Geriatría y Gerontología</option>
+                                            <option value="Ginecología">Ginecología</option>
+                                            <option value="Hematología">Hematología</option>
+                                            <option value="Infectología">Infectología</option>
+                                            <option value="Internación domiciliaria y cuidados paliativos">Internación
+                                                domiciliaria y cuidados paliativos</option>
+                                            <option value="Nefrología">Nefrología</option>
+                                            <option value="Neonatología">Neonatología</option>
+                                            <option value="Neurología">Neurología</option>
+                                            <option value="Nutrición y alimentación">Nutrición y alimentación</option>
+                                            <option value="Obstetricia">Obstetricia</option>
+                                            <option value="Obstetricia y Ginecología">Obstetricia y Ginecología</option>
+                                            <option value="Odontología">Odontología</option>
+                                            <option value="Oftalmología">Oftalmología</option>
+                                            <option value="Oncología">Oncología</option>
+                                            <option value="Ortopedia y Traumatología">Ortopedia y Traumatología</option>
+                                            <option value="Otorrinolaringología">Otorrinolaringología</option>
+                                            <option value="Pediatría">Pediatría</option>
+                                            <option value="Psiquiatría">Psiquiatría</option>
+                                            <option value="Radiología">Radiología</option>
+                                            <option value="Otra Especialidad">Otra Especialidad</option>
+                                        </select></span>
+                                </div>
+                            </div>
+    
+                            <button class="btn btn-big button">REGISTRARME</button>
+                        </form>
+                        <form id="forgot-pass-tab" class="content-tab formulario-campos" style="display: none;">
+                            <div class="field">
+                                <p class="control has-icons-left">
+                                    <input id="formulario-log-pass" class="input" type="password" name="formulario-log-pass"
+                                        placeholder="Ingresar código de verificación">
+                                    <span class="icon is-small is-left">
+                                        <i class="mdi mdi-shield-lock-outline"></i>
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="field">
+                                <p class="control has-icons-left">
+                                    <input id="formulario-log-pass" class="input" type="password" name="formulario-log-pass"
+                                        placeholder="Ingresar nueva contraseña">
+                                    <span class="icon is-small is-left">
+                                        <i class="mdi mdi-form-textbox-password"></i>
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="field">
+                                <p class="control has-icons-left">
+                                    <input id="formulario-log-pass-confirm" class="input" type="password"
+                                        name="formulario-log-pass-confirm" placeholder="Confirmar nueva contraseña">
+                                    <span class="icon is-small is-left">
+                                        <i class="mdi mdi-form-textbox-lock"></i>
+                                    </span>
+                                </p>
+                            </div>
+    
+    
+    
+                            <button class="btn btn-big button">CAMBIAR CONTRASEÑA</button>
+                        </form>
+                        <div class="logreg-cont-redes">
+                            <p>Iniciar sesión con <br>
+                                tus redes sociales</p>
+                            <div class="iconos">
+                                <a href=""><img src="media/icon/login-facbook.svg" alt=""></a>
+                                <a href=""><img src="media/icon/login-google.svg" alt=""></a>
+                            </div>
                         </div>
                     </div>
+    
+                </section>
+                <div class="modal-card-img">
+                    <img src="media/logreg/background-login.jpg" alt="">
                 </div>
-
-            </section>
-            <div class="modal-card-img">
-                <img src="media/logreg/background-login.jpg" alt="">
+                
             </div>
+            <section id="notification-news-logreb" class="notification news-login">
+                <article class="notification-cont">
+                    <div class="info">
+                     
+                        <i class="mdi mdi-bell-circle is-size-2"></i>
+                        <div class="info-text">
+                            <div class="info-text-body">
+                            <h5>Hemos actualizado el campus</h5>
+                            <h6>Si tienes dudas al navegar dentro del mismo, <br>
+                                obtén la guía de ayuda para usuarios</h6>
+                            </div>
+                            <a href="" class="btn btn-big button">DESCARGAR GUÍA</a>
+                        </div>
 
+                    </div>
+                </article>
+            </section>
         </div>
+       
     </div>
 
     <!--
