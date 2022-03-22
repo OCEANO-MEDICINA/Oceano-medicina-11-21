@@ -2168,7 +2168,6 @@ header .navbar .nav-contenidos.is-hoverable:focus .navbar-dropdown {
   font-size: clamp(1.125rem, 3vw, 1.25rem);
 }
 .news .card-news-small .card-news-bajada {
-
   font-size: clamp(0.75rem, 2vw, 0.875rem);
   overflow: hidden;
   text-overflow: ellipsis;
@@ -2177,7 +2176,6 @@ header .navbar .nav-contenidos.is-hoverable:focus .navbar-dropdown {
   /* number of lines to show */
   line-clamp: 8;
   -webkit-box-orient: vertical;
-
 }
 .news .card-news-small .card-news-img {
   height: max(180px,25vw);
@@ -2547,7 +2545,6 @@ header .navbar .nav-contenidos.is-hoverable:focus .navbar-dropdown {
     margin-top: 0;
     height: max(92px, 10vw);
   }
-
   .news-cont-item-small .card-news-small-bajada {
     -webkit-line-clamp: 5;
     /* number of lines to show */
