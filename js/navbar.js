@@ -46,8 +46,8 @@ function btnSearch() {
    cart.classList.toggle("invisible");
     var lupa = document.getElementById("lupa");
    lupa.classList.toggle("invisible");
-   var lupa = document.getElementById("user");
-   lupa.classList.toggle("invisible");
+   var user = document.getElementById("user");
+   user.classList.toggle("invisible");
     var lupa = document.getElementById("search-close");
    lupa.classList.toggle("invisible");
     var searchBar = document.getElementById("dgwt-wcas-search-input-1");
