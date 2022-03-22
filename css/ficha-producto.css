@@ -2126,7 +2126,9 @@ body {
 }
 .ficha-cont-header-info {
   display: grid;
-  grid-template-columns: auto max(86px, 20vw);
+  -ms-grid-columns: auto max(86px, 20vw);
+      grid-template-columns: auto max(86px, 20vw);
+  grid-auto-rows: minmax(20vw, 1fr);
   gap: 1rem;
 }
 .ficha-cont-header-info .tag-cont {
@@ -2997,7 +2999,10 @@ body {
     gap: 1.25rem;
   }
   .ficha-cont-header-info {
+    -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
+    grid-auto-rows: unset;
+
   }
   .ficha-cont-header-info .ficha-cont-header-img {
     display: none;
