@@ -2584,14 +2584,18 @@ header .navbar-overlay.is-active {
 }
 
 .news .card-news-small .card-news-title {
-  font-size: clamp(1.125rem, 3vw, 1.375rem);
+  font-size: clamp(1.125rem, 3vw, 1.25rem);
 }
 
 .news .card-news-small .card-news-bajada {
-  font-size: clamp(0.75rem, 2vw, 1rem);
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  font-size: clamp(0.75rem, 2vw, 0.875rem);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 8;
+  /* number of lines to show */
+  line-clamp: 8;
+  -webkit-box-orient: vertical;
 }
 
 .news .card-news-small .card-news-img {
@@ -3084,9 +3088,14 @@ header .navbar-overlay.is-active {
     border-top: none;
     border-left: 1px solid #c4c4c440;
   }
-  .news-cont-item-small .card-news-small .card-news-img {
+  .news-cont-item-small .card-news-small-img {
     margin-top: 0;
     height: max(92px, 10vw);
+  }
+  .news-cont-item-small .card-news-small-bajada {
+    -webkit-line-clamp: 5;
+    /* number of lines to show */
+    line-clamp: 5;
   }
   .enfermeria-cont {
     width: min(100% - 36px, 960px);
