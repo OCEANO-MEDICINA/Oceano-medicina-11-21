@@ -121,6 +121,7 @@ body {
             &-info {
                 display: grid;
                 grid-template-columns: auto unquote("max(86px, 20vw)");
+                grid-auto-rows: minmax(20vw, 1fr);
                 gap: 1rem;
                 .tag-cont {
                     display: flex;
@@ -1075,6 +1076,7 @@ body {
 
                 &-info {
                     grid-template-columns: 1fr;
+                    grid-auto-rows: unset;
                     .ficha-cont-header-img {
                         display: none;
                     }
