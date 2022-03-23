@@ -1,21 +1,12 @@
 @import "_founder";
-
 // NAVBAR
-
 @import "components/_header-navbar";
-
 // BANNER
-
 @import "components/_banner-contenedor";
-
 // Product Cards
-
 @import "components/_product-card";
-
 // FOOTER
-
 @import "components/_footer";
-
 .navbar {
     .navbar-brand {
         .navbar-item.logo {
@@ -26,7 +17,6 @@
                 padding-left: 0.5rem;
                 display: block;
                 font-weight: 500;
-
                 &::before {
                     content: " ";
                     position: absolute;
@@ -49,7 +39,6 @@
     position: relative;
     padding: 5.75rem 0 2.25rem;
     background: center url(../media/magazine/header-magazine.jpg);
-
     &-cont {
         h1 {
             margin-bottom: 0.5rem;
@@ -61,7 +50,6 @@
         h2 {
             color: #fff;
         }
-
         h2 {
             font-size: clamp(0.875rem, 3vw, 1.25rem);
             line-height: 1.1719em;
@@ -74,7 +62,6 @@
     position: relative;
     padding: 2rem 0;
     overflow: hidden;
-
     &-cont {
         &-body {
             padding-bottom: 2rem;
@@ -90,11 +77,9 @@
         &-side {
             .searchbar {
                 gap: 0.5rem;
-
                 .probox {
                     gap: 0.5rem;
                     height: min-content !important;
-
                     .proinput {
                         min-height: 2rem !important;
                     }
@@ -106,7 +91,6 @@
                         transform: translateY(-50%) !important;
                     }
                 }
-
                 input[type="search"] {
                     z-index: 2;
                     padding-left: 1rem;
@@ -115,21 +99,18 @@
                     border-radius: 50px;
                     background-color: #fff;
                 }
-
                 .promagnifier {
                     position: relative;
                     height: 2rem !important;
                     width: 2rem !important;
                     background-color: $primary !important;
                     border-radius: 50% !important;
-
                     svg {
                         fill: #fff !important;
                     }
                 }
             }
         }
-
         .swiper-reviews {
             position: relative;
             margin: 1rem 0;
@@ -142,7 +123,6 @@
             .swiper-pagination {
                 bottom: -1.5rem;
             }
-
             .card-review {
                 display: flex;
                 flex-direction: column;
@@ -153,7 +133,6 @@
                 padding: 1rem 0.85rem;
                 box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
                 border-radius: 10px;
-
                 &-tag {
                     font-size: 0.75rem;
                     font-weight: 300;
@@ -172,7 +151,6 @@
                     display: flex;
                     align-items: center;
                     gap: 0.5rem;
-
                     &-img {
                         flex-shrink: 0;
                         height: 2.25rem;
@@ -182,7 +160,6 @@
                     &-info {
                         display: flex;
                         flex-direction: column;
-
                         &-name {
                             font-size: 0.875rem;
                             font-weight: 500;
@@ -198,7 +175,6 @@
             }
         }
     }
-
     .card-news {
         &-big {
             .card-news-img {
@@ -217,7 +193,8 @@
                     overflow: hidden;
                     text-overflow: ellipsis;
                     display: -webkit-box;
-                    -webkit-line-clamp: 8; /* number of lines to show */
+                    -webkit-line-clamp: 8;
+                    /* number of lines to show */
                     line-clamp: 8;
                     -webkit-box-orient: vertical;
                 }
@@ -242,14 +219,12 @@
             font-size: 1rem;
             line-height: 1.2em;
         }
-
         &-img {
             margin: 1rem 0;
             position: relative;
             border-radius: 8px;
             overflow: hidden;
             width: 100%;
-
             a,
             img {
                 position: absolute;
@@ -272,15 +247,12 @@
     &-cont {
         width: 100%;
         padding: 2rem 0 1.5rem;
-
         &-top {
             padding: 0 1rem;
         }
-
         &-title {
             color: #fff;
         }
-
         .swiper {
             &-slide {
                 display: flex;
@@ -317,7 +289,6 @@
                 transition-delay: 0.1s;
             }
         }
-
         &-overlay,
         &-overlay-text {
             transition: all 0.3s ease-in-out;
@@ -331,7 +302,6 @@
             mix-blend-mode: normal;
             backdrop-filter: blur(4px);
             box-shadow: inset 0 0 5px 3px #00000015;
-
             &-text {
                 box-sizing: border-box;
                 padding: 1rem;
@@ -341,7 +311,6 @@
                 align-items: center;
                 justify-content: flex-end;
                 color: #fff;
-
                 &-leyenda {
                     position: absolute;
                     padding: 1rem;
@@ -352,7 +321,6 @@
                     justify-content: center;
                     flex-grow: 1;
                 }
-
                 p {
                     margin: 0 auto;
                     font-size: 1.25rem;
@@ -372,7 +340,6 @@
                 justify-content: flex-start;
                 align-items: flex-start;
                 padding: 0.75rem;
-
                 .tags {
                     padding: 0.125rem 0.25rem;
                     display: flex;
@@ -384,6 +351,7 @@
         }
     }
 }
+
 .enfermeria,
 .actual,
 .otros {
@@ -394,11 +362,9 @@
             flex-flow: row wrap;
             justify-content: space-between;
             align-items: flex-end;
-
             &-button {
                 display: flex;
                 align-items: center;
-
                 .btn {
                     font-size: clamp(0.625rem, 2vw, 0.75rem);
                     text-align: center;
@@ -406,7 +372,6 @@
                 }
             }
         }
-
         &-title {
             font-size: 1.25rem;
             font-weight: 300;
@@ -419,6 +384,7 @@
         }
     }
 }
+
 .actual,
 .otros {
     &-cont {
@@ -426,19 +392,16 @@
             padding-bottom: 0.5rem;
             border-bottom: 1px solid #c4c4c480;
         }
-
         &-body {
             &-grid {
                 padding: 1rem 0 2rem;
                 display: grid;
                 grid-template-columns: 1fr;
                 gap: 1rem;
-
                 .post-item {
                     display: grid;
                     grid-template-columns: 7.75rem auto;
                     gap: 1rem;
-
                     &-img {
                         height: 7.75rem;
                         width: 7.75rem;
@@ -466,7 +429,6 @@
 .webinar {
     padding: 1.75rem 0 1.5rem;
     background: linear-gradient(0deg, #203b83 0%, #4173cd 100%);
-
     &-cont {
         &-video {
             height: unquote("max(195px,35vw)");
@@ -476,14 +438,11 @@
         &-info {
             color: #fff;
             text-align: center;
-
             &-top {
                 padding: 1.25rem 0;
                 border-bottom: 1px solid #ffffff80;
-
                 span {
                     font-size: clamp(0.625rem, 2vw, 0.75rem);
-
                     letter-spacing: 0.23em;
                     font-weight: 300;
                     text-transform: uppercase;
@@ -499,13 +458,11 @@
                     justify-content: center;
                     gap: 0.5rem;
                     margin-top: 10px;
-
                     i {
                         font-size: 1.25rem;
                         line-height: 1;
                         color: #fff;
                     }
-
                     h4 {
                         font-size: clamp(0.875rem, 2vw, 1rem);
                         font-weight: 700;
@@ -522,7 +479,6 @@
                 .btn {
                     margin: 1rem auto 0;
                     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-
                     &:hover {
                         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.75);
                     }
@@ -538,11 +494,9 @@
         .card {
             display: grid;
             grid-template-columns: 8.125rem auto;
-
             &-img {
                 min-height: 170px;
             }
-
             &-info {
                 &-sup,
                 &-title {
@@ -551,7 +505,6 @@
                     justify-content: flex-start;
                     padding-bottom: 0;
                 }
-
                 &-footer {
                     border-top: none;
                     .cuotas {
@@ -576,14 +529,12 @@
         background-size: cover;
         align-items: center;
         justify-content: center;
-
         &-cont {
             h1 {
                 max-width: 30ch;
             }
             h2 {
                 max-width: 41ch;
-
                 .salto-de-linea {
                     display: inline;
                 }
@@ -594,15 +545,12 @@
         &-cont {
             position: relative;
             z-index: 2;
-
             &-body {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
             }
-
             &-item-big {
                 padding-right: 1rem;
-
                 .card-news-big {
                     height: 100%;
                     display: flex;
@@ -614,22 +562,29 @@
                     }
                 }
             }
-
             &-item-small {
                 padding-left: 1rem;
                 grid-template-columns: 1fr;
                 border-top: none;
                 border-left: 1px solid #c4c4c440;
-
-                .card-news-small {
+                .card-news {
                     &-img {
                         margin-top: 0;
                         height: unquote("max(92px, 10vw)");
                     }
                     &-bajada {
-                        -webkit-line-clamp: 5; /* number of lines to show */
+                        -webkit-line-clamp: 5;
+                        /* number of lines to show */
                         line-clamp: 5;
                     }
+                }
+            }
+        }
+        .card-news {
+            &-small {
+                .card-news-img {
+                    margin-top: 0;
+                    height: unquote("max(92px, 10vw)");
                 }
             }
         }
@@ -637,7 +592,6 @@
     .enfermeria {
         &-cont {
             width: $width-container-solapa;
-
             &-title,
             &-top-filters {
                 flex-grow: 0;
@@ -646,10 +600,8 @@
             &-top {
                 justify-content: space-between;
                 padding: 0 2rem;
-
                 &-filters {
                     margin-top: 0;
-
                     .btn {
                         min-width: 135px;
                     }
@@ -657,7 +609,6 @@
             }
             .swiper {
                 padding: 0 2rem;
-
                 .card {
                     &-info {
                         &-title {
@@ -671,7 +622,6 @@
             }
         }
     }
-
     .actual,
     .otros {
         .cont-w-side-r {
@@ -689,7 +639,6 @@
         .card {
             height: auto;
             min-height: 330px;
-
             &-info {
                 flex-grow: 1;
             }
@@ -742,7 +691,6 @@
             padding: 0.5rem 0.5rem;
             &:not(.is-arrowless) {
                 padding-right: 2rem;
-
                 &::after {
                     right: 0.75rem !important;
                 }
@@ -752,7 +700,6 @@
     .news {
         overflow: unset;
         margin-top: -3rem;
-
         .cont-w-side-r {
             display: grid;
             grid-template-columns: auto 230px;
@@ -778,11 +725,9 @@
                     flex-direction: column;
                     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
                     border-radius: 10px;
-
                     & .swiper-slide:last-child {
                         border-bottom: none;
                     }
-
                     .swiper-slide {
                         margin: 0;
                         height: max-content !important;
@@ -806,7 +751,6 @@
             }
         }
     }
-
     .enfermeria {
         padding: 0;
         .swiper {
@@ -847,27 +791,22 @@
         &-cont {
             display: grid;
             grid-template-columns: 1fr 1fr;
-
             &-video {
                 height: 290px;
             }
-
             &-info {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 padding: 0.5rem 0 0.5rem 1.25rem;
                 text-align: left;
-
                 &-top {
                     padding: 0 0 1rem;
                     flex-grow: 0.5;
-
                     .profesional {
                         justify-content: flex-start;
                     }
                 }
-
                 &-footer {
                     display: flex;
                     justify-content: space-between;

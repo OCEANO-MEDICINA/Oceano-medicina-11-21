@@ -2647,10 +2647,10 @@ header .navbar .nav-contenidos.is-hoverable:focus .navbar-dropdown {
     min-width: 135px;
   }
   .destacados-cont .swiper::before {
-    background: linear-gradient(90deg, #f7f7f7 0 50%, transparent 100%);
+    background: linear-gradient(90deg, #f6f6f6 0 50%, transparent 100%);
   }
   .destacados-cont .swiper::after {
-    background: linear-gradient(270deg, #f7f7f7 0 50%, transparent 100%);
+    background: linear-gradient(270deg, #f6f6f6 0 50%, transparent 100%);
   }
 
   .reviews-cont {

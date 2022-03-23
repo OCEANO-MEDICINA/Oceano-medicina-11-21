@@ -2541,14 +2541,18 @@ header .navbar .nav-contenidos.is-hoverable:focus .navbar-dropdown {
     border-top: none;
     border-left: 1px solid #c4c4c440;
   }
-  .news-cont-item-small .card-news-small-img {
+  .news-cont-item-small .card-news-img {
     margin-top: 0;
     height: max(92px, 10vw);
   }
-  .news-cont-item-small .card-news-small-bajada {
+  .news-cont-item-small .card-news-bajada {
     -webkit-line-clamp: 5;
     /* number of lines to show */
     line-clamp: 5;
+  }
+  .news .card-news-small .card-news-img {
+    margin-top: 0;
+    height: max(92px, 10vw);
   }
 
   .enfermeria-cont {
