@@ -865,6 +865,7 @@ body .zsiq-mobhgt[embedtheme].zsiq-newtheme {
   height: max-content;
   color: #fff;
   border-radius: 3px;
+  background-color: #ff266e;
 }
 .tags:hover {
   color: #fff;
@@ -2420,6 +2421,7 @@ header .navbar .nav-contenidos.is-hoverable:focus .navbar-dropdown {
   height: 2.625rem;
   width: 2.625rem;
   border-radius: 50%;
+  box-shadow: 0 0 5px 0px #839aa5;
 }
 .categorias-cont-body .card-cat-info-footer .autor-info {
   display: flex;

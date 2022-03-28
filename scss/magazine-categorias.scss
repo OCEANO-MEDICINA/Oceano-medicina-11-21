@@ -1,21 +1,12 @@
 @import "_founder";
-
 // NAVBAR
-
 @import "components/_header-navbar";
-
 // CONTENEDOR CON SIDE - RIGHT
-
 @import "components/_contenedor-side-r";
-
 // Product Cards
-
 @import "components/_product-card";
-
 // FOOTER
-
 @import "components/_footer";
-
 .navbar {
     .navbar-brand {
         .navbar-item.logo {
@@ -26,7 +17,6 @@
                 padding-left: 0.5rem;
                 display: block;
                 font-weight: 500;
-
                 &::before {
                     content: " ";
                     position: absolute;
@@ -49,7 +39,6 @@
     position: relative;
     padding: 5.75rem 0 2.25rem;
     background: center url(../media/magazine/header-magazine.jpg);
-
     &-cont {
         h1 {
             margin-bottom: 0.5rem;
@@ -61,7 +50,6 @@
         h2 {
             color: #fff;
         }
-
         h2 {
             font-size: clamp(0.875rem, 3vw, 1.125rem);
             line-height: 1.1719em;
@@ -74,19 +62,13 @@
     position: relative;
     padding: 2rem 0;
     overflow: hidden;
-
     .cont-w-side-r {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto 1fr;
-        grid-template-areas:
-            "categoriasHeader"
-            "body"
-            "ver-mas"
-            "side";
+        grid-template-areas: "categoriasHeader" "body" "ver-mas" "side";
         gap: unset;
     }
-
     &-cont {
         &-header {
             grid-area: categoriasHeader;
@@ -97,7 +79,6 @@
             gap: 0.75rem;
             padding-bottom: 0.5rem;
             border-bottom: 2px solid #c4c4c480;
-
             &-title {
                 flex-grow: 1;
                 font-size: 1.25rem;
@@ -110,15 +91,13 @@
                 justify-content: flex-end;
                 flex-grow: 1;
                 column-gap: 1.25rem;
-
                 .filter-count {
                     font-size: 0.75rem;
                     width: 100%;
                 }
-
                 .date,
                 .filtrar {
-                    > a {
+                    >a {
                         display: flex;
                         column-gap: 0.25rem;
                         color: $medicina-dark;
@@ -140,7 +119,6 @@
                         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
                         border-radius: 4px;
                         min-width: 220px;
-
                         &-button {
                             padding: 13px 1rem;
                             display: flex;
@@ -161,20 +139,16 @@
                                 color: $primary;
                             }
                         }
-
                         .accordion-panel {
                             position: relative;
                             background-color: #6c6c6c;
-
                             li {
                                 border-bottom: 1px solid #c4c4c480;
-
                                 a {
                                     padding: 10px 1rem;
                                     display: flex;
                                     justify-content: space-between;
                                     color: #fff;
-
                                     &:hover,
                                     &:focus {
                                         background-color: #6c6c6c;
@@ -190,7 +164,6 @@
                             border-bottom: none;
                         }
                     }
-
                     &:hover,
                     &:focus,
                     &:target {
@@ -209,9 +182,8 @@
                         .menu-desplegable {
                             bottom: -0.5rem;
                             display: flex;
-
                             .especialidad {
-                                .accordion-trigger.active ~ .accordion-panel {
+                                .accordion-trigger.active~.accordion-panel {
                                     max-height: 220px !important;
                                     overflow-y: scroll;
                                 }
@@ -222,7 +194,6 @@
                         }
                     }
                 }
-
                 .date {
                     &-cont {
                         padding: 1rem;
@@ -231,7 +202,6 @@
                             display: grid;
                             grid-template-columns: 1fr 1fr;
                             gap: 0.5rem;
-
                             label {
                                 font-weight: 700;
                                 color: #fff;
@@ -243,14 +213,12 @@
                         }
                     }
                 }
-
                 .filtrar-cont,
                 .date-cont {
                     display: none;
                 }
             }
         }
-
         &-side {
             grid-area: side;
             display: flex;
@@ -259,11 +227,9 @@
             .searchbar {
                 display: none;
                 gap: 0.5rem;
-
                 .probox {
                     gap: 0.5rem;
                     height: min-content !important;
-
                     .proinput {
                         min-height: 2rem !important;
                     }
@@ -275,7 +241,6 @@
                         transform: translateY(-50%) !important;
                     }
                 }
-
                 input[type="search"] {
                     z-index: 2;
                     padding-left: 1rem;
@@ -284,14 +249,12 @@
                     border-radius: 50px;
                     background-color: #fff;
                 }
-
                 .promagnifier {
                     position: relative;
                     height: 2rem !important;
                     width: 2rem !important;
                     background-color: $primary !important;
                     border-radius: 50% !important;
-
                     svg {
                         fill: #fff !important;
                     }
@@ -301,14 +264,12 @@
                 display: none;
                 position: relative;
                 margin: 1rem 0;
-
                 &-title {
                     padding: 1rem 0.85rem 0;
                     font-size: 1.125rem;
                     font-weight: 300;
                     color: $black;
                 }
-
                 .card-leida {
                     display: flex;
                     flex-direction: column;
@@ -317,7 +278,6 @@
                     height: 100%;
                     width: 100%;
                     padding: 1rem 0.85rem;
-
                     &-num {
                         display: flex;
                         align-items: center;
@@ -331,7 +291,6 @@
                         width: 22px;
                         border-radius: 50%;
                     }
-
                     &-tag {
                         font-size: 0.75rem;
                         font-weight: 400;
@@ -361,7 +320,6 @@
                 .swiper-slide {
                     display: flex;
                     width: 100% !important;
-
                     picture {
                         width: 100%;
                     }
@@ -373,7 +331,6 @@
                     }
                 }
             }
-
             .newsletter {
                 padding: 1rem 2rem 1rem 1rem;
                 background: #ffffff;
@@ -387,19 +344,16 @@
                     width: 100%;
                     margin-top: 1rem;
                     position: relative;
-
                     form {
                         p {
                             display: flex;
                             flex-flow: row;
-
                             .email-367 {
                                 height: max-content;
                                 flex-grow: 1;
                             }
                             .acceptance-848 {
                                 margin-top: 0.75rem;
-
                                 label {
                                     display: flex;
                                     align-items: center;
@@ -408,7 +362,6 @@
                             }
                         }
                     }
-
                     input[type="email"] {
                         padding: 0.5rem;
                         min-height: 2rem;
@@ -430,10 +383,8 @@
                 }
             }
         }
-
         &-body {
             grid-area: body;
-
             .card-cat {
                 padding: 1rem 0;
                 border-bottom: 1px solid #c4c4c440;
@@ -445,7 +396,6 @@
                     display: grid;
                     grid-template-columns: repeat(auto-fill, minmax(265px, 1fr));
                     gap: 1rem;
-
                     &-title {
                         font-size: 1.5rem;
                         line-height: 1.1em;
@@ -457,14 +407,12 @@
                         line-height: 1.3em;
                         color: $black;
                     }
-
                     &-footer {
                         margin: 1rem 0 0;
                         display: flex;
                         align-items: center;
                         justify-content: space-between;
                         gap: 1rem;
-
                         .autor {
                             display: flex;
                             gap: 0.5rem;
@@ -473,11 +421,11 @@
                                 height: 2.625rem;
                                 width: 2.625rem;
                                 border-radius: 50%;
+                                box-shadow: 0 0 5px 0px #839aa5;
                             }
                             &-info {
                                 display: flex;
                                 flex-direction: column;
-
                                 &-name {
                                     font-size: 1rem;
                                     font-weight: 500;
@@ -495,19 +443,16 @@
                             flex-grow: 1;
                         }
                     }
-
                     &-img {
                         flex-grow: 1;
                         min-height: 180px;
                         height: 100%;
                         border-radius: 0.5rem;
                         overflow: hidden;
-
                         picture {
                             position: relative;
                             height: 100%;
                             display: flex;
-
                             img {
                                 position: absolute;
                                 width: 100%;
@@ -528,7 +473,6 @@
             gap: 0.5rem;
             font-weight: 700;
             color: $black;
-
             a {
                 height: unset;
                 padding: 0.25rem 0.5rem;
@@ -539,16 +483,13 @@
                 color: $black;
                 border-radius: 4px;
                 border: 1px solid transparent;
-
                 &:hover {
                     border: 1px solid $black;
                 }
-
                 &:focus {
                     background-color: #43c8e6;
                     color: #fff !important;
                 }
-
                 &.active {
                     background-color: #00b6de;
                     color: #fff !important;
@@ -557,7 +498,6 @@
             }
         }
     }
-
     .tags {
         font-size: clamp(0.75rem, 2vw, 0.875rem);
         width: max-content;
@@ -567,7 +507,6 @@
 
 .daterangepicker {
     right: 1rem !important;
-
     .drp-buttons {
         .btn {
             display: unset;
@@ -584,14 +523,12 @@
         background-size: cover;
         align-items: center;
         justify-content: center;
-
         &-cont {
             h1 {
                 max-width: 30ch;
             }
             h2 {
                 max-width: 40ch;
-
                 .salto-de-linea {
                     display: inline;
                 }
@@ -602,7 +539,6 @@
         &-cont {
             position: relative;
             z-index: 2;
-
             &-side {
                 .searchbar {
                     display: flex;
@@ -613,18 +549,14 @@
                     height: 430px;
                     border-radius: 10px;
                     overflow: hidden;
-
                     &-cont {
                         height: 100%;
-
                         .swiper-banner {
                             height: 100%;
                         }
-
                         picture {
                             display: flex;
                             height: 100%;
-
                             img {
                                 height: 100%;
                                 object-fit: cover;
@@ -634,29 +566,24 @@
                     }
                 }
             }
-
             &-body {
                 .card-cat {
                     display: flex;
                     flex-direction: column;
                     padding: 2rem 0;
                     min-height: 350px;
-
                     &-info {
                         flex-grow: 1;
                         grid-template-columns: unquote("max(370px, 57%)") auto;
                         gap: 1.75rem;
-
                         &-cont {
                             display: flex;
                             flex-direction: column;
                             justify-content: space-between;
                         }
-
                         &-title {
                             font-size: 1.375rem;
                         }
-
                         &-img {
                             min-height: unset;
                         }
@@ -667,7 +594,6 @@
         .control-buttons {
             grid-area: ver-mas;
             margin: 1.5rem 0 4rem;
-
             a {
                 border-radius: 8px;
             }
@@ -688,7 +614,6 @@
     .daterangepicker {
         right: unset !important;
     }
-
     .navbar {
         .navbar-brand {
             .navbar-item.logo {
@@ -703,7 +628,6 @@
             padding: 0.5rem 0.5rem;
             &:not(.is-arrowless) {
                 padding-right: 2rem;
-
                 &::after {
                     right: 0.75rem !important;
                 }
@@ -713,14 +637,10 @@
     .categorias {
         overflow: unset;
         margin-top: -3rem;
-
         .cont-w-side-r {
             display: grid;
             grid-template-columns: 1fr 346px 230px;
-            grid-template-areas:
-                "categoriasHeader categoriasHeader side"
-                "body body side"
-                "ver-mas ver-mas side";
+            grid-template-areas: "categoriasHeader categoriasHeader side" "body body side" "ver-mas ver-mas side";
             gap: 0;
             column-gap: 2rem;
         }
@@ -728,7 +648,6 @@
             &-header {
                 grid-template-columns: 1.5fr 1fr;
             }
-
             &-side {
                 display: flex;
                 flex-direction: column;
@@ -739,17 +658,14 @@
                     display: flex;
                     flex-direction: column;
                 }
-
                 .mas-leidas-cont {
                     display: flex;
                     flex-direction: column;
                     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
                     border-radius: 10px;
-
                     & .card-leida:last-child {
                         border-bottom: none;
                     }
-
                     .card-leida {
                         margin: 0;
                         height: max-content !important;
@@ -760,7 +676,6 @@
                         }
                     }
                 }
-
                 .newsletter {
                     padding: 1rem;
                     h5 {
@@ -793,7 +708,6 @@
                             flex-direction: column;
                             align-items: flex-start;
                             gap: 0.75rem;
-
                             .btn {
                                 width: 100%;
                                 padding: 0.5rem 1rem;
