@@ -18,32 +18,31 @@ $fuera-de-guardia-invert: #ffffff;
 $black-light: #575757;
 $black: #272727;
 $ccc: #ccc;
-
 .background-primary {
     background-color: $primary;
     color: #fff;
 }
-$colores: (
-    "primary": $primary,
-    "primary-dark": $primary-dark,
-    "medicina": $medicina,
-    "medicina-dark": #203b83,
-    "enfermeria": $enfermeria,
-    "bibliografia": $bibliografia,
-    "actualidad": $actualidad,
-    "e-health": $e-health,
-    "f-d-guardia": $fuera-de-guardia,
-    "filtro-tienda": #fff,
-    "ccc": $ccc,
-);
 
-@each $name, $color in $colores {
+$colores: ( "primary": $primary, "primary-dark": $primary-dark, "medicina": $medicina, "medicina-dark": #203b83, "enfermeria": $enfermeria, "bibliografia": $bibliografia, "actualidad": $actualidad, "e-health": $e-health, "f-d-guardia": $fuera-de-guardia, "filtro-tienda": #fff, "ccc": $ccc, );
+@each $name,
+$color in $colores {
     .background-#{$name} {
         background-color: $color;
         color: #fff;
-
         &:hover {
             background: rgba($color, 0.75);
+        }
+    }
+    .btn-#{$name} {
+        background-color: $color !important;
+        color: #fff;
+        &:hover {
+            background: rgba($color, 0.75);
+        }
+        &.outlined {
+            background-color: transparent !important;
+            color: $color;
+            border: 1px solid $color;
         }
     }
 }

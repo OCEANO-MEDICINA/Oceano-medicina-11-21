@@ -226,6 +226,10 @@ body .zsiq-mobhgt[embedtheme].zsiq-newtheme {
 }
 
 @media screen and (min-width: 1024px) {
+  .br-desktop {
+    display: block;
+  }
+
   .solapa-sup {
     display: block;
     box-shadow: 0px -20px 20px rgba(0, 0, 0, 0.2);
@@ -451,6 +455,40 @@ body .zsiq-mobhgt[embedtheme].zsiq-newtheme {
 #modal-success .modal-card-body .info-msj {
   font-size: 14px;
   color: #979797;
+}
+
+.modal-addcart-validation .modal-card {
+  max-width: 29.75rem;
+}
+.modal-addcart-validation .modal-card-body {
+  padding: 3.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+.modal-addcart-validation .modal-card-body .info {
+  text-align: center;
+}
+.modal-addcart-validation .modal-card-body .info-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #494949;
+}
+.modal-addcart-validation .modal-card-body .info-msj {
+  font-size: 14px;
+  color: #979797;
+}
+.modal-addcart-validation .modal-card-body .botones {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.modal-addcart-validation .modal-card-body .button {
+  max-width: 298px;
+  width: 100%;
+  padding: 0.5rem 1rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -865,6 +903,7 @@ body .zsiq-mobhgt[embedtheme].zsiq-newtheme {
   height: max-content;
   color: #fff;
   border-radius: 3px;
+  background-color: #ff266e;
 }
 .tags:hover {
   color: #fff;
