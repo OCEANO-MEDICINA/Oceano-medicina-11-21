@@ -12,12 +12,48 @@
   background: rgba(255, 38, 110, 0.75);
 }
 
+.btn-primary {
+  background-color: #ff266e !important;
+  color: #fff;
+}
+.btn-primary:hover {
+  background: rgba(255, 38, 110, 0.75);
+}
+.btn-primary.outlined {
+  background-color: transparent !important;
+  color: #ff266e;
+  border: 1px solid #ff266e;
+}
+.btn-primary.simple {
+  background-color: transparent !important;
+  color: #ff266e;
+  border: transparent solid #ff266e;
+}
+
 .background-primary-dark {
   background-color: #ec125b;
   color: #fff;
 }
 .background-primary-dark:hover {
   background: rgba(236, 18, 91, 0.75);
+}
+
+.btn-primary-dark {
+  background-color: #ec125b !important;
+  color: #fff;
+}
+.btn-primary-dark:hover {
+  background: rgba(236, 18, 91, 0.75);
+}
+.btn-primary-dark.outlined {
+  background-color: transparent !important;
+  color: #ec125b;
+  border: 1px solid #ec125b;
+}
+.btn-primary-dark.simple {
+  background-color: transparent !important;
+  color: #ec125b;
+  border: transparent solid #ec125b;
 }
 
 .background-medicina {
@@ -28,12 +64,48 @@
   background: rgba(0, 85, 162, 0.75);
 }
 
+.btn-medicina {
+  background-color: #0055a2 !important;
+  color: #fff;
+}
+.btn-medicina:hover {
+  background: rgba(0, 85, 162, 0.75);
+}
+.btn-medicina.outlined {
+  background-color: transparent !important;
+  color: #0055a2;
+  border: 1px solid #0055a2;
+}
+.btn-medicina.simple {
+  background-color: transparent !important;
+  color: #0055a2;
+  border: transparent solid #0055a2;
+}
+
 .background-medicina-dark {
   background-color: #203b83;
   color: #fff;
 }
 .background-medicina-dark:hover {
   background: rgba(32, 59, 131, 0.75);
+}
+
+.btn-medicina-dark {
+  background-color: #203b83 !important;
+  color: #fff;
+}
+.btn-medicina-dark:hover {
+  background: rgba(32, 59, 131, 0.75);
+}
+.btn-medicina-dark.outlined {
+  background-color: transparent !important;
+  color: #203b83;
+  border: 1px solid #203b83;
+}
+.btn-medicina-dark.simple {
+  background-color: transparent !important;
+  color: #203b83;
+  border: transparent solid #203b83;
 }
 
 .background-enfermeria {
@@ -44,12 +116,48 @@
   background: rgba(0, 128, 102, 0.75);
 }
 
+.btn-enfermeria {
+  background-color: #008066 !important;
+  color: #fff;
+}
+.btn-enfermeria:hover {
+  background: rgba(0, 128, 102, 0.75);
+}
+.btn-enfermeria.outlined {
+  background-color: transparent !important;
+  color: #008066;
+  border: 1px solid #008066;
+}
+.btn-enfermeria.simple {
+  background-color: transparent !important;
+  color: #008066;
+  border: transparent solid #008066;
+}
+
 .background-bibliografia {
   background-color: #f09146;
   color: #fff;
 }
 .background-bibliografia:hover {
   background: rgba(240, 145, 70, 0.75);
+}
+
+.btn-bibliografia {
+  background-color: #f09146 !important;
+  color: #fff;
+}
+.btn-bibliografia:hover {
+  background: rgba(240, 145, 70, 0.75);
+}
+.btn-bibliografia.outlined {
+  background-color: transparent !important;
+  color: #f09146;
+  border: 1px solid #f09146;
+}
+.btn-bibliografia.simple {
+  background-color: transparent !important;
+  color: #f09146;
+  border: transparent solid #f09146;
 }
 
 .background-actualidad {
@@ -60,12 +168,48 @@
   background: rgba(83, 152, 255, 0.75);
 }
 
+.btn-actualidad {
+  background-color: #5398ff !important;
+  color: #fff;
+}
+.btn-actualidad:hover {
+  background: rgba(83, 152, 255, 0.75);
+}
+.btn-actualidad.outlined {
+  background-color: transparent !important;
+  color: #5398ff;
+  border: 1px solid #5398ff;
+}
+.btn-actualidad.simple {
+  background-color: transparent !important;
+  color: #5398ff;
+  border: transparent solid #5398ff;
+}
+
 .background-e-health {
   background-color: #a0cf67;
   color: #fff;
 }
 .background-e-health:hover {
   background: rgba(160, 207, 103, 0.75);
+}
+
+.btn-e-health {
+  background-color: #a0cf67 !important;
+  color: #fff;
+}
+.btn-e-health:hover {
+  background: rgba(160, 207, 103, 0.75);
+}
+.btn-e-health.outlined {
+  background-color: transparent !important;
+  color: #a0cf67;
+  border: 1px solid #a0cf67;
+}
+.btn-e-health.simple {
+  background-color: transparent !important;
+  color: #a0cf67;
+  border: transparent solid #a0cf67;
 }
 
 .background-f-d-guardia {
@@ -76,6 +220,24 @@
   background: rgba(22, 200, 164, 0.75);
 }
 
+.btn-f-d-guardia {
+  background-color: #16c8a4 !important;
+  color: #fff;
+}
+.btn-f-d-guardia:hover {
+  background: rgba(22, 200, 164, 0.75);
+}
+.btn-f-d-guardia.outlined {
+  background-color: transparent !important;
+  color: #16c8a4;
+  border: 1px solid #16c8a4;
+}
+.btn-f-d-guardia.simple {
+  background-color: transparent !important;
+  color: #16c8a4;
+  border: transparent solid #16c8a4;
+}
+
 .background-filtro-tienda {
   background-color: #fff;
   color: #fff;
@@ -84,12 +246,48 @@
   background: rgba(255, 255, 255, 0.75);
 }
 
+.btn-filtro-tienda {
+  background-color: #fff !important;
+  color: #fff;
+}
+.btn-filtro-tienda:hover {
+  background: rgba(255, 255, 255, 0.75);
+}
+.btn-filtro-tienda.outlined {
+  background-color: transparent !important;
+  color: #fff;
+  border: 1px solid #fff;
+}
+.btn-filtro-tienda.simple {
+  background-color: transparent !important;
+  color: #fff;
+  border: transparent solid #fff;
+}
+
 .background-ccc {
   background-color: #ccc;
   color: #fff;
 }
 .background-ccc:hover {
   background: rgba(204, 204, 204, 0.75);
+}
+
+.btn-ccc {
+  background-color: #ccc !important;
+  color: #fff;
+}
+.btn-ccc:hover {
+  background: rgba(204, 204, 204, 0.75);
+}
+.btn-ccc.outlined {
+  background-color: transparent !important;
+  color: #ccc;
+  border: 1px solid #ccc;
+}
+.btn-ccc.simple {
+  background-color: transparent !important;
+  color: #ccc;
+  border: transparent solid #ccc;
 }
 
 .background-filtro-tienda {
@@ -130,7 +328,7 @@ button {
   transform: translate(-50%, -50%);
   z-index: 1000;
   background: url(../media/icon/loader.svg);
-  background-color: #23282d8f;
+  background-color: rgba(35, 40, 45, 0.5607843137);
   background-size: 15%;
   background-position: center;
   background-repeat: no-repeat;
@@ -270,7 +468,7 @@ body .zsiq-mobhgt[embedtheme].zsiq-newtheme {
 .modal-background {
   opacity: 0;
   transition-delay: 0s;
-  background: #3f6cbbd9;
+  background: rgba(63, 108, 187, 0.8509803922);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
 }
@@ -281,7 +479,7 @@ body .zsiq-mobhgt[embedtheme].zsiq-newtheme {
   max-height: unset;
   border-radius: 0.5rem;
   background-color: #fdfdfd;
-  box-shadow: 0 0 20px 10px #00000020;
+  box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.1254901961);
 }
 .modal-card-head {
   align-items: flex-start;
@@ -352,7 +550,7 @@ body .zsiq-mobhgt[embedtheme].zsiq-newtheme {
   font-size: 0.875rem;
   padding: 0.25rem 0.5rem;
   width: 100%;
-  border: 1px solid #57575740;
+  border: 1px solid rgba(87, 87, 87, 0.2509803922);
   border-radius: 4px;
   background-color: #fff !important;
   min-height: 2rem !important;
@@ -378,7 +576,7 @@ body .zsiq-mobhgt[embedtheme].zsiq-newtheme {
 }
 .modal .formulario-campos input[type=checkbox] {
   width: unset;
-  border: 1px solid #57575740;
+  border: 1px solid rgba(87, 87, 87, 0.2509803922);
   border-radius: 4px;
   background-color: #fff !important;
   min-height: unset !important;
@@ -459,7 +657,7 @@ body .zsiq-mobhgt[embedtheme].zsiq-newtheme {
 }
 
 .modal-addcart-validation .modal-card {
-  max-width: 29.75rem;
+  max-width: 26.125rem;
 }
 .modal-addcart-validation .modal-card-body {
   padding: 3.25rem 1.5rem;
@@ -832,6 +1030,7 @@ body .zsiq-mobhgt[embedtheme].zsiq-newtheme {
 .btn:hover {
   background-color: #ec125b;
   color: #fff;
+  cursor: pointer;
 }
 .btn:focus, .btn:target {
   box-shadow: inset 0 0 1px 3px rgba(72, 95, 199, 0.25);
@@ -846,8 +1045,26 @@ body .zsiq-mobhgt[embedtheme].zsiq-newtheme {
   line-height: 17px;
   padding: 0.5rem 1.5rem;
 }
+.btn.outlined {
+  background-color: transparent !important;
+  color: #ff266e;
+  border: 1px solid #ff266e;
+}
+.btn.outlined:hover {
+  color: #ff266e !important;
+}
+.btn.simple {
+  background-color: transparent !important;
+  color: #ff266e;
+  border: transparent;
+}
+.btn.simple:hover {
+  color: #ff266e !important;
+  text-decoration: underline;
+  box-shadow: none;
+}
 .btn-mid:hover, .btn-big:hover {
-  box-shadow: 0px 0px 5px 2px #0000005d;
+  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.3647058824);
 }
 .btn-mid:focus, .btn-mid:target, .btn-big:focus, .btn-big:target {
   box-shadow: inset 0 0 2px 3px rgba(72, 95, 199, 0.25);
@@ -888,7 +1105,7 @@ body .zsiq-mobhgt[embedtheme].zsiq-newtheme {
 }
 .button:hover, .button:focus {
   color: #fff !important;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 12px rgba(79, 61, 114, 0.45);
 }
 .button:focus, .button:target {
   box-shadow: inset 0 0 1px 3px rgba(72, 95, 199, 0.25) !important;
@@ -1001,12 +1218,48 @@ body .zsiq-mobhgt[embedtheme].zsiq-newtheme {
   background: rgba(255, 38, 110, 0.75);
 }
 
+.btn-primary {
+  background-color: #ff266e !important;
+  color: #fff;
+}
+.btn-primary:hover {
+  background: rgba(255, 38, 110, 0.75);
+}
+.btn-primary.outlined {
+  background-color: transparent !important;
+  color: #ff266e;
+  border: 1px solid #ff266e;
+}
+.btn-primary.simple {
+  background-color: transparent !important;
+  color: #ff266e;
+  border: transparent solid #ff266e;
+}
+
 .background-primary-dark {
   background-color: #ec125b;
   color: #fff;
 }
 .background-primary-dark:hover {
   background: rgba(236, 18, 91, 0.75);
+}
+
+.btn-primary-dark {
+  background-color: #ec125b !important;
+  color: #fff;
+}
+.btn-primary-dark:hover {
+  background: rgba(236, 18, 91, 0.75);
+}
+.btn-primary-dark.outlined {
+  background-color: transparent !important;
+  color: #ec125b;
+  border: 1px solid #ec125b;
+}
+.btn-primary-dark.simple {
+  background-color: transparent !important;
+  color: #ec125b;
+  border: transparent solid #ec125b;
 }
 
 .background-medicina {
@@ -1017,12 +1270,48 @@ body .zsiq-mobhgt[embedtheme].zsiq-newtheme {
   background: rgba(0, 85, 162, 0.75);
 }
 
+.btn-medicina {
+  background-color: #0055a2 !important;
+  color: #fff;
+}
+.btn-medicina:hover {
+  background: rgba(0, 85, 162, 0.75);
+}
+.btn-medicina.outlined {
+  background-color: transparent !important;
+  color: #0055a2;
+  border: 1px solid #0055a2;
+}
+.btn-medicina.simple {
+  background-color: transparent !important;
+  color: #0055a2;
+  border: transparent solid #0055a2;
+}
+
 .background-medicina-dark {
   background-color: #203b83;
   color: #fff;
 }
 .background-medicina-dark:hover {
   background: rgba(32, 59, 131, 0.75);
+}
+
+.btn-medicina-dark {
+  background-color: #203b83 !important;
+  color: #fff;
+}
+.btn-medicina-dark:hover {
+  background: rgba(32, 59, 131, 0.75);
+}
+.btn-medicina-dark.outlined {
+  background-color: transparent !important;
+  color: #203b83;
+  border: 1px solid #203b83;
+}
+.btn-medicina-dark.simple {
+  background-color: transparent !important;
+  color: #203b83;
+  border: transparent solid #203b83;
 }
 
 .background-enfermeria {
@@ -1033,12 +1322,48 @@ body .zsiq-mobhgt[embedtheme].zsiq-newtheme {
   background: rgba(0, 128, 102, 0.75);
 }
 
+.btn-enfermeria {
+  background-color: #008066 !important;
+  color: #fff;
+}
+.btn-enfermeria:hover {
+  background: rgba(0, 128, 102, 0.75);
+}
+.btn-enfermeria.outlined {
+  background-color: transparent !important;
+  color: #008066;
+  border: 1px solid #008066;
+}
+.btn-enfermeria.simple {
+  background-color: transparent !important;
+  color: #008066;
+  border: transparent solid #008066;
+}
+
 .background-bibliografia {
   background-color: #f09146;
   color: #fff;
 }
 .background-bibliografia:hover {
   background: rgba(240, 145, 70, 0.75);
+}
+
+.btn-bibliografia {
+  background-color: #f09146 !important;
+  color: #fff;
+}
+.btn-bibliografia:hover {
+  background: rgba(240, 145, 70, 0.75);
+}
+.btn-bibliografia.outlined {
+  background-color: transparent !important;
+  color: #f09146;
+  border: 1px solid #f09146;
+}
+.btn-bibliografia.simple {
+  background-color: transparent !important;
+  color: #f09146;
+  border: transparent solid #f09146;
 }
 
 .background-actualidad {
@@ -1049,12 +1374,48 @@ body .zsiq-mobhgt[embedtheme].zsiq-newtheme {
   background: rgba(83, 152, 255, 0.75);
 }
 
+.btn-actualidad {
+  background-color: #5398ff !important;
+  color: #fff;
+}
+.btn-actualidad:hover {
+  background: rgba(83, 152, 255, 0.75);
+}
+.btn-actualidad.outlined {
+  background-color: transparent !important;
+  color: #5398ff;
+  border: 1px solid #5398ff;
+}
+.btn-actualidad.simple {
+  background-color: transparent !important;
+  color: #5398ff;
+  border: transparent solid #5398ff;
+}
+
 .background-e-health {
   background-color: #a0cf67;
   color: #fff;
 }
 .background-e-health:hover {
   background: rgba(160, 207, 103, 0.75);
+}
+
+.btn-e-health {
+  background-color: #a0cf67 !important;
+  color: #fff;
+}
+.btn-e-health:hover {
+  background: rgba(160, 207, 103, 0.75);
+}
+.btn-e-health.outlined {
+  background-color: transparent !important;
+  color: #a0cf67;
+  border: 1px solid #a0cf67;
+}
+.btn-e-health.simple {
+  background-color: transparent !important;
+  color: #a0cf67;
+  border: transparent solid #a0cf67;
 }
 
 .background-f-d-guardia {
@@ -1065,6 +1426,24 @@ body .zsiq-mobhgt[embedtheme].zsiq-newtheme {
   background: rgba(22, 200, 164, 0.75);
 }
 
+.btn-f-d-guardia {
+  background-color: #16c8a4 !important;
+  color: #fff;
+}
+.btn-f-d-guardia:hover {
+  background: rgba(22, 200, 164, 0.75);
+}
+.btn-f-d-guardia.outlined {
+  background-color: transparent !important;
+  color: #16c8a4;
+  border: 1px solid #16c8a4;
+}
+.btn-f-d-guardia.simple {
+  background-color: transparent !important;
+  color: #16c8a4;
+  border: transparent solid #16c8a4;
+}
+
 .background-filtro-tienda {
   background-color: #fff;
   color: #fff;
@@ -1073,12 +1452,48 @@ body .zsiq-mobhgt[embedtheme].zsiq-newtheme {
   background: rgba(255, 255, 255, 0.75);
 }
 
+.btn-filtro-tienda {
+  background-color: #fff !important;
+  color: #fff;
+}
+.btn-filtro-tienda:hover {
+  background: rgba(255, 255, 255, 0.75);
+}
+.btn-filtro-tienda.outlined {
+  background-color: transparent !important;
+  color: #fff;
+  border: 1px solid #fff;
+}
+.btn-filtro-tienda.simple {
+  background-color: transparent !important;
+  color: #fff;
+  border: transparent solid #fff;
+}
+
 .background-ccc {
   background-color: #ccc;
   color: #fff;
 }
 .background-ccc:hover {
   background: rgba(204, 204, 204, 0.75);
+}
+
+.btn-ccc {
+  background-color: #ccc !important;
+  color: #fff;
+}
+.btn-ccc:hover {
+  background: rgba(204, 204, 204, 0.75);
+}
+.btn-ccc.outlined {
+  background-color: transparent !important;
+  color: #ccc;
+  border: 1px solid #ccc;
+}
+.btn-ccc.simple {
+  background-color: transparent !important;
+  color: #ccc;
+  border: transparent solid #ccc;
 }
 
 .background-filtro-tienda {
@@ -1119,7 +1534,7 @@ header .navbar-link {
   font-size: 1.5rem;
   font-weight: 500;
   text-transform: uppercase;
-  border-bottom: 1px solid #ffffff25;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1450980392);
 }
 header .navbar-link::after {
   border-color: #fff !important;
@@ -1351,7 +1766,7 @@ header .navbar-menu .cart-desktop {
     min-width: unset !important;
   }
   header .navbar .accordion-trigger.active ~ .accordion-panel-comunidad::after, header .navbar-item.is-hoverable:hover .navbar-dropdown-comunidad::after, header .navbar-item.is-hoverable:focus .navbar-dropdown-comunidad::after {
-    border-color: transparent transparent #3a5395;
+    border-color: transparent transparent rgb(58, 83, 149);
   }
   header .navbar .accordion-trigger.active ~ .accordion-panel-comunidad .navbar-item, header .navbar-item.is-hoverable:hover .navbar-dropdown-comunidad .navbar-item, header .navbar-item.is-hoverable:focus .navbar-dropdown-comunidad .navbar-item {
     white-space: unset;
@@ -1373,7 +1788,7 @@ header .navbar-menu .cart-desktop {
     grid-template-columns: 7.5rem min-content;
     -moz-column-gap: 1.25rem;
          column-gap: 1.25rem;
-    background-color: #ffffff15;
+    background-color: rgba(255, 255, 255, 0.0823529412);
   }
   header .navbar .accordion-trigger.active ~ .accordion-panel-comunidad-news-img, header .navbar-item.is-hoverable:hover .navbar-dropdown-comunidad-news-img, header .navbar-item.is-hoverable:focus .navbar-dropdown-comunidad-news-img {
     height: 100%;
@@ -1507,12 +1922,48 @@ header .navbar .nav-contenidos.is-hoverable:focus .navbar-dropdown {
   background: rgba(255, 38, 110, 0.75);
 }
 
+.btn-primary {
+  background-color: #ff266e !important;
+  color: #fff;
+}
+.btn-primary:hover {
+  background: rgba(255, 38, 110, 0.75);
+}
+.btn-primary.outlined {
+  background-color: transparent !important;
+  color: #ff266e;
+  border: 1px solid #ff266e;
+}
+.btn-primary.simple {
+  background-color: transparent !important;
+  color: #ff266e;
+  border: transparent solid #ff266e;
+}
+
 .background-primary-dark {
   background-color: #ec125b;
   color: #fff;
 }
 .background-primary-dark:hover {
   background: rgba(236, 18, 91, 0.75);
+}
+
+.btn-primary-dark {
+  background-color: #ec125b !important;
+  color: #fff;
+}
+.btn-primary-dark:hover {
+  background: rgba(236, 18, 91, 0.75);
+}
+.btn-primary-dark.outlined {
+  background-color: transparent !important;
+  color: #ec125b;
+  border: 1px solid #ec125b;
+}
+.btn-primary-dark.simple {
+  background-color: transparent !important;
+  color: #ec125b;
+  border: transparent solid #ec125b;
 }
 
 .background-medicina {
@@ -1523,12 +1974,48 @@ header .navbar .nav-contenidos.is-hoverable:focus .navbar-dropdown {
   background: rgba(0, 85, 162, 0.75);
 }
 
+.btn-medicina {
+  background-color: #0055a2 !important;
+  color: #fff;
+}
+.btn-medicina:hover {
+  background: rgba(0, 85, 162, 0.75);
+}
+.btn-medicina.outlined {
+  background-color: transparent !important;
+  color: #0055a2;
+  border: 1px solid #0055a2;
+}
+.btn-medicina.simple {
+  background-color: transparent !important;
+  color: #0055a2;
+  border: transparent solid #0055a2;
+}
+
 .background-medicina-dark {
   background-color: #203b83;
   color: #fff;
 }
 .background-medicina-dark:hover {
   background: rgba(32, 59, 131, 0.75);
+}
+
+.btn-medicina-dark {
+  background-color: #203b83 !important;
+  color: #fff;
+}
+.btn-medicina-dark:hover {
+  background: rgba(32, 59, 131, 0.75);
+}
+.btn-medicina-dark.outlined {
+  background-color: transparent !important;
+  color: #203b83;
+  border: 1px solid #203b83;
+}
+.btn-medicina-dark.simple {
+  background-color: transparent !important;
+  color: #203b83;
+  border: transparent solid #203b83;
 }
 
 .background-enfermeria {
@@ -1539,12 +2026,48 @@ header .navbar .nav-contenidos.is-hoverable:focus .navbar-dropdown {
   background: rgba(0, 128, 102, 0.75);
 }
 
+.btn-enfermeria {
+  background-color: #008066 !important;
+  color: #fff;
+}
+.btn-enfermeria:hover {
+  background: rgba(0, 128, 102, 0.75);
+}
+.btn-enfermeria.outlined {
+  background-color: transparent !important;
+  color: #008066;
+  border: 1px solid #008066;
+}
+.btn-enfermeria.simple {
+  background-color: transparent !important;
+  color: #008066;
+  border: transparent solid #008066;
+}
+
 .background-bibliografia {
   background-color: #f09146;
   color: #fff;
 }
 .background-bibliografia:hover {
   background: rgba(240, 145, 70, 0.75);
+}
+
+.btn-bibliografia {
+  background-color: #f09146 !important;
+  color: #fff;
+}
+.btn-bibliografia:hover {
+  background: rgba(240, 145, 70, 0.75);
+}
+.btn-bibliografia.outlined {
+  background-color: transparent !important;
+  color: #f09146;
+  border: 1px solid #f09146;
+}
+.btn-bibliografia.simple {
+  background-color: transparent !important;
+  color: #f09146;
+  border: transparent solid #f09146;
 }
 
 .background-actualidad {
@@ -1555,12 +2078,48 @@ header .navbar .nav-contenidos.is-hoverable:focus .navbar-dropdown {
   background: rgba(83, 152, 255, 0.75);
 }
 
+.btn-actualidad {
+  background-color: #5398ff !important;
+  color: #fff;
+}
+.btn-actualidad:hover {
+  background: rgba(83, 152, 255, 0.75);
+}
+.btn-actualidad.outlined {
+  background-color: transparent !important;
+  color: #5398ff;
+  border: 1px solid #5398ff;
+}
+.btn-actualidad.simple {
+  background-color: transparent !important;
+  color: #5398ff;
+  border: transparent solid #5398ff;
+}
+
 .background-e-health {
   background-color: #a0cf67;
   color: #fff;
 }
 .background-e-health:hover {
   background: rgba(160, 207, 103, 0.75);
+}
+
+.btn-e-health {
+  background-color: #a0cf67 !important;
+  color: #fff;
+}
+.btn-e-health:hover {
+  background: rgba(160, 207, 103, 0.75);
+}
+.btn-e-health.outlined {
+  background-color: transparent !important;
+  color: #a0cf67;
+  border: 1px solid #a0cf67;
+}
+.btn-e-health.simple {
+  background-color: transparent !important;
+  color: #a0cf67;
+  border: transparent solid #a0cf67;
 }
 
 .background-f-d-guardia {
@@ -1571,6 +2130,24 @@ header .navbar .nav-contenidos.is-hoverable:focus .navbar-dropdown {
   background: rgba(22, 200, 164, 0.75);
 }
 
+.btn-f-d-guardia {
+  background-color: #16c8a4 !important;
+  color: #fff;
+}
+.btn-f-d-guardia:hover {
+  background: rgba(22, 200, 164, 0.75);
+}
+.btn-f-d-guardia.outlined {
+  background-color: transparent !important;
+  color: #16c8a4;
+  border: 1px solid #16c8a4;
+}
+.btn-f-d-guardia.simple {
+  background-color: transparent !important;
+  color: #16c8a4;
+  border: transparent solid #16c8a4;
+}
+
 .background-filtro-tienda {
   background-color: #fff;
   color: #fff;
@@ -1579,12 +2156,48 @@ header .navbar .nav-contenidos.is-hoverable:focus .navbar-dropdown {
   background: rgba(255, 255, 255, 0.75);
 }
 
+.btn-filtro-tienda {
+  background-color: #fff !important;
+  color: #fff;
+}
+.btn-filtro-tienda:hover {
+  background: rgba(255, 255, 255, 0.75);
+}
+.btn-filtro-tienda.outlined {
+  background-color: transparent !important;
+  color: #fff;
+  border: 1px solid #fff;
+}
+.btn-filtro-tienda.simple {
+  background-color: transparent !important;
+  color: #fff;
+  border: transparent solid #fff;
+}
+
 .background-ccc {
   background-color: #ccc;
   color: #fff;
 }
 .background-ccc:hover {
   background: rgba(204, 204, 204, 0.75);
+}
+
+.btn-ccc {
+  background-color: #ccc !important;
+  color: #fff;
+}
+.btn-ccc:hover {
+  background: rgba(204, 204, 204, 0.75);
+}
+.btn-ccc.outlined {
+  background-color: transparent !important;
+  color: #ccc;
+  border: 1px solid #ccc;
+}
+.btn-ccc.simple {
+  background-color: transparent !important;
+  color: #ccc;
+  border: transparent solid #ccc;
 }
 
 .background-filtro-tienda {
@@ -1693,12 +2306,48 @@ header .navbar .nav-contenidos.is-hoverable:focus .navbar-dropdown {
   background: rgba(255, 38, 110, 0.75);
 }
 
+.btn-primary {
+  background-color: #ff266e !important;
+  color: #fff;
+}
+.btn-primary:hover {
+  background: rgba(255, 38, 110, 0.75);
+}
+.btn-primary.outlined {
+  background-color: transparent !important;
+  color: #ff266e;
+  border: 1px solid #ff266e;
+}
+.btn-primary.simple {
+  background-color: transparent !important;
+  color: #ff266e;
+  border: transparent solid #ff266e;
+}
+
 .background-primary-dark {
   background-color: #ec125b;
   color: #fff;
 }
 .background-primary-dark:hover {
   background: rgba(236, 18, 91, 0.75);
+}
+
+.btn-primary-dark {
+  background-color: #ec125b !important;
+  color: #fff;
+}
+.btn-primary-dark:hover {
+  background: rgba(236, 18, 91, 0.75);
+}
+.btn-primary-dark.outlined {
+  background-color: transparent !important;
+  color: #ec125b;
+  border: 1px solid #ec125b;
+}
+.btn-primary-dark.simple {
+  background-color: transparent !important;
+  color: #ec125b;
+  border: transparent solid #ec125b;
 }
 
 .background-medicina {
@@ -1709,12 +2358,48 @@ header .navbar .nav-contenidos.is-hoverable:focus .navbar-dropdown {
   background: rgba(0, 85, 162, 0.75);
 }
 
+.btn-medicina {
+  background-color: #0055a2 !important;
+  color: #fff;
+}
+.btn-medicina:hover {
+  background: rgba(0, 85, 162, 0.75);
+}
+.btn-medicina.outlined {
+  background-color: transparent !important;
+  color: #0055a2;
+  border: 1px solid #0055a2;
+}
+.btn-medicina.simple {
+  background-color: transparent !important;
+  color: #0055a2;
+  border: transparent solid #0055a2;
+}
+
 .background-medicina-dark {
   background-color: #203b83;
   color: #fff;
 }
 .background-medicina-dark:hover {
   background: rgba(32, 59, 131, 0.75);
+}
+
+.btn-medicina-dark {
+  background-color: #203b83 !important;
+  color: #fff;
+}
+.btn-medicina-dark:hover {
+  background: rgba(32, 59, 131, 0.75);
+}
+.btn-medicina-dark.outlined {
+  background-color: transparent !important;
+  color: #203b83;
+  border: 1px solid #203b83;
+}
+.btn-medicina-dark.simple {
+  background-color: transparent !important;
+  color: #203b83;
+  border: transparent solid #203b83;
 }
 
 .background-enfermeria {
@@ -1725,12 +2410,48 @@ header .navbar .nav-contenidos.is-hoverable:focus .navbar-dropdown {
   background: rgba(0, 128, 102, 0.75);
 }
 
+.btn-enfermeria {
+  background-color: #008066 !important;
+  color: #fff;
+}
+.btn-enfermeria:hover {
+  background: rgba(0, 128, 102, 0.75);
+}
+.btn-enfermeria.outlined {
+  background-color: transparent !important;
+  color: #008066;
+  border: 1px solid #008066;
+}
+.btn-enfermeria.simple {
+  background-color: transparent !important;
+  color: #008066;
+  border: transparent solid #008066;
+}
+
 .background-bibliografia {
   background-color: #f09146;
   color: #fff;
 }
 .background-bibliografia:hover {
   background: rgba(240, 145, 70, 0.75);
+}
+
+.btn-bibliografia {
+  background-color: #f09146 !important;
+  color: #fff;
+}
+.btn-bibliografia:hover {
+  background: rgba(240, 145, 70, 0.75);
+}
+.btn-bibliografia.outlined {
+  background-color: transparent !important;
+  color: #f09146;
+  border: 1px solid #f09146;
+}
+.btn-bibliografia.simple {
+  background-color: transparent !important;
+  color: #f09146;
+  border: transparent solid #f09146;
 }
 
 .background-actualidad {
@@ -1741,12 +2462,48 @@ header .navbar .nav-contenidos.is-hoverable:focus .navbar-dropdown {
   background: rgba(83, 152, 255, 0.75);
 }
 
+.btn-actualidad {
+  background-color: #5398ff !important;
+  color: #fff;
+}
+.btn-actualidad:hover {
+  background: rgba(83, 152, 255, 0.75);
+}
+.btn-actualidad.outlined {
+  background-color: transparent !important;
+  color: #5398ff;
+  border: 1px solid #5398ff;
+}
+.btn-actualidad.simple {
+  background-color: transparent !important;
+  color: #5398ff;
+  border: transparent solid #5398ff;
+}
+
 .background-e-health {
   background-color: #a0cf67;
   color: #fff;
 }
 .background-e-health:hover {
   background: rgba(160, 207, 103, 0.75);
+}
+
+.btn-e-health {
+  background-color: #a0cf67 !important;
+  color: #fff;
+}
+.btn-e-health:hover {
+  background: rgba(160, 207, 103, 0.75);
+}
+.btn-e-health.outlined {
+  background-color: transparent !important;
+  color: #a0cf67;
+  border: 1px solid #a0cf67;
+}
+.btn-e-health.simple {
+  background-color: transparent !important;
+  color: #a0cf67;
+  border: transparent solid #a0cf67;
 }
 
 .background-f-d-guardia {
@@ -1757,6 +2514,24 @@ header .navbar .nav-contenidos.is-hoverable:focus .navbar-dropdown {
   background: rgba(22, 200, 164, 0.75);
 }
 
+.btn-f-d-guardia {
+  background-color: #16c8a4 !important;
+  color: #fff;
+}
+.btn-f-d-guardia:hover {
+  background: rgba(22, 200, 164, 0.75);
+}
+.btn-f-d-guardia.outlined {
+  background-color: transparent !important;
+  color: #16c8a4;
+  border: 1px solid #16c8a4;
+}
+.btn-f-d-guardia.simple {
+  background-color: transparent !important;
+  color: #16c8a4;
+  border: transparent solid #16c8a4;
+}
+
 .background-filtro-tienda {
   background-color: #fff;
   color: #fff;
@@ -1765,12 +2540,48 @@ header .navbar .nav-contenidos.is-hoverable:focus .navbar-dropdown {
   background: rgba(255, 255, 255, 0.75);
 }
 
+.btn-filtro-tienda {
+  background-color: #fff !important;
+  color: #fff;
+}
+.btn-filtro-tienda:hover {
+  background: rgba(255, 255, 255, 0.75);
+}
+.btn-filtro-tienda.outlined {
+  background-color: transparent !important;
+  color: #fff;
+  border: 1px solid #fff;
+}
+.btn-filtro-tienda.simple {
+  background-color: transparent !important;
+  color: #fff;
+  border: transparent solid #fff;
+}
+
 .background-ccc {
   background-color: #ccc;
   color: #fff;
 }
 .background-ccc:hover {
   background: rgba(204, 204, 204, 0.75);
+}
+
+.btn-ccc {
+  background-color: #ccc !important;
+  color: #fff;
+}
+.btn-ccc:hover {
+  background: rgba(204, 204, 204, 0.75);
+}
+.btn-ccc.outlined {
+  background-color: transparent !important;
+  color: #ccc;
+  border: 1px solid #ccc;
+}
+.btn-ccc.simple {
+  background-color: transparent !important;
+  color: #ccc;
+  border: transparent solid #ccc;
 }
 
 .background-filtro-tienda {
@@ -1923,7 +2734,7 @@ header .navbar .nav-contenidos.is-hoverable:focus .navbar-dropdown {
 }
 
 #modal-newsletter .formulario-campos {
-  border-top: 1px solid #57575740;
+  border-top: 1px solid rgba(87, 87, 87, 0.2509803922);
   padding-top: 10px;
 }
 #modal-newsletter .formulario-email-cont {
@@ -2023,7 +2834,7 @@ header .navbar .nav-contenidos.is-hoverable:focus .navbar-dropdown {
   }
 
   #modal-newsletter .formulario-campos {
-    border-top: 1px solid #57575740;
+    border-top: 1px solid rgba(87, 87, 87, 0.2509803922);
     padding-top: 10px;
   }
   #modal-newsletter .formulario-email-cont {
@@ -2117,13 +2928,13 @@ body {
   padding: 0.75rem;
   font-size: clamp(1.25rem, 2vw, 1.375rem);
   text-transform: uppercase;
-  background-color: #eeeeee40;
+  background-color: rgba(238, 238, 238, 0.2509803922);
 }
 .detalles-list,
 .ficha-cont-promo-list {
   padding: 0.75rem 2rem 1rem 0.75rem;
   font-size: clamp(0.875rem, 1.5vw, 1rem);
-  border-top: 1px solid #eeeeeebf;
+  border-top: 1px solid rgba(238, 238, 238, 0.7490196078);
 }
 .detalles-list ul,
 .ficha-cont-promo-list ul {
@@ -2195,7 +3006,7 @@ body {
   flex-direction: column;
   gap: 0.25rem;
   padding-right: 0.75rem;
-  border-right: 1px solid #acacac40;
+  border-right: 1px solid rgba(172, 172, 172, 0.2509803922);
 }
 .ficha-cont-header-price-info span {
   font-size: clamp(0.625rem, 2vw, 0.75rem);
@@ -2521,7 +3332,7 @@ body {
   grid-template-columns: 3rem auto;
 }
 .temario-cont-info .temario-tabs {
-  background-color: #eeeeee33;
+  background-color: rgba(238, 238, 238, 0.2);
   border-right: 1px solid #e6e6ed;
 }
 .temario-cont-info .temario-tabs ul {
@@ -2617,7 +3428,7 @@ body {
 .options-cont-ebooks-title, .options-cont-related-title {
   margin-bottom: 1.375rem;
   padding-bottom: 0.5rem;
-  border-bottom: 1px solid #c4c4c480;
+  border-bottom: 1px solid rgba(196, 196, 196, 0.5019607843);
 }
 .options-cont-ebooks-title i::before, .options-cont-related-title i::before {
   transform: translateY(2px);
@@ -2709,7 +3520,7 @@ body {
   aspect-ratio: 1/1;
   width: 100%;
   border-radius: 100px;
-  border: 1px solid #c4c4c480;
+  border: 1px solid rgba(196, 196, 196, 0.5019607843);
 }
 .autor-cont-grid .post-item-info {
   display: flex;
@@ -2776,7 +3587,7 @@ body {
   height: 4.5rem;
   width: 4.5rem;
   border-radius: 100px;
-  border: 1px solid #c4c4c480;
+  border: 1px solid rgba(196, 196, 196, 0.5019607843);
 }
 .cta-asesor-cont-info h5,
 .cta-scroll-cont-info h5 {
@@ -2817,7 +3628,7 @@ body {
   bottom: 0;
   left: 0;
   padding: 1rem 0;
-  background: #1e4385d9;
+  background: rgba(30, 67, 133, 0.8509803922);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
 }
@@ -2914,7 +3725,7 @@ body {
   font-size: 0.875rem;
   padding: 0.25rem 0.5rem;
   width: 100%;
-  border: 1px solid #57575740;
+  border: 1px solid rgba(87, 87, 87, 0.2509803922);
   border-radius: 4px;
   background-color: #fff !important;
   min-height: 2rem !important;
@@ -2939,7 +3750,7 @@ body {
 .form-asesor-cont .formulario textarea {
   padding: 0.25rem 0.5rem;
   width: 100%;
-  border: 1px solid #57575740;
+  border: 1px solid rgba(87, 87, 87, 0.2509803922);
   border-radius: 4px;
 }
 .form-asesor-cont .formulario textarea::-moz-placeholder {
@@ -3281,7 +4092,7 @@ body {
     height: -moz-max-content !important;
     height: max-content !important;
     width: 100%;
-    border-bottom: 1px solid #c4c4c480;
+    border-bottom: 1px solid rgba(196, 196, 196, 0.5019607843);
   }
   .ficha-cont-side .mas-leidas-cont .card-leida .card-review {
     box-shadow: unset;

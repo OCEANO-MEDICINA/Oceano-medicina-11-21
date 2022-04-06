@@ -44,6 +44,11 @@ $color in $colores {
             color: $color;
             border: 1px solid $color;
         }
+        &.simple {
+            background-color: transparent !important;
+            color: $color;
+            border: transparent solid $color;
+        }
     }
 }
 

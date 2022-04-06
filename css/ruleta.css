@@ -194,7 +194,7 @@ body {
   z-index: 10;
 }
 .modal-background {
-  background: #042799e1;
+  background: rgba(4, 39, 153, 0.8823529412);
   -webkit-backdrop-filter: blur(2px);
           backdrop-filter: blur(2px);
 }
@@ -384,7 +384,7 @@ body {
   font-size: 0.875rem;
   padding: 0.25rem 0.5rem;
   width: 100%;
-  border: 1px solid #57575740;
+  border: 1px solid rgba(87, 87, 87, 0.2509803922);
   border-radius: 4px;
   background-color: #fff !important;
   min-height: 2rem !important;
@@ -407,7 +407,7 @@ body {
   margin: 1rem 0;
   padding: 0.25rem 0.5rem;
   width: 100%;
-  border: 1px solid #57575740;
+  border: 1px solid rgba(87, 87, 87, 0.2509803922);
   border-radius: 4px;
 }
 .modal .formulario textarea::-moz-placeholder {
@@ -430,7 +430,7 @@ body {
     z-index: 10;
   }
   .modal-background {
-    background: #042799e1;
+    background: rgba(4, 39, 153, 0.8823529412);
     -webkit-backdrop-filter: blur(2px);
             backdrop-filter: blur(2px);
   }
@@ -504,7 +504,7 @@ body {
     z-index: 10;
   }
   .modal-background {
-    background: #042799e1;
+    background: rgba(4, 39, 153, 0.8823529412);
     -webkit-backdrop-filter: blur(2px);
             backdrop-filter: blur(2px);
   }

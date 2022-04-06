@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modales agregar al carrito</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.4.95/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="../css/plan-de-estudio.css">
+</head>
+
+<body>
+    <!--AGREGANDO UN CURSO CUANDO YA HAY UN PLAN EN EL CARRITO-->
+
+    <div id="modal-addcart-validation-planEnCart" class="modal modal-addcart-validation is-active">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <div class="modal-card-body">
+                <img src="../media/icon/addcart-error.svg" alt="" style="width: 48px;">
+                <div class="info">
+
+                    <p class="info-msj"><span class="br-desktop">Ya tenés un plan personalizado en tu carrito.</span> <span class="br-desktop">¿Te gustaría continuar la inscripción con </span> el programa que armaste a tu manera?</p>
+                </div>
+                <div class="botones">
+                    <button class="btn btn-big button">QUIERO ADQUIRIR EL PLAN</button>
+                    <button class="btn btn-big simple button">QUIERO ADQUIRIR LOS CURSOS</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--HIPOTETICO CASO DE ENCONTRAR AMBOS PRODUCTOS EN EL CARRITO-->
+    <div id="modal-addcart-validation-ambosEnCart" class="modal modal-addcart-validation is-active">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <div class="modal-card-body">
+                <img src="../media/icon/cart-conflict.svg" alt="">
+                <div class="info">
+
+                    <p class="info-msj"><span class="br-desktop">Tenés un plan personalizado y cursos.</span> <span class="br-desktop">individuales en tu carrito. Elegí una opción y</span> continuá avanzando en tu inscripción.</p>
+                </div>
+                <div class="botones">
+                    <button class="btn btn-big button">QUIERO ADQUIRIR EL PLAN</button>
+                    <button class="btn btn-big simple button">QUIERO ADQUIRIR LOS CURSOS</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--AGREGANDO UN PLAN CUANDO YA HAY UN CURSO EN EL CARRITO-->
+
+    <div id="modal-addcart-validation-cursoEnCart" class="modal modal-addcart-validation is-active">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <div class="modal-card-body">
+                <img src="../media/icon/cart-conflict.svg" alt="">
+                <div class="info">
+
+                    <p class="info-msj"><span class="br-desktop">Ya tenés cursos en tu carrito.</span> <span class="br-desktop">¿Te gustaría reemplazarlos por este plan</span> personalizado que armaste a tu manera? </p>
+                </div>
+                <div class="botones">
+                    <button class="btn btn-big button">QUIERO ADQUIRIR EL PLAN</button>
+                    <button class="btn btn-big simple button">QUIERO ADQUIRIR EL CURSO</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/modal.js"></script>
+</body>
+
+</html>

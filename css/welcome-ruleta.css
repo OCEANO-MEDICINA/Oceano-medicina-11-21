@@ -413,7 +413,7 @@ body {
     z-index: 10;
   }
   .modal-background {
-    background: #042799e1;
+    background: rgba(4, 39, 153, 0.8823529412);
     -webkit-backdrop-filter: blur(2px);
             backdrop-filter: blur(2px);
   }
