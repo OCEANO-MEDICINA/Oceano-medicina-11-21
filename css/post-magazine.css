@@ -1057,10 +1057,10 @@ body .zsiq-mobhgt[embedtheme].zsiq-newtheme {
   color: #ff266e;
   border: transparent;
 }
-.btn.simple:hover {
+.btn.simple:hover, .btn.simple:focus {
   color: #ff266e !important;
   text-decoration: underline;
-  box-shadow: none;
+  box-shadow: none !important;
 }
 .btn-mid:hover, .btn-big:hover {
   box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.3647058824);
@@ -1086,12 +1086,13 @@ body .zsiq-mobhgt[embedtheme].zsiq-newtheme {
 .btn-bibliografias:hover, .btn-bibliografias:focus {
   background-color: #f09146;
 }
-.btn-medicina, .btn-enfermeria, .btn-bibliografias {
+
+.filter-button {
   background-color: transparent;
   border: 1px solid #acacac;
   color: #acacac;
 }
-.btn-medicina.active, .btn-enfermeria.active, .btn-bibliografias.active {
+.filter-button.active {
   border: none;
   color: #fff;
   font-weight: 700;
@@ -3204,6 +3205,15 @@ footer,
 .post-cont-body > p:first-child {
   margin-top: 1.75rem;
 }
+.post-cont-body p > iframe {
+  aspect-ratio: 16/9;
+  max-width: 700px;
+  height: auto !important;
+  width: 100% !important;
+  transform: translateX(-50%);
+  -webkit-margin-start: 50%;
+          margin-inline-start: 50%;
+}
 .post-cont-body ul {
   list-style: disc;
   list-style-position: inside;
@@ -3512,6 +3522,17 @@ footer,
     -o-object-position: center;
        object-position: center;
   }
+  .post-cont .alignleft {
+    float: left;
+    margin-right: 1rem;
+  }
+  .post-cont .alignright {
+    float: right;
+    margin-left: 1rem;
+  }
+  .post-cont .aligncenter {
+    margin: 0 auto;
+  }
 
   .related-cont-body-grid {
     padding: 1rem 0 0;
@@ -3573,7 +3594,7 @@ footer,
   .post .cont-w-side-r {
     display: grid;
     grid-template-columns: 1fr 346px 230px;
-    grid-template-areas: "postHeader postHeader side" "body body side" "source source side" "share share side" "related related side" "coments coments side";
+    grid-template-areas: "postHeader postHeader side" "body body side" "source source source" "share share share" "related related related" "coments coments coments";
     gap: 0;
     -moz-column-gap: 2rem;
          column-gap: 2rem;
@@ -3688,5 +3709,9 @@ footer,
 @media screen and (min-width: 1445px) {
   .hero-cont {
     width: 1250px !important;
+  }
+
+  .post .cont-w-side-r {
+    grid-template-areas: "postHeader postHeader side" "body body side" "source source side" "share share side" "related related side" "coments coments side";
   }
 }/*# sourceMappingURL=post-magazine.css.map */

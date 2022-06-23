@@ -496,10 +496,11 @@ button {
         background-color: transparent !important;
         color: $primary;
         border: transparent;
-        &:hover {
+        &:hover,
+        &:focus {
             color: $primary !important;
             text-decoration: underline;
-            box-shadow: none;
+            box-shadow: none !important;
         }
     }
     &-mid,
@@ -533,17 +534,16 @@ button {
     &-bibliografias:focus {
         background-color: $bibliografia;
     }
-    &-medicina,
-    &-enfermeria,
-    &-bibliografias {
-        background-color: transparent;
-        border: 1px solid #acacac;
-        color: #acacac;
-        &.active {
-            border: none;
-            color: #fff;
-            font-weight: 700;
-        }
+}
+
+.filter-button {
+    background-color: transparent;
+    border: 1px solid #acacac;
+    color: #acacac;
+    &.active {
+        border: none;
+        color: #fff;
+        font-weight: 700;
     }
 }
 
