@@ -1422,7 +1422,6 @@ body {
          &-download {
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
             img {
                display: block;
             }
@@ -1440,12 +1439,16 @@ body {
          }
       }
    }
+
    .temario {
       &-cont {
          &-info {
             .content-tab {
                width: 89.3%;
             }
+         }
+         &-download {
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
          }
       }
    }

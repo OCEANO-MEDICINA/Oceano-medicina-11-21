@@ -4244,7 +4244,6 @@ body {
 .temario-cont-download {
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
   }
   .r-mex-cont-download img,
 .temario-cont-download img {
@@ -4269,6 +4268,9 @@ body {
 
   .temario-cont-info .content-tab {
     width: 89.3%;
+  }
+  .temario-cont-download {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
   }
 
   .options-cont {
