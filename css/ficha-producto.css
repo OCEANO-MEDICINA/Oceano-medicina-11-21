@@ -2927,10 +2927,6 @@ body {
   color: #272727;
 }
 
-.solapa-sup {
-  width: min(100% - 16px, 960px);
-}
-
 .fixed-position {
   bottom: 8rem !important;
 }

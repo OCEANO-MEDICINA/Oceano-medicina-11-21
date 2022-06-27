@@ -2979,6 +2979,25 @@ header .navbar .nav-contenidos.is-hoverable:focus .navbar-dropdown {
 .grid-w-side-cont-filtros .filtros-aplicados .output-filtros a:hover i {
   color: red;
 }
+.grid-w-side-cont-products .promo {
+  margin-bottom: clamp(0.5rem, 2vw, 1rem);
+  padding: clamp(1rem, 2vw, 1.5rem);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: #f6f8fc;
+  border: 1px solid rgba(172, 172, 172, 0.25);
+  border-radius: 4px;
+  font-size: clamp(0.875rem, 2vw, 1rem);
+  color: #02204d;
+}
+.grid-w-side-cont-products .promo-img {
+  width: 2.125rem;
+}
+.grid-w-side-cont-products .promo-title {
+  line-height: 1.2;
+  max-width: 500px;
+}
 .grid-w-side-cont-products-filters {
   position: relative;
   display: flex;
@@ -3297,6 +3316,9 @@ header .navbar .nav-contenidos.is-hoverable:focus .navbar-dropdown {
 @media screen and (min-width: 1024px) {
   .grid-w-side {
     margin-top: -4rem;
+  }
+  .grid-w-side .promo-title h3 {
+    font-weight: 500;
   }
 }
 @media screen and (min-width: 1445px) {
