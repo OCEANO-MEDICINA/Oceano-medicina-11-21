@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Pasarela de pagos</title>
+      <!-- Fonts -->
+      <link
+         href="https://fonts.googleapis.com/css?family=Roboto:200,400,500,700"
+         rel="stylesheet"
+      />
+      <!-- Syles CSS -->
+      <link
+         rel="stylesheet"
+         href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+      />
+      <link
+         rel="stylesheet"
+         href="https://cdn.jsdelivr.net/npm/@mdi/font@6.6.96/css/materialdesignicons.min.css"
+      />
+      <link rel="stylesheet" href="css/pasarela-de-cobros.css" />
+   </head>
+   <body>
+      <section class="is-flex" style="min-height: 100vh">
+         <article class="container contenedor">
+            <div class="info-view">
+               <div class="info-view-header">
+                  <h1>Información del pago</h1>
+               </div>
+               <div class="info-view-item field">
+                  <div
+                     class="is-flex is-justify-content-space-between is-align-items-center mb-3"
+                  >
+                     <label class="info-view-item-label label"
+                        >País seleccionado</label
+                     >
+                     <button class="">
+                        Editar <span class="mdi mdi-pencil"></span>
+                     </button>
+                  </div>
+                  <div class="control is-flex">
+                     <span id="" class="is-flex is-flex-grow-1">
+                        <input
+                           id="monto-a-pagar"
+                           class="input form-control"
+                           type="text"
+                           value="Argentina"
+                           disabled="disabled"
+                        />
+                     </span>
+                  </div>
+               </div>
+               <div class="info-view-item field">
+                  <div
+                     class="is-flex is-justify-content-space-between is-align-items-center mb-3"
+                  >
+                     <label class="info-view-item-label label"
+                        >Meétodo de pago seleccionado</label
+                     >
+                     <button class="">
+                        Editar <span class="mdi mdi-pencil"></span>
+                     </button>
+                  </div>
+                  <div class="control is-flex">
+                     <span id="" class="is-flex is-flex-grow-1">
+                        <input
+                           id="monto-a-pagar"
+                           class="input form-control"
+                           type="text"
+                           value="Mercado pago"
+                           disabled="disabled"
+                        />
+                     </span>
+                  </div>
+               </div>
+            </div>
+
+            <div class="columns pasarela">
+               <!--Seleccionar pais-->
+               <div id="seleccion_pais" class="column seleccion-pais box">
+                  <h2>Selecciona un país</h2>
+                  <div class="pais-grid">
+                     <div id="" class="pais-item">
+                        <img
+                           src="https://oceanomedicina.com.ar/pasarela-cobros-stripe/img/argentina.png"
+                           alt=""
+                        />
+                        <h4>Argentina</h4>
+                     </div>
+                     <div id="" class="pais-item">
+                        <img
+                           src="https://oceanomedicina.com.ar/pasarela-cobros-stripe/img/bolivia.png"
+                           alt=""
+                        />
+                        <h4>Bolivia</h4>
+                     </div>
+                     <div id="" class="pais-item">
+                        <img
+                           src="https://oceanomedicina.com.ar/pasarela-cobros-stripe/img/chile.png"
+                           alt=""
+                        />
+                        <h4>Chile</h4>
+                     </div>
+                     <div id="" class="pais-item">
+                        <img
+                           src="https://oceanomedicina.com.ar/pasarela-cobros-stripe/img/colombia.png"
+                           alt=""
+                        />
+                        <h4>Colombia</h4>
+                     </div>
+                     <div id="" class="pais-item">
+                        <img
+                           src="https://oceanomedicina.com.ar/pasarela-cobros-stripe/img/costa-rica.png"
+                           alt=""
+                        />
+                        <h4>Costa Rica</h4>
+                     </div>
+                     <div id="" class="pais-item">
+                        <img
+                           src="https://oceanomedicina.com.ar/pasarela-cobros-stripe/img/ecuador.png"
+                           alt=""
+                        />
+                        <h4>Ecuador</h4>
+                     </div>
+                     <div id="" class="pais-item">
+                        <img
+                           src="https://oceanomedicina.com.ar/pasarela-cobros-stripe/img/salvador.png"
+                           alt=""
+                        />
+                        <h4>El Salvador</h4>
+                     </div>
+                     <div id="" class="pais-item">
+                        <img
+                           src="https://oceanomedicina.com.ar/pasarela-cobros-stripe/img/guatemala.png"
+                           alt=""
+                        />
+                        <h4>Guatemala</h4>
+                     </div>
+                     <div id="" class="pais-item">
+                        <img
+                           src="https://oceanomedicina.com.ar/pasarela-cobros-stripe/img/honduras.png"
+                           alt=""
+                        />
+                        <h4>Honduras</h4>
+                     </div>
+                     <div id="" class="pais-item">
+                        <img
+                           src="https://oceanomedicina.com.ar/pasarela-cobros-stripe/img/mexico.png"
+                           alt=""
+                        />
+                        <h4>México</h4>
+                     </div>
+                     <div id="" class="pais-item">
+                        <img
+                           src="https://oceanomedicina.com.ar/pasarela-cobros-stripe/img/nicaragua.png"
+                           alt=""
+                        />
+                        <h4>Nicaragua</h4>
+                     </div>
+                     <div id="" class="pais-item">
+                        <img
+                           src="https://oceanomedicina.com.ar/pasarela-cobros-stripe/img/panama.png"
+                           alt=""
+                        />
+                        <h4>Panamá</h4>
+                     </div>
+                     <div id="" class="pais-item">
+                        <img
+                           src="https://oceanomedicina.com.ar/pasarela-cobros-stripe/img/paraguay.png"
+                           alt=""
+                        />
+                        <h4>Paraguay</h4>
+                     </div>
+                     <div id="" class="pais-item">
+                        <img
+                           src="https://oceanomedicina.com.ar/pasarela-cobros-stripe/img/peru.png"
+                           alt=""
+                        />
+                        <h4>Perú</h4>
+                     </div>
+                     <div id="" class="pais-item">
+                        <img
+                           src="https://oceanomedicina.com.ar/pasarela-cobros-stripe/img/uruguay.png"
+                           alt=""
+                        />
+                        <h4>Uruaguay</h4>
+                     </div>
+                     <div id="" class="pais-item">
+                        <img
+                           src="https://oceanomedicina.com.ar/pasarela-cobros-stripe/img/usa.png"
+                           alt=""
+                        />
+                        <h4>USA</h4>
+                     </div>
+                  </div>
+               </div>
+               <!--Seleccionar método de pago-->
+               <div
+                  id="seleccion_metPago"
+                  class="column pasarela-01 met-pago box"
+               >
+                  <h2>01. Selecciona un método de pago</h2>
+                  <div class="met-pago-grid">
+                     <div id="" class="met-pago-item">
+                        <img
+                           src="https://oceanomedicina.com.ar/pasarela-cobros/img/mp_logo.png"
+                           alt=""
+                        />
+                        <h4>Mercado Pago</h4>
+                     </div>
+                     <div id="" class="met-pago-item">
+                        <img
+                           src="https://pedidosweb.es/wp-content/uploads/2020/04/stripe-payment-method.png"
+                           alt=""
+                        />
+                        <h4>Stripe</h4>
+                     </div>
+                     <div id="" class="met-pago-item">
+                        <img
+                           src="https://oceanomedicina.com.ar/pasarela-cobros/img/paypal.png"
+                           alt=""
+                        />
+                        <h4>Paypal</h4>
+                     </div>
+                     <div id="" class="met-pago-item">
+                        <img
+                           src="https://pbs.twimg.com/profile_images/659415494663892993/pvVx6k98_400x400.png"
+                           alt=""
+                        />
+                        <h4>Banorte</h4>
+                     </div>
+                     <div id="" class="met-pago-item">
+                        <img
+                           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKs3b1j7mMMAX8vqCN2dLqLoICGsWhUKdU52Zriy1-03W7GJ3qwnAS7U7JnzX6GYT9xSY&usqp=CAU"
+                           alt=""
+                        />
+                        <h4>Datafast</h4>
+                     </div>
+                  </div>
+               </div>
+
+               <!------------------------->
+               <!--Pasarela Mercado Pago-->
+               <!------------------------->
+
+               <h1
+                  class="title is-3 has-text-weight-bold is-uppercase has-text-primary m-0"
+               >
+                  Pasarela Mercado Pago
+               </h1>
+               <!--Seleccionar medio de pago-->
+
+               <div
+                  id="seleccion_medPago"
+                  class="column pasarela-02 med-pago box"
+               >
+                  <h2>02. Selecciona el medio de pago</h2>
+
+                  <div class="med-pago-grid field has-addons">
+                     <div class="control">
+                        <button id="" class="med-pago-item button">
+                           <h4>Pago con tarjeta</h4>
+                        </button>
+                     </div>
+                     <div class="control">
+                        <button
+                           id=""
+                           class="med-pago-item button is-link is-outlined"
+                        >
+                           <h4>Compartir link</h4>
+                        </button>
+                     </div>
+                  </div>
+               </div>
+
+               <!--Seleccionar modalidad de pago-->
+               <div
+                  id="seleccion_modPago"
+                  class="column pasarela-03 mod-pago box"
+               >
+                  <h2>03. Selecciona la modalidad de pago</h2>
+                  <div class="mod-pago-grid field has-addons">
+                     <div class="control">
+                        <button id="" class="mod-pago-item button">
+                           <h4>Tradicional</h4>
+                        </button>
+                     </div>
+                     <div class="control">
+                        <button
+                           id=""
+                           class="mod-pago-item button is-warning is-outlined"
+                        >
+                           <h4>Suscripcion</h4>
+                        </button>
+                     </div>
+                  </div>
+               </div>
+
+               <!--Completar los datos personales-->
+               <div
+                  id="form_datosPersonales"
+                  class="column pasarela-04 datos-personales form-datos-personales box"
+               >
+                  <h2>04. Completa los datos del cliente</h2>
+
+                  <!--Tipo de suscripcion-->
+                  <div class="form-item field">
+                     <label class="label has-text-warning"
+                        >Tipo de suscripción</label
+                     >
+                     <div class="control">
+                        <label class="radio">
+                           <input type="radio" name="tipo-de-suscripcion" />
+                           Agregar suscripción
+                        </label>
+                        <label class="radio">
+                           <input type="radio" name="tipo-de-suscripcion" />
+                           Modificar suscripción (permite cambiar los datos de
+                           la tarjeta)
+                        </label>
+                        <label class="radio">
+                           <input type="radio" name="tipo-de-suscripcion" />
+                           Suscripción simple (sin datos de tarjeta)
+                        </label>
+                     </div>
+                     <p class="help has-text-weight-medium is-warning">
+                        Campo de Suscripción
+                     </p>
+                  </div>
+
+                  <!--Datos del cliente-->
+                  <h3>Información del cliente</h3>
+
+                  <!--Nro. de contrato-->
+                  <div class="form-item field">
+                     <label class="label">Nro. de Contrato</label>
+                     <div class="control is-flex">
+                        <span id="" class="is-flex is-flex-grow-1">
+                           <input
+                              id="numero-de-contrato"
+                              class="input form-control"
+                              type="text"
+                              placeholder=""
+                           />
+                        </span>
+                     </div>
+                  </div>
+
+                  <!--Correo electronico-->
+                  <div class="form-item field">
+                     <label class="label">Correo electrónico</label>
+                     <div class="control is-flex">
+                        <span id="" class="is-flex is-flex-grow-1">
+                           <input
+                              id="numero-de-contrato"
+                              class="input form-control"
+                              type="email"
+                              placeholder="ejemplo@correo.com"
+                           />
+                        </span>
+                     </div>
+                  </div>
+
+                  <!--Campos de suscripcion - Monto total del contrato y meses totales - -->
+                  <div class="form-item field columns is-align-items-center">
+                     <div class="column">
+                        <label class="label has-text-warning"
+                           >Monto Total Del Contrato</label
+                        >
+                        <div class="control is-flex">
+                           <span id="" class="is-flex is-flex-grow-1">
+                              <input
+                                 id="monto-total-contrato"
+                                 class="input form-control is-warning"
+                                 type="number"
+                                 placeholder="Escribir el valor TOTAL de pago (con esta sintaxis 30.20)"
+                              />
+                           </span>
+                        </div>
+                        <p class="help has-text-weight-medium is-warning">
+                           Campo de Suscripción
+                        </p>
+                     </div>
+                     <div class="column">
+                        <label class="label has-text-warning"
+                           >Meses totales</label
+                        >
+                        <div class="control is-flex">
+                           <span id="" class="is-flex is-flex-grow-1">
+                              <input
+                                 id="monto-a-pagar"
+                                 class="input form-control is-warning"
+                                 type="number"
+                                 placeholder="12"
+                              />
+                           </span>
+                        </div>
+                        <p class="help has-text-weight-medium is-warning">
+                           Campo de Suscripción
+                        </p>
+                     </div>
+                  </div>
+
+                  <!--Monto a pagar-->
+                  <div class="form-item field">
+                     <label class="label">Monto a pagar</label>
+                     <div class="control is-flex">
+                        <span id="" class="is-flex is-flex-grow-1">
+                           <input
+                              id="monto-a-pagar"
+                              class="input form-control"
+                              type="text"
+                              placeholder="Escribir el valor de pago (con esta sintaxis 30.20)"
+                           />
+                        </span>
+                     </div>
+                  </div>
+
+                  <!--Seleccionar como compartir-->
+                  <div class="form-item field">
+                     <label class="label has-text-link"
+                        >Compartir link por</label
+                     >
+
+                     <div class="control">
+                        <label class="radio">
+                           <input type="radio" name="compartir-link-por" />
+                           Email
+                        </label>
+                        <label class="radio">
+                           <input type="radio" name="compartir-link-por" />
+                           Whatsapp
+                        </label>
+                     </div>
+                     <p class="help has-text-weight-medium is-link">
+                        Campo de Compartir por Link
+                     </p>
+                  </div>
+               </div>
+
+               <!--Completar los datos de la tarjeta-->
+               <div
+                  id="form_datosTarjeta"
+                  class="column pasarela-05 tarjeta form-tarjeta box"
+               >
+                  <h2>05. Completa los datos de la tarjeta</h2>
+
+                  <div class="form-item field">
+                     <label class="label">Indique el tipo de tarjeta</label>
+                     <div class="control is-flex is-flex-direction-column">
+                        <label
+                           class="radio has-text-weight-medium is-flex is-flex-grow-1 is-align-items-center has-text-success"
+                        >
+                           <input
+                              id="tarjeta-credito"
+                              type="radio"
+                              name="tipo-de-tarjeta"
+                           />
+                           Crédito
+                        </label>
+                        <div class="credito-grid is-flex-grow-1">
+                           <img
+                              src="https://http2.mlstatic.com/storage/logos-api-admin/0daa1670-5c81-11ec-ae75-df2bef173be2-xl@2x.png"
+                              alt=""
+                           />
+                           <img
+                              src="https://http2.mlstatic.com/storage/logos-api-admin/33ea00e0-571a-11e8-8364-bff51f08d440-xl@2x.png"
+                              alt=""
+                           />
+                           <img
+                              src="https://http2.mlstatic.com/storage/logos-api-admin/751ea930-571a-11e8-9a2d-4b2bd7b1bf77-xl@2x.png"
+                              alt=""
+                           />
+                           <img
+                              src="https://http2.mlstatic.com/storage/logos-api-admin/b08cf800-4c1a-11e9-9888-a566cbf302df-xl@2x.png"
+                              alt=""
+                           />
+                           <img
+                              src="https://http2.mlstatic.com/storage/logos-api-admin/c9f71470-6f07-11ec-9b23-071a218bbe35-xl@2x.png"
+                              alt=""
+                           />
+                           <img
+                              src="https://http2.mlstatic.com/storage/logos-api-admin/d589be70-eb86-11e9-b9a8-097ac027487d-xl@2x.png"
+                              alt=""
+                           />
+                           <img
+                              src="https://http2.mlstatic.com/storage/logos-api-admin/770edaa0-5dc7-11ec-a13d-73e40a9e9500-xl@2x.png"
+                              alt=""
+                           />
+                           <img
+                              src="https://http2.mlstatic.com/storage/logos-api-admin/e8ffdc40-5dc7-11ec-ae75-df2bef173be2-xl@2x.png"
+                              alt=""
+                           />
+                        </div>
+                        <label
+                           class="radio is-flex is-flex-grow-1 is-align-items-center"
+                        >
+                           <input
+                              id="tarjeta-debito"
+                              type="radio"
+                              name="tipo-de-tarjeta"
+                           />
+                           Débito
+                        </label>
+                        <div class="credito-grid">
+                           <img
+                              src="https://http2.mlstatic.com/storage/logos-api-admin/0daa1670-5c81-11ec-ae75-df2bef173be2-xl@2x.png"
+                              alt=""
+                           />
+                           <img
+                              src="https://http2.mlstatic.com/storage/logos-api-admin/33ea00e0-571a-11e8-8364-bff51f08d440-xl@2x.png"
+                              alt=""
+                           />
+                           <img
+                              src="https://http2.mlstatic.com/storage/logos-api-admin/751ea930-571a-11e8-9a2d-4b2bd7b1bf77-xl@2x.png"
+                              alt=""
+                           />
+                           <img
+                              src="https://http2.mlstatic.com/storage/logos-api-admin/b08cf800-4c1a-11e9-9888-a566cbf302df-xl@2x.png"
+                              alt=""
+                           />
+                        </div>
+                     </div>
+                  </div>
+                  <div class="form-item field columns is-tablet">
+                     <div class="column">
+                        <label class="label">Número de tarjeta</label>
+                        <div class="control is-flex">
+                           <span id="" class="is-flex is-flex-grow-1">
+                              <input
+                                 id="monto-a-pagar"
+                                 class="input form-control"
+                                 type="number"
+                                 placeholder="1111-2222-3333-4444"
+                              />
+                           </span>
+                        </div>
+                     </div>
+                     <div class="column">
+                        <label class="label has-text-success">Cuotas</label>
+                        <div class="control is-flex">
+                           <span
+                              class="select is-success is-flex is-flex-grow-1"
+                           >
+                              <select
+                                 id="campaignsource"
+                                 class="form-control is-flex-grow-1"
+                              >
+                                 <option value="0" selected="">
+                                    Cantidad de cuotas
+                                 </option>
+                                 <option value="1">1 cuota</option>
+                                 <option value="3">3 cuotas</option>
+                                 <option value="6">6 cuotas</option>
+                                 <option value="9">9 cuotas</option>
+                                 <option value="12">12 cuotas</option>
+                              </select>
+                           </span>
+                        </div>
+                        <p class="help has-text-weight-medium is-success">
+                           Campo tarjeta de credito
+                        </p>
+                     </div>
+                  </div>
+
+                  <div class="form-item field columns is-flex-grow-1">
+                     <div class="column">
+                        <label class="label">Fecha de vencimiento</label>
+                        <div class="is-flex is-align-items-center">
+                           <div class="control is-flex-grow-1">
+                              <span id="" class="is-flex is-flex-grow-1">
+                                 <input
+                                    id="monto-a-pagar"
+                                    class="input form-control"
+                                    type="number"
+                                    placeholder="11"
+                                 />
+                              </span>
+                           </div>
+                           <span class="has-text-weight-bold mx-2">/</span>
+                           <div class="control is-flex-grow-1">
+                              <span id="" class="is-flex is-flex-grow-1">
+                                 <input
+                                    id="monto-a-pagar"
+                                    class="input form-control"
+                                    type="number"
+                                    placeholder="27"
+                                 />
+                              </span>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="column">
+                        <label class="label">CVV</label>
+                        <div class="control is-flex">
+                           <span id="" class="is-flex is-flex-grow-1">
+                              <input
+                                 id="monto-a-pagar"
+                                 class="input form-control"
+                                 type="number"
+                                 placeholder="123"
+                              />
+                           </span>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div
+                     class="form-item field columns is-flex is-align-items-center"
+                  >
+                     <div class="column">
+                        <label class="label">Nombre del títular</label>
+                        <div class="control is-flex">
+                           <span id="" class="is-flex is-flex-grow-1">
+                              <input
+                                 id="monto-a-pagar"
+                                 class="input form-control"
+                                 type="text"
+                                 placeholder="Juan Pérez"
+                              />
+                           </span>
+                        </div>
+                     </div>
+
+                     <div class="column">
+                        <label class="label">Dirección</label>
+                        <div class="control is-flex">
+                           <span id="" class="is-flex is-flex-grow-1">
+                              <input
+                                 id="monto-a-pagar"
+                                 class="input form-control"
+                                 type="text"
+                                 placeholder="Esscriba la dirección"
+                              />
+                           </span>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div
+                     class="form-item field columns is-flex is-align-items-center"
+                  >
+                     <div class="column is-one-fifth">
+                        <label class="label">Tipo de documento</label>
+                        <div class="control is-flex">
+                           <span class="select is-flex is-flex-grow-1">
+                              <select
+                                 id="campaignsource"
+                                 class="form-control is-flex-grow-1"
+                              >
+                                 <option value="0" selected="">
+                                    Tipo de documento
+                                 </option>
+                                 <option value="dni">DNI</option>
+                                 <option value="libreta">
+                                    Libreta de enrolamiento
+                                 </option>
+                              </select>
+                           </span>
+                        </div>
+                     </div>
+                     <div class="column">
+                        <label class="label">Número de documento</label>
+                        <div class="control is-flex">
+                           <span id="" class="is-flex is-flex-grow-1">
+                              <input
+                                 id="monto-a-pagar"
+                                 class="input form-control"
+                                 type="number"
+                                 placeholder="12"
+                              />
+                           </span>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div
+                     class="form-item field columns is-flex is-align-items-center"
+                  >
+                     <div class="column">
+                        <label class="label has-text-danger"
+                           >CUIL / CUIT (ARG/PER/URU) -- NIT (COL) -- RUT
+                           (CHI)</label
+                        >
+                        <div class="control is-flex">
+                           <span id="" class="is-flex is-flex-grow-1">
+                              <input
+                                 id="monto-a-pagar"
+                                 class="input form-control is-danger"
+                                 type="number"
+                                 placeholder="11-11111111-1"
+                              />
+                           </span>
+                        </div>
+                     </div>
+                     <div class="column">
+                        <label class="label">Razón social</label>
+                        <div class="control is-flex">
+                           <span id="" class="is-flex is-flex-grow-1">
+                              <input
+                                 id="monto-a-pagar"
+                                 class="input form-control"
+                                 type="text"
+                                 placeholder="Escribir razón social"
+                              />
+                           </span>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="form-item field">
+                     <div class="control">
+                        <div id="" class="button is-primary">
+                           <h4>Generar pago</h4>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <!------------------------->
+               <!--Pasarela Stripe-------->
+               <!------------------------->
+
+               <h1
+                  class="title is-3 has-text-weight-bold is-uppercase has-text-primary m-0"
+               >
+                  Pasarela Stripe
+               </h1>
+
+               <!--Seleccionar medio de pago-->
+               <div
+                  id="seleccion_medPago"
+                  class="column pasarela-02 med-pago box"
+               >
+                  <h2>02. Selecciona el medio de pago</h2>
+
+                  <div class="med-pago-grid field has-addons">
+                     <div class="control">
+                        <button id="" class="med-pago-item button">
+                           <h4>Pago con tarjeta</h4>
+                        </button>
+                     </div>
+                     <div class="control">
+                        <button
+                           id=""
+                           class="med-pago-item button is-link is-outlined"
+                        >
+                           <h4>Compartir link</h4>
+                        </button>
+                     </div>
+                  </div>
+               </div>
+
+               <!--Seleccionar modalidad de pago-->
+               <div
+                  id="seleccion_modPago"
+                  class="column pasarela-03 mod-pago box"
+               >
+                  <h2>03. Selecciona la modalidad de pago</h2>
+                  <div class="mod-pago-grid field">
+                     <div class="control">
+                        <button id="" class="mod-pago-item button" disabled>
+                           <h4>Tradicional (default)</h4>
+                        </button>
+                     </div>
+                  </div>
+               </div>
+
+               <!--Completar los datos personales-->
+               <div
+                  id="form_datosPersonales"
+                  class="column pasarela-04 datos-personales form-datos-personales box"
+               >
+                  <h2>04. Completa los datos del cliente</h2>
+
+                  <!--Datos del cliente-->
+                  <h3>Información del cliente</h3>
+
+                  <!--Nro. de contrato-->
+                  <div class="form-item field">
+                     <label class="label">Nro. de Contrato</label>
+                     <div class="control is-flex">
+                        <span id="" class="is-flex is-flex-grow-1">
+                           <input
+                              id="numero-de-contrato"
+                              class="input form-control"
+                              type="text"
+                              placeholder=""
+                           />
+                        </span>
+                     </div>
+                     <p class="help has-text-weight-medium is-link">
+                        Solo se mantiene este campo en "Compartir por Link"
+                     </p>
+                  </div>
+
+                  <!--Correo electronico-->
+                  <div class="form-item field">
+                     <label class="label">Correo electrónico</label>
+                     <div class="control is-flex">
+                        <span id="" class="is-flex is-flex-grow-1">
+                           <input
+                              id="numero-de-contrato"
+                              class="input form-control"
+                              type="email"
+                              placeholder="ejemplo@correo.com"
+                           />
+                        </span>
+                     </div>
+                  </div>
+
+                  <!--Monto a pagar-->
+                  <div class="form-item field columns">
+                     <div class="column">
+                        <label class="label">Monto a pagar</label>
+                        <div class="control is-flex">
+                           <span id="" class="is-flex is-flex-grow-1">
+                              <input
+                                 id="monto-a-pagar"
+                                 class="input form-control"
+                                 type="text"
+                                 placeholder="Escribir el valor de pago (con esta sintaxis 30.20)"
+                              />
+                           </span>
+                        </div>
+                     </div>
+
+                     <div class="column">
+                        <label class="label has-text-link"
+                           >Porcentaje a descontar</label
+                        >
+                        <div class="control is-flex">
+                           <span class="select is-link is-flex is-flex-grow-1">
+                              <select
+                                 id="campaignsource"
+                                 class="form-control is-flex-grow-1"
+                              >
+                                 <option value="0" selected="">
+                                    Porcentaje de descuento
+                                 </option>
+                                 <option value="0">0%</option>
+                                 <option value="5">5%</option>
+                                 <option value="10">10%</option>
+                                 <option value="15">15%</option>
+                                 <option value="20">20%</option>
+                                 <option value="25">25%</option>
+                                 <option value="30">30%</option>
+                              </select>
+                           </span>
+                        </div>
+                        <p class="help has-text-weight-medium is-link">
+                           Campo de Compartir por Link
+                        </p>
+                     </div>
+                  </div>
+
+                  <!--Seleccionar como compartir-->
+                  <div class="form-item field">
+                     <label class="label has-text-link"
+                        >Compartir link por</label
+                     >
+
+                     <div class="control">
+                        <label class="radio">
+                           <input type="radio" name="compartir-link-por" />
+                           Email
+                        </label>
+                        <label class="radio">
+                           <input type="radio" name="compartir-link-por" />
+                           Whatsapp
+                        </label>
+                     </div>
+                     <p class="help has-text-weight-medium is-link">
+                        Campo de Compartir por Link
+                     </p>
+                  </div>
+               </div>
+
+               <!--Completar los datos de la tarjeta-->
+               <div
+                  id="form_datosTarjeta"
+                  class="column pasarela-05 tarjeta form-tarjeta box"
+               >
+                  <h2>05. Completa los datos de la tarjeta</h2>
+
+                  <div class="form-item field columns is-tablet">
+                     <div class="column">
+                        <label class="label">Número de tarjeta</label>
+                        <div class="control is-flex">
+                           <span id="" class="is-flex is-flex-grow-1">
+                              <input
+                                 id="monto-a-pagar"
+                                 class="input form-control"
+                                 type="number"
+                                 placeholder="1111-2222-3333-4444"
+                              />
+                           </span>
+                        </div>
+                     </div>
+                     <div class="column">
+                        <label class="label">Número de pagos</label>
+                        <div class="control is-flex">
+                           <span class="select is-flex is-flex-grow-1">
+                              <select
+                                 id="campaignsource"
+                                 class="form-control is-flex-grow-1"
+                              >
+                                 <option value="0" selected="">
+                                    Cantidad de pagos
+                                 </option>
+                                 <option value="1">1 pagos</option>
+                                 <option value="3">3 pagos</option>
+                                 <option value="6">6 pagos</option>
+                                 <option value="9">9 pagos</option>
+                                 <option value="12">12 pagos</option>
+                              </select>
+                           </span>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="form-item field columns is-flex-grow-1">
+                     <div class="column">
+                        <label class="label">Fecha de vencimiento</label>
+                        <div class="is-flex is-align-items-center">
+                           <div class="control is-flex-grow-1">
+                              <span id="" class="is-flex is-flex-grow-1">
+                                 <input
+                                    id="monto-a-pagar"
+                                    class="input form-control"
+                                    type="number"
+                                    placeholder="11"
+                                 />
+                              </span>
+                           </div>
+                           <span class="has-text-weight-bold mx-2">/</span>
+                           <div class="control is-flex-grow-1">
+                              <span id="" class="is-flex is-flex-grow-1">
+                                 <input
+                                    id="monto-a-pagar"
+                                    class="input form-control"
+                                    type="number"
+                                    placeholder="27"
+                                 />
+                              </span>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="column">
+                        <label class="label">CVV</label>
+                        <div class="control is-flex">
+                           <span id="" class="is-flex is-flex-grow-1">
+                              <input
+                                 id="monto-a-pagar"
+                                 class="input form-control"
+                                 type="number"
+                                 placeholder="123"
+                              />
+                           </span>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div
+                     class="form-item field columns is-flex is-align-items-center"
+                  >
+                     <div class="column">
+                        <label class="label">Nombre del títular</label>
+                        <div class="control is-flex">
+                           <span id="" class="is-flex is-flex-grow-1">
+                              <input
+                                 id="monto-a-pagar"
+                                 class="input form-control"
+                                 type="text"
+                                 placeholder="Juan Pérez"
+                              />
+                           </span>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="form-item field">
+                     <div class="control">
+                        <div id="" class="button is-primary">
+                           <h4>Generar pago</h4>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <!------------------------->
+               <!--Pasarela PayPal-------->
+               <!------------------------->
+
+               <h1
+                  class="title is-3 has-text-weight-bold is-uppercase has-text-primary m-0"
+               >
+                  Pasarela PayPal
+               </h1>
+               <!--Seleccionar medio de pago-->
+
+               <div
+                  id="seleccion_medPago"
+                  class="column pasarela-02 med-pago box"
+               >
+                  <h2>02. Selecciona el medio de pago</h2>
+
+                  <div class="med-pago-grid field has-addons">
+                     <div class="control">
+                        <button id="" class="med-pago-item button" disabled>
+                           <h4>Pago con tarjeta (default)</h4>
+                        </button>
+                     </div>
+                  </div>
+               </div>
+
+               <!--Seleccionar modalidad de pago-->
+               <div
+                  id="seleccion_modPago"
+                  class="column pasarela-03 mod-pago box"
+               >
+                  <h2>03. Selecciona la modalidad de pago</h2>
+                  <div class="mod-pago-grid field">
+                     <div class="control">
+                        <button id="" class="mod-pago-item button" disabled>
+                           <h4>Tradicional (default)</h4>
+                        </button>
+                     </div>
+                  </div>
+               </div>
+
+               <!--Completar los datos personales-->
+               <div
+                  id="form_datosPersonales"
+                  class="column pasarela-04 datos-personales form-datos-personales box"
+               >
+                  <h2>04. Completa los datos del cliente</h2>
+
+                  <!--Datos del cliente-->
+                  <h3>Información del cliente</h3>
+
+                  <!--Nro. de contrato-->
+                  <div class="form-item field">
+                     <label class="label">Nro. de Contrato</label>
+                     <div class="control is-flex">
+                        <span id="" class="is-flex is-flex-grow-1">
+                           <input
+                              id="numero-de-contrato"
+                              class="input form-control"
+                              type="text"
+                              placeholder=""
+                           />
+                        </span>
+                     </div>
+                  </div>
+
+                  <!--Correo electronico-->
+                  <div class="form-item field">
+                     <label class="label">Correo electrónico</label>
+                     <div class="control is-flex">
+                        <span id="" class="is-flex is-flex-grow-1">
+                           <input
+                              id="numero-de-contrato"
+                              class="input form-control"
+                              type="email"
+                              placeholder="ejemplo@correo.com"
+                           />
+                        </span>
+                     </div>
+                  </div>
+
+                  <!--Monto a pagar-->
+                  <div class="form-item field columns">
+                     <div class="column">
+                        <label class="label">Monto a pagar</label>
+                        <div class="control is-flex">
+                           <span id="" class="is-flex is-flex-grow-1">
+                              <input
+                                 id="monto-a-pagar"
+                                 class="input form-control"
+                                 type="text"
+                                 placeholder="Escribir el valor de pago (con esta sintaxis 30.20)"
+                              />
+                           </span>
+                        </div>
+                     </div>
+
+                     <div class="column">
+                        <label class="label">Número de pagos</label>
+                        <div class="control is-flex">
+                           <span class="select is-flex is-flex-grow-1">
+                              <select
+                                 id="campaignsource"
+                                 class="form-control is-flex-grow-1"
+                              >
+                                 <option value="0" selected="">
+                                    Cantidad de pagos
+                                 </option>
+                                 <option value="1">1 pago</option>
+                                 <option value="3">3 pagos</option>
+                                 <option value="6">6 pagos</option>
+                                 <option value="9">9 pagos</option>
+                                 <option value="12">12 pagos</option>
+                              </select>
+                           </span>
+                        </div>
+                     </div>
+                  </div>
+
+                  <!--Seleccionar como compartir-->
+                  <div class="form-item field">
+                     <label class="label has-text-link"
+                        >Compartir link por</label
+                     >
+
+                     <div class="control">
+                        <label class="radio">
+                           <input type="radio" name="compartir-link-por" />
+                           Email
+                        </label>
+                        <label class="radio">
+                           <input type="radio" name="compartir-link-por" />
+                           Whatsapp
+                        </label>
+                     </div>
+                     <p class="help has-text-weight-medium is-link">
+                        Campo de Compartir por Link
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </article>
+      </section>
+   </body>
+</html>

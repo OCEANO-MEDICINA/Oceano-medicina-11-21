@@ -1,0 +1,36 @@
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.pasarela {
+    display: flex;
+    flex-direction: column;
+}
+.pasarela > * {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+}
+
+.pasarela .tradicional {
+    border: 1px solid #48c78e;
+}
+
+.pais-grid,
+.met-pago-grid,
+.credito-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(4.75rem, 1fr));
+    gap: 1rem;
+}

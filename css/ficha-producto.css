@@ -1564,7 +1564,7 @@ header .navbar-item, header .navbar-link {
 }
 header .navbar-item:focus, header .navbar-item:focus-within, header .navbar-item:hover, header .navbar-item:focus::after, header .navbar-item:focus-within::after, header .navbar-item:hover::after, header .navbar-link:focus, header .navbar-link:focus-within, header .navbar-link:hover, header .navbar-link:focus::after, header .navbar-link:focus-within::after, header .navbar-link:hover::after {
   background: unset;
-  color: #ff266e;
+  color: #fff;
   border-color: #ff266e !important;
 }
 header .navbar-item.button, header .navbar-link.button {
