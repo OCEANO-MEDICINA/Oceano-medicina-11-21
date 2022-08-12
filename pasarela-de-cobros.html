@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Pasarela de cobros</title>
+      <link
+         rel="stylesheet"
+         href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+      />
+      <link href="./public/css/pasarela-de-cobros.css" rel="stylesheet" />
+      <link
+         rel="stylesheet"
+         href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+      />
+      <link
+         rel="stylesheet"
+         href="https://cdn.jsdelivr.net/npm/@mdi/font@6.6.96/css/materialdesignicons.min.css"
+      />
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      />
+   </head>
+   <header class="container is-max-widescreen py-5">
+      <nav
+         class="navbar is-transparent"
+         role="navigation"
+         aria-label="main navigation"
+      >
+         <div class="navbar-brand">
+            <a class="navbar-item" href="#">
+               <img
+                  src="./public/img/logo-oceano-pagos.svg"
+                  alt="Bulma: Free, open source, and modern CSS framework based on Flexbox"
+                  width="100%"
+                  height="auto"
+               />
+            </a>
+         </div>
+      </nav>
+   </header>
+   <body>
+      <section class="container is-max-widescreen">
+         <div
+            class="is-offset-two-thirds is-two-thirds column background-side"
+         ></div>
+
+         <article id="pasarela" class="pasarela columns mx-auto">
+            <div class="is-8 column pasarela-cont">
+               <div class="is-two-thirds column overlay-left invisible"></div>
+               <h1
+                  id="finalResume_title"
+                  class="title is-4 has-text-white invisible"
+                  style="position: relative; z-index: 5"
+               >
+                  Resumen de datos
+               </h1>
+               <div id="finalResume" class="is-full column invisible">
+                  <div class="columns is-multiline datos-cliente">
+                     <div class="column is-full datos-cliente-header">
+                        <div id="emailCliente_resume" class="finalResume-item">
+                           <label for="">CORREO ELECTRÓNICO</label>
+                           <h4></h4>
+                        </div>
+                        <div id="todayDate_resume" class="finalResume-item">
+                           <h4></h4>
+                        </div>
+                     </div>
+                     <div
+                        id="numeroContrato_resume"
+                        class="column is-three-fifths finalResume-item"
+                     >
+                        <label for="">Número de contrato</label>
+                        <h4></h4>
+                     </div>
+                     <div
+                        id="montoTotalContrato_resume"
+                        class="column finalResume-item"
+                     >
+                        <label for="">MONTO TOTAL DEL CONTRATO</label>
+                        <h4></h4>
+                     </div>
+                     <div class="column is-full is-divider-dashed"></div>
+
+                     <div
+                        id="mesesTotales_resume"
+                        class="column is-one-third finalResume-item"
+                     >
+                        <label for="">MESES TOTALES</label>
+                        <h4></h4>
+                     </div>
+                     <div
+                        id="montoTotalMes_resume"
+                        class="column is-one-third finalResume-item"
+                     >
+                        <label for="">monto a pagar POR MES</label>
+                        <h4></h4>
+                     </div>
+                  </div>
+                  <div class="is-divider"></div>
+                  <div class="columns is-multiline datos-tarjeta">
+                     <h2 class="column is-full title is-size-4">
+                        Datos de la tarjeta
+                     </h2>
+                     <div
+                        id="tipoTarjeta_resume"
+                        class="column is-one-third finalResume-item"
+                     >
+                        <label for="">Tipo de tarjeta</label>
+                        <h4></h4>
+                     </div>
+                     <div
+                        id="numeroTarjeta_resume"
+                        class="column is-two-thirds finalResume-item"
+                     >
+                        <label for="">número de tarjeta</label>
+                        <h4></h4>
+                     </div>
+                     <div
+                        id="fechaVencimiento_resume"
+                        class="column is-one-third finalResume-item"
+                     >
+                        <label for="">Fecha de vencimiento</label>
+                        <h4></h4>
+                     </div>
+                     <div id="cvv_resume" class="column is-1 finalResume-item">
+                        <label for="">CVV</label>
+                        <h4></h4>
+                     </div>
+                     <div
+                        id="cuotas_resume"
+                        class="column is-2 finalResume-item"
+                     >
+                        <label for="">Cuotas</label>
+                        <h4></h4>
+                     </div>
+                     <div
+                        id="nombreTitular_resume"
+                        class="column is-half finalResume-item"
+                     >
+                        <label for="">NOMBRE DEL TITULAR</label>
+                        <h4></h4>
+                     </div>
+                     <div
+                        id="direccionTitular_resume"
+                        class="column is-half finalResume-item"
+                     >
+                        <label for="">Dirección</label>
+                        <h4></h4>
+                     </div>
+                     <div
+                        id="tipoNumDocumento_resume"
+                        class="column is-one-third finalResume-item"
+                     >
+                        <label for="">Tipo Y NÚMERO DE DOC</label>
+                        <h4></h4>
+                     </div>
+                     <div
+                        id="cuilCuit_resume"
+                        class="column is-one-third finalResume-item"
+                     >
+                        <label for="">CUIL/CUIT</label>
+                        <h4></h4>
+                     </div>
+                     <div
+                        id="razonSocial_resume"
+                        class="column is-one-third finalResume-item"
+                     >
+                        <label for="">Razón Social</label>
+                        <h4></h4>
+                     </div>
+                  </div>
+               </div>
+               <!--Seleccionar rol-->
+               <div
+                  id="seleccion_rol"
+                  class="pasarela-splash seleccion_rol animate__animated animate__fadeIn"
+               >
+                  <h2 class="title is-4">¡Bienvenido al flow de pagos!</h2>
+                  <h3 class="has-text-weight-medium">
+                     Para comenzar el proceso de generar un pago, elije tu rol
+                     correspondiente.
+                  </h3>
+
+                  <div class="cardAsesor-grid">
+                     <div
+                        id="asesorComercial"
+                        class="cardAsesor asesor-comerical"
+                     >
+                        <div class="cardAsesor-img-overlay">
+                           <div class="overlay-color"></div>
+                           <picture>
+                              <source
+                                 type="image/jpg"
+                                 media="(max-width: 1920px)"
+                                 srcset="./public/img/asesor-comercial.jpg"
+                              />
+                              <img
+                                 src="./public/img/asesor-comercial.jpg"
+                                 alt="tarjeta de asesor comercial"
+                              />
+                           </picture>
+                        </div>
+                        <h4 class="cardAsesor-title">Asesor comercial</h4>
+                        <button
+                           id="ctaAsesorComercial"
+                           class="button is-primary is-medium"
+                        >
+                           Comenzar
+                        </button>
+                     </div>
+
+                     <div id="asesorCobranzas" class="cardAsesor cobranzas">
+                        <div class="cardAsesor-img-overlay">
+                           <div class="overlay-color"></div>
+                           <picture>
+                              <source
+                                 type="image/jpg"
+                                 media="(max-width: 1920px)"
+                                 srcset="./public/img/asesor-cobranzas.jpg"
+                              />
+                              <img
+                                 src="./public/img/asesor-cobranzas.jpg"
+                                 alt="tarjeta de asesor de cobranzas"
+                              />
+                           </picture>
+                        </div>
+                        <h4 class="cardAsesor-title">Asesor de cobranzas</h4>
+                        <button
+                           id="ctaAsesorCobranzas"
+                           class="button is-primary is-medium"
+                        >
+                           Comenzar
+                        </button>
+                     </div>
+                  </div>
+               </div>
+
+               <!--Seleccionar pais-->
+               <div
+                  id="seleccion_pais"
+                  class="pasarela-1 seleccion-pais invisible"
+               >
+                  <h2 class="title is-4">
+                     <img src="./public/img/icon/paso-1.svg" alt="" />
+                     Seleccione país
+                  </h2>
+                  <div id="pais-grid" class="gridCuartos"></div>
+               </div>
+
+               <!--Seleccionar método de pago-->
+               <div id="seleccion_metPago" class="pasarela-2 metPago invisible">
+                  <h2 class="title is-4">
+                     <img src="./public/img/icon/paso-2.svg" alt="" />Seleccione
+                     método de pago
+                  </h2>
+                  <div id="metPago_grid" class="gridCuartos"></div>
+               </div>
+
+               <!------------------------->
+               <!--Pasarela Mercado Pago-->
+               <!------------------------->
+
+               <div id="pasarela-body" class="mercadopago invisible">
+                  <!--Seleccionar medio y modo de pago-->
+                  <div id="seleccion_medModPago" class="pasarela-3 medModPago">
+                     <h2 class="title is-4">
+                        <img
+                           src="./public/img/icon/paso-3.svg"
+                           alt=""
+                        />Seleccione medio y modo de pago
+                     </h2>
+
+                     <div id="medPago_grid" class="gridCuartos"></div>
+
+                     <div class="is-divider"></div>
+
+                     <div id="modPago_grid" class="gridCuartos"></div>
+                  </div>
+
+                  <!--Completar los datos personales-->
+                  <div
+                     id="form_datosPersonales"
+                     class="pasarela-4 form-datosPersonales invisible"
+                  >
+                     <h2 class="title is-4 ancho-completo">
+                        <img
+                           src="./public/img/icon/paso-4.svg"
+                           alt=""
+                        />Completa los datos del cliente
+                     </h2>
+
+                     <!----------------------->
+                     <!--Tipo de suscripcion-->
+                     <!----------------------->
+
+                     <!-- Campo que se muestra al elegir como modo de pago SUSCRIPCION -->
+                     <div
+                        id="tipoSuscripcion"
+                        class="form-item field checkFields ancho-completo"
+                     >
+                        <div class="control box is-flex align-items-center">
+                           <h3 class="is-uppercase">Tipo de suscripción</h3>
+                           <label class="radio checkFields-item">
+                              <input
+                                 class="dataPerson_tipoSuscricion"
+                                 type="radio"
+                                 name="tipoSuscripcion"
+                                 id="tipoSuscripcion_agregar"
+                                 value="Agregar"
+                                 checked="checked"
+                              />
+                              Agregar suscripción
+                           </label>
+                           <label class="radio checkFields-item">
+                              <input
+                                 class="dataPerson_tipoSuscricion"
+                                 type="radio"
+                                 name="tipoSuscripcion"
+                                 id="tipoSuscripcion_modificar"
+                                 value="Modificar"
+                              />
+                              Modificar suscripción
+                              <!--(permite cambiar los datos de la tarjeta)-->
+                           </label>
+                           <label class="radio checkFields-item">
+                              <input
+                                 class="dataPerson_tipoSuscricion"
+                                 type="radio"
+                                 name="tipoSuscripcion"
+                                 id="tipoSuscripcion_simple"
+                                 value="Simple"
+                              />
+                              Suscripción simple
+                              <!--(sin datos de tarjeta)-->
+                           </label>
+                        </div>
+                     </div>
+
+                     <!--------------------->
+                     <!--Datos del cliente-->
+                     <!--------------------->
+
+                     <!--Nro. de contrato-->
+                     <div id="numeroContrato" class="form-item field">
+                        <label class="label is-uppercase"
+                           >Número de Contrato</label
+                        >
+                        <div class="control is-flex">
+                           <span id="" class="is-flex is-flex-grow-1">
+                              <input
+                                 id="numeroContrato_value"
+                                 class="input form-control"
+                                 type="number"
+                                 placeholder="Ingrese número de contrato"
+                              />
+                           </span>
+                        </div>
+                     </div>
+
+                     <!--% de Descuento-->
+
+                     <div id="porcentajeDescuento" class="form-item field">
+                        <label class="label is-uppercase"
+                           >Porcentaje a descontar</label
+                        >
+                        <div class="control is-flex">
+                           <span id="" class="is-flex is-flex-grow-1">
+                              <input
+                                 id="porcentajeDescuento_value"
+                                 class="input form-control"
+                                 type="number"
+                                 placeholder="Ingrese porcentaje a descontar"
+                              />
+                           </span>
+                        </div>
+                     </div>
+
+                     <!--Correo electronico-->
+                     <div id="emailCliente" class="form-item field">
+                        <label class="label is-uppercase"
+                           >Correo electrónico</label
+                        >
+                        <div class="control is-flex">
+                           <span id="" class="is-flex is-flex-grow-1">
+                              <input
+                                 id="emailCliente_value"
+                                 class="input form-control"
+                                 type="email"
+                                 placeholder="Ingrese correco electrónico"
+                              />
+                           </span>
+                        </div>
+                     </div>
+
+                     <!--Campos de MODO SUSCRIPCIÓN - Monto total del contrato y meses totales -->
+                     <div id="montoTotal_contrato" class="form-item field">
+                        <label class="label is-uppercase"
+                           >Monto Total Del Contrato</label
+                        >
+                        <div class="control is-flex">
+                           <span id="" class="is-flex is-flex-grow-1">
+                              <input
+                                 id="montoTotalContrato_value"
+                                 class="input form-control"
+                                 type="number"
+                                 placeholder="Escribir valor total de pago (Ej: 100.00)"
+                              />
+                           </span>
+                        </div>
+                        <!--p class="help has-text-weight-medium is-warning">Campo de Suscripción</p-->
+                     </div>
+                     <div id="mesesTotales" class="form-item field">
+                        <label class="label is-uppercase">Meses totales</label>
+                        <div class="control is-flex">
+                           <span id="" class="is-flex is-flex-grow-1">
+                              <input
+                                 id="mesesTotales_value"
+                                 class="input form-control"
+                                 type="number"
+                                 placeholder="Ej: 12"
+                              />
+                           </span>
+                        </div>
+                        <!--p class="help has-text-weight-medium is-warning">Campo de Suscripción</p-->
+                     </div>
+
+                     <!--Monto a pagar-->
+                     <div
+                        id="montoPagarMes"
+                        class="form-item field ancho-completo"
+                     >
+                        <label class="label is-uppercase"
+                           >Monto a pagar por mes</label
+                        >
+                        <div class="control is-flex">
+                           <span id="" class="is-flex is-flex-grow-1">
+                              <input
+                                 id="montoTotalMes_value"
+                                 class="input form-control"
+                                 type="number"
+                                 placeholder="Escribir el valor de pago (Ej: 100.00)"
+                              />
+                           </span>
+                        </div>
+                     </div>
+
+                     <!--Seleccionar como compartir-->
+                     <div
+                        id="compartirLinkPor"
+                        class="form-item field ancho-completo"
+                     >
+                        <label class="label is-uppercase"
+                           >Compartir link por</label
+                        >
+
+                        <div class="columns control compartirLinkPor">
+                           <label
+                              class="column radio compartirLinkPor-item is-active"
+                           >
+                              <input
+                                 id="compartirLinkPor_email"
+                                 type="radio"
+                                 name="compartirLinkPor"
+                                 checked="checked"
+                              />
+                              Email
+                           </label>
+                           <label class="column radio compartirLinkPor-item">
+                              <input
+                                 id="compartirLinkPor_wpp"
+                                 type="radio"
+                                 name="compartirLinkPor"
+                              />
+                              Whatsapp
+                           </label>
+                        </div>
+                        <!--p class="help has-text-weight-medium is-link">Campo de Compartir por Link</p-->
+
+                        <!--Campo de email-->
+                        <div
+                           id="inputCompartirLinkPorEmail"
+                           class="form-item field ancho-completo"
+                        >
+                           <div class="control is-flex">
+                              <span id="" class="is-flex is-flex-grow-1">
+                                 <input
+                                    id="campoCompartirLinkPor-email"
+                                    class="input form-control"
+                                    type="text"
+                                    placeholder="Ingrese email"
+                                 />
+                              </span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+                  <!--------------------->
+                  <!--Datos de tarjeta--->
+                  <!--------------------->
+                  <!---->
+                  <!--Completar los datos de la tarjeta-->
+                  <div
+                     id="form_datosTarjeta"
+                     class="pasarela-5 tarjeta form-datosTarjeta invisible"
+                  >
+                     <h2 class="title is-4 ancho-completo">
+                        <img src="./public/img/icon/paso-5.svg" alt="" />
+                        Completa los datos de la tarjeta
+                     </h2>
+                     <!---->
+                     <!-- Seleccionar tipo de tarjeta -->
+                     <div
+                        id="tipoTarjerta"
+                        class="form-item field checkFields ancho-completo"
+                     >
+                        <div class="control box is-flex align-items-center">
+                           <h3 class="is-uppercase">Tipo de tarjeta</h3>
+                           <label class="radio checkFields-item">
+                              <input
+                                 class="tipoTarjeta"
+                                 type="radio"
+                                 name="tipoTarjeta"
+                                 id="tipoTarjeta_credito"
+                                 value="Crédito"
+                              />
+                              Crédito
+                           </label>
+
+                           <label class="radio checkFields-item">
+                              <input
+                                 class="tipoTarjeta"
+                                 type="radio"
+                                 name="tipoTarjeta"
+                                 id="tipoTarjeta_debito"
+                                 value="Débito"
+                              />
+                              Débito
+                           </label>
+                        </div>
+                     </div>
+                     <!---->
+                     <!--Nro. de contrato-->
+                     <div id="numeroTarjeta" class="form-item field">
+                        <label class="label is-uppercase"
+                           >Número de tarjeta</label
+                        >
+                        <div class="control is-flex">
+                           <span id="" class="is-flex is-flex-grow-1">
+                              <input
+                                 id="numeroTarjeta_value"
+                                 class="input form-control"
+                                 type="text"
+                                 placeholder="0000 - 0000 - 0000 - 00000"
+                              />
+                           </span>
+                        </div>
+                     </div>
+                     <!---->
+                     <!--Fecha de vencimiento-->
+                     <div id="fechaVencimiento" class="form-item field">
+                        <label class="label is-uppercase"
+                           >Fecha de vencimiento</label
+                        >
+                        <div class="is-flex is-align-items-center">
+                           <div class="control is-flex-grow-1">
+                              <span id="" class="is-flex is-flex-grow-1">
+                                 <input
+                                    id="fechaVencimiento_mes"
+                                    class="input form-control"
+                                    type="number"
+                                    placeholder="11"
+                                 />
+                              </span>
+                           </div>
+                           <span class="has-text-weight-bold mx-2">/</span>
+                           <div class="control is-flex-grow-1">
+                              <span id="" class="is-flex is-flex-grow-1">
+                                 <input
+                                    id="fechaVencimiento_ano"
+                                    class="input form-control"
+                                    type="number"
+                                    placeholder="27"
+                                 />
+                              </span>
+                           </div>
+                        </div>
+                     </div>
+                     <!---->
+                     <!--CVV-->
+                     <div id="cvv" class="form-item field">
+                        <label class="label is-uppercase">CVV</label>
+                        <div class="control is-flex">
+                           <span id="" class="is-flex is-flex-grow-1">
+                              <input
+                                 id="cvv_value"
+                                 class="input form-control"
+                                 type="number"
+                                 placeholder="Ingresar código de seguridad"
+                              />
+                           </span>
+                        </div>
+                     </div>
+                     <!---->
+                     <!--Campo CRÉDITO - Cuotas -->
+                     <div id="cuotas" class="form-item field">
+                        <label class="label is-uppercase">Cuotas</label>
+                        <div class="control is-flex">
+                           <span class="select is-flex is-flex-grow-1">
+                              <select
+                                 id="cuotas_value"
+                                 class="form-control is-flex-grow-1"
+                              >
+                                 <option value="0" selected="">
+                                    Seleccionar cantidad de cuotas
+                                 </option>
+                                 <option value="1">1</option>
+                                 <option value="3">3</option>
+                                 <option value="6">6</option>
+                                 <option value="9">9</option>
+                                 <option value="12">12</option>
+                              </select>
+                           </span>
+                        </div>
+                        <!--p class="help has-text-weight-medium is-success">Campo tarjeta de credito</p-->
+                     </div>
+                     <!---->
+                     <!--Nombre y apellido-->
+                     <div id="nombreTitular" class="form-item field">
+                        <label class="label is-uppercase"
+                           >Nombre del títular</label
+                        >
+                        <div class="control is-flex">
+                           <span id="" class="is-flex is-flex-grow-1">
+                              <input
+                                 id="nombreTitular_value"
+                                 class="input form-control"
+                                 type="text"
+                                 placeholder="Ingresar nombre del titular"
+                              />
+                           </span>
+                        </div>
+                     </div>
+                     <!---->
+                     <!--Tipo y Número de Documento-->
+                     <div id="documento" class="form-item field">
+                        <label class="label is-uppercase"
+                           >TIPO Y NÚMERO DE DOCUMENTO</label
+                        >
+                        <div class="columns is-variable is-1">
+                           <div class="is-3 column control is-flex">
+                              <span class="select">
+                                 <select
+                                    id="tipoDocumento"
+                                    class="form-control is-flex-grow-1"
+                                 >
+                                    <option value="dni">DNI</option>
+                                    <option value="libreta">
+                                       Libreta de enrolamiento
+                                    </option>
+                                 </select>
+                              </span>
+                           </div>
+
+                           <div class="column control is-flex is-flex-grow-1">
+                              <span id="" class="is-flex is-flex-grow-1">
+                                 <input
+                                    id="numDocumento"
+                                    class="input form-control"
+                                    type="number"
+                                    placeholder="Ingresar documento"
+                                 />
+                              </span>
+                           </div>
+                        </div>
+                     </div>
+                     <!---->
+                     <!--Número de cuil/Cuit-->
+                     <div id="cuilCuit" class="form-item field">
+                        <label class="label is-uppercase">CUIL/CUIT</label>
+                        <!--label class="label has-text-danger">CUIL / CUIT (ARG/PER/URU) -- NIT (COL) -- RUT (CHI)</label-->
+                        <div class="control is-flex">
+                           <span id="" class="is-flex is-flex-grow-1">
+                              <input
+                                 id="cuilCuit_value"
+                                 class="input form-control"
+                                 type="number"
+                                 placeholder="Ingresar número de CUIT/CUIL"
+                              />
+                           </span>
+                        </div>
+                     </div>
+                     <!---->
+                     <!--Razón social-->
+                     <div id="razonSocial" class="form-item field">
+                        <label class="label is-uppercase">Razón social</label>
+                        <div class="control is-flex">
+                           <span id="" class="is-flex is-flex-grow-1">
+                              <input
+                                 id="razonSocial_value"
+                                 class="input form-control"
+                                 type="text"
+                                 placeholder="Ingresar razón social"
+                              />
+                           </span>
+                        </div>
+                     </div>
+                     <!---->
+                     <!--Dirección-->
+                     <div id="direccionTitular" class="form-item field">
+                        <label class="label is-uppercase">Dirección</label>
+                        <div class="control is-flex">
+                           <span id="" class="is-flex is-flex-grow-1">
+                              <input
+                                 id="direccionTitular_value"
+                                 class="input form-control"
+                                 type="text"
+                                 placeholder="Ingresar la dirección del titular"
+                              />
+                           </span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- Volver/Siguiente -->
+               <div id="stepControls" class="stepControls columns invisible">
+                  <button
+                     id="stepControls_prev"
+                     class="column button is-primary is-outlined"
+                  >
+                     Volver
+                  </button>
+                  <button
+                     id="stepControls_next"
+                     class="column button is-primary"
+                  >
+                     Siguiente
+                  </button>
+               </div>
+               <div
+                  id="edit_stepControls"
+                  class="edit_stepControls columns invisible"
+               >
+                  <button
+                     id="edit_stepControls_prev"
+                     class="column button is-primary is-outlined"
+                  >
+                     Volver
+                  </button>
+                  <button
+                     id="edit_stepControls_next"
+                     class="column button is-primary"
+                  >
+                     Terminar
+                  </button>
+               </div>
+            </div>
+
+            <div id="infoView" class="is-4 column infoView pl-6 invisible">
+               <h1 class="title is-4">Resumen del pago</h1>
+
+               <div class="infoView-body">
+                  <!-- Paso-1 Pais seleccionado -->
+                  <div
+                     id="infoSeleccion_pais"
+                     data-target="1"
+                     class="infoPasarela infoPasarela-1 infoView-item card current"
+                  >
+                     <span class="infoView-item-info">
+                        <div class="numstep">1</div>
+
+                        <div
+                           class="is-flex is-flex-direction-column is-align-items-flex-start"
+                        >
+                           <h3 class="subtitle is-uppercase">País</h3>
+                           <h4 id="paisSeleccionado" class="title is-5">
+                              Sin seleccionar
+                           </h4>
+                        </div>
+                     </span>
+
+                     <button
+                        id="editStep_1"
+                        class="editStep infoView-item-button button is-ghost"
+                     >
+                        <i class="mdi mdi-note-edit-outline is-size-4"></i>
+                     </button>
+                  </div>
+
+                  <!-- Paso-2 Método de pago seleccionado -->
+                  <div
+                     id="infoSeleccion_metPago"
+                     data-target="2"
+                     class="infoPasarela infoPasarela-2 infoView-item"
+                  >
+                     <span class="infoView-item-info">
+                        <div class="numstep">2</div>
+                        <div
+                           class="is-flex is-flex-direction-column is-align-items-flex-start"
+                        >
+                           <h3 class="subtitle is-uppercase">Método de pago</h3>
+                           <h4 id="metPagoSeleccionado" class="title is-5">
+                              Sin seleccionar
+                           </h4>
+                        </div>
+                     </span>
+
+                     <button
+                        id="editStep_2"
+                        class="editStep infoView-item-button button is-ghost"
+                     >
+                        <i class="mdi mdi-note-edit-outline is-size-4"></i>
+                     </button>
+                  </div>
+
+                  <!-- Paso-3 Medio y modo de pago seleccionado -->
+                  <div
+                     id="infoSeleccion_medModPago"
+                     data-target="3"
+                     class="infoPasarela infoPasarela-3 infoView-item"
+                  >
+                     <span class="infoView-item-info">
+                        <div class="numstep">3</div>
+
+                        <div
+                           class="is-flex is-flex-direction-column is-align-items-flex-start"
+                        >
+                           <h3 class="subtitle is-uppercase">
+                              Medio y modo de pago
+                           </h3>
+                           <h4 id="medModPagoSeleccionado" class="title is-5">
+                              <span id="medPagoSeleccionado"
+                                 >Sin seleccionar</span
+                              >
+                              <span id="modPagoSeleccionado"></span>
+                           </h4>
+                        </div>
+                     </span>
+
+                     <button
+                        id="editStep_3"
+                        class="editStep infoView-item-button button is-ghost"
+                     >
+                        <i class="mdi mdi-note-edit-outline is-size-4"></i>
+                     </button>
+                  </div>
+
+                  <!-- Paso-4 Datos de cliente -->
+                  <div
+                     id="infoForm_datosPersonales"
+                     data-target="4"
+                     class="infoPasarela infoPasarela-4 infoView-item"
+                  >
+                     <span class="infoView-item-info">
+                        <div class="numstep">4</div>
+                        <div
+                           class="is-flex is-flex-direction-column is-align-items-flex-start"
+                        >
+                           <h3 class="subtitle is-uppercase">
+                              Datos del cliente
+                           </h3>
+                           <h4 class="title is-5">Sin completar</h4>
+                        </div>
+                     </span>
+
+                     <button
+                        id="editStep_4"
+                        class="editStep infoView-item-button button is-ghost"
+                     >
+                        <i class="mdi mdi-note-edit-outline is-size-4"></i>
+                     </button>
+                  </div>
+
+                  <!-- Paso-5 Datos de cliente -->
+                  <div
+                     id="infoForm_datosTarjeta"
+                     data-target="5"
+                     class="infoPasarela infoPasarela-5 infoView-item"
+                  >
+                     <span class="infoView-item-info">
+                        <div class="numstep">5</div>
+
+                        <div
+                           class="is-flex is-flex-direction-column is-align-items-flex-start"
+                        >
+                           <h3 class="subtitle is-uppercase">
+                              Datos de la tarjeta
+                           </h3>
+                           <h4 class="title is-5">Sin completar</h4>
+                        </div>
+                     </span>
+
+                     <button
+                        id="editStep_5"
+                        class="editStep infoView-item-button button is-ghost"
+                     >
+                        <i class="mdi mdi-note-edit-outline is-size-4"></i>
+                     </button>
+                  </div>
+
+                  <!-- --------------------- -->
+                  <!-- Controles del resumen -->
+                  <!-- --------------------- -->
+
+                  <!-- Botón Generar pago -->
+                  <button
+                     id="buttonGenPayment"
+                     class="button bigger is-primary is-medium invisible"
+                  >
+                     Generar pago
+                  </button>
+
+                  <!-- Link de pago generado -->
+                  <div id="fieldLinkPago" class="field invisible">
+                     <p class="control has-icons-right">
+                        <input
+                           id="LinkPagoGenerated"
+                           class="input is-medium"
+                           type="text"
+                           value="linkdepago12364598778"
+                           readonly
+                        />
+
+                        <span class="icon is-small is-right">
+                           <i class="mdi mdi-content-copy is-size-4"></i>
+                        </span>
+                     </p>
+                  </div>
+
+                  <!-- Botón paso atras -->
+                  <button
+                     id="BackToFlow"
+                     class="button is-primary is-outlined invisible"
+                  >
+                     Volver
+                  </button>
+
+                  <!-- Controles de reinicio del flow -->
+                  <div
+                     id="infoView-decision"
+                     class="infoView-decision invisible"
+                  >
+                     <h3 class="subtitle is-size-4 mb-0">
+                        ¿Quieres generar otro <br />
+                        pago en el mismo país?
+                     </h3>
+
+                     <button
+                        id="generate_newPayment"
+                        class="button bigger is-primary is-medium"
+                     >
+                        Generar nuevo pago
+                     </button>
+                     <button
+                        id="backTo_Country"
+                        class="button bigger is-primary is-outlined"
+                     >
+                        Volver al inicio
+                     </button>
+                  </div>
+               </div>
+            </div>
+         </article>
+      </section>
+
+      <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+      <script>
+         const swiper = new Swiper(".swiper", {
+            effect: "fade",
+            fadeEffect: {
+               crossFade: true,
+            },
+            navigation: {
+               nextEl: ".swiper-button-next",
+               prevEl: ".swiper-button-prev",
+            },
+         });
+      </script>
+      <script
+         src="./public/js/jquery-3.4.1.min.js"
+         type="text/javascript"
+      ></script>
+
+      <script
+         src="./public/js/pasarela-progress.js"
+         type="text/javascript"
+      ></script>
+   </body>
+</html>
