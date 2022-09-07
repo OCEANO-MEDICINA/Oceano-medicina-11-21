@@ -1,0 +1,274 @@
+@use "../utilities" as *;
+
+@use "../abstracts" as *;
+
+@use "../base/founder";
+
+// NAVBAR
+@use "../base/header/_header-navbar";
+
+// HERO
+@use "../components/hero/_hero";
+
+// LAYOUT SIDE-RIGHT
+@use "../layouts/_contenedor-side-r";
+
+// PRODUCT CARD
+@use "../components/_product-card";
+
+//CTA-FIXED-BOTTOM
+@use "../components/cta-fixBottom";
+
+// FOOTER
+@use "../base/_footer";
+
+/* ----------------- */
+/* FICHA DE PRODUCTO */
+/* ----------------- */
+
+// CTA EXCLUSIVE / AVALES / VIDEO ABOUT / TEMARIO / ART RELATED / DIPLOMA / AUTOR
+@use "../components/ficha-producto/" as *;
+
+// DETALLES
+@use "../components/detail-cards";
+
+// FORMULARIO CON CABECERA
+@use "../components/formulario-3-w-header";
+
+// PRODUCTOS RELACIONADOS
+@use "../components/grid-productCardRelated";
+
+// MODAL - TEMARIO
+@use "../components/modals/formTemario";
+
+body {
+   background-color: #fdfdfd;
+   color: color(texto, -dark);
+}
+
+.fixed-position {
+   bottom: 8rem !important;
+}
+/* 
+.navbar {
+   .navbar-brand {
+      .navbar-item {
+         p {
+            display: none;
+         }
+      }
+   }
+} */
+
+.sombra {
+   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+}
+
+.boton {
+   width: 100%;
+   flex-grow: 1;
+   font-size: 1rem;
+   white-space: nowrap;
+}
+
+.hero {
+   position: relative;
+   padding: 5.75rem 1rem 3.25rem;
+   background: center url(../media/header-ficha-m.jpg);
+   background-size: cover;
+}
+
+.contenedor {
+   width: unquote("min(100% - 64px, 960px - 64px)");
+}
+@media screen and (max-width: 360px) {
+   .contenedor {
+      width: calc(100% - 32px);
+   }
+}
+
+.footer {
+   &-cont {
+      width: unquote("min(100% - 32px, 960px - 64px)");
+   }
+}
+
+.detalles,
+.ficha-cont-promo {
+   background: #ffffff;
+   border-radius: 4px;
+   &-title {
+      padding: 0.75rem;
+      font-size: clamp(1.25rem, 2vw, 1.375rem);
+      text-transform: uppercase;
+      background-color: #eeeeee40;
+   }
+   &-list {
+      padding: 0.75rem 2rem 1rem 0.75rem;
+      font-size: clamp(0.875rem, 1.5vw, 1rem);
+      border-top: 1px solid #eeeeeebf;
+      ul {
+         padding-left: 1.25rem;
+      }
+      li {
+         padding-left: 0.25rem;
+         margin-bottom: 0.5rem;
+         position: relative;
+
+         &:last-child {
+            margin: 0;
+         }
+         &::marker {
+            content: "\F0E1E";
+            font: normal normal normal 1rem/1 "Material Design Icons";
+         }
+      }
+   }
+}
+
+.solapa-sup {
+   display: block;
+}
+@media screen and (max-width: 360px) {
+   .ficha {
+      margin: 0;
+   }
+   .solapa-sup {
+      display: none;
+   }
+}
+
+.aval-cont,
+.v-about-cont,
+.temario-cont,
+.autor-cont,
+.options-cont-related,
+.options-cont-ebooks,
+.related-cont {
+   &-title {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1.375rem;
+      line-height: 1;
+      text-transform: uppercase;
+      i {
+         font-size: 1.2em;
+      }
+   }
+}
+
+.r-mex {
+   margin-top: 2rem;
+   &-cont {
+      &-download {
+         background: #f6f8fc;
+         border: 1px solid rgba(172, 172, 172, 0.25);
+      }
+   }
+}
+
+.r-mex,
+.temario {
+   &-cont {
+      &-download {
+         padding: 2rem 1rem;
+         @include flex(center, flex-start, row, wrap, 1rem);
+         text-align: center;
+         border-radius: 8px;
+         img {
+            display: none;
+         }
+         h6 {
+            font-size: 1.125rem;
+            line-height: 1.2em;
+         }
+      }
+   }
+}
+
+.evaluacion {
+   margin-top: 2rem;
+}
+
+.c-hover:hover {
+   box-shadow: 0px 11px 20px 1px #d2cedb;
+}
+
+@media screen and (min-width: 767px) {
+   .boton {
+      max-width: 233px;
+   }
+   .fixed-position {
+      bottom: 7rem !important;
+      &-chat {
+         bottom: 6.75rem;
+      }
+   }
+   .hero {
+      padding: 3.75rem 1rem 3.25rem;
+      background: center url(../media/header-ficha.jpg);
+      background-size: cover;
+   }
+   .navbar {
+      .navbar-brand {
+         .navbar-item {
+            p {
+               display: block;
+               border-left: 1px solid #fff;
+               font-weight: 700;
+            }
+         }
+      }
+   }
+
+   .r-mex,
+   .temario {
+      &-cont {
+         &-download {
+            padding: 2rem;
+         }
+      }
+   }
+   .r-mex {
+      &-cont {
+         &-download {
+            padding: 2rem 2rem 1.75rem;
+         }
+      }
+   }
+}
+
+@media screen and (min-width: 1024px) {
+   .r-mex,
+   .temario {
+      &-cont {
+         &-download {
+            justify-content: space-between;
+            align-items: center;
+            img {
+               display: block;
+            }
+            h6 {
+               font-weight: 500;
+               width: max-content;
+               text-align: left;
+            }
+            .salto-de-linea {
+               display: inline;
+               &:last-child {
+                  display: block;
+               }
+            }
+         }
+      }
+   }
+}
+
+@media screen and (min-width: 1441px) {
+   .hero {
+      &-cont {
+         width: 1250px !important;
+      }
+   }
+}

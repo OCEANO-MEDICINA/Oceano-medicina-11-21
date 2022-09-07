@@ -1,0 +1,90 @@
+@use "../abstracts" as *;
+
+@use "../base/_founder";
+
+@use "../utilities" as *;
+
+// NAVBAR
+@use "../base/header/_header-navbar";
+
+// HERO
+@use "../components/hero/hero-searchbar";
+
+//COURSES-TOP / REVIEWS / WEBINARS
+@use "../components/home/" as *;
+
+// PRODUCT CARD
+@use "../components/_product-card";
+
+//SLIDER-PRODUCT-CARDS
+@use "../components/_slider-productCards";
+
+//BANNER-PROMOS
+@use "../components/_banner-promos";
+
+//FOOTER
+@use "../base/footer";
+
+.destacados {
+   background-color: #f0f0f080;
+   .slider-productCards-cont {
+      &-top {
+         display: flex;
+         flex-flow: row wrap;
+      }
+      &-top-filters {
+         margin-top: 0.5rem;
+         display: flex;
+         justify-content: center;
+         flex-grow: 1;
+         padding: 0 1rem;
+         column-gap: 0.5rem;
+
+         .btn {
+            flex-grow: 1;
+            text-align: center;
+            max-width: 130px;
+            cursor: pointer;
+         }
+      }
+   }
+}
+
+@media screen and (min-width: 767px) {
+   .destacados {
+      .slider-productCards-cont {
+         &-title,
+         &-top-filters {
+            padding: 0;
+            flex-grow: 0;
+         }
+         &-top {
+            padding: 0 2rem;
+            justify-content: space-between;
+
+            &-filters {
+               margin-top: 0;
+               .btn {
+                  min-width: 135px;
+               }
+            }
+         }
+         .swiper {
+            &::before {
+               background: linear-gradient(
+                  90deg,
+                  #f6f6f6 0 50%,
+                  transparent 100%
+               );
+            }
+            &::after {
+               background: linear-gradient(
+                  270deg,
+                  #f6f6f6 0 50%,
+                  transparent 100%
+               );
+            }
+         }
+      }
+   }
+}

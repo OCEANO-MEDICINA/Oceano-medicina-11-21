@@ -1,0 +1,99 @@
+@use "../../abstracts/" as *;
+
+.autor {
+   margin-top: 2rem;
+   &-cont {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      &-title {
+         i {
+            &::before {
+               transform: translateY(2px);
+            }
+         }
+      }
+      &-grid {
+         display: flex;
+         flex-direction: column;
+         gap: 1.5rem;
+         .post-item {
+            @include gridC(clamp(4.5rem, 10vw, 6.75rem) auto, 1rem);
+
+            &-img {
+               aspect-ratio: 1/1;
+               width: 100%;
+               border-radius: 100px;
+               border: 1px solid #c4c4c480;
+            }
+            &-info {
+               display: flex;
+               flex-direction: column;
+               row-gap: 0.25rem;
+               color: #000;
+               h5 {
+                  font-size: clamp(0.875rem, 2vw, 1rem);
+                  line-height: 1.2em;
+               }
+               a,
+               h6,
+               li {
+                  font-size: clamp(0.625rem, 1vw, 0.75rem);
+                  text-transform: uppercase;
+                  color: #878686;
+               }
+               ul {
+                  padding-bottom: 0.5rem;
+                  &:last-child {
+                     border-bottom: 1px solid #c9c9c9;
+                  }
+               }
+               h6 {
+                  i {
+                     margin-right: 0.25rem;
+                  }
+               }
+            }
+            &-title {
+               @include font(clamp(1.125rem, 2vw, 1.375rem), 700, 1.2em, #000);
+            }
+         }
+         .autor-rest {
+            display: none;
+         }
+         .boton {
+            margin: 0 auto;
+         }
+      }
+   }
+}
+
+@media screen and (min-width: 767px) {
+   .autor {
+      margin-top: 4rem;
+      &-cont {
+         &-grid {
+            gap: 1.5rem;
+            .autor-location {
+               display: block;
+            }
+         }
+      }
+   }
+}
+
+@media screen and (min-width: 1024px) {
+   .autor {
+      &-cont {
+         &-grid {
+            .post-item {
+               &-info {
+                  h5 {
+                     margin-bottom: 1rem;
+                  }
+               }
+            }
+         }
+      }
+   }
+}

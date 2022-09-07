@@ -1,0 +1,392 @@
+@use "../_founder" as *;
+@use "../components/_product-card";
+// NAVBAR
+@use "../layouts/_header-navbar";
+// HERO
+@use "../components/_hero-slider";
+// FOOTER
+@use "../layouts/_footer";
+.grid-w-side {
+   position: relative;
+   &-cont {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr;
+      row-gap: 1rem;
+      padding: 1.75rem 0 4rem;
+      &-filtros {
+         .searchbar-filter,
+         &-group {
+            display: none;
+         }
+         h6 {
+            font-size: clamp(0.875rem, 2vw, 1rem);
+            color: $medicina-dark;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+         }
+         .filtros-aplicados {
+            .output-filtros {
+               display: flex;
+               flex-direction: column;
+               row-gap: 0.5rem;
+               a {
+                  display: flex;
+                  column-gap: 0.5rem;
+                  border: 1px solid;
+                  &:hover {
+                     background-color: inherit;
+                     color: #b5b5b5;
+                     border: 1px solid transparent;
+                     i {
+                        color: red;
+                     }
+                  }
+               }
+            }
+         }
+      }
+      &-products {
+         &-filters {
+            position: relative;
+            display: flex;
+            column-gap: 1.25rem;
+            padding-bottom: 0.75rem;
+            .filter-count {
+               font-size: 0.75rem;
+               width: 100%;
+            }
+            .sorting,
+            .filtrar {
+               > a {
+                  display: flex;
+                  column-gap: 0.25rem;
+                  color: $medicina-dark;
+                  font-size: clamp(0.75rem, 2vw, 0.875rem);
+                  font-weight: 700;
+                  text-transform: uppercase;
+               }
+               &-cont {
+                  display: flex;
+                  flex-direction: column;
+                  position: absolute;
+                  z-index: 2;
+                  right: 0;
+                  bottom: 0;
+                  overflow: hidden;
+                  background-color: #6c6c6c;
+                  font-size: 0.75rem;
+                  transform: translateY(100%);
+                  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+                  border-radius: 4px;
+                  min-width: 220px;
+                  &-button {
+                     padding: 13px 1rem;
+                     display: flex;
+                     justify-content: space-between;
+                     background-color: #494949;
+                     border-bottom: 1px solid #c4c4c480;
+                     font-weight: 700;
+                     color: #fff;
+                     i {
+                        font-size: 1rem;
+                        line-height: 1;
+                     }
+                     &:last-child {
+                        border-bottom: none;
+                     }
+                     &.active {
+                        background-color: #494949;
+                        color: $primary;
+                     }
+                  }
+                  .accordion-panel {
+                     position: relative;
+                     background-color: #6c6c6c;
+                     li {
+                        border-bottom: 1px solid #c4c4c480;
+                        a {
+                           padding: 10px 1rem;
+                           display: flex;
+                           justify-content: space-between;
+                           color: #fff;
+                           &:hover,
+                           &:focus {
+                              background-color: #6c6c6c;
+                              color: $primary;
+                           }
+                        }
+                        &:last-child {
+                           border-bottom: none;
+                        }
+                     }
+                  }
+                  a:last-child {
+                     border-bottom: none;
+                  }
+               }
+               &::after {
+                  position: absolute;
+                  content: "";
+                  bottom: 0;
+                  left: 0;
+                  transform: translateY(100%);
+                  width: 100%;
+                  height: 1rem;
+               }
+               &:hover,
+               &:focus,
+               &:target {
+                  .btn-filtro {
+                     color: $primary;
+                  }
+                  .menu-desplegable {
+                     display: flex;
+                     .especialidad {
+                        .accordion-trigger.active ~ .accordion-panel {
+                           max-height: 220px !important;
+                           overflow-y: scroll;
+                        }
+                     }
+                     .accordion-panel {
+                        overflow: hidden;
+                     }
+                  }
+               }
+            }
+            .filtrar-cont,
+            .sorting-cont {
+               display: none;
+            }
+         }
+         &-grid {
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(165px, 1fr));
+            grid-auto-rows: 1fr;
+            row-gap: 8px;
+            column-gap: 8px;
+            .card {
+               border-radius: 4px;
+               &-img {
+                  min-height: 112px;
+               }
+               &-info {
+                  &-sup {
+                     font-size: clamp(0.5rem, 2vw, 0.625rem);
+                     .area {
+                        max-width: 18ch;
+                     }
+                  }
+                  &-title {
+                     padding: 0.5rem 0.5rem 0.75rem;
+                     font-size: clamp(0.875rem, 3.75vw, 1rem);
+                     line-height: 1.3em;
+                  }
+                  &-footer {
+                     padding: 0.5rem 0.65rem;
+                     &-precio {
+                        .cuotas {
+                           font-size: clamp(0.5rem, 2.25vw, 0.625rem);
+                           line-height: 1.2em;
+                        }
+                        .price {
+                           font-size: clamp(0.75rem, 3.5vw, 1rem);
+                           line-height: 1.2em;
+                        }
+                     }
+                     &-boton {
+                        font-size: clamp(0.625rem, 2.75vw, 0.75rem);
+                        line-height: 1.1em;
+                        min-height: 25px;
+                     }
+                  }
+               }
+               &-big {
+                  &-info {
+                     display: flex;
+                     flex-direction: column;
+                     justify-content: flex-end;
+                     height: 100%;
+                     padding: 0.5rem 0.75rem;
+                     &-title {
+                        font-size: clamp(0.875rem, 4.5vw, 1.25rem);
+                        font-weight: 700;
+                        line-height: 1.3em;
+                        flex-grow: unset;
+                        text-align: left;
+                        color: #fff;
+                        margin-bottom: 6px;
+                     }
+                     &-bajada {
+                        font-size: clamp(0.625rem, 3vw, 0.875rem);
+                        line-height: 1.3em;
+                        color: #fff;
+                        margin-bottom: 10px;
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+}
+
+@media screen and (min-width: 768px) {
+   .hero {
+      .searchbar-especialidad {
+         display: none;
+      }
+   }
+   .grid-w-side {
+      &-cont {
+         grid-template-columns: minmax(auto, 224px) auto;
+         column-gap: 24px;
+         &-filtros {
+            display: flex;
+            flex-direction: column;
+            row-gap: 1.5rem;
+            position: sticky;
+            height: max-content;
+            top: 1rem;
+            padding: 1rem;
+            background-color: #f0f0f080;
+            border-radius: 10px;
+            // MOSTRAR EN DESKTOP
+            .searchbar-filter,
+            &-group {
+               display: flex;
+            }
+            .searchbar-filter {
+               input {
+                  padding: 0.25rem 0.5rem;
+                  font-size: 14px;
+                  line-height: 1em;
+                  height: unset;
+               }
+            }
+            .filtros-aplicados {
+               a {
+                  width: 100%;
+                  font-weight: 400;
+                  justify-content: space-between;
+               }
+            }
+            &-group {
+               flex-direction: column;
+               h6 {
+                  margin-bottom: 0;
+               }
+               // ACCORDION
+               .accordion-trigger {
+                  font-size: 14px;
+                  font-weight: 700;
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  padding: 0.75rem 0.35rem 0.5rem 0;
+                  width: 100%;
+                  color: $medicina-dark;
+                  line-height: 1;
+                  border-bottom: 1px solid #e4e4e4;
+                  &.active {
+                     color: $primary;
+                     font-weight: 700;
+                     border-bottom: none;
+                     & ~ .accordion-panel {
+                        padding-bottom: 0.5rem;
+                        border-bottom: 1px solid #e4e4e4;
+                     }
+                  }
+               }
+               & > div:last-child .accordion-trigger {
+                  border-bottom: none;
+               }
+               .accordion-panel li:last-child .dropdown-item {
+                  border-bottom: none;
+               }
+               .especialidad {
+                  .accordion-trigger.active ~ .accordion-panel {
+                     max-height: 200px !important;
+                     overflow-y: scroll;
+                  }
+               }
+               .dropdown-item {
+                  padding: 3px 0;
+                  border-bottom: 1px solid #eeeeee;
+                  white-space: unset;
+               }
+            }
+         }
+         &-products {
+            .filtrar {
+               display: none;
+            }
+            .sorting {
+               position: relative;
+               &-cont {
+                  bottom: -0.75rem;
+               }
+            }
+            &-grid {
+               gap: 1rem;
+               .card {
+                  border-radius: 0.5rem;
+                  &-img {
+                     min-height: 152px;
+                  }
+                  &-info {
+                     .area {
+                        max-width: 20ch;
+                     }
+                     &-title {
+                        padding: 0.75rem 0.5rem;
+                        line-height: 1.2em;
+                     }
+                     &-footer {
+                        align-items: center;
+                        padding: 0.75rem 1rem 0.75rem;
+                        .price {
+                           line-height: 1em;
+                        }
+                     }
+                  }
+                  &-big {
+                     &-info {
+                        background-size: cover !important;
+                        padding: 0.75rem 1rem 0.9rem;
+                        &-title {
+                           line-height: 1.1em;
+                        }
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+}
+
+@media screen and (min-width: 1024px) {
+   .grid-w-side {
+      margin-top: -4rem;
+   }
+}
+
+@media screen and (min-width: 1445px) {
+   html {
+      font-size: 18px;
+   }
+   .grid-w-side {
+      margin-top: -4rem;
+      &-cont {
+         grid-template-columns: minmax(auto, 314px) auto;
+         &-products {
+            &-grid {
+               grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            }
+         }
+      }
+   }
+}

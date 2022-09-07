@@ -1,0 +1,120 @@
+@use "../../abstracts" as *;
+
+.options {
+   margin-top: 2rem;
+   &-cont {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      &-ebooks,
+      &-related {
+         &-title {
+            margin-bottom: 1.375rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #c4c4c480;
+            i {
+               &::before {
+                  transform: translateY(2px);
+               }
+            }
+         }
+         &-grid {
+            position: relative;
+            @include gridC(repeat(auto-fill, minmax(150px, 1fr)), 0.5rem);
+
+            .card {
+               border-radius: 4px;
+               &-img {
+                  min-height: 100px;
+               }
+               &-info {
+                  &-sup {
+                     font-size: clamp(0.5rem, 1vw, 0.625rem);
+                     .area {
+                        max-width: 18ch;
+                     }
+                  }
+                  &-title {
+                     padding: 0.5rem 0.5rem 0.75rem;
+                     font-size: clamp(0.75rem, 2vw, 1rem);
+                     line-height: 1.3em;
+                  }
+                  &-footer {
+                     border: none;
+                     padding: 0.5rem;
+                     &-precio {
+                        .cuotas {
+                           font-size: clamp(0.5rem, 2.25vw, 0.625rem);
+                           line-height: 1.2em;
+                        }
+                        .price {
+                           font-size: clamp(0.75rem, 4vw, 1rem);
+                           line-height: 1.2em;
+                        }
+                     }
+                     &-boton {
+                        width: 100%;
+                        font-size: clamp(0.625rem, 2.75vw, 0.75rem);
+                        line-height: 1.1em;
+                        min-height: 25px;
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+}
+
+@media screen and (min-width: 767px) {
+   .options {
+      &-cont {
+         &-ebooks,
+         &-related {
+            &-grid {
+               .card-img {
+                  min-height: 150px;
+               }
+            }
+         }
+      }
+   }
+}
+
+@media screen and (min-width: 1024px) {
+   .options {
+      &-cont {
+         @include gridC(1fr 1fr, 1rem);
+
+         &-ebooks,
+         &-related {
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            &-title {
+               margin-bottom: 1.5rem;
+            }
+            &-grid {
+               height: 100%;
+               grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+               gap: 1rem;
+            }
+         }
+      }
+   }
+}
+
+@media screen and (min-width: 1450px) {
+   .options {
+      &-cont {
+         &-ebooks,
+         &-related {
+            flex-grow: 1;
+            &-grid {
+               grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,159 @@
+@use "../../abstracts" as *;
+
+.temario {
+   margin-top: 2rem;
+
+   &-cont {
+      display: flex;
+      flex-direction: column;
+      row-gap: 2rem;
+      &-title {
+         i::before {
+            transform: translateY(1px);
+         }
+      }
+      &-info {
+         border-radius: 8px;
+         border: 1px solid #e6e6ed;
+         overflow: hidden;
+         &-grid {
+            position: relative;
+            display: grid;
+            grid-template-columns: 3rem auto;
+         }
+         .temario-tabs {
+            background-color: #eeeeee33;
+            border-right: 1px solid #e6e6ed;
+            ul {
+               display: flex;
+               flex-direction: column;
+               height: max-content;
+               min-height: 400px;
+               .tab {
+                  padding: clamp(1rem, 1.5vw, 1.125rem);
+                  min-width: max-content;
+                  width: 100%;
+                  line-height: 1;
+                  text-align: center;
+                  border-bottom: 1px solid #e6e6ed;
+                  p {
+                     display: none;
+                     color: color(texto, "");
+
+                     &.mod-num {
+                        display: initial;
+                     }
+                  }
+                  &:last-child {
+                     border: none;
+                  }
+
+                  &.is-active {
+                     background-color: #00b6de;
+                     p {
+                        color: #fff;
+                     }
+                  }
+               }
+            }
+         }
+         .content-tab {
+            padding: 1rem;
+            position: absolute;
+            height: 100%;
+            left: 3rem;
+            overflow-y: scroll;
+            font-size: 0.875rem;
+            h5 {
+               font-weight: 700;
+            }
+            ul {
+               list-style-position: inside;
+            }
+            li {
+               &::marker {
+                  content: "- ";
+               }
+            }
+         }
+      }
+      &-download {
+         .btn {
+            min-width: min-content;
+         }
+      }
+   }
+}
+@media screen and (min-width: 767px) {
+   .temario {
+      &-cont {
+         &-info {
+            &-grid {
+               display: flex;
+               position: relative;
+               max-height: max-content;
+            }
+            .temario-tabs {
+               ul {
+                  .tab {
+                     text-align: left;
+                     text-transform: uppercase;
+                     cursor: pointer;
+                     p {
+                        display: initial;
+                     }
+                  }
+               }
+            }
+            .content-tab {
+               position: absolute;
+               height: 100%;
+               left: 8rem;
+               width: 81.5%;
+            }
+         }
+      }
+   }
+}
+
+@media screen and (min-width: 1024px) {
+   .temario {
+      &-cont {
+         &-info {
+            .content-tab {
+               width: 89.3%;
+            }
+         }
+         &-download {
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+
+            .btn {
+               height: 2.5rem;
+            }
+         }
+      }
+   }
+}
+@media screen and (min-width: 1440px) {
+   .temario {
+      &-cont {
+         &-info {
+            .content-tab {
+               width: 85.5%;
+            }
+         }
+      }
+   }
+}
+
+@media screen and (min-width: 1441px) {
+   .temario {
+      &-cont {
+         &-info {
+            .content-tab {
+               width: 89.1%;
+            }
+         }
+      }
+   }
+}

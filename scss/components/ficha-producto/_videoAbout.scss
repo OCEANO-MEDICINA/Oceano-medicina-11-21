@@ -1,0 +1,30 @@
+.v-about {
+   margin-top: 4rem;
+
+   &-cont {
+      display: flex;
+      flex-flow: row wrap;
+      gap: 2rem;
+      &-info {
+         flex: 1;
+
+         h4 {
+            font-size: 1.125rem;
+         }
+      }
+      &-title {
+         margin-bottom: 0.75rem;
+      }
+      &-iframe {
+         aspect-ratio: 16/9;
+         width: 100%;
+         max-width: 510px;
+      }
+   }
+}
+
+@media screen and (min-width: 1024px) {
+   .v-about {
+      margin-top: 6rem;
+   }
+}

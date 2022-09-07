@@ -1,0 +1,123 @@
+@use "../_founder";
+$width-container: unquote("min(100% - 64px, 960px)");
+// NAVBAR
+@use "../base/header/_header";
+// HERO
+@use "../components/hero/_hero";
+
+.hero {
+   min-height: unset;
+   h1 {
+      font-size: clamp(1.875rem, 5vw, 3rem);
+   }
+   h2 {
+      font-size: clamp(1.125rem, 4vw, 1.75rem);
+   }
+}
+
+.links {
+   padding: 42px 0;
+   &-cont {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      row-gap: 1rem;
+      column-gap: 1.75rem;
+      width: $width-container-w-pad;
+   }
+   &-card {
+      width: unquote("min(100%, 440px)");
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background-size: cover;
+      background-position: center;
+      background-color: #02204dcc;
+      background-blend-mode: multiply;
+      min-height: 385px;
+      padding: 1.625rem 2rem 1.875rem;
+      border-radius: 10px;
+      &-info {
+         flex-grow: 1;
+         color: #fff;
+         &-title {
+            margin-bottom: 0.5rem;
+            font-size: clamp(1.5rem, 3vw, 2.25rem);
+            font-weight: 700;
+            line-height: 1.2em;
+         }
+         &-subtitle {
+            font-size: clamp(12px, 2vw, 1rem);
+         }
+      }
+      img {
+         max-width: 80%;
+         margin-bottom: 0.5rem;
+      }
+   }
+}
+
+.footer {
+   background: #333333;
+   padding: 0;
+   &-cont {
+      width: $width-container-w-pad;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      img {
+         width: 84px;
+         height: 46px;
+      }
+      .copy {
+         font-size: 0.625rem;
+         color: #fff;
+         text-align: center;
+      }
+   }
+}
+
+@media screen and (min-width: 767px) {
+   .hero {
+      padding: 7rem 3rem;
+      h1 {
+         margin-bottom: 1rem;
+         max-width: unset;
+         .salto-de-linea {
+            display: inline;
+         }
+      }
+      &-cont {
+         h2 {
+            max-width: 72ch;
+         }
+      }
+   }
+   .links {
+      position: relative;
+      z-index: 2;
+      padding: 0 0 4rem;
+      margin-top: -2.75rem;
+      &-card {
+         padding: 3.375rem 3rem 2.875rem;
+         min-height: 500px;
+         border-radius: 14px;
+         .btn {
+            height: max-content;
+            padding: 0.75rem 2rem;
+            font-size: 1.25rem;
+            line-height: 1.2em;
+         }
+      }
+   }
+   .footer {
+      &-cont {
+         justify-content: space-between;
+         align-items: flex-end;
+         .copy {
+            font-size: 1.125rem;
+         }
+      }
+   }
+}

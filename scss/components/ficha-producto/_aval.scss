@@ -1,0 +1,137 @@
+@use "../../abstracts" as *;
+
+.aval {
+   margin: 3.5rem 0 -2rem;
+   overflow: hidden;
+   &-cont {
+      &-title {
+         i::before {
+            transform: translateY(3px);
+         }
+      }
+      &-mobile {
+         .swiper-avales {
+            position: relative;
+            margin: 1.75rem 0 2rem;
+            .swiper-slide {
+               display: flex;
+               align-items: center;
+               height: auto;
+               max-width: unquote("min(16rem, 100%)");
+               width: 100%;
+            }
+         }
+         .aval-card-img:hover {
+            .info::before {
+               display: block;
+               bottom: 2rem;
+               right: -0.5rem;
+            }
+            .info::after {
+               position: absolute;
+               content: " ";
+               top: -16px;
+               border: solid;
+               border-width: 0 10px 12px;
+               border-color: transparent transparent #3f6cbb;
+               transform: translateX(-50%) rotate(180deg);
+            }
+         }
+      }
+      &-desktop {
+         display: none;
+      }
+   }
+   &-card {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      height: 100%;
+      width: 100%;
+      background: #ffffff;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      &-img {
+         width: 100%;
+         text-align: center;
+         position: relative;
+         background-color: #fcfcfc;
+         .imagen-aval {
+            object-fit: cover;
+            object-position: center;
+         }
+         .info {
+            position: absolute;
+            background: center/contain url(../media/icon/information-button.svg);
+            width: 1.25rem;
+            height: 1.25rem;
+            right: 0.5rem;
+            bottom: 0.5rem;
+            &::before {
+               display: none;
+               padding: 0.5rem 0.75rem;
+               border-radius: 4px;
+               position: absolute;
+               width: max-content;
+               max-width: 30ch;
+               font-size: 14px;
+               content: "Aval solo disponible en Argentina";
+               background-color: #3f6cbb;
+               color: #fff;
+            }
+         }
+      }
+      &-title {
+         padding: 0.75rem 1rem;
+         @include flex(center, center);
+         font-size: 0.75rem;
+         flex-grow: 1;
+         border-top: 1px solid rgba(238, 238, 238, 0.75);
+         text-align: center;
+      }
+   }
+}
+
+@media screen and (min-width: 1024px) {
+   .aval {
+      &-cont {
+         width: unquote("min(100% - 32px, 960px - 64px)");
+         &-mobile {
+            display: none;
+         }
+         &-desktop {
+            margin-top: 2rem;
+            padding-bottom: 2rem;
+            @include gridC(repeat(4, 1fr), 1rem);
+
+            .aval-card {
+               overflow: unset;
+               &-img {
+                  img {
+                     border-radius: 8px 8px 0 0;
+                  }
+               }
+               .info:hover {
+                  &::after {
+                     position: absolute;
+                     content: " ";
+                     top: -16px;
+                     border: solid;
+                     border-width: 0 10px 12px;
+                     border-color: transparent transparent #3f6cbb;
+                     transform: translateX(-50%) rotate(180deg);
+                  }
+                  &::before {
+                     display: block;
+                     bottom: 2rem;
+                     right: 0.75rem;
+                     text-align: center;
+                     z-index: 3;
+                     transform: translateX(50%);
+                  }
+               }
+            }
+         }
+      }
+   }
+}

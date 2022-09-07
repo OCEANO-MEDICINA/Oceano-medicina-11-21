@@ -1,0 +1,86 @@
+@use "../abstracts" as *;
+
+.cta-fixBotttom {
+   margin: 2.375rem 0 0;
+   padding: 1rem 0;
+   @include pos(3, auto auto 0 0, fixed);
+   width: 100%;
+   background: #1e4385d9;
+   backdrop-filter: blur(5px);
+   &-cont {
+      @include flex(space-between, center, row, nowrap, 0.5rem);
+      &.contenedor {
+         width: unquote("min(100% - 32px, 960px - 64px)");
+      }
+
+      &-info {
+         display: flex;
+         align-items: center;
+         &-img {
+            display: none;
+         }
+         h5 {
+            @include font(clamp(0.875rem, 1.5vw, 1.125rem), 500, 1.3em, #fff);
+            width: 24ch;
+         }
+      }
+      &-title {
+         @include font(clamp(0.9375rem, 2vw, 1.375rem), 700, 1.5, #fff);
+      }
+      .botones {
+         display: flex;
+         flex-direction: column;
+         gap: 0.5rem;
+      }
+      .btn {
+         height: max-content;
+         font-size: 0.75rem;
+         text-align: center;
+         white-space: normal;
+         width: 17ch;
+      }
+   }
+}
+@media screen and (max-width: 360px) {
+   .cta-fixBotttom {
+      &-cont {
+         &-info {
+            h5 {
+               font-size: 0.7188rem;
+            }
+         }
+      }
+   }
+   .fixed-position {
+      bottom: 9rem !important;
+   }
+}
+
+@media screen and (min-width: 767px) {
+   .cta-fixBotttom {
+      &-cont {
+         &-info {
+            gap: 1rem;
+            &-img {
+               display: block;
+               height: 4.5rem;
+               width: 4.5rem;
+               border-radius: 100px;
+               border: 1px solid #c4c4c480;
+            }
+            h5 {
+               width: unset;
+            }
+         }
+         .botones {
+            button {
+               width: 100% !important;
+            }
+         }
+         .btn {
+            font-size: 0.875rem;
+            width: unset;
+         }
+      }
+   }
+}

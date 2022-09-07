@@ -1,0 +1,1072 @@
+@use "../abstracts" as *;
+
+@use "../base/_founder" as *;
+
+@use "../utilities" as *;
+
+// NAVBAR
+@use "../base/header/_header-navbar";
+
+// HERO
+@use "../components/hero/hero";
+
+//LAYOUT GRILLA
+@use "../layouts/grid-w-side";
+
+// FOOTER
+@use "../base/footer";
+
+$width-container: min(100% - 36px, 960px);
+
+.hero {
+   background: center/cover url(../media/header-planes-mobile.jpg);
+   &-cont {
+      h2 {
+         .salto-de-linea {
+            display: block;
+         }
+      }
+   }
+}
+
+.plan {
+   position: relative;
+   z-index: 3;
+   &-cont {
+      position: relative;
+      z-index: 2;
+      border-radius: 10px;
+      &-header {
+         padding: 1rem 0 0;
+         display: flex;
+         justify-content: space-between;
+         margin-bottom: 1.5rem;
+         &-info {
+            &-title {
+               h3 {
+                  color: color("medicina", "-dark");
+                  font-size: clamp(1.125rem, 3vw, 1.5rem);
+                  font-weight: 700;
+               }
+               h4 {
+                  font-size: clamp(12px, 2vw, 1rem);
+                  line-height: 1.3em;
+               }
+               &.title-1 {
+                  h4 {
+                     max-width: 24ch;
+                  }
+               }
+            }
+            &-bajada {
+               display: none;
+            }
+         }
+         &-progress {
+            position: relative;
+            display: flex;
+            column-gap: clamp(0.65rem, 3vw, 2rem);
+            margin-top: 4px;
+            height: max-content;
+            .numbers {
+               position: relative;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               font-size: clamp(0.6875rem, 2vw, 24px);
+               color: color(texto, "");
+               font-weight: 700;
+               padding: 0.05em 0.5em;
+               .num {
+                  position: relative;
+                  z-index: 2;
+               }
+               .circle {
+                  content: "";
+                  position: absolute;
+                  z-index: 1;
+                  width: 100%;
+                  height: 100%;
+                  inset: 0;
+                  border-radius: 40px;
+                  background: #eeeeee;
+                  border: 1.5px solid #c4c4c4;
+               }
+               &.active {
+                  .circle {
+                     border-color: #00b6de;
+                     background-color: #e4faff;
+                  }
+               }
+            }
+            .progress {
+               position: absolute;
+               width: 100%;
+               margin: 0;
+               height: 1px;
+               left: 0;
+               top: 50%;
+               transform: translateY(-50%);
+               background-color: #c4c4c4;
+               &-bar {
+                  background-color: #00b6de;
+               }
+            }
+            span {
+               display: none;
+            }
+         }
+      }
+   }
+}
+
+.paso {
+   &-1 {
+      width: min(100%, 960px);
+
+      .swiper-3d .swiper-slide-shadow-left {
+         background-image: none;
+      }
+      .swiper-3d .swiper-slide-shadow-right {
+         background-image: none;
+      }
+      .swiper {
+         position: relative;
+         /* &::before {
+            position: absolute;
+            z-index: 2;
+            content: "";
+            left: 0;
+            top: 50%;
+            width: 1rem;
+            height: 90%;
+            transform: translateY(-50%);
+            background: url(https://ar.oceanomedicina.com/wp-content/themes/oceano2/assets/media/plan-gradient.png);
+         }
+         &::after {
+            position: absolute;
+            z-index: 2;
+            content: "";
+            right: 0;
+            top: 50%;
+            width: 1rem;
+            height: 90%;
+            transform: translateY(-50%) rotate(180deg);
+            background: url(https://ar.oceanomedicina.com/wp-content/themes/oceano2/assets/media/plan-gradient.png);
+         } */
+      }
+      .swiper-wrapper {
+         padding-top: 1.5rem;
+         padding-bottom: 2rem;
+      }
+      .swiper-slide {
+         height: auto;
+         width: unquote("max(280px, 45%)");
+         &-active {
+            .card-plan-header-title,
+            .card-plan-footer h4 {
+               color: color("medicina", "-dark");
+            }
+            .card-plan-footer .btn {
+               background-color: color(primary, "");
+            }
+         }
+      }
+      .card-plan {
+         display: flex;
+         flex-direction: column;
+         height: 100%;
+         background: #ffffff;
+         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+         border-radius: 8px;
+         &-header {
+            padding: 1.75rem 1.25rem 1.5rem;
+            text-align: center;
+            &-title {
+               font-size: clamp(1.125rem, 3vw, 1.5rem);
+               font-weight: 700;
+               line-height: 1.2em;
+               color: color("medicina", "-dark");
+            }
+            &-subtitle {
+               font-size: clamp(12px, 2vw, 1rem);
+               line-height: 1.3em;
+            }
+         }
+         &-list {
+            text-align: center;
+            li {
+               padding: 0.5rem 0.5rem 0.4rem;
+               font-size: clamp(0.625rem, 2vw, 0.875rem);
+               font-weight: 500;
+               line-height: 1;
+               border-bottom: 1px solid #eeeeee;
+               &:first-child {
+                  border-top: 1px solid #eeeeee;
+               }
+            }
+         }
+         &-specs {
+            flex-grow: 1;
+            padding: 1.5rem 1.25rem 0rem;
+            &-grid {
+               margin-bottom: 1.5rem;
+               display: grid;
+               grid-template-columns: 1fr 1fr;
+               gap: 1rem;
+               .specs-item {
+                  display: flex;
+                  column-gap: 0.5rem;
+                  align-items: center;
+                  justify-content: center;
+                  i {
+                     font-size: clamp(1rem, 2vw, 1.5rem);
+                     color: color(texto, "");
+                  }
+                  p {
+                     font-size: clamp(8px, 1vw, 10px);
+                     line-height: 1.4em;
+                     font-weight: 300;
+                     width: unquote("max(15ch ,100% - 34%)");
+                  }
+               }
+            }
+            &-info {
+               display: flex;
+               flex-direction: column;
+               row-gap: 0.25rem;
+               text-align: center;
+               h5 {
+                  font-weight: 300;
+                  font-size: clamp(10px, 1.5vw, 14px);
+                  line-height: 1.3em;
+                  &.first-spec {
+                     font-weight: 500;
+                  }
+               }
+               h6 {
+                  font-size: clamp(9px, 1vw, 12px);
+                  font-weight: 500;
+                  line-height: 1.3em;
+               }
+            }
+         }
+         &-footer {
+            padding: 0.5rem;
+            text-align: center;
+            h4 {
+               font-size: clamp(1.75rem, 4vw, 2.25rem);
+               font-weight: 700;
+               color: color("medicina", "-dark");
+               .mes {
+                  font-size: 0.5em;
+               }
+            }
+            .btn {
+               font-size: clamp(1rem, 2.5vw, 1.125rem);
+               box-sizing: border-box;
+               width: 100%;
+               background-color: #c4c4c4;
+               color: #fff;
+            }
+         }
+      }
+   }
+   &-2 {
+      width: $width-container-w-pad;
+      padding-bottom: 2rem;
+   }
+   &-3 {
+      width: $width-container-w-pad;
+
+      .filtros {
+         position: relative;
+         display: flex;
+         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+         border-radius: 5px;
+         background-color: #fff;
+         .searchbar-cursos-sec {
+            display: none;
+         }
+         .cta-main-course,
+         .filtros-cont {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 1rem;
+         }
+         .cta-main-course {
+            flex-grow: 1;
+            border-right: 1px solid #ebebeb;
+            span {
+               font-size: clamp(0.75rem, 2vw, 0.75rem);
+            }
+            h5 {
+               font-size: clamp(1rem, 2vw, 1.125rem);
+               font-weight: 500;
+               line-height: 1.2em;
+               color: color("medicina", "-dark");
+            }
+            .btn {
+               display: none;
+            }
+         }
+         .filtros-cont {
+            &-seleccionados {
+               width: 10ch;
+               a {
+                  display: flex;
+                  align-items: center;
+                  column-gap: 6px;
+                  span {
+                     font-size: clamp(0.5rem, 2vw, 1rem);
+                     font-weight: 700;
+                     line-height: 1.3em;
+                     color: color(texto, "");
+                  }
+                  .text {
+                     &-desktop {
+                        display: none;
+                     }
+                     &-mobile {
+                        display: block;
+                        text-transform: uppercase;
+                     }
+                  }
+               }
+               span {
+                  display: none;
+               }
+               .active {
+                  color: color(primary, "");
+               }
+               .accordion-trigger.active ~ .accordion-panel {
+                  max-height: unset;
+               }
+               .accordion-panel {
+                  padding: 0.5rem 0 0.25rem;
+                  flex-direction: column;
+                  position: absolute;
+                  z-index: 5;
+                  min-width: 100%;
+                  right: 0;
+                  bottom: 0;
+                  overflow: hidden;
+                  background-color: #fff;
+                  font-size: clamp(0.75rem, 2vw, 0.875rem);
+                  transform: translateY(100%);
+                  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+                  border-radius: 4px;
+                  a {
+                     padding: 0.5rem 14px;
+                     display: flex;
+                     justify-content: space-between;
+                     font-size: clamp(0.75rem, 2vw, 0.875rem);
+                  }
+                  li {
+                     border-bottom: 1px solid #ebebeb;
+                     &:last-child {
+                        border-bottom: none;
+                     }
+                  }
+               }
+            }
+         }
+      }
+      .grid-cursos {
+         &-filters {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 1rem;
+            padding: 1rem 0;
+            justify-content: space-between;
+         }
+         .searchbar-cursos-sec {
+            width: 100%;
+            flex-grow: 1;
+            .control.has-icons-right .input {
+               padding-left: 2.25em;
+               padding-right: 0.75em;
+
+               &:focus {
+                  padding-left: 0.75em;
+                  & ~ span {
+                     opacity: 0;
+                  }
+               }
+            }
+         }
+         .sorting {
+            align-self: flex-end;
+            position: relative;
+            > a {
+               display: flex;
+               column-gap: 0.25rem;
+               font-size: clamp(0.75rem, 2vw, 1rem);
+               font-weight: 700;
+               color: color("medicina", "-dark");
+               text-transform: uppercase;
+            }
+            .menu-desplegable {
+               display: none;
+            }
+            &-cont {
+               display: flex;
+               flex-direction: column;
+               position: absolute;
+               z-index: 2;
+               right: 0;
+               bottom: -1.75rem;
+               overflow: hidden;
+               background-color: #6c6c6c;
+               font-size: 0.75rem;
+               transform: translateY(100%);
+               box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+               border-radius: 4px;
+               min-width: 220px;
+               &-button {
+                  padding: 13px 1rem;
+                  display: flex;
+                  justify-content: space-between;
+                  background-color: #494949;
+                  border-bottom: 1px solid #c4c4c480;
+                  font-weight: 700;
+                  color: #fff;
+                  i {
+                     font-size: 1rem;
+                     line-height: 1;
+                  }
+                  &:last-child {
+                     border-bottom: none;
+                  }
+                  &.active {
+                     background-color: #494949;
+                     color: color(primary, "");
+                  }
+               }
+               .accordion-panel {
+                  position: relative;
+                  background-color: #6c6c6c;
+                  li {
+                     border-bottom: 1px solid #c4c4c480;
+                     a {
+                        padding: 10px 1rem;
+                        display: flex;
+                        justify-content: space-between;
+                        color: #fff;
+                        &:hover,
+                        &:focus {
+                           background-color: #6c6c6c;
+                           color: color(primary, "");
+                        }
+                     }
+                     &:last-child {
+                        border-bottom: none;
+                     }
+                  }
+               }
+               a:last-child {
+                  border-bottom: none;
+               }
+            }
+            &::after {
+               position: absolute;
+               content: "";
+               bottom: 0;
+               left: 0;
+               transform: translateY(100%);
+               width: 100%;
+               height: 1rem;
+            }
+            &:hover,
+            &:focus,
+            &:target {
+               .btn-filtro {
+                  color: color(primary, "");
+               }
+               .menu-desplegable {
+                  display: flex;
+                  .especialidad {
+                     .accordion-trigger.active ~ .accordion-panel {
+                        max-height: 220px !important;
+                        overflow-y: scroll;
+                     }
+                  }
+                  .accordion-panel {
+                     overflow: hidden;
+                  }
+               }
+            }
+         }
+      }
+   }
+   &-4 {
+      width: $width-container-w-pad;
+      display: flex;
+      flex-direction: column;
+      row-gap: 1.5rem;
+      .main-course-cont,
+      .secondary-course-cont {
+         display: flex;
+         flex-direction: column;
+         row-gap: 1rem;
+         h3 {
+            font-size: clamp(1.125rem, 3vw, 1.5rem);
+            margin-bottom: -0.5rem;
+         }
+      }
+      .course-card-info > p {
+         display: none;
+      }
+      .course-card {
+         min-height: 150px;
+      }
+   }
+   .grilla-cursos-planes {
+      display: flex;
+      flex-direction: column;
+      row-gap: 1rem;
+   }
+   &-1,
+   &-2,
+   &-3,
+   &-4 {
+      margin: 0 auto;
+   }
+   .course {
+      &-card {
+         position: relative;
+         display: grid;
+         overflow: hidden;
+         grid-template-columns: 82px 1fr;
+         background: #ffffff;
+         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+         border-radius: 4px;
+         &-img {
+            position: relative;
+            overflow: hidden;
+            .img-course {
+               position: relative;
+               height: unquote("min(100%, 280px)");
+               .img-curso {
+                  position: absolute;
+                  object-fit: cover;
+                  object-position: center;
+                  height: 100%;
+                  width: 100%;
+               }
+            }
+            .avales {
+               position: absolute;
+               width: 82px;
+               height: 100%;
+               display: flex;
+               flex-grow: 1;
+               flex-flow: column;
+               padding: 1rem;
+               gap: 1rem;
+               background-color: #f5f5f5;
+               transition: all 0s !important;
+               p {
+                  font-size: clamp(0.625rem, 2vw, 0.875rem);
+                  font-weight: 700;
+                  width: 100%;
+                  text-align: center;
+               }
+               .aval {
+                  display: flex;
+                  align-items: center;
+                  width: 51px;
+                  height: 51px;
+                  background-color: #fff;
+               }
+            }
+         }
+         &-info {
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+            .horas {
+               display: flex;
+               align-items: center;
+               column-gap: 0.5rem;
+               p {
+                  font-size: clamp(0.625rem, 2vw, 0.875rem);
+               }
+               i {
+                  font-size: clamp(0.875rem, 2vw, 1.125rem);
+               }
+            }
+            h4 {
+               margin-bottom: 0.25rem;
+               font-size: clamp(1rem, 3vw, 1.5rem);
+               line-height: 1.2em;
+               font-weight: 700;
+               color: color("medicina", "-dark");
+            }
+            p {
+               font-size: clamp(12px, 2vw, 0.875rem);
+               line-height: 1.3em;
+            }
+            .mas-info {
+               margin-top: 0.75rem;
+               display: grid;
+               grid-template-columns: 50% 50%;
+               grid-template-areas: "mas-info mas-info" "trigger select";
+               column-gap: 0.5rem;
+               &-modulos {
+                  ul {
+                     list-style: decimal;
+                     list-style-position: inside;
+                  }
+               }
+               .accordion-panel {
+                  grid-area: mas-info;
+                  order: 1;
+                  width: 100%;
+                  font-size: clamp(12px, 2vw, 0.875rem);
+                  h6 {
+                     font-weight: 700;
+                  }
+                  ul {
+                     margin-bottom: 0.5rem;
+                  }
+               }
+               .btn {
+                  width: 100%;
+                  padding: 0.375rem 0.5rem;
+                  font-size: clamp(0.625rem, 2vw, 0.875rem);
+               }
+               .accordion-trigger {
+                  grid-area: trigger;
+               }
+               .seleccionar {
+                  grid-area: select;
+               }
+               .accordion-trigger.active ~ .accordion-panel {
+                  max-height: max-content;
+               }
+               .seleccionar.active {
+                  background: color(accent, -light);
+               }
+            }
+         }
+      }
+   }
+   .control-buttons {
+      margin: 1rem 0 3rem;
+      display: flex;
+      column-gap: 0.75rem;
+      a {
+         padding: 0.5rem;
+         text-align: center;
+         background: #ffffff;
+         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+         border-radius: 4px;
+         font-weight: 700;
+         &.prev {
+            color: color("medicina", "-dark");
+         }
+         &.next {
+            background-color: color(primary, "");
+            color: #fff;
+         }
+      }
+   }
+}
+
+.swiper-pagination-bullets {
+   padding: 0 2rem;
+   display: flex;
+   justify-content: space-evenly;
+   column-gap: 0.5rem;
+   .swiper-pagination-bullet {
+      margin: 0 !important;
+      padding: 0.4rem 0.5rem 0.35rem;
+      width: 100%;
+      height: 100%;
+      font-size: 0.75rem;
+      line-height: 1;
+      text-align: center;
+      text-transform: uppercase;
+      background: #fff;
+      border: 1px solid #acacac;
+      border-radius: 4px;
+      &-active {
+         color: #fff;
+         font-weight: 700;
+         background: color(enfermeria, "");
+         border-color: color(enfermeria, "");
+      }
+   }
+}
+
+.cta-planes {
+   padding: 2rem 1rem;
+   background: linear-gradient(
+      270deg,
+      rgba(32, 59, 131, 0.9) 15.68%,
+      rgba(65, 115, 205, 0.9) 84.32%
+   );
+   &-cont {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      row-gap: 1rem;
+   }
+   .info {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      column-gap: 0.75rem;
+      color: #fff;
+      span {
+         font-size: clamp(0.875rem, 2vw, 1.5rem);
+         line-height: 1;
+      }
+      p {
+         font-size: clamp(1.5rem, 3vw, 2.25rem);
+         font-weight: 700;
+         line-height: 1;
+      }
+   }
+   a {
+      font-size: clamp(0.875rem, 2vw, 1.5rem);
+      font-weight: 700;
+      padding: 3px 0.75rem 1px;
+      color: #fff;
+      background: #54b948;
+      border-radius: 4px;
+   }
+}
+
+@media screen and (min-width: 768px) {
+   .solapa-sup {
+      display: block;
+      height: 4rem;
+   }
+   .plan {
+      &-cont {
+         &-header {
+            padding: 1.5rem 1.5rem 0;
+            margin-bottom: 2rem;
+            &-info {
+               &-title {
+                  &.title-1 {
+                     h4 {
+                        max-width: unset;
+                     }
+                  }
+               }
+               &-bajada {
+                  margin-top: 0.5rem;
+                  display: flex;
+                  align-items: center;
+                  column-gap: 0.75rem;
+                  p {
+                     font-size: 0.875rem;
+                  }
+                  a {
+                     font-size: 0.875rem;
+                     font-weight: 700;
+                     padding: 0.25rem 12px 0.1875rem;
+                     color: #fff;
+                     background: #54b948;
+                     border-radius: 4px;
+                  }
+               }
+            }
+         }
+         .paso {
+            padding: 0 1.5rem 100px;
+            .course-card-info .mas-info {
+               margin-top: 1rem;
+               .btn {
+                  padding: 0.5rem 1rem;
+               }
+            }
+            &-2 {
+               .course-card {
+                  &-info {
+                     .mas-info {
+                        &-modulos {
+                           ul {
+                              display: flex;
+                              flex-flow: column wrap;
+                              align-content: flex-start;
+                              max-height: 430px;
+                              column-gap: 2rem;
+                           }
+                           li {
+                              width: clamp(32.5%, 48%, 100%);
+                           }
+                        }
+                     }
+                  }
+               }
+            }
+            &-3 {
+               .filtros {
+                  position: sticky;
+                  top: 1.5rem;
+                  background-color: transparent;
+                  box-shadow: none;
+                  padding: 0;
+                  .cta-main-course {
+                     border-radius: 10px;
+                     background-color: #fff;
+                     filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.1));
+                     border: none;
+                     .btn {
+                        display: initial;
+                        margin-top: 1.875rem;
+                        font-size: 0.875rem;
+                     }
+                  }
+                  &-cont {
+                     padding: 1rem;
+                     background: rgba(240, 240, 240, 0.5);
+                     border-radius: 10px;
+                     .searchbar-cursos-sec {
+                        display: flex;
+                        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+                        border-radius: 4px;
+                        margin-bottom: 1.5rem;
+                     }
+                     &-seleccionados {
+                        width: 100%;
+                        .trigger-bajada {
+                           display: block;
+                           font-size: 0.875rem;
+                           padding: 0;
+                        }
+                        .accordion-trigger {
+                           padding: 0;
+                           color: #02204d;
+                           font-size: 1rem;
+                           font-weight: 700;
+                           i {
+                              display: none;
+                           }
+                           .text-mobile {
+                              display: none;
+                           }
+                           .text-desktop {
+                              display: block;
+                           }
+                        }
+                        .accordion-panel {
+                           padding: 0;
+                           display: flex;
+                           max-height: max-content;
+                           opacity: 1;
+                           transform: none;
+                           background: transparent;
+                           box-shadow: none;
+                           position: relative;
+                           a {
+                              padding: 14px 0;
+                           }
+                        }
+                     }
+                  }
+               }
+               .searchbar-cursos-sec {
+                  display: none;
+               }
+               .control-buttons {
+                  grid-column: 2/3;
+               }
+               .grid-w-side-cont {
+                  row-gap: 0;
+               }
+               .grid-cursos-filters {
+                  justify-content: flex-end;
+                  padding: 0 0 1rem;
+               }
+               .sorting {
+                  &-cont.menu-desplegable {
+                     bottom: -1.5rem;
+                  }
+               }
+            }
+            &-4 {
+               .course-card-info > p {
+                  display: block;
+               }
+               .course-card-info {
+                  padding-bottom: 3.5rem;
+               }
+            }
+            .control-buttons {
+               margin-top: 2rem;
+               justify-content: center;
+               a {
+                  max-width: 220px;
+               }
+            }
+         }
+      }
+      .course {
+         &-card {
+            grid-template-columns: 158px 1fr;
+            &-img {
+               .img-course {
+                  height: unquote("min(100%, 310px)");
+               }
+               .avales {
+                  width: 100%;
+                  flex-flow: row wrap;
+                  align-content: flex-start;
+               }
+            }
+            &-info {
+               .mas-info {
+                  grid-template-columns: 1fr;
+                  grid-template-areas: "mas-info mas-info" "boton-l boton-r";
+                  justify-items: flex-end;
+                  .btn {
+                     width: unset;
+                  }
+                  .accordion-trigger {
+                     grid-area: boton-l;
+                  }
+                  .seleccionar {
+                     grid-area: boton-r;
+                  }
+               }
+            }
+         }
+      }
+   }
+   .cta-planes {
+      padding: 4rem 1rem;
+      &-cont {
+         flex-direction: row;
+         column-gap: 4rem;
+         .info {
+            column-gap: 1rem;
+            p {
+               margin-top: 0.5rem;
+            }
+            img {
+               width: 55px;
+            }
+         }
+         a:hover {
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+         }
+      }
+   }
+}
+
+@media screen and (min-width: 1024px) {
+   .hero {
+      background: 25% top/cover url(../media/header-planes.jpg);
+   }
+   .solapa-sup {
+      height: 280px;
+   }
+   .plan {
+      margin-top: -4rem;
+      &-cont {
+         border-radius: 20px;
+         &-header {
+            padding: 2rem 0 0;
+            &-progress {
+               .progress {
+                  height: 2px;
+                  top: 23%;
+                  width: 90%;
+                  transform: translate(25px, -50%);
+               }
+               .progress-item {
+                  span {
+                     margin-top: 0.5rem;
+                     display: block;
+                     text-align: center;
+                     font-size: 12px;
+                     max-width: 12ch;
+                     text-transform: uppercase;
+                  }
+                  .num {
+                     font-weight: 400;
+                  }
+                  .circle {
+                     border-width: 2px;
+                     width: 40px;
+                     height: 40px;
+                     margin: -2px auto;
+                  }
+               }
+            }
+         }
+         .paso {
+            padding: 0 2rem 100px;
+
+            &-1 {
+               padding: 0 0 100px;
+               margin-top: -1rem;
+               .swiper {
+                  padding: 0 2rem;
+                  &::before,
+                  &::after {
+                     display: none;
+                  }
+                  .swiper-slide {
+                     width: unquote("max(280px, 45%)");
+                     .card-plan-footer {
+                        padding: 1rem;
+                        .btn {
+                           margin-top: 1rem;
+                        }
+                     }
+                  }
+               }
+            }
+         }
+      }
+      .paso {
+         &-1 {
+            .swiper-wrapper {
+               padding-top: 2rem;
+            }
+            .swiper-slide:hover {
+               z-index: 5;
+               transform: translate(0px, 0px) scale(1.05);
+               .card-plan {
+                  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+               }
+            }
+         }
+      }
+      .course-card {
+         .img-course {
+            height: unquote("min(100%, 260px)");
+         }
+      }
+   }
+   .swiper-pagination-bullets {
+      display: none;
+   }
+}
+
+@media screen and (min-width: 1445px) {
+   html {
+      font-size: 18px;
+   }
+   .hero {
+      min-height: 21vw;
+   }
+}
+
+@media screen and (min-width: 1441px) {
+   .plan-cont {
+      .paso {
+         padding: 0 0 100px;
+         width: min(1250px - 64px) !important;
+      }
+   }
+}

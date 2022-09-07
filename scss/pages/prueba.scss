@@ -1,0 +1,11 @@
+@use "../abstracts" as *;
+
+@use "../components/buttons" as *;
+
+.prueba {
+   color: color(primary, dark);
+}
+
+.prueba-2 {
+   color: color(primary, light);
+}

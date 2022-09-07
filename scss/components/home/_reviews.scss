@@ -1,0 +1,139 @@
+@use "../../abstracts" as *;
+
+.reviews {
+   overflow: hidden;
+   &-cont {
+      padding: 2rem 0 4rem;
+      &-title {
+         margin: 0 auto 0.75rem;
+         width: 34ch;
+         @include font(clamp(1rem, 3vw, 1.5rem), 500, 1.15em, color(texto, ""));
+         text-align: center;
+         > span {
+            margin-top: 0.25rem;
+            display: block;
+            span {
+               display: block;
+            }
+         }
+      }
+      .swiper-reviews {
+         position: relative;
+         .swiper-slide {
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            height: auto;
+         }
+         .swiper-pagination {
+            bottom: -2rem;
+         }
+      }
+      .card-review {
+         padding: 2rem 1rem 1rem;
+         display: flex;
+         flex-direction: column;
+         height: 100%;
+         background: #ffffff;
+         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+         border-radius: 10px;
+         &-rating {
+            margin-bottom: 0.75rem;
+            display: flex;
+            justify-content: center;
+            column-gap: 0.25rem;
+
+            img {
+               width: 1.25rem;
+            }
+         }
+         &-body {
+            margin-bottom: 2rem;
+            @include font(clamp(0.875rem, 2vw, 1rem), 400, 1.2em);
+            text-align: center;
+            flex-grow: 1;
+         }
+         &-footer {
+            @include flex(space-between, center);
+            padding-top: 1rem;
+            border-top: 1px solid #eeeeee80;
+            &-user {
+               display: flex;
+               align-items: center;
+               column-gap: 0.5rem;
+            }
+            p {
+               font-size: clamp(0.875rem, 2vw, 1.25rem);
+               font-weight: 700;
+               color: color(medicina, dark);
+            }
+            .profile-picture {
+               width: 36px;
+               height: 36px;
+               background-color: color(medicina, main);
+               border-radius: 36px;
+               img {
+                  width: 100%;
+               }
+            }
+            .google-market {
+               width: 74px;
+            }
+         }
+      }
+   }
+}
+
+@media screen and (min-width: 767px) {
+   .reviews {
+      &-cont {
+         display: grid;
+         grid-template-columns: 45% 55%;
+         align-items: center;
+         padding: 4rem 0 4rem;
+         &-title {
+            text-align: left;
+            width: 26ch;
+            margin: 0;
+            > span {
+               margin-top: 0.5rem;
+            }
+         }
+         .reviews-slider {
+            position: relative;
+            right: -1rem;
+            .swiper-reviews {
+               overflow: hidden;
+               padding-block: 2rem;
+               .swiper-slide {
+                  width: 100% !important;
+               }
+               .swiper-pagination {
+                  bottom: 0rem;
+               }
+            }
+            .card-review {
+               margin: 1rem;
+               padding: 4rem 2rem 1rem;
+               &-footer {
+                  .profile-picture {
+                     height: 52px;
+                     width: 52px;
+                  }
+                  .google-market {
+                     width: 104px;
+                  }
+               }
+            }
+         }
+      }
+   }
+}
+
+@media screen and (min-width: 1024px) {
+   .reviews {
+      .swiper-reviews {
+         cursor: grab;
+      }
+   }
+}

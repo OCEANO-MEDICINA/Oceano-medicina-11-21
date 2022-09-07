@@ -1,0 +1,217 @@
+@use "../../abstracts" as *;
+@use "../../base/_founder" as *;
+@use "../../utilities" as *;
+
+.webinars {
+   padding: 1.5rem 0 3rem;
+   background: linear-gradient(95.19deg, #3767ae 0%, #203b83 99.64%);
+   &-info {
+      margin-bottom: 1.5rem;
+      text-align: center;
+      color: #fff;
+      &-title {
+         margin-bottom: 0.35rem;
+         @include flex(center, center);
+         column-gap: 0.5rem;
+         font-size: clamp(1.25rem, 3vw, 1.5rem);
+      }
+      &-bajada {
+         @include flex(center, flex-start, flex, row, wrap);
+         row-gap: 1rem;
+         font-size: 1rem;
+         line-height: 19px;
+
+         .text-desktop {
+            display: none;
+         }
+      }
+   }
+
+   &-body {
+      @include gridC(repeat(auto-fit, minmax(220px, 1fr)), 1rem);
+      flex-grow: 1;
+
+      &-column {
+         display: flex;
+         flex-direction: column;
+         gap: 1rem;
+      }
+   }
+   &-item {
+      padding: clamp(1rem, 3vw, 1.375rem) clamp(1.25rem, 3vw, 1.75rem);
+      position: relative;
+      overflow: hidden;
+      @include flex(flex-start, stretch, column, wrap, 0.5rem);
+      flex-grow: 1;
+      background-color: #f6f8fc;
+      border-radius: 10px;
+
+      // BACKGROUND
+      picture {
+         position: absolute;
+         inset: 0;
+         z-index: 1;
+         img {
+            @include imgPos(100%, 100%, cover, top);
+         }
+      }
+      &-body {
+         max-width: 75%;
+         margin-top: 2rem;
+         flex-grow: 1;
+         @include flex(flex-end, flex-start, column, nowrap);
+      }
+
+      .overlay-color {
+         position: absolute;
+         z-index: 2;
+         inset: 0;
+         background: linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0) 7.26%,
+            rgba(255, 255, 255, 0) 24.53%,
+            rgba(255, 255, 255, 0.7) 47.04%,
+            #ffffff 96.56%
+         );
+      }
+
+      // ITEM CHILDRENS
+      > *:not(picture) {
+         position: relative;
+         z-index: 3;
+      }
+
+      .tags {
+         font-size: 0.75rem;
+
+         &-greys {
+            font-weight: 400;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+         }
+         &-live {
+            background-color: #ff0000;
+            border-radius: 4px;
+         }
+      }
+      &-title {
+         @include font(
+            clamp(1.125rem, 3vw, 1.5rem),
+            700,
+            111%,
+            color(medicina, "-darkest")
+         );
+      }
+      &-subtitle {
+         @include font(0.875rem, 500, 110%, color(medicina, "-darkest"));
+      }
+      &-footer {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         .left {
+            display: flex;
+            img {
+               width: clamp(1.125rem, 2vw, 1.375rem);
+               aspect-ratio: 1/1;
+            }
+         }
+
+         .btn {
+            line-height: unset;
+         }
+      }
+      &.big {
+         min-height: 230px;
+         filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.25));
+      }
+      svg {
+         transition: all 0.1s ease-in-out;
+         width: clamp(1.125rem, 2vw, 1.375rem);
+         aspect-ratio: 1/1;
+         path,
+         circle {
+            fill: transparent;
+         }
+      }
+
+      svg:hover path,
+      svg:hover circle {
+         fill: color(primary, "");
+      }
+   }
+   .in-block {
+      display: block;
+   }
+
+   &-newsletter {
+      border: 1px solid rgba(172, 172, 172, 0.25);
+
+      h5 {
+         @include font(clamp(0.875rem, 2vw, 1rem), 400, 110%, color(texto, ""));
+      }
+      &-form {
+         display: flex;
+         gap: 10px;
+
+         .field {
+            margin-bottom: 0;
+            flex-grow: 1;
+         }
+         .btn {
+            font-size: 1.25rem;
+            width: 42px;
+         }
+      }
+   }
+   &-page-cta {
+      border: 1px solid rgba(172, 172, 172, 0.25);
+
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+      h5 {
+         @include font(
+            clamp(1rem, 2vw, 1.25rem),
+            700,
+            111%,
+            color(medicina, "-darkest")
+         );
+      }
+      .btn {
+         flex-grow: 1;
+         line-height: unset;
+         height: max-content;
+      }
+   }
+}
+
+@media screen and (min-width: 767px) {
+   .webinars {
+      padding: 2rem 0 4rem;
+      &-cont {
+         width: $width-container-w-pad;
+      }
+      &-info {
+         text-align: left;
+         &-title {
+            justify-content: flex-start;
+         }
+         &-bajada {
+            justify-content: flex-start;
+            max-width: 620px;
+         }
+      }
+
+      &-item {
+         flex-basis: 0;
+         &.big {
+            min-height: 18.75rem;
+            filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.25));
+         }
+      }
+      .in-block {
+         display: inline-block;
+      }
+   }
+}

@@ -13,8 +13,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.4.95/css/materialdesignicons.min.css">
-
-    <link rel="stylesheet" href="css/home.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <link rel="stylesheet" href="public/css/home.css">
 
 </head>
 
@@ -740,24 +743,88 @@
 
     <section id="webinars" class="webinars">
         <article class="webinars-cont contenedor mx-auto">
-            <div class="webinars-cont-info">
-                <div class="webinars-cont-info-title">
-                    <i class="mdi mdi-laptop"></i>
+            <div class="webinars-info">
+                <div class="webinars-info-title">
+                    <img src="media/icon/tutoriales-videso.svg" alt="">
                     <h3 class="is-uppercase">Webinars</h3>
                 </div>
-                <div class="webinars-cont-info-bajada">
-                    <h5>Participá en vivo de las charlas gratuitas con profesionales del ámbito de la medicina y la ciencia. También disfrutá las ediciones pasadas en nuestro canal de YouTube.</h5>
-                    <a class="button btn btn-big" href="">Ver todos</a>
+                <div class="webinars-info-bajada">
+                    <h4>
+                        <span class="in-block">Todos los meses desarrollamos nuevas</span> 
+                        <span class="in-block">charlas sobre medicina, enfermería y ciencia</span>
+                        <span class="in-block">con profesionales de prestigio.</span> 
+                        <span class="in-block">¡Sumate ahora al mundo de nuestros webinars!</span>
+                    </h4>
+
                 </div>
             </div>
-            <div class="webinars-cont-slider">
+            <div class="webinars-body">
+                <div class="webinars-body-column">
+                    <div class="webinars-item big">
+                        <div class="overlay-color"></div>
+                        <picture>
+                            <img src="media/webinars/webinar.jpg" alt="Imagen de card 1">
+                        </picture>
+                        <p class="tags tags-whites"><i class="mdi mdi-clock-outline mr-1"></i> Jueves 5 de agosto - 15 horas </p>
+                        <p class="tags tags-live px-3 animate__animated animate__pulse animate__infinite invisible">Vivo </p>
+
+                        <div class="webinars-item-body">
+                            <a href="" class="tags tags-enfermeria">ENFERMERÍA</a>
+                            <h5 class="webinars-item-title mt-2">Desafíos de la enfermería
+                                <br>
+                                en el siglo XXI</h5>
+                            <h6 class="webinars-item-subtitle mt-1">
+                                <span class="in-block">Con la Lic. Viviana Alcaraz </span> 
+                                <span class="in-block">  y el Dr. Sergio Butman</span>
+                            </h6>
+                        </div>
+                        <div class="webinars-item-footer mt-3">
+                            <div class="left">
+                                <button class="btn naked"><img src="media/icon/home/webinar-star.svg" alt=""></button>
+                                <button class="btn naked"><img src="media/icon/home/webinar-fav.svg" alt=""></button>
+                                <button class="btn naked"><img src="media/icon/home/webinar-share.svg" alt=""></button>
+                            </div>
+                            <a class="btn btn-primary btn-big right">QUIERO ANOTARME</a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="webinars-body-column">
+                    <div class="webinars-item webinars-newsletter">
+                        <h5>
+                           Si no podés asistir al webinar de tu interés,<br>
+                           te avisamos cuando esté en nuestro canal.
+                        </h5>
+                        <form class="webinars-newsletter-form mt-2">
+                            <div class="field">
+                                <p class="control has-icons-left has-icons-right">
+                                  <input class="input" type="email" placeholder="Dejanos tu e-mail acá">
+                                  <span class="icon is-small is-left">
+                                    <i class="mdi mdi-email-outline"></i>
+                                  </span>
+                                </p>
+                              </div>
+                            <button class="btn btn-primary"><i class="mdi mdi-navigation-variant-outline"></i></button>
+                        </form>
+                    </div>
+                    <div class="webinars-item webinars-page-cta">
+                        <h5>
+                            Encontrá todas las <br>
+                            ediciones disponibles <br>
+                            en la sección especial
+                        </h5>
+                        <a href="" class="btn btn-big btn-primary">Ingresar</a>
+                    </div>
+
+                </div>
+            </div>
+            <!-- <div class="webinars-cont-slider">
                 <div class="swiper-webinars">
-                    <!-- Additional required wrapper -->
+                  
                     <div class="swiper-wrapper">
-                        <!-- Slides -->
                         <div class="swiper-slide">
                             <div class="card-webinar">
-                                <div class="card-webinar-img" style="background: center/cover url(media/webinar-home.jpg);"></div>
+                                <div class="card-webinar-img" style="background: center/cover url(media/webinars/webinar.jpg);"></div>
                                 <div class="card-webinar-info">
                                     <div class="card-webinar-info-top">
                                         <i class="mdi mdi-clock-outline"></i>
@@ -771,7 +838,7 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="card-webinar">
-                                <div class="card-webinar-img" style="background: center/cover url(media/webinar-home.jpg);"></div>
+                                <div class="card-webinar-img" style="background: center/cover url(media/webinars/webinar.jpg);"></div>
                                 <div class="card-webinar-info">
                                     <div class="card-webinar-info-top">
                                         <i class="mdi mdi-clock-outline"></i>
@@ -785,7 +852,7 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="card-webinar">
-                                <div class="card-webinar-img" style="background: center/cover url(media/webinar-home.jpg);"></div>
+                                <div class="card-webinar-img" style="background: center/cover url(media/webinars/webinar.jpg);"></div>
                                 <div class="card-webinar-info">
                                     <div class="card-webinar-info-top">
                                         <i class="mdi mdi-clock-outline"></i>
@@ -799,16 +866,14 @@
                         </div>
 
                     </div>
-                    <!-- If we need pagination -->
+                   
                     <div class="swiper-pagination"></div>
                 </div>
                 <div class="swiper-webinars-desktop">
-                    <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
-                        <!-- Slides -->
                         <div class="swiper-slide">
                             <div class="card-webinar">
-                                <div class="card-webinar-img" style="background: center/cover url(media/webinar-home.jpg);"></div>
+                                <div class="card-webinar-img" style="background: center/cover url(media/webinars/webinar.jpg);"></div>
                                 <div class="card-webinar-info">
                                     <div class="card-webinar-info-top">
                                         <i class="mdi mdi-clock-outline"></i>
@@ -822,7 +887,7 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="card-webinar">
-                                <div class="card-webinar-img" style="background: center/cover url(media/webinar-home.jpg);"></div>
+                                <div class="card-webinar-img" style="background: center/cover url(media/webinars/webinar.jpg);"></div>
                                 <div class="card-webinar-info">
                                     <div class="card-webinar-info-top">
                                         <i class="mdi mdi-clock-outline"></i>
@@ -836,7 +901,7 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="card-webinar">
-                                <div class="card-webinar-img" style="background: center/cover url(media/webinar-home.jpg);"></div>
+                                <div class="card-webinar-img" style="background: center/cover url(media/webinars/webinar.jpg);"></div>
                                 <div class="card-webinar-info">
                                     <div class="card-webinar-info-top">
                                         <i class="mdi mdi-clock-outline"></i>
@@ -850,10 +915,10 @@
                         </div>
 
                     </div>
-                    <!-- If we need pagination -->
                     <div class="swiper-pagination"></div>
                 </div>
-            </div>
+            </div> -->
+       
         </article>
     </section>
 

@@ -1,0 +1,45 @@
+@use "../abstracts/" as *;
+@use "../utilities/" as *;
+
+.related {
+   margin: 2rem 0 0;
+   &-cont.contenedor {
+      width: 100%;
+   }
+   &-cont {
+      &-grid {
+         .swiper {
+            &-slide {
+               display: flex;
+               align-items: center;
+               height: auto;
+               width: unquote("max(212px, 50%)");
+               padding: 1rem 0 2rem;
+            }
+         }
+      }
+   }
+}
+
+@media screen and (min-width: 767px) {
+   .related {
+      margin-top: 4rem;
+      &-cont.contenedor {
+         width: min(100% - 32px, 960px);
+      }
+      .swiper {
+         padding: 0 2rem;
+
+         .card {
+            min-height: 350px;
+         }
+      }
+      &-cont {
+         &-body {
+            &-grid {
+               padding: 1rem 0 0;
+            }
+         }
+      }
+   }
+}

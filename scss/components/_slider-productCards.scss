@@ -1,0 +1,92 @@
+@use "../utilities" as *;
+@use "../abstracts" as *;
+
+.slider-productCards {
+   &-cont {
+      width: 100%;
+      padding: 2rem 0 1.5rem;
+      &-title {
+         flex-grow: 1;
+         font-size: 1.25rem;
+         text-align: center;
+         text-transform: uppercase;
+      }
+      .swiper {
+         &-slide {
+            padding: 1rem 0;
+            display: flex;
+            align-items: center;
+            height: auto;
+            width: unquote("max(212px, 50%)");
+         }
+         .swiper-button-prev,
+         .swiper-button-next {
+            display: none;
+         }
+      }
+   }
+}
+@media screen and (min-width: 767px) {
+   .slider-productCards {
+      &-cont {
+         width: $width-container;
+      }
+      .swiper {
+         padding: 0 2rem;
+
+         @include pseudo(0 auto auto 0) {
+            z-index: 2;
+            width: 2rem;
+            height: 100%;
+            background: linear-gradient(90deg, #fdfdfd 0 50%, transparent 100%);
+         }
+         @include pseudo(0 0 auto auto, after) {
+            z-index: 2;
+            width: 2rem;
+            height: 100%;
+            background: linear-gradient(
+               270deg,
+               #fdfdfd 0 50%,
+               transparent 100%
+            );
+         }
+      }
+   }
+}
+@media screen and (min-width: 1024px) {
+   .slider-productCards {
+      &-cont {
+         .swiper {
+            cursor: grab;
+            &-button-prev {
+               padding-right: 1.5rem;
+            }
+            &-button-next {
+               padding-left: 1.5rem;
+            }
+            &-button-prev,
+            &-button-next {
+               display: flex !important;
+               i {
+                  font-size: 2rem;
+                  color: #acacac;
+                  &:hover {
+                     color: color(medicina, -dark);
+                  }
+               }
+               &::after {
+                  display: none;
+               }
+            }
+         }
+      }
+   }
+}
+
+@media screen and (min-width: 1445px) {
+   .slider-productCards {
+      &-cont {
+         width: 1250px !important;
+      }
+   }
+}

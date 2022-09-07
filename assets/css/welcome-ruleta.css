@@ -1,0 +1,464 @@
+@import url("https://fonts.googleapis.com/css?family=Material+Icons|Work+Sans:400,700,900");
+body {
+  position: fixed;
+  overflow: hidden;
+  font-family: "Roboto", sans-serif !important;
+  background-color: #4173cd;
+  width: 100%;
+  height: 100%;
+}
+
+.invisible {
+  display: none !important;
+}
+
+.boton {
+  font-family: "Roboto", sans-serif !important;
+  font-size: clamp(0.75rem, 2vw, 1rem);
+  cursor: pointer;
+}
+.boton.error {
+  background-color: red !important;
+  border-color: red !important;
+}
+.boton.success {
+  background-color: #008066 !important;
+  border-color: #008066 !important;
+}
+
+.roulette {
+  font-family: "Work Sans", sans-serif;
+  display: block;
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  top: 50%;
+  left: 50%;
+  margin-top: -180px;
+  margin-left: -180px;
+}
+.roulette .shadow {
+  border: 7.2px solid #fff;
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  box-shadow: 0 0.3em 0 rgba(0, 0, 0, 0.25) inset;
+}
+.roulette .markers {
+  display: block;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  overflow: hidden;
+  border-radius: 100%;
+}
+.roulette .markers .marker {
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: -180px;
+  left: 180px;
+  transform-origin: 0% 360px;
+  border: 0 solid transparent;
+}
+.roulette .markers .triangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0.75em 0 0.75em 0.75em;
+  border-color: transparent transparent transparent #007bff;
+  position: absolute;
+  border-left-color: #fff;
+  top: 51%;
+  left: 7.2px;
+  margin-top: -1em;
+  filter: drop-shadow(0 0.25em 0 rgba(0, 0, 0, 0.25));
+}
+.roulette .spinner {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  transform: rotateZ(0deg);
+  /*performance boost*/
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-animation: giro 4s linear infinite;
+          animation: giro 4s linear infinite;
+}
+.roulette .spinner .item {
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: -180px;
+  left: 180px;
+  transform-origin: 0% 360px;
+  border: 0 solid transparent;
+}
+.roulette .spinner .item .label {
+  display: block;
+  position: absolute;
+  color: #fff;
+  font-weight: 800;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  transform-origin: 0 0;
+  font-size: 0.8em;
+}
+.roulette .spinner .item .label i,
+.roulette .spinner .item .label .text {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+  font-size: 1em;
+  text-indent: 0;
+}
+.roulette .spinner .item .label i {
+  margin-right: 0.1em;
+}
+@-webkit-keyframes giro {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(720deg);
+  }
+  70% {
+    transform: rotate(1080deg);
+  }
+  100% {
+    transform: rotate(1080deg);
+  }
+}
+@keyframes giro {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(720deg);
+  }
+  70% {
+    transform: rotate(1080deg);
+  }
+  100% {
+    transform: rotate(1080deg);
+  }
+}
+.roulette .button {
+  width: 6.5em;
+  height: 6.5em;
+  line-height: 10em;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 800;
+  z-index: 2;
+  position: absolute;
+  background: #fff;
+  border: none;
+  border-radius: 100%;
+  color: #999;
+  outline: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  box-shadow: 0 0.4em 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+}
+.roulette .button:hover {
+  color: inherit;
+  transition: all 0.3s ease-in-out;
+}
+.roulette .button span {
+  font-size: 1.5em;
+  letter-spacing: -0.05em;
+}
+.roulette.busy .button {
+  transform: translate(-50%, -50%) scale(0.9);
+  box-shadow: 0 0.15em 0 rgba(0, 0, 0, 0.25);
+  color: #999;
+  cursor: default;
+}
+
+/* CUSTOM LABELS */
+.roulette .spinner .item[data-type=quiz] .label {
+  font-size: 1.15em;
+  line-height: 1;
+}
+.roulette .spinner .item[data-type=quiz] .label span > span {
+  font-size: 0.75em;
+}
+.roulette .spinner .item[data-type=question] .label {
+  font-size: 1.3em;
+  font-weight: 600;
+}
+.roulette .spinner .item[data-type=replay] .label .text {
+  font-size: 0.6em;
+  white-space: initial;
+  width: 1em;
+  text-align: center;
+  line-height: 1.2;
+}
+.roulette .spinner .item[data-type=replay] .label i {
+  font-size: 1.5em;
+}
+.roulette .spinner .item[data-type=time] .label i {
+  font-size: 1.5em;
+}
+
+.modal {
+  z-index: 10;
+}
+.modal-card {
+  justify-content: center;
+  min-height: 430px;
+  max-height: unset;
+  width: min(100% - 64px, 475px);
+  background-color: #fff;
+  border-radius: 20px;
+}
+.modal-card-body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.75rem 0 2.375rem;
+  text-align: center;
+}
+.modal-card-body-title {
+  font-size: clamp(1.25rem, 3vw, 2.25rem);
+  line-height: 1.1em;
+  font-weight: 700;
+  color: #575757;
+}
+.modal-card-body form {
+  width: 100%;
+}
+.modal-card-body a {
+  width: 100%;
+  padding: 0.25rem 0.75rem;
+  min-height: 2rem;
+  border-radius: 4px;
+}
+.modal-card-body a.btn {
+  margin: 0 auto;
+  max-width: 320px;
+  background-color: #ff266e;
+  border: 1px solid #ff266e;
+  font-weight: 700;
+  color: #fff;
+  outline: none;
+}
+.modal-card .premios {
+  margin: 1.5rem 0 2.5rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.5rem;
+}
+.modal-card .premios-item {
+  min-height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.3em;
+  color: #fff;
+  -webkit-animation: tarjeta 4s ease-in-out infinite;
+          animation: tarjeta 4s ease-in-out infinite;
+}
+.modal-card .premios-item.item-1 {
+  background-color: #3f6cbb;
+}
+.modal-card .premios-item.item-2 {
+  background-color: #dc0936;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+.modal-card .premios-item.item-3 {
+  background-color: #00b6de;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+.modal-card .premios-item span {
+  display: block;
+}
+.modal-card .premios-item span.big {
+  font-size: 2.5rem;
+  line-height: 1em;
+}
+@-webkit-keyframes tarjeta {
+  0% {
+    transform: translateY(0px);
+  }
+  70% {
+    transform: translateY(0px);
+  }
+  80% {
+    transform: translateY(-15px);
+    box-shadow: 0px 4px 5px 1px rgba(0, 0, 0, 0.1);
+  }
+  90% {
+    transform: translateY(-15px);
+    box-shadow: 0px 4px 5px 1px rgba(0, 0, 0, 0.3);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes tarjeta {
+  0% {
+    transform: translateY(0px);
+  }
+  70% {
+    transform: translateY(0px);
+  }
+  80% {
+    transform: translateY(-15px);
+    box-shadow: 0px 4px 5px 1px rgba(0, 0, 0, 0.1);
+  }
+  90% {
+    transform: translateY(-15px);
+    box-shadow: 0px 4px 5px 1px rgba(0, 0, 0, 0.3);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .boton {
+    margin-top: 1rem;
+    height: 2.5rem;
+  }
+  .modal {
+    left: 30%;
+  }
+  .modal-card {
+    width: min(100% - 64px, 475px);
+  }
+  .modal-card-body {
+    padding: 3.625rem 4rem 4rem;
+    border-radius: 25px;
+  }
+  .modal-card-body form {
+    display: flex;
+    flex-direction: column;
+  }
+  .modal-card-body .logo {
+    width: 5.375rem;
+  }
+  .modal-card-body .win-info {
+    padding: 1.25rem 1rem;
+  }
+  .roulette {
+    width: 700px;
+    height: 700px;
+    left: 35%;
+    margin-top: -350px;
+    margin-left: -350px;
+  }
+  .roulette .shadow {
+    border: 14.4px solid #fff;
+  }
+  .roulette .markers .marker {
+    top: -350px;
+    left: 350px;
+    transform-origin: 0% 700px;
+  }
+  .roulette .markers .triangle {
+    left: 14.4px;
+  }
+  .roulette .spinner .item {
+    top: -350px;
+    left: 350px;
+    transform-origin: 0% 700px;
+  }
+  .roulette .button {
+    width: 10em;
+    height: 10em;
+  }
+  .roulette .button span {
+    font-size: 2em;
+  }
+}
+@media screen and (min-height: 500px) and (max-height: 800px) and (min-width: 600px) {
+  .boton {
+    margin-top: 1rem;
+    height: 2.5rem;
+  }
+  .modal {
+    z-index: 10;
+  }
+  .modal-background {
+    background: rgba(4, 39, 153, 0.8823529412);
+    -webkit-backdrop-filter: blur(2px);
+            backdrop-filter: blur(2px);
+  }
+  .modal-card {
+    width: min(100% - 64px, 445px);
+  }
+  .modal-card-body {
+    padding: 3.625rem 1.75rem 2.25rem;
+    border-radius: 25px;
+  }
+  .modal-card-body form {
+    display: flex;
+    flex-direction: column;
+  }
+  .modal-card-body .logo {
+    width: 5.375rem;
+  }
+  .modal-card-body .win-info {
+    padding: 1.25rem 1rem;
+  }
+  .roulette {
+    width: 500px;
+    height: 500px;
+    left: 35%;
+    margin-top: -250px;
+    margin-left: -250px;
+  }
+  .roulette .shadow {
+    border: 10.8px solid #fff;
+  }
+  .roulette .markers .marker {
+    top: -250px;
+    left: 250px;
+    transform-origin: 0% 500px;
+  }
+  .roulette .markers .triangle {
+    left: 10.8px;
+  }
+  .roulette .spinner .item {
+    top: -250px;
+    left: 250px;
+    transform-origin: 0% 500px;
+  }
+  .roulette .button {
+    width: 10em;
+    height: 10em;
+  }
+  .roulette .button span {
+    font-size: 2em;
+  }
+}/*# sourceMappingURL=welcome-ruleta.css.map */
