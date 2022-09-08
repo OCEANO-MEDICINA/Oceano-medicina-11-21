@@ -335,10 +335,12 @@
                <div class="webinars-body-column">
                   <div class="webinars-item webinars-newsletter">
                      <h5>
-                        Si no podés asistir al webinar de tu interés,<br />
+                        <span class="salto-de-linea-m"
+                           >Si no podés asistir al webinar de tu interés,</span
+                        >
                         te avisamos cuando esté en nuestro canal.
                      </h5>
-                     <form class="webinars-newsletter-form mt-2">
+                     <form class="webinars-newsletter-form">
                         <div class="field">
                            <p class="control has-icons-left has-icons-right">
                               <input
@@ -375,196 +377,124 @@
             </ul>
 
             <div class="grid-filter">
-               <p class="filter-count">X WEBINARS DISPONIBLES</p>
+               <p class="filter-count">214 WEBINARS</p>
+
                <div class="filtrar" ontouchstart="">
-                  <a id="btnFiltrarPor" class="btn-filtro"
-                     ><i class="mdi mdi-tune-variant"></i> Filtrar</a
+                  <a
+                     class="btn-filtro accordion-trigger"
+                     type="button"
+                     id="btnFiltrarPor"
+                     data-bs-toggle="dropdown"
+                     aria-expanded="false"
                   >
-                  <div class="filtrar-cont menu-desplegable">
-                     <div class="especialidad">
-                        <a
-                           class="filtrar-cont-button accordion-trigger"
-                           type="button"
-                           id="dropdownMenuButton1"
-                           data-bs-toggle="dropdown"
-                           aria-expanded="false"
-                        >
-                           ESPECIALIDAD <i class="mdi mdi-chevron-down"></i>
-                        </a>
-                        <ul
-                           class="accordion-panel"
-                           aria-labelledby="dropdownMenuButton1"
-                        >
-                           <li>
-                              <a
-                                 class="dropdown-item filter_button"
-                                 data-filter="*"
-                                 >Mostrar todo</a
-                              >
-                           </li>
-                           <li>
-                              <a
-                                 class="dropdown-item filter_button"
-                                 data-filter=".traumatologia"
-                                 >Traumatología</a
-                              >
-                           </li>
-                           <li>
-                              <a
-                                 class="dropdown-item filter_button"
-                                 data-filter=".anestesiologia-y-dolor"
-                                 >Anestesiología y dolor</a
-                              >
-                           </li>
-                           <li>
-                              <a
-                                 class="dropdown-item filter_button"
-                                 data-filter=".cardiologia"
-                                 >Cardiología</a
-                              >
-                           </li>
-                           <li>
-                              <a
-                                 class="dropdown-item filter_button"
-                                 data-filter=".cirugia"
-                                 >Cirugía</a
-                              >
-                           </li>
-                           <li>
-                              <a
-                                 class="dropdown-item filter_button"
-                                 data-filter=".dermatologia"
-                                 >Dermatología</a
-                              >
-                           </li>
-                           <li>
-                              <a
-                                 class="dropdown-item filter_button"
-                                 data-filter=".diabetes"
-                                 >Diabetes</a
-                              >
-                           </li>
-                           <li>
-                              <a
-                                 class="dropdown-item filter_button"
-                                 data-filter=".emergentologia"
-                                 >Emergentología</a
-                              >
-                           </li>
-                           <li>
-                              <a
-                                 class="dropdown-item filter_button"
-                                 data-filter=".gastroenterologia"
-                                 >Gastroenterología</a
-                              >
-                           </li>
-                           <li>
-                              <a
-                                 class="dropdown-item filter_button"
-                                 data-filter=".geriatria"
-                                 >Geriatría</a
-                              >
-                           </li>
-                           <li>
-                              <a
-                                 class="dropdown-item filter_button"
-                                 data-filter=".ginecologia"
-                                 >Ginecología</a
-                              >
-                           </li>
-                           <li>
-                              <a
-                                 class="dropdown-item filter_button"
-                                 data-filter=".infectologia"
-                                 >Infectología</a
-                              >
-                           </li>
-                           <li>
-                              <a
-                                 class="dropdown-item filter_button"
-                                 data-filter=".kinesiologia"
-                                 >Kinesiología</a
-                              >
-                           </li>
-                           <li>
-                              <a
-                                 class="dropdown-item filter_button"
-                                 data-filter=".medicina-general"
-                                 >Medicina general</a
-                              >
-                           </li>
-                           <li>
-                              <a
-                                 class="dropdown-item filter_button"
-                                 data-filter=".medicina-intensiva"
-                                 >Medicina intensiva</a
-                              >
-                           </li>
-                           <li>
-                              <a
-                                 class="dropdown-item filter_button"
-                                 data-filter=".nutricion"
-                                 >Nutrición</a
-                              >
-                           </li>
-                           <li>
-                              <a
-                                 class="dropdown-item filter_button"
-                                 data-filter=".obstetricia"
-                                 >Obstetricia</a
-                              >
-                           </li>
-                           <li>
-                              <a
-                                 class="dropdown-item filter_button"
-                                 data-filter=".odontologia"
-                                 >Odontología</a
-                              >
-                           </li>
-                           <li>
-                              <a
-                                 class="dropdown-item filter_button"
-                                 data-filter=".oftalmologia"
-                                 >Oftalmología</a
-                              >
-                           </li>
-                           <li>
-                              <a
-                                 class="dropdown-item filter_button"
-                                 data-filter=".oncologia"
-                                 >Oncología</a
-                              >
-                           </li>
-                           <li>
-                              <a
-                                 class="dropdown-item filter_button"
-                                 data-filter=".psicologia"
-                                 >Psicología</a
-                              >
-                           </li>
-                           <li>
-                              <a
-                                 class="dropdown-item filter_button"
-                                 data-filter=".psiquiatria"
-                                 >Psiquiatría</a
-                              >
-                           </li>
-                           <li>
-                              <a
-                                 class="dropdown-item filter_button"
-                                 data-filter=".pediatria"
-                                 >Pediatría</a
-                              >
-                           </li>
-                           <li>
-                              <a
-                                 class="dropdown-item filter_button"
-                                 data-filter=".hematologia"
-                                 >Hematología</a
-                              >
-                           </li>
-                        </ul>
-                     </div>
+                     ESPECIALIDAD <i class="mdi mdi-chevron-down"></i>
+                  </a>
+                  <div class="filtrar-cont menu-desplegable especialidad">
+                     <a class="filtrar-cont-button" data-filter="*"
+                        >Mostrar todo</a
+                     >
+
+                     <a class="filtrar-cont-button" data-filter=".traumatologia"
+                        >Traumatología</a
+                     >
+
+                     <a
+                        class="filtrar-cont-button"
+                        data-filter=".anestesiologia-y-dolor"
+                        >Anestesiología y dolor</a
+                     >
+
+                     <a class="filtrar-cont-button" data-filter=".cardiologia"
+                        >Cardiología</a
+                     >
+
+                     <a class="filtrar-cont-button" data-filter=".cirugia"
+                        >Cirugía</a
+                     >
+
+                     <a class="filtrar-cont-button" data-filter=".dermatologia"
+                        >Dermatología</a
+                     >
+
+                     <a class="filtrar-cont-button" data-filter=".diabetes"
+                        >Diabetes</a
+                     >
+
+                     <a
+                        class="filtrar-cont-button"
+                        data-filter=".emergentologia"
+                        >Emergentología</a
+                     >
+
+                     <a
+                        class="filtrar-cont-button"
+                        data-filter=".gastroenterologia"
+                        >Gastroenterología</a
+                     >
+
+                     <a class="filtrar-cont-button" data-filter=".geriatria"
+                        >Geriatría</a
+                     >
+
+                     <a class="filtrar-cont-button" data-filter=".ginecologia"
+                        >Ginecología</a
+                     >
+
+                     <a class="filtrar-cont-button" data-filter=".infectologia"
+                        >Infectología</a
+                     >
+
+                     <a class="filtrar-cont-button" data-filter=".kinesiologia"
+                        >Kinesiología</a
+                     >
+
+                     <a
+                        class="filtrar-cont-button"
+                        data-filter=".medicina-general"
+                        >Medicina general</a
+                     >
+
+                     <a
+                        class="filtrar-cont-button"
+                        data-filter=".medicina-intensiva"
+                        >Medicina intensiva</a
+                     >
+
+                     <a class="filtrar-cont-button" data-filter=".nutricion"
+                        >Nutrición</a
+                     >
+
+                     <a class="filtrar-cont-button" data-filter=".obstetricia"
+                        >Obstetricia</a
+                     >
+
+                     <a class="filtrar-cont-button" data-filter=".odontologia"
+                        >Odontología</a
+                     >
+
+                     <a class="filtrar-cont-button" data-filter=".oftalmologia"
+                        >Oftalmología</a
+                     >
+
+                     <a class="filtrar-cont-button" data-filter=".oncologia"
+                        >Oncología</a
+                     >
+
+                     <a class="filtrar-cont-button" data-filter=".psicologia"
+                        >Psicología</a
+                     >
+
+                     <a class="filtrar-cont-button" data-filter=".psiquiatria"
+                        >Psiquiatría</a
+                     >
+
+                     <a class="filtrar-cont-button" data-filter=".pediatria"
+                        >Pediatría</a
+                     >
+
+                     <a class="filtrar-cont-button" data-filter=".hematologia"
+                        >Hematología</a
+                     >
                   </div>
                </div>
                <div class="sorting" onclick="">
@@ -1396,6 +1326,9 @@
             </div>
          </article>
       </section>
+      <h1 id="titulo"></h1>
+      <h2 id="nombreDoc"></h2>
+      <div id="player"></div>
 
       <!----END-BANNER---->
       <!------------------>
@@ -1524,6 +1457,69 @@
 
       <script src="js/navbar.js"></script>
       <script src="js/accordion.js"></script>
+      <script>
+                  var videos = https://www.googleapis.com/youtube/v3/search?key=&channelId={channel_id_here}&part=snippet,id&order=date&maxResults=20
+         ;
+                  // 2. This code loads the IFrame Player API code asynchronously.
+                  var tag = document.createElement("script");
+
+                  tag.src = "https://www.youtube.com/iframe_api";
+                  var firstScriptTag = document.getElementsByTagName("script")[0];
+                  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+                  // 3. This function creates an <iframe> (and YouTube player)
+                  //    after the API code downloads.
+                  var player;
+                  function onYouTubeIframeAPIReady() {
+                     player = new YT.Player("player", {
+                        height: "360",
+                        width: "640",
+                        videoId: "FI72AEeeCOc",
+                        events: {
+                           onReady: onPlayerReady,
+                           onStateChange: onPlayerStateChange,
+                        },
+                     });
+                  }
+
+                  // 4. The API will call this function when the video player is ready.
+                  function onPlayerReady(event) {
+                     event.target.playVideo();
+                     var intId = setInterval(function () {
+                        // Check if player is initialized and the video is loaded
+                        if (player) {
+                           // States: 1: playing, 2: paused, 5: stopped
+                           if ([1, 2, 5].indexOf(player.getPlayerState()) >= 0) {
+                              titulo = player.getVideoData().title;
+                              doctors = titulo.split(" - ");
+                              doctorName = doctors[1];
+
+                              // Set the innerText of div with id="title" to player title
+                              document.getElementById("titulo").innerText =
+                                 player.getVideoData().title;
+                              document.getElementById("nombreDoc").innerText =
+                                 doctorName;
+                              console.log(doctorName);
+                              clearInterval(intId);
+                           }
+                        }
+                     }, 100);
+                  }
+
+                  // 5. The API calls this function when the player's state changes.
+                  //    The function indicates that when playing a video (state=1),
+                  //    the player should play for six seconds and then stop.
+                  var done = false;
+                  function onPlayerStateChange(event) {
+                     if (event.data == YT.PlayerState.PLAYING && !done) {
+                        setTimeout(stopVideo, 6000);
+                        done = true;
+                     }
+                  }
+                  function stopVideo() {
+                     player.stopVideo();
+                  }
+      </script>
    </body>
 
    <footer id="footer" class="footer">

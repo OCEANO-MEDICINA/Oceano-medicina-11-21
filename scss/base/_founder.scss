@@ -178,11 +178,17 @@ button {
       width: unquote("min(100%,1250px)");
    }
 }
-
 .salto-de-linea {
    display: block;
 }
-
+.salto-de-linea-m {
+   display: block;
+}
+@media screen and (min-width: 1440px) {
+   .salto-de-linea-m {
+      display: inline-block;
+   }
+}
 .invisible {
    display: none !important;
 }

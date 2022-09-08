@@ -830,6 +830,7 @@
 .btn-primary:hover {
   background: hsl(340deg, 100%, 65%);
   color: #fff;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.5);
 }
 .btn-primary:focus {
   background: hsl(340deg, 100%, 52%);
@@ -875,6 +876,7 @@
 .btn-accent:hover {
   background: hsl(191deg, 100%, 54%);
   color: #fff;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.5);
 }
 .btn-accent:focus {
   background: hsl(191deg, 100%, 34%);
@@ -920,6 +922,7 @@
 .btn-medicina:hover {
   background: hsl(209deg, 100%, 42%);
   color: #fff;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.5);
 }
 .btn-medicina:focus {
   background: hsl(209deg, 100%, 22%);
@@ -965,6 +968,7 @@
 .btn-enfermeria:hover {
   background: hsl(168deg, 100%, 35%);
   color: #fff;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.5);
 }
 .btn-enfermeria:focus {
   background: hsl(168deg, 100%, 20%);
@@ -1010,6 +1014,7 @@
 .btn-bibliografias:hover {
   background: hsl(26deg, 85%, 71%);
   color: #fff;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.5);
 }
 .btn-bibliografias:focus {
   background: hsl(26deg, 85%, 55%);
@@ -1055,6 +1060,7 @@
 .btn-actualidad:hover {
   background: hsl(216deg, 100%, 76%);
   color: #fff;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.5);
 }
 .btn-actualidad:focus {
   background: hsl(216deg, 100%, 56%);
@@ -1100,6 +1106,7 @@
 .btn-e-health:hover {
   background: hsl(87deg, 52%, 71%);
   color: #fff;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.5);
 }
 .btn-e-health:focus {
   background: hsl(87deg, 52%, 51%);
@@ -1145,6 +1152,7 @@
 .btn-f-de-guardia:hover {
   background: hsl(168deg, 80%, 54%);
   color: #fff;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.5);
 }
 .btn-f-de-guardia:focus {
   background: hsl(168deg, 80%, 34%);
@@ -1190,6 +1198,7 @@
 .btn-texto:hover {
   background: hsl(0deg, 0%, 34%);
   color: #fff;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.5);
 }
 .btn-texto:focus {
   color: #fff;
@@ -1231,6 +1240,7 @@
 .btn-whites:hover {
   background: hsl(0deg, 0%, 95%);
   color: #fff;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.5);
 }
 .btn-whites:focus {
   background: hsl(0deg, 0%, 90%);
@@ -1276,6 +1286,7 @@
 .btn-news:hover {
   background: hsl(39deg, 100%, 59%);
   color: #fff;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.5);
 }
 .btn-news:focus {
   background: hsl(39deg, 100%, 40%);
@@ -2163,6 +2174,15 @@ body .zsiq-mobhgt[embedtheme].zsiq-newtheme {
   display: block;
 }
 
+.salto-de-linea-m {
+  display: block;
+}
+
+@media screen and (min-width: 1440px) {
+  .salto-de-linea-m {
+    display: inline-block;
+  }
+}
 .invisible {
   display: none !important;
 }

@@ -21,6 +21,7 @@
       &:hover {
          background: map-get($shades, "-light");
          color: #fff;
+         box-shadow: 0px 0px 6px rgb(0 0 0 / 50%);
       }
       &:focus {
          background: map-get($shades, "-dark");
