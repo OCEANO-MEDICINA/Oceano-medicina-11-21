@@ -52,11 +52,10 @@
          inset: 0;
          z-index: 1;
          img {
-            @include imgPos(100%, 100%, cover, top);
+            @include imgPos(100%, 100%, cover, center);
          }
       }
       &-body {
-         max-width: 75%;
          margin-top: 2rem;
          flex-grow: 1;
          @include flex(flex-end, flex-start, column, nowrap);
@@ -102,6 +101,8 @@
          );
       }
       &-subtitle {
+         margin-top: 0.25rem;
+         max-width: 75%;
          @include font(0.875rem, 500, 110%, color(medicina, "-darkest"));
       }
       &-footer {

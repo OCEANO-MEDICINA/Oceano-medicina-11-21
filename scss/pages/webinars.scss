@@ -120,6 +120,7 @@
 
       .filter-count {
          font-size: 0.75rem;
+         font-weight: 500;
          width: 100%;
       }
 
@@ -248,7 +249,7 @@
          position: absolute;
          z-index: 5;
          inset: 0;
-         @include imgPos(100%, 100%, cover, top);
+         @include imgPos(100%, 100%, cover, center);
       }
 
       .playYoutube {
@@ -283,7 +284,10 @@
    .webinars {
       &-news {
          margin-top: 0;
-
+         .webinars-item-body,
+         .webinars-item-footer-date {
+            transform: translateY(10px);
+         }
          .webinars-item.big {
             min-height: 464px;
 
@@ -295,6 +299,10 @@
                   rgba(255, 255, 255, 0.7) 61.08%,
                   #ffffff 92.83%
                );
+            }
+            .right {
+               padding: 1rem 1.75rem;
+               font-size: 1.125rem;
             }
          }
       }
