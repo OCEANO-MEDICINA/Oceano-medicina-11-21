@@ -4,12 +4,15 @@ function createCard(html) {
 
    return template.content.firstElementChild;
 }
+
 function showPlayer() {
-   document.querySelector(".player").innerHTML += playerEmbebed;
+   let iframe = document.querySelector("iframe");
+   iframe.classList.remove("invisible");
 }
 fetch(
    //"https://www.googleapis.com/youtube/v3/search?key=AIzaSyDlNBNqNvptNiuDBQS1-fEtCB-91ShmyoU&part=snippet&channelId=UC3nyYrMXzRSyr8K8mR5nUiA&type=video"
-   "https://www.googleapis.com/youtube/v3/search?key=AIzaSyCx1_-nW1xTdwDCXmUnV26NTtlYbBubkaw&part=snippet&channelId=UCKtE8yeLq5jkZSbkJt3nFuA&type=video&maxResults=50&q=webinar"
+   //"https://www.googleapis.com/youtube/v3/search?key=AIzaSyDQEa4-1UcnNEtRJ4t0vYF6dqnAxmd3Fvo&part=snippet&channelId=UCKtE8yeLq5jkZSbkJt3nFuA&type=video&maxResults=50&q=webinar"
+   "./js/dataYoutube.json"
 )
    .then((result) => {
       return result.json();
@@ -21,14 +24,12 @@ fetch(
       for (video of videos) {
          let videoId = video.id.videoId;
          let videoUrl = `https://www.youtube.com/watch?v=${videoId}`;
-         let videoThumbnail = video.snippet.thumbnails.high.url;
+         let videoThumbnail = `https://img.youtube.com/vi/${videoId}/sddefault.jpg`;
          let titulo = video.snippet.title;
          let doctors = titulo.split(" - ");
          let title = doctors[0];
          let doctorName = doctors[1];
          let description = video.snippet.description;
-         let playerEmbebed = `<iframe width="100%" height="100%" src="https://www.youtube.com/embed/${videoId}?controls=0" title="${title}" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-         `;
 
          document.querySelector(".webinars-item-title").innerText = title;
          document.querySelector(".webinars-item-subtitle").innerText =
@@ -38,8 +39,9 @@ fetch(
 
          const card = createCard(`
 <div class="webinars-item grid-item">
-       <div class="player"></div>
-       <div class="overlay-color"></div>
+<div>
+</div>
+<iframe loading="lazy" class="invisible" width="100%" height="100%" src="https://www.youtube.com/embed/${videoId}?controls=0" title="${title}" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>       <div class="overlay-color"></div>
                   <picture>
                      <img
                         src="${videoThumbnail}"

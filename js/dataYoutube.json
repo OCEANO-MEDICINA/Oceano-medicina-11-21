@@ -1,0 +1,1099 @@
+{
+   "kind": "youtube#searchListResponse",
+   "etag": "2NgfdOY0-pxiQFQ3sf6Y8JTn1eY",
+   "regionCode": "AR",
+   "pageInfo": {
+      "totalResults": 32,
+      "resultsPerPage": 32
+   },
+   "items": [
+      {
+         "kind": "youtube#searchResult",
+         "etag": "KvMscQmdDTK-XxQ3tdsMfIC0hwU",
+         "id": {
+            "kind": "youtube#video",
+            "videoId": "jCfmfHSN-Bc"
+         },
+         "snippet": {
+            "publishedAt": "2022-04-18T20:00:10Z",
+            "channelId": "UCKtE8yeLq5jkZSbkJt3nFuA",
+            "title": "Calidad en la atención del paciente - Con el Dr. Néstor Feldman 👨\u200d⚕️",
+            "description": "Charlamos con el autor de los cursos «Gestión de la calidad en salud», «Auditoría médica» y del Curso superior de ...",
+            "thumbnails": {
+               "default": {
+                  "url": "https://i.ytimg.com/vi/jCfmfHSN-Bc/default.jpg",
+                  "width": 120,
+                  "height": 90
+               },
+               "medium": {
+                  "url": "https://i.ytimg.com/vi/jCfmfHSN-Bc/mqdefault.jpg",
+                  "width": 320,
+                  "height": 180
+               },
+               "high": {
+                  "url": "https://i.ytimg.com/vi/jCfmfHSN-Bc/hqdefault.jpg",
+                  "width": 480,
+                  "height": 360
+               }
+            },
+            "channelTitle": "Océano Medicina",
+            "liveBroadcastContent": "none",
+            "publishTime": "2022-04-18T20:00:10Z"
+         }
+      },
+      {
+         "kind": "youtube#searchResult",
+         "etag": "wZ4zQAmdoH5vkoBtrxB24BIrcOc",
+         "id": {
+            "kind": "youtube#video",
+            "videoId": "jF9WuOjMIks"
+         },
+         "snippet": {
+            "publishedAt": "2021-08-19T09:21:41Z",
+            "channelId": "UCKtE8yeLq5jkZSbkJt3nFuA",
+            "title": "Salud mental en pandemia: burnout y estrés postraumático - Con Federico Nuñez y Laura Valcarce",
+            "description": "Charla en vivo con el Licenciado en Psicología y la Magister en Psicoanálisis. Descubre todos nuestros cursos en ...",
+            "thumbnails": {
+               "default": {
+                  "url": "https://i.ytimg.com/vi/jF9WuOjMIks/default.jpg",
+                  "width": 120,
+                  "height": 90
+               },
+               "medium": {
+                  "url": "https://i.ytimg.com/vi/jF9WuOjMIks/mqdefault.jpg",
+                  "width": 320,
+                  "height": 180
+               },
+               "high": {
+                  "url": "https://i.ytimg.com/vi/jF9WuOjMIks/hqdefault.jpg",
+                  "width": 480,
+                  "height": 360
+               }
+            },
+            "channelTitle": "Océano Medicina",
+            "liveBroadcastContent": "none",
+            "publishTime": "2021-08-19T09:21:41Z"
+         }
+      },
+      {
+         "kind": "youtube#searchResult",
+         "etag": "ECEFFSkMpnjVP5HEz7U431AGd18",
+         "id": {
+            "kind": "youtube#video",
+            "videoId": "NuZI54E8aNU"
+         },
+         "snippet": {
+            "publishedAt": "2022-03-24T20:00:17Z",
+            "channelId": "UCKtE8yeLq5jkZSbkJt3nFuA",
+            "title": "El impacto de la nutrición sobre el sistema inmune - Con la Lcda. Marisa Canicoba 👩\u200d⚕️",
+            "description": "Charlamos con la autora de nuestros cursos «Inmunonutrición», «Nutrición clínica» y «Actualización en nutrición y patologías ...",
+            "thumbnails": {
+               "default": {
+                  "url": "https://i.ytimg.com/vi/NuZI54E8aNU/default.jpg",
+                  "width": 120,
+                  "height": 90
+               },
+               "medium": {
+                  "url": "https://i.ytimg.com/vi/NuZI54E8aNU/mqdefault.jpg",
+                  "width": 320,
+                  "height": 180
+               },
+               "high": {
+                  "url": "https://i.ytimg.com/vi/NuZI54E8aNU/hqdefault.jpg",
+                  "width": 480,
+                  "height": 360
+               }
+            },
+            "channelTitle": "Océano Medicina",
+            "liveBroadcastContent": "none",
+            "publishTime": "2022-03-24T20:00:17Z"
+         }
+      },
+      {
+         "kind": "youtube#searchResult",
+         "etag": "fVtjUq-Kx-LIRfYg-0Sw7nmTZM8",
+         "id": {
+            "kind": "youtube#video",
+            "videoId": "u1yIF_7jdl0"
+         },
+         "snippet": {
+            "publishedAt": "2022-07-13T19:58:10Z",
+            "channelId": "UCKtE8yeLq5jkZSbkJt3nFuA",
+            "title": "COVID-19 y vía aérea - Con el Dr. Sergio Butman 👨\u200d⚕️",
+            "description": "Charlamos con el director médico de Océano Medicina, autor de nuestro Curso superior de emergentología y del curso ...",
+            "thumbnails": {
+               "default": {
+                  "url": "https://i.ytimg.com/vi/u1yIF_7jdl0/default.jpg",
+                  "width": 120,
+                  "height": 90
+               },
+               "medium": {
+                  "url": "https://i.ytimg.com/vi/u1yIF_7jdl0/mqdefault.jpg",
+                  "width": 320,
+                  "height": 180
+               },
+               "high": {
+                  "url": "https://i.ytimg.com/vi/u1yIF_7jdl0/hqdefault.jpg",
+                  "width": 480,
+                  "height": 360
+               }
+            },
+            "channelTitle": "Océano Medicina",
+            "liveBroadcastContent": "none",
+            "publishTime": "2022-07-13T19:58:10Z"
+         }
+      },
+      {
+         "kind": "youtube#searchResult",
+         "etag": "F4HovmRXWCh3awgK8BjIQ8Iv0R0",
+         "id": {
+            "kind": "youtube#video",
+            "videoId": "oItKdKEYzg8"
+         },
+         "snippet": {
+            "publishedAt": "2022-07-25T19:58:09Z",
+            "channelId": "UCKtE8yeLq5jkZSbkJt3nFuA",
+            "title": "COVID-19 y PIMS - Con el Dr. Enrique Antoni y la Dra. Claudia Merhar 👨\u200d⚕️👩\u200d⚕️",
+            "description": "Charlamos con el médico pediatra especialista en terapia intensiva y la médica pediatra especialista en inmunología. Puedes ...",
+            "thumbnails": {
+               "default": {
+                  "url": "https://i.ytimg.com/vi/oItKdKEYzg8/default.jpg",
+                  "width": 120,
+                  "height": 90
+               },
+               "medium": {
+                  "url": "https://i.ytimg.com/vi/oItKdKEYzg8/mqdefault.jpg",
+                  "width": 320,
+                  "height": 180
+               },
+               "high": {
+                  "url": "https://i.ytimg.com/vi/oItKdKEYzg8/hqdefault.jpg",
+                  "width": 480,
+                  "height": 360
+               }
+            },
+            "channelTitle": "Océano Medicina",
+            "liveBroadcastContent": "none",
+            "publishTime": "2022-07-25T19:58:09Z"
+         }
+      },
+      {
+         "kind": "youtube#searchResult",
+         "etag": "adHplF_o4f2tnOSxzeBbI6kBhgU",
+         "id": {
+            "kind": "youtube#video",
+            "videoId": "w89PTjZazDM"
+         },
+         "snippet": {
+            "publishedAt": "2022-08-11T19:58:10Z",
+            "channelId": "UCKtE8yeLq5jkZSbkJt3nFuA",
+            "title": "Nutrición y enfermedades crónicas no transmisibles - Con el Dr. Buso y la Lic. Perri 👨\u200d⚕️👩\u200d⚕️",
+            "description": "Charlamos con los autores de nuestro Curso superior de nutrición. Puedes dejarnos tu opinión sobre este webinar aquí ...",
+            "thumbnails": {
+               "default": {
+                  "url": "https://i.ytimg.com/vi/w89PTjZazDM/default.jpg",
+                  "width": 120,
+                  "height": 90
+               },
+               "medium": {
+                  "url": "https://i.ytimg.com/vi/w89PTjZazDM/mqdefault.jpg",
+                  "width": 320,
+                  "height": 180
+               },
+               "high": {
+                  "url": "https://i.ytimg.com/vi/w89PTjZazDM/hqdefault.jpg",
+                  "width": 480,
+                  "height": 360
+               }
+            },
+            "channelTitle": "Océano Medicina",
+            "liveBroadcastContent": "none",
+            "publishTime": "2022-08-11T19:58:10Z"
+         }
+      },
+      {
+         "kind": "youtube#searchResult",
+         "etag": "6cPbuMSFfGKQyHRBC0dM88NqN4s",
+         "id": {
+            "kind": "youtube#video",
+            "videoId": "FI72AEeeCOc"
+         },
+         "snippet": {
+            "publishedAt": "2022-08-26T19:58:12Z",
+            "channelId": "UCKtE8yeLq5jkZSbkJt3nFuA",
+            "title": "Manejo de las intoxicaciones medicamentosas - Con la Dra. Karina Costa 👩\u200d⚕️",
+            "description": "Charlamos con la médica especialista en pediatría y toxicología. Puedes dejarnos tu opinión sobre este webinar aquí ...",
+            "thumbnails": {
+               "default": {
+                  "url": "https://i.ytimg.com/vi/FI72AEeeCOc/default.jpg",
+                  "width": 120,
+                  "height": 90
+               },
+               "medium": {
+                  "url": "https://i.ytimg.com/vi/FI72AEeeCOc/mqdefault.jpg",
+                  "width": 320,
+                  "height": 180
+               },
+               "high": {
+                  "url": "https://i.ytimg.com/vi/FI72AEeeCOc/hqdefault.jpg",
+                  "width": 480,
+                  "height": 360
+               }
+            },
+            "channelTitle": "Océano Medicina",
+            "liveBroadcastContent": "none",
+            "publishTime": "2022-08-26T19:58:12Z"
+         }
+      },
+      {
+         "kind": "youtube#searchResult",
+         "etag": "I5wxBrVFYDvMPQQ6z9Cxcv8TIMY",
+         "id": {
+            "kind": "youtube#video",
+            "videoId": "GtC3HolgZgA"
+         },
+         "snippet": {
+            "publishedAt": "2022-06-13T19:59:00Z",
+            "channelId": "UCKtE8yeLq5jkZSbkJt3nFuA",
+            "title": "El pediatra y su rol en la emergencia - Con el Dr. Nelson Wolfsteiner y el Dr. Ariel Aruj 👨\u200d⚕️",
+            "description": "Charlamos con los directores del Curso superior de urgencias y emergencias pediátricas, de Océano Medicina. Puedes dejarnos ...",
+            "thumbnails": {
+               "default": {
+                  "url": "https://i.ytimg.com/vi/GtC3HolgZgA/default.jpg",
+                  "width": 120,
+                  "height": 90
+               },
+               "medium": {
+                  "url": "https://i.ytimg.com/vi/GtC3HolgZgA/mqdefault.jpg",
+                  "width": 320,
+                  "height": 180
+               },
+               "high": {
+                  "url": "https://i.ytimg.com/vi/GtC3HolgZgA/hqdefault.jpg",
+                  "width": 480,
+                  "height": 360
+               }
+            },
+            "channelTitle": "Océano Medicina",
+            "liveBroadcastContent": "none",
+            "publishTime": "2022-06-13T19:59:00Z"
+         }
+      },
+      {
+         "kind": "youtube#searchResult",
+         "etag": "KPMquWtUYyeKN4XqjsXVkeNSw7w",
+         "id": {
+            "kind": "youtube#video",
+            "videoId": "-ngni7Dded8"
+         },
+         "snippet": {
+            "publishedAt": "2021-10-06T09:00:48Z",
+            "channelId": "UCKtE8yeLq5jkZSbkJt3nFuA",
+            "title": "Desafíos de la enfermería en el siglo XXI - Lic. Viviana Alcaraz 👩\u200d⚕️ y Dr. Sergio Butman 👨\u200d⚕️",
+            "description": "Charla en vivo con los autores del curso «Formación integral en emergentología para enfermeros». Conoce todas nuestras ...",
+            "thumbnails": {
+               "default": {
+                  "url": "https://i.ytimg.com/vi/-ngni7Dded8/default.jpg",
+                  "width": 120,
+                  "height": 90
+               },
+               "medium": {
+                  "url": "https://i.ytimg.com/vi/-ngni7Dded8/mqdefault.jpg",
+                  "width": 320,
+                  "height": 180
+               },
+               "high": {
+                  "url": "https://i.ytimg.com/vi/-ngni7Dded8/hqdefault.jpg",
+                  "width": 480,
+                  "height": 360
+               }
+            },
+            "channelTitle": "Océano Medicina",
+            "liveBroadcastContent": "none",
+            "publishTime": "2021-10-06T09:00:48Z"
+         }
+      },
+      {
+         "kind": "youtube#searchResult",
+         "etag": "a2hPcF9irWKEKQZ0dKaQfcjUPIE",
+         "id": {
+            "kind": "youtube#video",
+            "videoId": "s454PgDVQcw"
+         },
+         "snippet": {
+            "publishedAt": "2022-05-26T19:58:36Z",
+            "channelId": "UCKtE8yeLq5jkZSbkJt3nFuA",
+            "title": "El impacto de la nutrición en el rendimiento deportivo - Con la Lcda. María Luján Tizziani 👩\u200d⚕️",
+            "description": "Charlamos con la autora del curso «Nutrición deportiva», de Océano Medicina. Puedes dejarnos tu opinión sobre este webinar ...",
+            "thumbnails": {
+               "default": {
+                  "url": "https://i.ytimg.com/vi/s454PgDVQcw/default.jpg",
+                  "width": 120,
+                  "height": 90
+               },
+               "medium": {
+                  "url": "https://i.ytimg.com/vi/s454PgDVQcw/mqdefault.jpg",
+                  "width": 320,
+                  "height": 180
+               },
+               "high": {
+                  "url": "https://i.ytimg.com/vi/s454PgDVQcw/hqdefault.jpg",
+                  "width": 480,
+                  "height": 360
+               }
+            },
+            "channelTitle": "Océano Medicina",
+            "liveBroadcastContent": "none",
+            "publishTime": "2022-05-26T19:58:36Z"
+         }
+      },
+      {
+         "kind": "youtube#searchResult",
+         "etag": "uAYxftNxIY899tS6szSNIuT5VS8",
+         "id": {
+            "kind": "youtube#video",
+            "videoId": "_c58sfvYf-U"
+         },
+         "snippet": {
+            "publishedAt": "2022-04-26T19:59:24Z",
+            "channelId": "UCKtE8yeLq5jkZSbkJt3nFuA",
+            "title": "Guardia sí / Guardia no - Con las Médicas de Familia 👩\u200d⚕️",
+            "description": "Charlamos con Micaela Amor y Carla Irazabal, creadoras del Instagram @medicasdefamilia. Puedes dejarnos tu opinión sobre ...",
+            "thumbnails": {
+               "default": {
+                  "url": "https://i.ytimg.com/vi/_c58sfvYf-U/default.jpg",
+                  "width": 120,
+                  "height": 90
+               },
+               "medium": {
+                  "url": "https://i.ytimg.com/vi/_c58sfvYf-U/mqdefault.jpg",
+                  "width": 320,
+                  "height": 180
+               },
+               "high": {
+                  "url": "https://i.ytimg.com/vi/_c58sfvYf-U/hqdefault.jpg",
+                  "width": 480,
+                  "height": 360
+               }
+            },
+            "channelTitle": "Océano Medicina",
+            "liveBroadcastContent": "none",
+            "publishTime": "2022-04-26T19:59:24Z"
+         }
+      },
+      {
+         "kind": "youtube#searchResult",
+         "etag": "9S-Z4boX4By-Wv0--6dSEAlWs6Q",
+         "id": {
+            "kind": "youtube#video",
+            "videoId": "dmk6_-Vecg8"
+         },
+         "snippet": {
+            "publishedAt": "2022-02-25T20:00:36Z",
+            "channelId": "UCKtE8yeLq5jkZSbkJt3nFuA",
+            "title": "Cardiología: avances en investigaciones y nuevos tratamientos - Con el Dr. Pedro Forcada 👨\u200d⚕️",
+            "description": "Charlamos con el co-autor de nuestro Curso superior de cardiología y autor del curso «Hipertensión arterial». Puedes dejarnos tu ...",
+            "thumbnails": {
+               "default": {
+                  "url": "https://i.ytimg.com/vi/dmk6_-Vecg8/default.jpg",
+                  "width": 120,
+                  "height": 90
+               },
+               "medium": {
+                  "url": "https://i.ytimg.com/vi/dmk6_-Vecg8/mqdefault.jpg",
+                  "width": 320,
+                  "height": 180
+               },
+               "high": {
+                  "url": "https://i.ytimg.com/vi/dmk6_-Vecg8/hqdefault.jpg",
+                  "width": 480,
+                  "height": 360
+               }
+            },
+            "channelTitle": "Océano Medicina",
+            "liveBroadcastContent": "none",
+            "publishTime": "2022-02-25T20:00:36Z"
+         }
+      },
+      {
+         "kind": "youtube#searchResult",
+         "etag": "qBpauopNQ-eZFmjadwYVeJVAaZE",
+         "id": {
+            "kind": "youtube#video",
+            "videoId": "68J9tJs266M"
+         },
+         "snippet": {
+            "publishedAt": "2021-12-14T17:45:31Z",
+            "channelId": "UCKtE8yeLq5jkZSbkJt3nFuA",
+            "title": "📣 ¿Estamos ante una nueva relación medicina/enfermería? - Con Elena Yacquet y Ricardo Chercover",
+            "description": "Charla en vivo de la licenciada en enfermería y directora del curso «Enfermería y cuidados intensivos neonatales», junto con el ...",
+            "thumbnails": {
+               "default": {
+                  "url": "https://i.ytimg.com/vi/68J9tJs266M/default.jpg",
+                  "width": 120,
+                  "height": 90
+               },
+               "medium": {
+                  "url": "https://i.ytimg.com/vi/68J9tJs266M/mqdefault.jpg",
+                  "width": 320,
+                  "height": 180
+               },
+               "high": {
+                  "url": "https://i.ytimg.com/vi/68J9tJs266M/hqdefault.jpg",
+                  "width": 480,
+                  "height": 360
+               }
+            },
+            "channelTitle": "Océano Medicina",
+            "liveBroadcastContent": "none",
+            "publishTime": "2021-12-14T17:45:31Z"
+         }
+      },
+      {
+         "kind": "youtube#searchResult",
+         "etag": "N9hVkplDa0JOflRyMmUg6TKVfVs",
+         "id": {
+            "kind": "youtube#video",
+            "videoId": "_Puqk5Pn8-w"
+         },
+         "snippet": {
+            "publishedAt": "2022-05-19T19:59:00Z",
+            "channelId": "UCKtE8yeLq5jkZSbkJt3nFuA",
+            "title": "¿Afecta la COVID-19 en la fertilidad femenina? - Con la Dra. Fernanda Parborell 👩\u200d⚕️",
+            "description": "Charlamos con la Licenciada en Ciencias Biológicas e investigadora del CONICET. Puedes dejarnos tu opinión sobre este ...",
+            "thumbnails": {
+               "default": {
+                  "url": "https://i.ytimg.com/vi/_Puqk5Pn8-w/default.jpg",
+                  "width": 120,
+                  "height": 90
+               },
+               "medium": {
+                  "url": "https://i.ytimg.com/vi/_Puqk5Pn8-w/mqdefault.jpg",
+                  "width": 320,
+                  "height": 180
+               },
+               "high": {
+                  "url": "https://i.ytimg.com/vi/_Puqk5Pn8-w/hqdefault.jpg",
+                  "width": 480,
+                  "height": 360
+               }
+            },
+            "channelTitle": "Océano Medicina",
+            "liveBroadcastContent": "none",
+            "publishTime": "2022-05-19T19:59:00Z"
+         }
+      },
+      {
+         "kind": "youtube#searchResult",
+         "etag": "8j-0CDz9cW48LuiYAuqsmKdRSns",
+         "id": {
+            "kind": "youtube#video",
+            "videoId": "0czJ4krT5JE"
+         },
+         "snippet": {
+            "publishedAt": "2022-01-18T20:00:11Z",
+            "channelId": "UCKtE8yeLq5jkZSbkJt3nFuA",
+            "title": "Seguridad en la administración de medicamentos y posología - Con la Lcda. María José Gomes 👩\u200d⚕️",
+            "description": "Charlamos junto a la Licenciada en Enfermería y creadora del Instagram @enfermeriaparatodos. Puedes dejar tu opinión sobre ...",
+            "thumbnails": {
+               "default": {
+                  "url": "https://i.ytimg.com/vi/0czJ4krT5JE/default.jpg",
+                  "width": 120,
+                  "height": 90
+               },
+               "medium": {
+                  "url": "https://i.ytimg.com/vi/0czJ4krT5JE/mqdefault.jpg",
+                  "width": 320,
+                  "height": 180
+               },
+               "high": {
+                  "url": "https://i.ytimg.com/vi/0czJ4krT5JE/hqdefault.jpg",
+                  "width": 480,
+                  "height": 360
+               }
+            },
+            "channelTitle": "Océano Medicina",
+            "liveBroadcastContent": "none",
+            "publishTime": "2022-01-18T20:00:11Z"
+         }
+      },
+      {
+         "kind": "youtube#searchResult",
+         "etag": "e2dRmr58R7YU06x0YYsg7Pd-F2Y",
+         "id": {
+            "kind": "youtube#video",
+            "videoId": "PnWWUnkuyzM"
+         },
+         "snippet": {
+            "publishedAt": "2021-12-02T09:23:52Z",
+            "channelId": "UCKtE8yeLq5jkZSbkJt3nFuA",
+            "title": "Lactancia: atención de las necesidades de las personas que amamantan - Con Sabrina Critzmann 👩\u200d⚕️",
+            "description": "Charla en vivo con la médica pediatra y puericultora. Conoce todas nuestras capacitaciones online en ...",
+            "thumbnails": {
+               "default": {
+                  "url": "https://i.ytimg.com/vi/PnWWUnkuyzM/default.jpg",
+                  "width": 120,
+                  "height": 90
+               },
+               "medium": {
+                  "url": "https://i.ytimg.com/vi/PnWWUnkuyzM/mqdefault.jpg",
+                  "width": 320,
+                  "height": 180
+               },
+               "high": {
+                  "url": "https://i.ytimg.com/vi/PnWWUnkuyzM/hqdefault.jpg",
+                  "width": 480,
+                  "height": 360
+               }
+            },
+            "channelTitle": "Océano Medicina",
+            "liveBroadcastContent": "none",
+            "publishTime": "2021-12-02T09:23:52Z"
+         }
+      },
+      {
+         "kind": "youtube#searchResult",
+         "etag": "PsTnvD1rFSm7Y7uhiRA-FkATr9Q",
+         "id": {
+            "kind": "youtube#video",
+            "videoId": "EHrUiH2PioM"
+         },
+         "snippet": {
+            "publishedAt": "2022-03-15T19:55:54Z",
+            "channelId": "UCKtE8yeLq5jkZSbkJt3nFuA",
+            "title": "El impacto de la pandemia en las mujeres embarazadas - Con el Dr. Roberto Casale 👨\u200d⚕️",
+            "description": "Charlamos con el Director de nuestro Curso superior de obstetricia y de la Formación integral en obstetricia. Puedes dejarnos tu ...",
+            "thumbnails": {
+               "default": {
+                  "url": "https://i.ytimg.com/vi/EHrUiH2PioM/default.jpg",
+                  "width": 120,
+                  "height": 90
+               },
+               "medium": {
+                  "url": "https://i.ytimg.com/vi/EHrUiH2PioM/mqdefault.jpg",
+                  "width": 320,
+                  "height": 180
+               },
+               "high": {
+                  "url": "https://i.ytimg.com/vi/EHrUiH2PioM/hqdefault.jpg",
+                  "width": 480,
+                  "height": 360
+               }
+            },
+            "channelTitle": "Océano Medicina",
+            "liveBroadcastContent": "none",
+            "publishTime": "2022-03-15T19:55:54Z"
+         }
+      },
+      {
+         "kind": "youtube#searchResult",
+         "etag": "AOUFZD-iKoyIM2u9AEBf0nA4ciE",
+         "id": {
+            "kind": "youtube#video",
+            "videoId": "Jcw3LIH--c0"
+         },
+         "snippet": {
+            "publishedAt": "2021-07-16T09:08:26Z",
+            "channelId": "UCKtE8yeLq5jkZSbkJt3nFuA",
+            "title": "Coaching en la práctica profesional en salud - Con el Dr. Carlos Obredor 👨\u200d⚕️",
+            "description": "Charla en vivo con el miembro de la Asociación Argentina de Coaching Ontológico Profesional. Conoce todos nuestros cursos ...",
+            "thumbnails": {
+               "default": {
+                  "url": "https://i.ytimg.com/vi/Jcw3LIH--c0/default.jpg",
+                  "width": 120,
+                  "height": 90
+               },
+               "medium": {
+                  "url": "https://i.ytimg.com/vi/Jcw3LIH--c0/mqdefault.jpg",
+                  "width": 320,
+                  "height": 180
+               },
+               "high": {
+                  "url": "https://i.ytimg.com/vi/Jcw3LIH--c0/hqdefault.jpg",
+                  "width": 480,
+                  "height": 360
+               }
+            },
+            "channelTitle": "Océano Medicina",
+            "liveBroadcastContent": "none",
+            "publishTime": "2021-07-16T09:08:26Z"
+         }
+      },
+      {
+         "kind": "youtube#searchResult",
+         "etag": "f0DaQTbA1jT5Z9tsiv6ztE80ofU",
+         "id": {
+            "kind": "youtube#video",
+            "videoId": "8-O2-5wXZyQ"
+         },
+         "snippet": {
+            "publishedAt": "2021-09-24T09:03:20Z",
+            "channelId": "UCKtE8yeLq5jkZSbkJt3nFuA",
+            "title": "Opioides y su uso en la práctica clínica - Con el Dr. Ariel Cherro 👨\u200d⚕️",
+            "description": "Charla en vivo con el Presidente del Consejo de Cuidados Paliativos de la Sociedad Argentina de Medicina. Conoce todos ...",
+            "thumbnails": {
+               "default": {
+                  "url": "https://i.ytimg.com/vi/8-O2-5wXZyQ/default.jpg",
+                  "width": 120,
+                  "height": 90
+               },
+               "medium": {
+                  "url": "https://i.ytimg.com/vi/8-O2-5wXZyQ/mqdefault.jpg",
+                  "width": 320,
+                  "height": 180
+               },
+               "high": {
+                  "url": "https://i.ytimg.com/vi/8-O2-5wXZyQ/hqdefault.jpg",
+                  "width": 480,
+                  "height": 360
+               }
+            },
+            "channelTitle": "Océano Medicina",
+            "liveBroadcastContent": "none",
+            "publishTime": "2021-09-24T09:03:20Z"
+         }
+      },
+      {
+         "kind": "youtube#searchResult",
+         "etag": "lobaJOgN6Hau3LKLpIEf2GErHZY",
+         "id": {
+            "kind": "youtube#video",
+            "videoId": "VXS07-WQSIs"
+         },
+         "snippet": {
+            "publishedAt": "2021-04-23T07:47:59Z",
+            "channelId": "UCKtE8yeLq5jkZSbkJt3nFuA",
+            "title": "Cardiología e hipertensión arterial: cómo prevenir y tratar hoy - Con el Dr. Pedro Forcada 👨\u200d⚕️",
+            "description": "Charla en vivo con el co-director del Curso superior de cardiología de Océano Medicina y ESEM III - COLMED III. Autor del curso ...",
+            "thumbnails": {
+               "default": {
+                  "url": "https://i.ytimg.com/vi/VXS07-WQSIs/default.jpg",
+                  "width": 120,
+                  "height": 90
+               },
+               "medium": {
+                  "url": "https://i.ytimg.com/vi/VXS07-WQSIs/mqdefault.jpg",
+                  "width": 320,
+                  "height": 180
+               },
+               "high": {
+                  "url": "https://i.ytimg.com/vi/VXS07-WQSIs/hqdefault.jpg",
+                  "width": 480,
+                  "height": 360
+               }
+            },
+            "channelTitle": "Océano Medicina",
+            "liveBroadcastContent": "none",
+            "publishTime": "2021-04-23T07:47:59Z"
+         }
+      },
+      {
+         "kind": "youtube#searchResult",
+         "etag": "ChYbpIzruT5wBTycyLXmDAB-OS4",
+         "id": {
+            "kind": "youtube#video",
+            "videoId": "3q_ggjmO5ZQ"
+         },
+         "snippet": {
+            "publishedAt": "2022-09-14T21:03:51Z",
+            "channelId": "UCKtE8yeLq5jkZSbkJt3nFuA",
+            "title": "Cuidados intensivos humanizados y trabajo en equipo - Lcda. Paz, Lcdo. Balderrama y Lcdo. Córdoba",
+            "description": "Charlamos con los autores de nuestra Formación integral en cuidados intensivos para enfermería. Puedes dejarnos tu opinión ...",
+            "thumbnails": {
+               "default": {
+                  "url": "https://i.ytimg.com/vi/3q_ggjmO5ZQ/default_live.jpg",
+                  "width": 120,
+                  "height": 90
+               },
+               "medium": {
+                  "url": "https://i.ytimg.com/vi/3q_ggjmO5ZQ/mqdefault_live.jpg",
+                  "width": 320,
+                  "height": 180
+               },
+               "high": {
+                  "url": "https://i.ytimg.com/vi/3q_ggjmO5ZQ/hqdefault_live.jpg",
+                  "width": 480,
+                  "height": 360
+               }
+            },
+            "channelTitle": "Océano Medicina",
+            "liveBroadcastContent": "upcoming",
+            "publishTime": "2022-09-14T21:03:51Z"
+         }
+      },
+      {
+         "kind": "youtube#searchResult",
+         "etag": "ZyiKNquYz3v1-iKlg1gxvfpWSQg",
+         "id": {
+            "kind": "youtube#video",
+            "videoId": "6IyuN7R7WCA"
+         },
+         "snippet": {
+            "publishedAt": "2021-05-13T09:01:15Z",
+            "channelId": "UCKtE8yeLq5jkZSbkJt3nFuA",
+            "title": "Trabajar en enfermería: miradas en primera persona 👩\u200d⚕️",
+            "description": "Conmemoramos el Día Internacional de la enfermería con una charla en vivo junto a las licenciadas Elena Yacquet (ARG) y ...",
+            "thumbnails": {
+               "default": {
+                  "url": "https://i.ytimg.com/vi/6IyuN7R7WCA/default.jpg",
+                  "width": 120,
+                  "height": 90
+               },
+               "medium": {
+                  "url": "https://i.ytimg.com/vi/6IyuN7R7WCA/mqdefault.jpg",
+                  "width": 320,
+                  "height": 180
+               },
+               "high": {
+                  "url": "https://i.ytimg.com/vi/6IyuN7R7WCA/hqdefault.jpg",
+                  "width": 480,
+                  "height": 360
+               }
+            },
+            "channelTitle": "Océano Medicina",
+            "liveBroadcastContent": "none",
+            "publishTime": "2021-05-13T09:01:15Z"
+         }
+      },
+      {
+         "kind": "youtube#searchResult",
+         "etag": "TfWntarYDDy3gFqcz1HgHodQvQ8",
+         "id": {
+            "kind": "youtube#video",
+            "videoId": "eWN1q70Gp40"
+         },
+         "snippet": {
+            "publishedAt": "2021-06-26T08:54:57Z",
+            "channelId": "UCKtE8yeLq5jkZSbkJt3nFuA",
+            "title": "Dolor torácico: diagnóstico diferencial en urgencias - Con la Dra. Lina Santos Hernández 👩\u200d⚕️",
+            "description": "Charla en vivo con la Presidenta de la Sociedad Colombiana de Médicos Generales. Conoce todos nuestros cursos en ...",
+            "thumbnails": {
+               "default": {
+                  "url": "https://i.ytimg.com/vi/eWN1q70Gp40/default.jpg",
+                  "width": 120,
+                  "height": 90
+               },
+               "medium": {
+                  "url": "https://i.ytimg.com/vi/eWN1q70Gp40/mqdefault.jpg",
+                  "width": 320,
+                  "height": 180
+               },
+               "high": {
+                  "url": "https://i.ytimg.com/vi/eWN1q70Gp40/hqdefault.jpg",
+                  "width": 480,
+                  "height": 360
+               }
+            },
+            "channelTitle": "Océano Medicina",
+            "liveBroadcastContent": "none",
+            "publishTime": "2021-06-26T08:54:57Z"
+         }
+      },
+      {
+         "kind": "youtube#searchResult",
+         "etag": "sqL6gmKuuyU9z6chpzzyisoJ1o0",
+         "id": {
+            "kind": "youtube#video",
+            "videoId": "K0rYfL-W9lA"
+         },
+         "snippet": {
+            "publishedAt": "2021-02-27T03:07:47Z",
+            "channelId": "UCKtE8yeLq5jkZSbkJt3nFuA",
+            "title": "Pediatría: novedades prácticas para mejorar la acción y atención - Con el Dr. Emilio Tugender 👨\u200d⚕️",
+            "description": "Hablamos con el Dr. Tugender, pediatra especialista en neumonología infantil. Miembro titular de la Sociedad Argentina de ...",
+            "thumbnails": {
+               "default": {
+                  "url": "https://i.ytimg.com/vi/K0rYfL-W9lA/default.jpg",
+                  "width": 120,
+                  "height": 90
+               },
+               "medium": {
+                  "url": "https://i.ytimg.com/vi/K0rYfL-W9lA/mqdefault.jpg",
+                  "width": 320,
+                  "height": 180
+               },
+               "high": {
+                  "url": "https://i.ytimg.com/vi/K0rYfL-W9lA/hqdefault.jpg",
+                  "width": 480,
+                  "height": 360
+               }
+            },
+            "channelTitle": "Océano Medicina",
+            "liveBroadcastContent": "none",
+            "publishTime": "2021-02-27T03:07:47Z"
+         }
+      },
+      {
+         "kind": "youtube#searchResult",
+         "etag": "1JWHbSov6-YfcpkcWzvQ9zhs8Rs",
+         "id": {
+            "kind": "youtube#video",
+            "videoId": "IAD9gsMYQhU"
+         },
+         "snippet": {
+            "publishedAt": "2021-05-28T08:59:10Z",
+            "channelId": "UCKtE8yeLq5jkZSbkJt3nFuA",
+            "title": "Malnutrición, gastroenterología y afecciones por COVID-19 - Con la Lic. Marisa Canicoba 👩\u200d⚕️",
+            "description": "Charla en vivo con la autora de los cursos Nutrición clínica y Actualización en nutrición y patologías gastrointestinales, ...",
+            "thumbnails": {
+               "default": {
+                  "url": "https://i.ytimg.com/vi/IAD9gsMYQhU/default.jpg",
+                  "width": 120,
+                  "height": 90
+               },
+               "medium": {
+                  "url": "https://i.ytimg.com/vi/IAD9gsMYQhU/mqdefault.jpg",
+                  "width": 320,
+                  "height": 180
+               },
+               "high": {
+                  "url": "https://i.ytimg.com/vi/IAD9gsMYQhU/hqdefault.jpg",
+                  "width": 480,
+                  "height": 360
+               }
+            },
+            "channelTitle": "Océano Medicina",
+            "liveBroadcastContent": "none",
+            "publishTime": "2021-05-28T08:59:10Z"
+         }
+      },
+      {
+         "kind": "youtube#searchResult",
+         "etag": "L9W6TL3CX-E5aw6gKV-iizZ61lA",
+         "id": {
+            "kind": "youtube#video",
+            "videoId": "CdKbAzrTY6E"
+         },
+         "snippet": {
+            "publishedAt": "2021-08-26T09:01:39Z",
+            "channelId": "UCKtE8yeLq5jkZSbkJt3nFuA",
+            "title": "Salud materno fetal en pandemia: desafíos actuales y herramientas - Con el Dr. Raúl Winograd 👨\u200d⚕️",
+            "description": "Charla en vivo con el Profesor Titular Consulto de Obstetricia en la Universidad de Buenos Aires. Conoce todos nuestros ...",
+            "thumbnails": {
+               "default": {
+                  "url": "https://i.ytimg.com/vi/CdKbAzrTY6E/default.jpg",
+                  "width": 120,
+                  "height": 90
+               },
+               "medium": {
+                  "url": "https://i.ytimg.com/vi/CdKbAzrTY6E/mqdefault.jpg",
+                  "width": 320,
+                  "height": 180
+               },
+               "high": {
+                  "url": "https://i.ytimg.com/vi/CdKbAzrTY6E/hqdefault.jpg",
+                  "width": 480,
+                  "height": 360
+               }
+            },
+            "channelTitle": "Océano Medicina",
+            "liveBroadcastContent": "none",
+            "publishTime": "2021-08-26T09:01:39Z"
+         }
+      },
+      {
+         "kind": "youtube#searchResult",
+         "etag": "CvgaD9XJZvpoq1EQNZT0bSeUtng",
+         "id": {
+            "kind": "youtube#video",
+            "videoId": "aQERSJFTQa0"
+         },
+         "snippet": {
+            "publishedAt": "2021-09-15T09:25:35Z",
+            "channelId": "UCKtE8yeLq5jkZSbkJt3nFuA",
+            "title": "Vacunación contra la COVID-19 a nivel regional - Con la Dra. Florencia Cahn 👩\u200d⚕️",
+            "description": "Charla en vivo con la Presidenta de la Sociedad Argentina de Vacunología y Epidemiología. Conoce todos nuestros cursos en ...",
+            "thumbnails": {
+               "default": {
+                  "url": "https://i.ytimg.com/vi/aQERSJFTQa0/default.jpg",
+                  "width": 120,
+                  "height": 90
+               },
+               "medium": {
+                  "url": "https://i.ytimg.com/vi/aQERSJFTQa0/mqdefault.jpg",
+                  "width": 320,
+                  "height": 180
+               },
+               "high": {
+                  "url": "https://i.ytimg.com/vi/aQERSJFTQa0/hqdefault.jpg",
+                  "width": 480,
+                  "height": 360
+               }
+            },
+            "channelTitle": "Océano Medicina",
+            "liveBroadcastContent": "none",
+            "publishTime": "2021-09-15T09:25:35Z"
+         }
+      },
+      {
+         "kind": "youtube#searchResult",
+         "etag": "QVtoac8EjvAAfxY4CJLI62OhIB4",
+         "id": {
+            "kind": "youtube#video",
+            "videoId": "kOj9V3cZBCs"
+         },
+         "snippet": {
+            "publishedAt": "2021-04-10T08:47:39Z",
+            "channelId": "UCKtE8yeLq5jkZSbkJt3nFuA",
+            "title": "La importancia de la medicina intensiva en contexto de pandemia - Con el Dr. Francisco Barone 👨\u200d⚕️",
+            "description": "Charla en vivo con el autor del Curso Superior de Terapia Intensiva de Océano Medicina y ESEM III - COLMED III. Especialista en ...",
+            "thumbnails": {
+               "default": {
+                  "url": "https://i.ytimg.com/vi/kOj9V3cZBCs/default.jpg",
+                  "width": 120,
+                  "height": 90
+               },
+               "medium": {
+                  "url": "https://i.ytimg.com/vi/kOj9V3cZBCs/mqdefault.jpg",
+                  "width": 320,
+                  "height": 180
+               },
+               "high": {
+                  "url": "https://i.ytimg.com/vi/kOj9V3cZBCs/hqdefault.jpg",
+                  "width": 480,
+                  "height": 360
+               }
+            },
+            "channelTitle": "Océano Medicina",
+            "liveBroadcastContent": "none",
+            "publishTime": "2021-04-10T08:47:39Z"
+         }
+      },
+      {
+         "kind": "youtube#searchResult",
+         "etag": "jOlW1fcsU6EmVyVz3M8uz4nuLQs",
+         "id": {
+            "kind": "youtube#video",
+            "videoId": "5tcErOTz4yA"
+         },
+         "snippet": {
+            "publishedAt": "2021-01-20T08:48:27Z",
+            "channelId": "UCKtE8yeLq5jkZSbkJt3nFuA",
+            "title": "Administración y organización en Salud - En vivo con el Dr. Néstor Feldman 👨\u200d⚕️",
+            "description": "Hablamos con el autor del Curso Superior de Administración y Gestión Hospitalaria y del curso de Auditoría Médica. Médico del ...",
+            "thumbnails": {
+               "default": {
+                  "url": "https://i.ytimg.com/vi/5tcErOTz4yA/default.jpg",
+                  "width": 120,
+                  "height": 90
+               },
+               "medium": {
+                  "url": "https://i.ytimg.com/vi/5tcErOTz4yA/mqdefault.jpg",
+                  "width": 320,
+                  "height": 180
+               },
+               "high": {
+                  "url": "https://i.ytimg.com/vi/5tcErOTz4yA/hqdefault.jpg",
+                  "width": 480,
+                  "height": 360
+               }
+            },
+            "channelTitle": "Océano Medicina",
+            "liveBroadcastContent": "none",
+            "publishTime": "2021-01-20T08:48:27Z"
+         }
+      },
+      {
+         "kind": "youtube#searchResult",
+         "etag": "k4Nd4Im4PmgTGz5tXYfFcXO7I_s",
+         "id": {
+            "kind": "youtube#video",
+            "videoId": "QhuYFMJKV50"
+         },
+         "snippet": {
+            "publishedAt": "2021-02-20T02:43:03Z",
+            "channelId": "UCKtE8yeLq5jkZSbkJt3nFuA",
+            "title": "Los desafíos de la obstetricia para el 2021 - En vivo con el Dr. Roberto Casale 👨\u200d⚕️",
+            "description": "El Dr. Roberto Casale es Jefe del Programa de Residencia de Obstétricas en el Hospital Posadas (Buenos Aires, Argentina).",
+            "thumbnails": {
+               "default": {
+                  "url": "https://i.ytimg.com/vi/QhuYFMJKV50/default.jpg",
+                  "width": 120,
+                  "height": 90
+               },
+               "medium": {
+                  "url": "https://i.ytimg.com/vi/QhuYFMJKV50/mqdefault.jpg",
+                  "width": 320,
+                  "height": 180
+               },
+               "high": {
+                  "url": "https://i.ytimg.com/vi/QhuYFMJKV50/hqdefault.jpg",
+                  "width": 480,
+                  "height": 360
+               }
+            },
+            "channelTitle": "Océano Medicina",
+            "liveBroadcastContent": "none",
+            "publishTime": "2021-02-20T02:43:03Z"
+         }
+      },
+      {
+         "kind": "youtube#searchResult",
+         "etag": "SGL9m8oUQZUEVbMbDPF8rqYj0f0",
+         "id": {
+            "kind": "youtube#video",
+            "videoId": "aY60O0r4DVQ"
+         },
+         "snippet": {
+            "publishedAt": "2020-05-26T14:55:30Z",
+            "channelId": "UCKtE8yeLq5jkZSbkJt3nFuA",
+            "title": "Cuidados paliativos perinatales: tratar el dolor del recién nacido de manera integral",
+            "description": "Rut Kiman, médica pediatra con una vasta trayectoria en el área de cuidados paliativos perinatales, aporta herramientas para el ...",
+            "thumbnails": {
+               "default": {
+                  "url": "https://i.ytimg.com/vi/aY60O0r4DVQ/default.jpg",
+                  "width": 120,
+                  "height": 90
+               },
+               "medium": {
+                  "url": "https://i.ytimg.com/vi/aY60O0r4DVQ/mqdefault.jpg",
+                  "width": 320,
+                  "height": 180
+               },
+               "high": {
+                  "url": "https://i.ytimg.com/vi/aY60O0r4DVQ/hqdefault.jpg",
+                  "width": 480,
+                  "height": 360
+               }
+            },
+            "channelTitle": "Océano Medicina",
+            "liveBroadcastContent": "none",
+            "publishTime": "2020-05-26T14:55:30Z"
+         }
+      },
+      {
+         "kind": "youtube#searchResult",
+         "etag": "BNdBYIz58GTxXiFCqK9l_jsBMiQ",
+         "id": {
+            "kind": "youtube#video",
+            "videoId": "XEzR09QJRuM"
+         },
+         "snippet": {
+            "publishedAt": "2020-11-18T08:48:58Z",
+            "channelId": "UCKtE8yeLq5jkZSbkJt3nFuA",
+            "title": "Día del Prematuro - En vivo con la Dra. Silvia García 👩\u200d⚕️",
+            "description": "Hablamos con la directora del Curso Superior de Neonatología y Jefa del servicio de Neonatología del Hospital Posadas ...",
+            "thumbnails": {
+               "default": {
+                  "url": "https://i.ytimg.com/vi/XEzR09QJRuM/default.jpg",
+                  "width": 120,
+                  "height": 90
+               },
+               "medium": {
+                  "url": "https://i.ytimg.com/vi/XEzR09QJRuM/mqdefault.jpg",
+                  "width": 320,
+                  "height": 180
+               },
+               "high": {
+                  "url": "https://i.ytimg.com/vi/XEzR09QJRuM/hqdefault.jpg",
+                  "width": 480,
+                  "height": 360
+               }
+            },
+            "channelTitle": "Océano Medicina",
+            "liveBroadcastContent": "none",
+            "publishTime": "2020-11-18T08:48:58Z"
+         }
+      }
+   ]
+}
