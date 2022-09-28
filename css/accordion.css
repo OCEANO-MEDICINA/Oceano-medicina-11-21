@@ -1,0 +1,47 @@
+.accordionjs {
+   position: relative;
+   margin: 0;
+   padding: 0;
+   list-style: none;
+   margin-top: 10px;
+   margin-bottom: 20px;
+}
+.accordionjs .acc_section {
+   border: 1px solid #e6e6ed;
+   border-radius: 8px;
+   position: relative;
+   z-index: 10;
+   margin-top: -1px;
+   overflow: hidden;
+}
+.accordionjs .acc_section .acc_head {
+   position: relative;
+   z-index: 2;
+   padding: 0.5rem 1rem;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background: #eeeeee26;
+   border: none;
+   border-radius: 8px;
+   color: #272727;
+   border-bottom: transparent;
+}
+.accordionjs .acc_section .acc_head h3 {
+   line-height: 1;
+   margin: 5px 0;
+}
+.accordionjs .acc_section .acc_content {
+   padding: 10px;
+}
+.accordionjs .acc_section.acc_active {
+   border: 1px solid #e6e6ed;
+   border-color: #e6e6ed;
+}
+.accordionjs .acc_section.acc_active > .acc_content {
+   display: block;
+}
+.accordionjs .acc_section.acc_active > .acc_head {
+   background: #f9f9f9;
+   border-bottom: 1px solid #e6e6ed;
+}

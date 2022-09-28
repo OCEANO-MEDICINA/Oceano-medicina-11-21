@@ -2038,6 +2038,7 @@ body.clip {
 }
 
 button {
+  font-family: "Roboto", sans-serif;
   background: transparent;
   border: unset;
 }

@@ -24,181 +24,9 @@
          rel="stylesheet"
          href="https://cdn.jsdelivr.net/npm/@mdi/font@6.4.95/css/materialdesignicons.min.css"
       />
-      <link rel="stylesheet" href="css/ficha-producto.css" />
+      <link rel="stylesheet" href="css/accordion.css" />
+      <link rel="stylesheet" href="public/css/ficha-producto.css" />
    </head>
-   <header>
-    <div class="contenedor">
-        <nav class="navbar" role="navigation" aria-label="main navigation">
-            <div id="navbar-overlay" class="navbar-overlay"></div>
-            <div class="navbar-brand">
-                <a id="logo" class="navbar-item logo absolute-center" href="#">
-                    <img src="media/logo-oceano-medicina.png">
-                </a>
-
-                <a id="navbar-burger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar-oceano" onclick="navBar()">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                </a>
-                <div id="icons" class="navbar-item icons">
-                    <input id="dgwt-wcas-search-input-1" type="search" class="dgwt-wcas-search-input invisible" placeholder="Escribí tu especialidad de interés" autocomplete="on">
-                    <button id="toggleBuscador" onclick="btnSearch()" class="icons">
-
-                        <span id="lupa" class="mdi mdi-magnify" alt=""></span>
-                        <span id="search-close" alt="" class="mdi mdi-close invisible">
-                    </button>
-                    <button id="cart" class="cart">
-                        <span src="media/icon/cart.svg" alt="" class="mdi mdi-cart-outline"></span>
-                    </button>
-                </div>
-
-
-            </div>
-
-            <div id="navbar-oceano" class="navbar-menu">
-                <div class="navbar-start">
-                    <div id="nav-medicina" class="navbar-item has-dropdown is-hoverable nav-medicina">
-                        <a class="navbar-link accordion-trigger">
-                            Medicina
-                        </a>
-
-                        <ul class="navbar-dropdown accordion-panel">
-                            <div class="overlay"></div>
-                            <li><a class="navbar-item ver_todos" href="/tienda/#filter=.medicos">VER
-                                    TODOS</a></li>
-                            <li><a class="navbar-item" href="/tienda/#filter=.anestesiologia-y-dolor">Anestesiología y
-                                    dolor</a></li>
-                            <li><a class="navbar-item" href="/tienda/#filter=.bibliography">Bibliografia</a></li>
-                            <li><a class="navbar-item" href="/tienda/#filter=.cardiologia">Cardiología</a></li>
-                            <li><a class="navbar-item" href="/tienda/#filter=.cirugia">Cirugía</a></li>
-                            <li><a class="navbar-item" href="/tienda/#filter=.dermatologia">Dermatología</a></li>
-                            <li><a class="navbar-item" href="/tienda/#filter=.diabetes">Diabetes</a></li>
-                            <li><a class="navbar-item" href="/tienda/#filter=.emergentologia">Emergentología</a></li>
-                            <li><a class="navbar-item" href="/tienda/#filter=.gastroenterologia">Gastroenterología</a>
-                            </li>
-                            <li><a class="navbar-item" href="/tienda/#filter=.geriatria">Geriatría</a></li>
-                            <li><a class="navbar-item" href="/tienda/#filter=.ginecologia">Ginecología</a></li>
-                            <li><a class="navbar-item" href="/tienda/#filter=.hematologia">Hematología</a></li>
-                            <li><a class="navbar-item" href="/tienda/#filter=.infectologia">Infectología</a></li>
-                            <li><a class="navbar-item" href="/tienda/#filter=.kinesiologia">Kinesiología</a></li>
-                            <li><a class="navbar-item" href="/tienda/#filter=.medicina-estetica">Medicina estética</a>
-                            </li>
-
-                            <li><a class="navbar-item" href="/tienda/#filter=.medicina-general">Medicina general</a>
-                            </li>
-                            <li><a class="navbar-item" href="/tienda/#filter=.medicina-intensiva">Medicina intensiva</a>
-                            </li>
-                            <li><a class="navbar-item" href="/tienda/#filter=.nutricion">Nutrición</a></li>
-                            <li><a class="navbar-item" href="/tienda/#filter=.obstetricia">Obstetricia</a></li>
-                            <li><a class="navbar-item" href="/tienda/#filter=.odontologia">Odontología</a></li>
-                            <li><a class="navbar-item" href="/tienda/#filter=.oftalmologia">Oftalmología</a></li>
-                            <li><a class="navbar-item" href="/tienda/#filter=.oncologia">Oncología</a></li>
-                            <li><a class="navbar-item" href="/tienda/#filter=.pediatria">Pediatría</a></li>
-                            <li><a class="navbar-item" href="/tienda/#filter=.psicologia">Psicología</a></li>
-                            <li><a class="navbar-item" href="/tienda/#filter=.psiquiatria">Psiquiatría</a></li>
-                        </ul>
-                    </div>
-
-                    <div id="nav-enfermeria" class="navbar-item has-dropdown is-hoverable nav-enfermeria">
-                        <a class="navbar-link accordion-trigger">
-                            Enfermería
-                        </a>
-
-                        <ul class="navbar-dropdown accordion-panel">
-                            <div class="overlay"></div>
-                            <li>
-                                <a class="navbar-item" href="">Item 1</a>
-                            </li>
-                            <li>
-                                <a class="navbar-item" href="">Item 2</a>
-                            </li>
-                            <li>
-                                <a class="navbar-item" href="">Item 3</a>
-                            </li>
-                            <li>
-                                <a class="navbar-item" href="">Item 1</a>
-                            </li>
-                            <li>
-                                <a class="navbar-item" href="">Item 2</a>
-                            </li>
-                            <li>
-                                <a class="navbar-item" href="">Item 3</a>
-                            </li>
-                            <li>
-                                <a class="navbar-item" href="">Item 1</a>
-                            </li>
-                            <li>
-                                <a class="navbar-item" href="">Item 2</a>
-                            </li>
-                            <li>
-                                <a class="navbar-item" href="">Item 3</a>
-                            </li>
-                            <li>
-                                <a class="navbar-item" href="">Item 1</a>
-                            </li>
-                            <li>
-                                <a class="navbar-item" href="">Item 2</a>
-                            </li>
-                            <li>
-                                <a class="navbar-item" href="">Item 3</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div id="nav-comunidad" class="navbar-item has-dropdown is-hoverable nav-comunidad">
-                        <a class="navbar-link accordion-trigger">
-                            Comunidad
-                        </a>
-
-                        <div class="navbar-dropdown navbar-dropdown-comunidad accordion-panel">
-                            <div class="overlay"></div>
-
-                            <ul class="navbar-dropdown-comunidad-menu">
-                                <li>
-                                    <a class="navbar-item" href="">Descargables</a>
-                                </li>
-                                <li>
-                                    <a class="navbar-item" href="">Magazine</a>
-                                </li>
-                                <li>
-                                    <a class="navbar-item" href="">FAQ's</a>
-                                </li>
-                                <li>
-                                    <a class="navbar-item" href="">Contacto</a>
-                                </li>
-                            </ul>
-                            <div class="navbar-item navbar-dropdown-comunidad-news">
-                                <div class="navbar-dropdown-comunidad-news-img"></div>
-                                <div class="navbar-dropdown-comunidad-news-info">
-                                    <h3>Nuevo Ebook</h3>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet commodi maxime excepturi nostrum maiores quod vel, temporibus obcaecati accusantium iure minus, eos explicabo repellat sint, velit debitis nam omnis quia.</p>
-                                    <a href="">Leer más</a>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div id="search-desktop" class="navbar-item search-desktop">
-                        <input id="dgwt-wcas-search-input-1-desktop" type="search" class="dgwt-wcas-search-input invisible" placeholder="Escribí tu especialidad de interés" autocomplete="on">
-                        <button id="toggleBuscador-desktop" onclick="btnSearchDesktop()" class="icons">
-
-                            <span id="lupa-desktop" class="mdi mdi-magnify" alt=""></span>
-                            <span id="search-close-desktop" alt="" class="mdi mdi-close invisible">
-                        </button>
-                    </div>
-                    <button id="cart" class="cart-desktop">
-                        <span src="media/icon/cart.svg" alt="" class="mdi mdi-cart-outline"></span>
-                    </button>
-
-                    <a id="login-campus" class="button navbar-item login-campus" href="https://suite.oceano.com/#/public/login?not_logged=true">
-                        Acceder al campus
-                    </a>
-
-                </div>
-            </div>
-        </nav>
-    </div>
-</header>
 
    <body>
       <section id="hero" class="hero">
@@ -326,7 +154,10 @@
                      <img src="media/icon/detail-product-1.svg" alt="" />
                      <div>
                         <h3>Duración</h3>
-                        <h4><span class="has-text-danger">400</span> horas estimadas de lectura</h4>
+                        <h4>
+                           <span class="has-text-danger">400</span> horas
+                           estimadas de lectura
+                        </h4>
                      </div>
                   </div>
                   <div href="" class="details-card">
@@ -347,7 +178,10 @@
                      <img src="media/icon/detail-product-4.svg" alt="" />
                      <div>
                         <h3>Contenido</h3>
-                        <h4>Material digital disponible por <span class="has-text-danger">24</span> meses</h4>
+                        <h4>
+                           Material digital disponible por
+                           <span class="has-text-danger">24</span> meses
+                        </h4>
                      </div>
                   </div>
                   <!--Ebooks-->
@@ -712,270 +546,642 @@
 
       <section id="temario" class="temario">
          <article class="temario-cont contenedor mx-auto">
-            <div class="temario-cont-title">
-               <h3><i class="mdi mdi-file-document-outline"></i> Temario</h3>
-            </div>
-
-            <div class="temario-cont-info sombra">
-               <article class="temario-cont-info-grid">
-                  <nav class="temario-tabs">
-                     <ul>
-                        <li
-                           class="tab is-active"
-                           onclick="openTab(event,'modulo-1')"
-                        >
-                           <a><span class="">Módulo </span> 1</a>
-                        </li>
-                        <li class="tab" onclick="openTab(event,'modulo-2')">
-                           <a><span class="">Módulo </span>2</a>
-                        </li>
-                        <li class="tab" onclick="openTab(event,'modulo-3')">
-                           <a><span class="">Módulo </span>3</a>
-                        </li>
-                        <li class="tab" onclick="openTab(event,'modulo-4')">
-                           <a><span class="">Módulo </span>4</a>
-                        </li>
-                        <li class="tab" onclick="openTab(event,'modulo-5')">
-                           <a><span class="">Módulo </span>5</a>
-                        </li>
-                        <li class="tab" onclick="openTab(event,'modulo-6')">
-                           <a><span class="">Módulo </span>6</a>
-                        </li>
-                        <li class="tab" onclick="openTab(event,'modulo-7')">
-                           <a><span class="">Módulo </span>7</a>
-                        </li>
-                        <li class="tab" onclick="openTab(event,'modulo-8')">
-                           <a><span class="">Módulo </span>8</a>
-                        </li>
-                        <li class="tab" onclick="openTab(event,'modulo-9')">
-                           <a><span class="">Módulo </span>9</a>
-                        </li>
-                        <li class="tab" onclick="openTab(event,'modulo-10')">
-                           <a><span class="">Módulo </span>10</a>
-                        </li>
-                     </ul>
-                  </nav>
-
-                  <div id="modulo-1" class="content-tab" style="display: block">
-                     <h5>Medicina cardiovascular</h5>
-                     <ul>
-                        <li>Epidemiología y factores de riesgo</li>
-                        <li>Evaluación diagnóstica en cardiología</li>
-                        <li>Enfermedad coronaria</li>
-                        <li>Insuficiencia cardíaca</li>
-                        <li>Arritmias</li>
-                        <li>Cardiopatía valvular</li>
-                        <li>Enfermedades del miocardio</li>
-                        <li>Enfermedades del pericardio</li>
-                        <li>Cardiopatías congénitas en el adulto</li>
-                        <li>Enfermedades de la aorta</li>
-                        <li>Enfermedad arterial periférica</li>
-                        <li>
-                           Enfermedad cardiovascular en sobrevivientes de cáncer
-                        </li>
-                        <li>Embarazo y enfermedad cardiovascular</li>
-                        <li>Bibliografía</li>
-                        <li>Casos clínicos</li>
-
-                        <li>Epidemiología y factores de riesgo</li>
-                        <li>Evaluación diagnóstica en cardiología</li>
-                        <li>Enfermedad coronaria</li>
-                        <li>Insuficiencia cardíaca</li>
-                        <li>Arritmias</li>
-                        <li>Cardiopatía valvular</li>
-                        <li>Enfermedades del miocardio</li>
-                        <li>Enfermedades del pericardio</li>
-                        <li>Cardiopatías congénitas en el adulto</li>
-                        <li>Enfermedades de la aorta</li>
-                        <li>Enfermedad arterial periférica</li>
-                        <li>
-                           Enfermedad cardiovascular en sobrevivientes de cáncer
-                        </li>
-                        <li>Embarazo y enfermedad cardiovascular</li>
-                        <li>Bibliografía</li>
-                        <li>Casos clínicos</li>
-                     </ul>
-                  </div>
-                  <div id="modulo-2" class="content-tab" style="display: none">
-                     <h5>Medicina cardiovascular</h5>
-                     <ul>
-                        <li>Epidemiología y factores de riesgo</li>
-                        <li>Evaluación diagnóstica en cardiología</li>
-                        <li>Enfermedad coronaria</li>
-                        <li>Insuficiencia cardíaca</li>
-                        <li>Arritmias</li>
-                     </ul>
-                  </div>
-                  <div id="modulo-3" class="content-tab" style="display: none">
-                     <h5>Medicina cardiovascular</h5>
-                     <ul>
-                        <li>Epidemiología y factores de riesgo</li>
-                        <li>Evaluación diagnóstica en cardiología</li>
-                        <li>Enfermedad coronaria</li>
-                        <li>Insuficiencia cardíaca</li>
-                        <li>Arritmias</li>
-                        <li>Cardiopatía valvular</li>
-                        <li>Enfermedades del miocardio</li>
-                        <li>Enfermedades del pericardio</li>
-                     </ul>
-                  </div>
-                  <div id="modulo-4" class="content-tab" style="display: none">
-                     <h5>Medicina cardiovascular</h5>
-                     <ul>
-                        <li>Epidemiología y factores de riesgo</li>
-                        <li>Evaluación diagnóstica en cardiología</li>
-                        <li>Enfermedad coronaria</li>
-                        <li>Insuficiencia cardíaca</li>
-                        <li>Arritmias</li>
-                        <li>Cardiopatía valvular</li>
-                        <li>Enfermedades del miocardio</li>
-                        <li>Enfermedades del pericardio</li>
-                        <li>Cardiopatías congénitas en el adulto</li>
-                        <li>Enfermedades de la aorta</li>
-                        <li>Enfermedad arterial periférica</li>
-                        <li>
-                           Enfermedad cardiovascular en sobrevivientes de cáncer
-                        </li>
-                        <li>Embarazo y enfermedad cardiovascular</li>
-                        <li>Bibliografía</li>
-                        <li>Casos clínicos</li>
-                     </ul>
-                  </div>
-                  <div id="modulo-5" class="content-tab" style="display: none">
-                     <h5>Medicina cardiovascular</h5>
-                     <ul>
-                        <li>Epidemiología y factores de riesgo</li>
-                        <li>Evaluación diagnóstica en cardiología</li>
-                        <li>Enfermedad coronaria</li>
-                        <li>Insuficiencia cardíaca</li>
-                        <li>Arritmias</li>
-                        <li>Cardiopatía valvular</li>
-                        <li>Enfermedades del miocardio</li>
-                        <li>Enfermedades del pericardio</li>
-                        <li>Cardiopatías congénitas en el adulto</li>
-                        <li>Enfermedades de la aorta</li>
-                        <li>Enfermedad arterial periférica</li>
-                        <li>
-                           Enfermedad cardiovascular en sobrevivientes de cáncer
-                        </li>
-                     </ul>
-                  </div>
-                  <div id="modulo-6" class="content-tab" style="display: none">
-                     <h5>Medicina cardiovascular</h5>
-                     <ul>
-                        <li>Epidemiología y factores de riesgo</li>
-                        <li>Evaluación diagnóstica en cardiología</li>
-                        <li>Enfermedad coronaria</li>
-                        <li>Insuficiencia cardíaca</li>
-                        <li>Arritmias</li>
-                        <li>Cardiopatía valvular</li>
-                        <li>Enfermedades del miocardio</li>
-                        <li>Enfermedades del pericardio</li>
-                        <li>Cardiopatías congénitas en el adulto</li>
-                        <li>Enfermedades de la aorta</li>
-                        <li>Enfermedad arterial periférica</li>
-                        <li>
-                           Enfermedad cardiovascular en sobrevivientes de cáncer
-                        </li>
-                        <li>Embarazo y enfermedad cardiovascular</li>
-                        <li>Bibliografía</li>
-                        <li>Casos clínicos</li>
-                     </ul>
-                  </div>
-                  <div id="modulo-7" class="content-tab" style="display: none">
-                     <h5>Medicina cardiovascular</h5>
-                     <ul>
-                        <li>Epidemiología y factores de riesgo</li>
-                        <li>Evaluación diagnóstica en cardiología</li>
-                        <li>Enfermedad coronaria</li>
-                        <li>Insuficiencia cardíaca</li>
-                     </ul>
-                  </div>
-                  <div id="modulo-8" class="content-tab" style="display: none">
-                     <h5>Medicina cardiovascular</h5>
-                     <ul>
-                        <li>Epidemiología y factores de riesgo</li>
-                        <li>Evaluación diagnóstica en cardiología</li>
-                        <li>Enfermedad coronaria</li>
-                        <li>Insuficiencia cardíaca</li>
-                        <li>Arritmias</li>
-                        <li>Cardiopatía valvular</li>
-                        <li>Enfermedades del miocardio</li>
-                        <li>Enfermedades del pericardio</li>
-                        <li>Cardiopatías congénitas en el adulto</li>
-                        <li>Enfermedades de la aorta</li>
-                        <li>Enfermedad arterial periférica</li>
-                        <li>
-                           Enfermedad cardiovascular en sobrevivientes de cáncer
-                        </li>
-                        <li>Embarazo y enfermedad cardiovascular</li>
-                        <li>Bibliografía</li>
-                        <li>Casos clínicos</li>
-                     </ul>
-                  </div>
-                  <div id="modulo-9" class="content-tab" style="display: none">
-                     <h5>Medicina cardiovascular</h5>
-                     <ul>
-                        <li>Epidemiología y factores de riesgo</li>
-                        <li>Evaluación diagnóstica en cardiología</li>
-                        <li>Enfermedad coronaria</li>
-                        <li>Insuficiencia cardíaca</li>
-                        <li>Arritmias</li>
-                        <li>Cardiopatía valvular</li>
-                        <li>Enfermedades del miocardio</li>
-                        <li>Enfermedades del pericardio</li>
-                        <li>Cardiopatías congénitas en el adulto</li>
-                        <li>Enfermedades de la aorta</li>
-                        <li>Enfermedad arterial periférica</li>
-                        <li>
-                           Enfermedad cardiovascular en sobrevivientes de cáncer
-                        </li>
-                        <li>Embarazo y enfermedad cardiovascular</li>
-                        <li>Bibliografía</li>
-                        <li>Casos clínicos</li>
-                     </ul>
-                  </div>
-                  <div id="modulo-10" class="content-tab" style="display: none">
-                     <h5>Medicina cardiovascular</h5>
-                     <ul>
-                        <li>Epidemiología y factores de riesgo</li>
-                        <li>Evaluación diagnóstica en cardiología</li>
-                        <li>Enfermedad coronaria</li>
-                        <li>Insuficiencia cardíaca</li>
-                        <li>Arritmias</li>
-                        <li>Cardiopatía valvular</li>
-                        <li>Enfermedades del miocardio</li>
-                        <li>Enfermedades del pericardio</li>
-                        <li>Cardiopatías congénitas en el adulto</li>
-                        <li>Enfermedades de la aorta</li>
-                        <li>Enfermedad arterial periférica</li>
-                        <li>
-                           Enfermedad cardiovascular en sobrevivientes de cáncer
-                        </li>
-                        <li>Embarazo y enfermedad cardiovascular</li>
-                        <li>Bibliografía</li>
-                        <li>Casos clínicos</li>
-                     </ul>
-                  </div>
-               </article>
-            </div>
             <div class="temario-cont-download sombra">
-               <h6>
-                  <span class="salto-de-linea"
-                     >Los módulos pueden cursarse en</span
-                  >
-                  <span class="salto-de-linea"> el orden que desee.</span>
-                  <span class="salto-de-linea">
-                     Para recibir la certificación, el curso debe completarse al
-                     100%.</span
-                  >
+               <picture>
+                  <source
+                     type="image/webp"
+                     media="(max-width: 480px)"
+                     srcset="media/ficha-producto/cta-temario-mobile.jpg"
+                  />
+                  <source
+                     type="image/webp"
+                     media="(max-width: 1920px)"
+                     srcset="media/ficha-producto/cta-temario-desktop.jpg"
+                  />
+                  <img
+                     src="media/ficha-producto/cta-temario-desktop.jpg"
+                     alt=""
+                  />
+               </picture>
+               <h6 class="text-mobile">
+                  Conocé todos los <br />
+                  módulos descargando <br />
+                  el temario completo
                </h6>
-               <button
-                  class="btn btn-mid button boton js-modal-trigger"
+               <h6 class="text-desktop">
+                  Conocé todos los módulos <br />
+                  descargando el temario completo
+               </h6>
+
+               <a
+                  class="btn btn-primary boton js-modal-trigger"
                   data-target="modal-temario"
+                  >QUIERO SABER MÁS</a
                >
-                  OBTENER TEMARIO COMPLETO
-               </button>
+               <p>X módulos — X horas estimadas</p>
+            </div>
+
+            <div class="temario-cont-info">
+               <ul id="temario_accordion" class="temario-accordion accordionjs">
+                  <li>
+                     <div class="accordionjs-header">
+                        <span>Módulo 1 -</span>
+                        <b>Medicina cardiovascular</b>
+
+                        <svg
+                           width="12"
+                           height="10"
+                           viewBox="0 0 12 10"
+                           fill="none"
+                           xmlns="http://www.w3.org/2000/svg"
+                        >
+                           <path
+                              d="M7.73205 9C6.96225 10.3333 5.03775 10.3333 4.26795 9L0.803847 3C0.0340471 1.66666 0.996299 -1.13682e-06 2.5359 -1.00222e-06L9.4641 -3.96541e-07C11.0037 -2.61945e-07 11.966 1.66667 11.1962 3L7.73205 9Z"
+                              fill="#777777"
+                           />
+                        </svg>
+                     </div>
+                     <div>
+                        <ul>
+                           <li>
+                              Suspendisse placerat elit vitae viverra cursus.
+                           </li>
+                           <li>
+                              Nullam ut nunc feugiat, porta felis ac, ornare
+                              diam.
+                           </li>
+                           <li>
+                              Nullam finibus dolor sit amet vehicula vulputate.
+                           </li>
+                           <li>
+                              Nam efficitur urna eget urna consectetur, at
+                              rutrum odio fermentum.
+                           </li>
+                           <li>
+                              Morbi ac justo a erat auctor iaculis vitae euismod
+                              metus.
+                           </li>
+                           <li>
+                              Suspendisse placerat elit vitae viverra cursus.
+                           </li>
+                           <li>
+                              Nullam ut nunc feugiat, porta felis ac, ornare
+                              diam.
+                           </li>
+                           <li>
+                              Nullam finibus dolor sit amet vehicula vulputate.
+                           </li>
+                           <li>
+                              Nam efficitur urna eget urna consectetur, at
+                              rutrum odio fermentum.
+                           </li>
+                           <li>
+                              Morbi ac justo a erat auctor iaculis vitae euismod
+                              metus.
+                           </li>
+                           <li>
+                              Suspendisse placerat elit vitae viverra cursus.
+                           </li>
+                           <li>
+                              Nullam ut nunc feugiat, porta felis ac, ornare
+                              diam.
+                           </li>
+                           <li>
+                              Nullam finibus dolor sit amet vehicula vulputate.
+                           </li>
+                           <li>
+                              Nam efficitur urna eget urna consectetur, at
+                              rutrum odio fermentum.
+                           </li>
+                           <li>
+                              Morbi ac justo a erat auctor iaculis vitae euismod
+                              metus.
+                           </li>
+                           <li>
+                              Suspendisse placerat elit vitae viverra cursus.
+                           </li>
+                        </ul>
+                     </div>
+                  </li>
+                  <li>
+                     <div class="accordionjs-header">
+                        <span>Módulo 2 -</span>
+                        <b>Medicina cardiovascular</b>
+
+                        <svg
+                           width="12"
+                           height="10"
+                           viewBox="0 0 12 10"
+                           fill="none"
+                           xmlns="http://www.w3.org/2000/svg"
+                        >
+                           <path
+                              d="M7.73205 9C6.96225 10.3333 5.03775 10.3333 4.26795 9L0.803847 3C0.0340471 1.66666 0.996299 -1.13682e-06 2.5359 -1.00222e-06L9.4641 -3.96541e-07C11.0037 -2.61945e-07 11.966 1.66667 11.1962 3L7.73205 9Z"
+                              fill="#777777"
+                           />
+                        </svg>
+                     </div>
+                     <div>
+                        <ul>
+                           <li>
+                              Suspendisse placerat elit vitae viverra cursus.
+                           </li>
+                           <li>
+                              Nullam ut nunc feugiat, porta felis ac, ornare
+                              diam.
+                           </li>
+                           <li>
+                              Nullam finibus dolor sit amet vehicula vulputate.
+                           </li>
+                           <li>
+                              Nam efficitur urna eget urna consectetur, at
+                              rutrum odio fermentum.
+                           </li>
+                           <li>
+                              Morbi ac justo a erat auctor iaculis vitae euismod
+                              metus.
+                           </li>
+                           <li>
+                              Suspendisse placerat elit vitae viverra cursus.
+                           </li>
+                           <li>
+                              Nullam ut nunc feugiat, porta felis ac, ornare
+                              diam.
+                           </li>
+                           <li>
+                              Nullam finibus dolor sit amet vehicula vulputate.
+                           </li>
+                           <li>
+                              Nam efficitur urna eget urna consectetur, at
+                              rutrum odio fermentum.
+                           </li>
+                           <li>
+                              Morbi ac justo a erat auctor iaculis vitae euismod
+                              metus.
+                           </li>
+                           <li>
+                              Suspendisse placerat elit vitae viverra cursus.
+                           </li>
+                           <li>
+                              Nullam ut nunc feugiat, porta felis ac, ornare
+                              diam.
+                           </li>
+                           <li>
+                              Nullam finibus dolor sit amet vehicula vulputate.
+                           </li>
+                           <li>
+                              Nam efficitur urna eget urna consectetur, at
+                              rutrum odio fermentum.
+                           </li>
+                           <li>
+                              Morbi ac justo a erat auctor iaculis vitae euismod
+                              metus.
+                           </li>
+                           <li>
+                              Suspendisse placerat elit vitae viverra cursus.
+                           </li>
+                           <li>
+                              Nullam ut nunc feugiat, porta felis ac, ornare
+                              diam.
+                           </li>
+                           <li>
+                              Nullam finibus dolor sit amet vehicula vulputate.
+                           </li>
+                           <li>
+                              Nam efficitur urna eget urna consectetur, at
+                              rutrum odio fermentum.
+                           </li>
+                           <li>
+                              Morbi ac justo a erat auctor iaculis vitae euismod
+                              metus.
+                           </li>
+                           <li>
+                              Suspendisse placerat elit vitae viverra cursus.
+                           </li>
+                           <li>
+                              Nullam ut nunc feugiat, porta felis ac, ornare
+                              diam.
+                           </li>
+                           <li>
+                              Nullam finibus dolor sit amet vehicula vulputate.
+                           </li>
+                           <li>
+                              Nam efficitur urna eget urna consectetur, at
+                              rutrum odio fermentum.
+                           </li>
+                           <li>
+                              Morbi ac justo a erat auctor iaculis vitae euismod
+                              metus.
+                           </li>
+                        </ul>
+                     </div>
+                  </li>
+                  <li>
+                     <div class="accordionjs-header">
+                        <span>Módulo 3 -</span>
+                        <b>Medicina cardiovascular</b>
+
+                        <svg
+                           width="12"
+                           height="10"
+                           viewBox="0 0 12 10"
+                           fill="none"
+                           xmlns="http://www.w3.org/2000/svg"
+                        >
+                           <path
+                              d="M7.73205 9C6.96225 10.3333 5.03775 10.3333 4.26795 9L0.803847 3C0.0340471 1.66666 0.996299 -1.13682e-06 2.5359 -1.00222e-06L9.4641 -3.96541e-07C11.0037 -2.61945e-07 11.966 1.66667 11.1962 3L7.73205 9Z"
+                              fill="#777777"
+                           />
+                        </svg>
+                     </div>
+                     <div>
+                        <ul>
+                           <li>
+                              Suspendisse placerat elit vitae viverra cursus.
+                           </li>
+                           <li>
+                              Nullam ut nunc feugiat, porta felis ac, ornare
+                              diam.
+                           </li>
+                           <li>
+                              Nullam finibus dolor sit amet vehicula vulputate.
+                           </li>
+                           <li>
+                              Nam efficitur urna eget urna consectetur, at
+                              rutrum odio fermentum.
+                           </li>
+                           <li>
+                              Morbi ac justo a erat auctor iaculis vitae euismod
+                              metus.
+                           </li>
+                           <li>
+                              Suspendisse placerat elit vitae viverra cursus.
+                           </li>
+                           <li>
+                              Nullam ut nunc feugiat, porta felis ac, ornare
+                              diam.
+                           </li>
+                           <li>
+                              Nullam finibus dolor sit amet vehicula vulputate.
+                           </li>
+                           <li>
+                              Nam efficitur urna eget urna consectetur, at
+                              rutrum odio fermentum.
+                           </li>
+                           <li>
+                              Morbi ac justo a erat auctor iaculis vitae euismod
+                              metus.
+                           </li>
+                           <li>
+                              Suspendisse placerat elit vitae viverra cursus.
+                           </li>
+                           <li>
+                              Nullam ut nunc feugiat, porta felis ac, ornare
+                              diam.
+                           </li>
+                           <li>
+                              Nullam finibus dolor sit amet vehicula vulputate.
+                           </li>
+                           <li>
+                              Nam efficitur urna eget urna consectetur, at
+                              rutrum odio fermentum.
+                           </li>
+                           <li>
+                              Morbi ac justo a erat auctor iaculis vitae euismod
+                              metus.
+                           </li>
+                           <li>
+                              Suspendisse placerat elit vitae viverra cursus.
+                           </li>
+                        </ul>
+                     </div>
+                  </li>
+                  <li>
+                     <div class="accordionjs-header">
+                        <span>Módulo 4 -</span>
+                        <b>Medicina cardiovascular</b>
+
+                        <svg
+                           width="12"
+                           height="10"
+                           viewBox="0 0 12 10"
+                           fill="none"
+                           xmlns="http://www.w3.org/2000/svg"
+                        >
+                           <path
+                              d="M7.73205 9C6.96225 10.3333 5.03775 10.3333 4.26795 9L0.803847 3C0.0340471 1.66666 0.996299 -1.13682e-06 2.5359 -1.00222e-06L9.4641 -3.96541e-07C11.0037 -2.61945e-07 11.966 1.66667 11.1962 3L7.73205 9Z"
+                              fill="#777777"
+                           />
+                        </svg>
+                     </div>
+                     <div>
+                        <ul>
+                           <li>
+                              Suspendisse placerat elit vitae viverra cursus.
+                           </li>
+                           <li>
+                              Nullam ut nunc feugiat, porta felis ac, ornare
+                              diam.
+                           </li>
+                           <li>
+                              Nullam finibus dolor sit amet vehicula vulputate.
+                           </li>
+                           <li>
+                              Nam efficitur urna eget urna consectetur, at
+                              rutrum odio fermentum.
+                           </li>
+                           <li>
+                              Morbi ac justo a erat auctor iaculis vitae euismod
+                              metus.
+                           </li>
+                           <li>
+                              Suspendisse placerat elit vitae viverra cursus.
+                           </li>
+                           <li>
+                              Nullam ut nunc feugiat, porta felis ac, ornare
+                              diam.
+                           </li>
+                           <li>
+                              Nullam finibus dolor sit amet vehicula vulputate.
+                           </li>
+                           <li>
+                              Nam efficitur urna eget urna consectetur, at
+                              rutrum odio fermentum.
+                           </li>
+                           <li>
+                              Morbi ac justo a erat auctor iaculis vitae euismod
+                              metus.
+                           </li>
+                           <li>
+                              Suspendisse placerat elit vitae viverra cursus.
+                           </li>
+                           <li>
+                              Nullam ut nunc feugiat, porta felis ac, ornare
+                              diam.
+                           </li>
+                           <li>
+                              Nullam finibus dolor sit amet vehicula vulputate.
+                           </li>
+                           <li>
+                              Nam efficitur urna eget urna consectetur, at
+                              rutrum odio fermentum.
+                           </li>
+                           <li>
+                              Morbi ac justo a erat auctor iaculis vitae euismod
+                              metus.
+                           </li>
+                           <li>
+                              Suspendisse placerat elit vitae viverra cursus.
+                           </li>
+                           <li>
+                              Nullam ut nunc feugiat, porta felis ac, ornare
+                              diam.
+                           </li>
+                           <li>
+                              Nullam finibus dolor sit amet vehicula vulputate.
+                           </li>
+                           <li>
+                              Nam efficitur urna eget urna consectetur, at
+                              rutrum odio fermentum.
+                           </li>
+                           <li>
+                              Morbi ac justo a erat auctor iaculis vitae euismod
+                              metus.
+                           </li>
+                           <li>
+                              Suspendisse placerat elit vitae viverra cursus.
+                           </li>
+                           <li>
+                              Nullam ut nunc feugiat, porta felis ac, ornare
+                              diam.
+                           </li>
+                           <li>
+                              Nullam finibus dolor sit amet vehicula vulputate.
+                           </li>
+                           <li>
+                              Nam efficitur urna eget urna consectetur, at
+                              rutrum odio fermentum.
+                           </li>
+                           <li>
+                              Morbi ac justo a erat auctor iaculis vitae euismod
+                              metus.
+                           </li>
+                        </ul>
+                     </div>
+                  </li>
+                  <li>
+                     <div class="accordionjs-header">
+                        <span>Módulo 5 -</span>
+                        <b>Medicina cardiovascular</b>
+
+                        <svg
+                           width="12"
+                           height="10"
+                           viewBox="0 0 12 10"
+                           fill="none"
+                           xmlns="http://www.w3.org/2000/svg"
+                        >
+                           <path
+                              d="M7.73205 9C6.96225 10.3333 5.03775 10.3333 4.26795 9L0.803847 3C0.0340471 1.66666 0.996299 -1.13682e-06 2.5359 -1.00222e-06L9.4641 -3.96541e-07C11.0037 -2.61945e-07 11.966 1.66667 11.1962 3L7.73205 9Z"
+                              fill="#777777"
+                           />
+                        </svg>
+                     </div>
+                     <div>
+                        <ul>
+                           <li>
+                              Suspendisse placerat elit vitae viverra cursus.
+                           </li>
+                           <li>
+                              Nullam ut nunc feugiat, porta felis ac, ornare
+                              diam.
+                           </li>
+                           <li>
+                              Nullam finibus dolor sit amet vehicula vulputate.
+                           </li>
+                           <li>
+                              Nam efficitur urna eget urna consectetur, at
+                              rutrum odio fermentum.
+                           </li>
+                           <li>
+                              Morbi ac justo a erat auctor iaculis vitae euismod
+                              metus.
+                           </li>
+                           <li>
+                              Suspendisse placerat elit vitae viverra cursus.
+                           </li>
+                           <li>
+                              Nullam ut nunc feugiat, porta felis ac, ornare
+                              diam.
+                           </li>
+                           <li>
+                              Nullam finibus dolor sit amet vehicula vulputate.
+                           </li>
+                           <li>
+                              Nam efficitur urna eget urna consectetur, at
+                              rutrum odio fermentum.
+                           </li>
+                           <li>
+                              Morbi ac justo a erat auctor iaculis vitae euismod
+                              metus.
+                           </li>
+                           <li>
+                              Suspendisse placerat elit vitae viverra cursus.
+                           </li>
+                           <li>
+                              Nullam ut nunc feugiat, porta felis ac, ornare
+                              diam.
+                           </li>
+                           <li>
+                              Nullam finibus dolor sit amet vehicula vulputate.
+                           </li>
+                           <li>
+                              Nam efficitur urna eget urna consectetur, at
+                              rutrum odio fermentum.
+                           </li>
+                           <li>
+                              Morbi ac justo a erat auctor iaculis vitae euismod
+                              metus.
+                           </li>
+                           <li>
+                              Suspendisse placerat elit vitae viverra cursus.
+                           </li>
+                        </ul>
+                     </div>
+                  </li>
+                  <li>
+                     <div class="accordionjs-header">
+                        <span>Módulo 6 -</span>
+                        <b>Medicina cardiovascular</b>
+
+                        <svg
+                           width="12"
+                           height="10"
+                           viewBox="0 0 12 10"
+                           fill="none"
+                           xmlns="http://www.w3.org/2000/svg"
+                        >
+                           <path
+                              d="M7.73205 9C6.96225 10.3333 5.03775 10.3333 4.26795 9L0.803847 3C0.0340471 1.66666 0.996299 -1.13682e-06 2.5359 -1.00222e-06L9.4641 -3.96541e-07C11.0037 -2.61945e-07 11.966 1.66667 11.1962 3L7.73205 9Z"
+                              fill="#777777"
+                           />
+                        </svg>
+                     </div>
+                     <div>
+                        <ul>
+                           <li>
+                              Suspendisse placerat elit vitae viverra cursus.
+                           </li>
+                           <li>
+                              Nullam ut nunc feugiat, porta felis ac, ornare
+                              diam.
+                           </li>
+                           <li>
+                              Nullam finibus dolor sit amet vehicula vulputate.
+                           </li>
+                           <li>
+                              Nam efficitur urna eget urna consectetur, at
+                              rutrum odio fermentum.
+                           </li>
+                           <li>
+                              Morbi ac justo a erat auctor iaculis vitae euismod
+                              metus.
+                           </li>
+                           <li>
+                              Suspendisse placerat elit vitae viverra cursus.
+                           </li>
+                           <li>
+                              Nullam ut nunc feugiat, porta felis ac, ornare
+                              diam.
+                           </li>
+                           <li>
+                              Nullam finibus dolor sit amet vehicula vulputate.
+                           </li>
+                           <li>
+                              Nam efficitur urna eget urna consectetur, at
+                              rutrum odio fermentum.
+                           </li>
+                           <li>
+                              Morbi ac justo a erat auctor iaculis vitae euismod
+                              metus.
+                           </li>
+                           <li>
+                              Suspendisse placerat elit vitae viverra cursus.
+                           </li>
+                           <li>
+                              Nullam ut nunc feugiat, porta felis ac, ornare
+                              diam.
+                           </li>
+                           <li>
+                              Nullam finibus dolor sit amet vehicula vulputate.
+                           </li>
+                           <li>
+                              Nam efficitur urna eget urna consectetur, at
+                              rutrum odio fermentum.
+                           </li>
+                           <li>
+                              Morbi ac justo a erat auctor iaculis vitae euismod
+                              metus.
+                           </li>
+                           <li>
+                              Suspendisse placerat elit vitae viverra cursus.
+                           </li>
+                           <li>
+                              Nullam ut nunc feugiat, porta felis ac, ornare
+                              diam.
+                           </li>
+                           <li>
+                              Nullam finibus dolor sit amet vehicula vulputate.
+                           </li>
+                           <li>
+                              Nam efficitur urna eget urna consectetur, at
+                              rutrum odio fermentum.
+                           </li>
+                           <li>
+                              Morbi ac justo a erat auctor iaculis vitae euismod
+                              metus.
+                           </li>
+                           <li>
+                              Suspendisse placerat elit vitae viverra cursus.
+                           </li>
+                           <li>
+                              Nullam ut nunc feugiat, porta felis ac, ornare
+                              diam.
+                           </li>
+                           <li>
+                              Nullam finibus dolor sit amet vehicula vulputate.
+                           </li>
+                           <li>
+                              Nam efficitur urna eget urna consectetur, at
+                              rutrum odio fermentum.
+                           </li>
+                           <li>
+                              Morbi ac justo a erat auctor iaculis vitae euismod
+                              metus.
+                           </li>
+                        </ul>
+                     </div>
+                  </li>
+               </ul>
+               <div class="temario-cont-footer">
+                  <button
+                     id="paginationTrigger"
+                     onclick="temarioPagination()"
+                     class=""
+                  >
+                     Mostrar más módulos
+                  </button>
+                  <p id="paginationModules" class="pagination-count">
+                     Módulos 20-30/60
+                  </p>
+                  <div id="paginationControl" class="control-pagination">
+                     <a href="" class="active">1</a>
+                     <a href="">2</a>
+                     <a href="">3</a>
+                     <a href="">4</a>...
+                     <a href="">6</a>
+                  </div>
+               </div>
             </div>
          </article>
       </section>
@@ -2050,7 +2256,23 @@
       <script src="js/navbar.js"></script>
       <script src="js/accordion.js"></script>
       <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="js/new-accordion.js"></script>
 
+      <script>
+         jQuery(document).ready(function ($) {
+            $("#temario_accordion").accordionjs({
+               // Allow self close.(data-close-able)
+               closeAble: true,
+
+               // Close other sections.(data-close-other)
+               closeOther: true,
+
+               // Animation Speed.(data-slide-speed)
+               slideSpeed: 300,
+            });
+         });
+      </script>
       <script>
          const swiper = new Swiper(".swiper", {
             // Optional parameters

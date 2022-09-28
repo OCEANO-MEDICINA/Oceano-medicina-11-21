@@ -168,8 +168,7 @@ body {
    }
 }
 
-.r-mex,
-.temario {
+.r-mex {
    &-cont {
       &-download {
          padding: 2rem 1rem;
@@ -185,6 +184,9 @@ body {
          }
       }
    }
+}
+.temario-cont-download {
+   box-shadow: none;
 }
 
 .evaluacion {
@@ -240,8 +242,7 @@ body {
 }
 
 @media screen and (min-width: 1024px) {
-   .r-mex,
-   .temario {
+   .r-mex {
       &-cont {
          &-download {
             justify-content: space-between;
@@ -253,12 +254,6 @@ body {
                font-weight: 500;
                width: max-content;
                text-align: left;
-            }
-            .salto-de-linea {
-               display: inline;
-               &:last-child {
-                  display: block;
-               }
             }
          }
       }
